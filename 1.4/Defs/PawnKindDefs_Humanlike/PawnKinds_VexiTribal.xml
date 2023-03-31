@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- dIl_VexiSpecies_ -->
+
+
+<PawnKindDef ParentName="TribalChiefBase">
+  <defName>Tribal_ChiefRangedVexi</defName>
+  <label>archer chief</label>
+  <weaponTags>
+    <li>NeolithicRangedChief</li>
+  </weaponTags>
+  <apparelRequired Inherit="False">
+    <li>Apparel_TribalHeaddress</li>
+    <li>Apparel_Cape</li>
+  </apparelRequired>
+  <apparelTags>
+    <li>Neolithic</li>
+    <li>ApparelNoble</li>
+  </apparelTags>
+  <backstoryFiltersOverride>
+    <li>
+      <categories>
+        <li>TribalVexi</li>
+      </categories>
+    </li>
+  </backstoryFiltersOverride>
+  <disallowedTraits>
+    <li>Brawler</li>
+  </disallowedTraits>
+  <initialResistanceRange>16~26</initialResistanceRange>
+</PawnKindDef>
+
+
+<PawnKindDef ParentName="Tribal_Hunter">
+  <defName>Tribal_TraderVexi</defName>
+  <label>trader</label>
+  <trader>true</trader>
+  <apparelRequired Inherit="False">
+    <li>Apparel_TribalHeaddress</li>
+    <li>Apparel_Cape</li>
+  </apparelRequired>
+  <apparelTags>
+    <li>Neolithic</li>
+    <li>ApparelNoble</li>
+  </apparelTags>
+  <backstoryFiltersOverride>
+    <li>
+      <categories>
+        <li>TribalVexi</li>
+      </categories>
+    </li>
+  </backstoryFiltersOverride>
+  <initialWillRange>2~4</initialWillRange>
+  <initialResistanceRange>9~15</initialResistanceRange>
+  <disallowedTraits>
+    <li>Brawler</li>
+  </disallowedTraits>
+
+</PawnKindDef>
+
+<PawnKindDef ParentName="Tribal_Hunter">
+  <defName>Tribal_LeaderVexi</defName>
+  <label>leader</label>
+  <factionLeader>true</factionLeader>
+  <apparelRequired Inherit="False">
+    <li>Apparel_TribalHeaddress</li>
+    <li>Apparel_Cape</li>
+  </apparelRequired>
+  <apparelTags>
+    <li>Neolithic</li>
+    <li>ApparelNoble</li>
+  </apparelTags>
+  <backstoryFiltersOverride>
+    <li>
+      <categories>
+        <li>TribalVexi</li>
+      </categories>
+    </li>
+  </backstoryFiltersOverride>
+  <initialWillRange>2~4</initialWillRange>
+  <initialResistanceRange>9~15</initialResistanceRange>
+  <disallowedTraits>
+    <li>Brawler</li>
+  </disallowedTraits>
+</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,435 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <GeneDef Name="dIl_Vexi_BodyBase" Abstract="True">
+    <label>gt-7OL59IOFBQ-fox</label>
+    <description>The endogene specific to all creatures called "Vexi," although no Vexi individual precisely matches this gene in its blueprint form. It is invariably found with pt-IM0OLQUF2X and rt-VD2BA47S3J, GMO specific genes which are extremely
+      lethal in mammals but beneficial in insectoid species.</description>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <iconColor>(0.85, 0.50, 0.75)</iconColor>
+    <iconPath>ui/Xenotypes/VexiSp</iconPath>
+    <statFactors>
+      <LifespanFactor>0.625</LifespanFactor>
+      <CancerRate>3</CancerRate>
+      <ImmunityGainSpeed>0.95</ImmunityGainSpeed>
+    </statFactors>
+    <hediffGiversCannotGive>
+      <li>BadBack</li>
+      <li>Frail</li>
+      <li>Cataract</li>
+      <li>Alzheimers</li>
+    </hediffGiversCannotGive>
+    <missingGeneRomanceChanceFactor>0.5</missingGeneRomanceChanceFactor>
+  </GeneDef>
+
+  <GeneDef ParentName="dIl_Vexi_BodyBase">
+    <defName>dIl_Vexi_Body</defName>
+    <label>vexi body</label>
+    <iconPath>ui/Xenotypes/VexiSp</iconPath>
+    <!-- <bodyType>Standard</bodyType> -->
+  </GeneDef>
+
+  <GeneDef ParentName="GeneNoseBase">
+    <defName>dIl_Vexi_MuzzleB</defName>
+    <label>vexine muzzle</label>
+    <description>This gene codes a specific Vexi Muzzle.</description>
+   <iconPath>ui/Xenotypes/VexiSp</iconPath>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/HeadAttachments/MuzzleB</graphicPath>
+     <!-- <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset> -->
+      <useSkinShader>false</useSkinShader>
+    <drawScale>1</drawScale>
+    <!--<drawOffsetEast>(0.26, 0, -0.125)</drawOffsetEast>
+    <drawOffsetSouth>(-0.01, 0, -0.13)</drawOffsetSouth>-->
+      <layer>PostSkin</layer>
+    </graphicData>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <displayOrderInCategory>2</displayOrderInCategory>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>vexine</symbol></li>
+        <li><symbol>muzzle</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>vulpine</symbol></li>
+        <li><symbol>nose</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+  
+
+  <GeneDef ParentName="GeneHeadboneBase">
+    <defName>dIl_Vexi_FringeB</defName>
+    <label>vexine facial fur</label>
+    <description>This gene codes for a certain volume of fur on the vexi head.</description>
+   <iconPath>ui/Xenotypes/VexiSp</iconPath>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/HeadAttachments/FringeB</graphicPath>
+     <!-- <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset> -->
+      <useSkinShader>false</useSkinShader>
+    <drawScale>1</drawScale>
+    <drawOffsetEast>0,0.55,0</drawOffsetEast>
+    <drawOffsetSouth>0,0.55,0</drawOffsetSouth>
+    <!--<drawOffsetEast>(0.26, 0, -0.125)</drawOffsetEast>
+    <drawOffsetSouth>(-0.01, 0, -0.13)</drawOffsetSouth>-->
+      <layer>PostSkin</layer>
+    <colorType>Skin</colorType>
+    </graphicData>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <displayOrderInCategory>2</displayOrderInCategory>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>vexine</symbol></li>
+        <li><symbol>fringer</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>vulpine</symbol></li>
+        <li><symbol>face</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+
+  <GeneDef ParentName="GeneEarsBase">
+    <defName>dIl_Vexi_EarsB</defName>
+    <label>vexine ears</label>
+    <description>This gene codes for ears ressembling those of a fox.</description>
+   <iconPath>ui/Xenotypes/VexiSp</iconPath>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/HeadAttachments/EarsB</graphicPath>
+     <!-- <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset> -->
+      <useSkinShader>false</useSkinShader>
+    <drawScale>1</drawScale>
+    <drawOffsetEast>0,0.65,0</drawOffsetEast>
+    <drawOffsetSouth>0,0.65,0</drawOffsetSouth>
+    <!--<drawOffsetEast>(0.26, 0, -0.125)</drawOffsetEast>
+    <drawOffsetSouth>(-0.01, 0, -0.13)</drawOffsetSouth>-->
+    <layer>PostSkin</layer>
+    <colorType>Skin</colorType>
+    </graphicData>
+    <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <displayOrderInCategory>2</displayOrderInCategory>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>vexine</symbol></li>
+        <li><symbol>fringer</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>vulpine</symbol></li>
+        <li><symbol>face</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+
+  <GeneDef>
+    <defName>Vexi_SkulkInstinct</defName>
+    <label>Vexine need for other Vexi</label>
+    <description>
+      Vexi are naturally communal unlike Vulpes sp. An isolated Vexi without any traits
+      such as psychopath, misvexinism, will suffer psychologically. This need is satisfied through
+      a proper, clean, communal living environment Vexi and the presence of their unique sense of
+      understanding and connection to one another. Psychological stress is nearly as unhealthy for
+      Vexi as for humans. This particular kind of stress is likely accelerate the natural Vexine
+      tendency to experience their first health effects related to aging as young as thirty for
+      males.
+
+      Unsurprisingly, some Vexi keep trained foxes around and are highly likely to form natural
+      bonds due to the high affinity of their brain receptors and body chemistry. These individuals
+      claim the presence of vulpines "eases their heartache," or "they prevent dementia."
+
+      This custom is strongly associated with Old-Style Vexi, who despite the fervent materialism
+      implied by their nearly universal Transxanist leanings, continue to perform their queer rituals
+      with figurines three in number, but no one Skulk even can agree on the names of the individuals
+      or spirits represented.
+    </description>
+    <iconPath>ui/GeneIcons/SkulkSense</iconPath>
+    <displayCategory>Miscellaneous</displayCategory>
+    <displayOrderInCategory>100</displayOrderInCategory>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <customEffectDescriptions>
+      <li>With Vexi, you can't have just one. Unless they are crazy.</li>
+    </customEffectDescriptions>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneHandsBase">
+    <defName>dIl_Clawed_Hands_old</defName>
+    <label>clawed hands</label>
+    <description>Among the most striking features of Vexi anatomy is their adapted fore-paws nearly equal to the human in manipulation capacities.</description>
+    <iconPath>UI/Icons/Genes/Gene_ElongatedFingers</iconPath>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <displayOrderInCategory>137</displayOrderInCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <statOffsets>
+      <MeleeDPS>0.1</MeleeDPS>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>claw</symbol>
+        </li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li>
+          <symbol>finger</symbol>
+        </li>
+        <li>
+          <symbol>dactyl</symbol>
+        </li>
+        <li>
+          <symbol>digit</symbol>
+        </li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef ParentName="GeneTailBase" Name="dIl_Vexi_TailBase" Abstract="true">
+    <description>This gene codes for a thick tail often compared to that of a fox. It is included in certain patented gene types and is illegal to trade in certain jurisdictions.</description>
+    <iconPath>ui/Xenotypes/VexiSp</iconPath>
+    <iconColor>(0.35, 0.15, 0.35)</iconColor>
+    <displayOrderInCategory>138</displayOrderInCategory>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>0.15</offset>
+      </li>
+    </capMods>
+    <statOffsets>
+      <MoveSpeed>0.1</MoveSpeed>
+    </statOffsets>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tail/leeani</graphicPath>
+      <colorType>Skin</colorType>
+      <drawOffsetNorth>(0.1, 0.2, -0.25)</drawOffsetNorth>
+      <drawOffsetSouth>(-0.1, -0.1, -0.25)</drawOffsetSouth>
+      <drawOffsetEast>(-0.5, -0.1, -0.10)</drawOffsetEast>
+      <!-- <drawOffsetNorth>(0, 0.00, 0)</drawOffsetNorth> <drawOffsetSouth>(0, 0.00, -0.10)</drawOffsetSouth> <drawOffsetEast>(0, 0.25, -0.15)</drawOffsetEast> -->
+
+      <!-- <drawOffsetNorth>(0, 0.25, -0.58)</drawOffsetNorth> <drawOffsetSouth>(-0.39, -0.1, -0.2)</drawOffsetSouth> <drawOffsetEast>(-0.5, -0.1, -0.15)</drawOffsetEast> -->
+      <!-- <drawScale>1.4</drawScale> -->
+      <drawLoc>Tailbone</drawLoc>
+    </graphicData>
+    <randomChosen>true</randomChosen>
+    <exclusionTags>
+      <li>Tail</li>
+    </exclusionTags>
+    <randomBrightnessFactor>0.15</randomBrightnessFactor>
+  </GeneDef>
+  <GeneDef Name="dIl_Vexi_Tail" ParentName="dIl_Vexi_TailBase" Abstract="true">
+    <label>vexi tail shouldn't happen</label>
+    <iconColor>(0.95, 0.75, 0.75)</iconColor>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tail/vexine</graphicPath>
+     <colorType>Skin</colorType>
+      <!-- <drawOffsetNorth>(0.1, 0.2, -0.25)</drawOffsetNorth> <drawOffsetSouth>(-0.1, -0.1, -0.25)</drawOffsetSouth> <drawOffsetEast>(-0.5, -0.1, -0.15)</drawOffsetEast> -->
+    </graphicData>
+    <selectionWeight>0</selectionWeight>
+  </GeneDef>
+  <GeneDef ParentName="dIl_Vexi_Tail">
+    <defName>dIl_Vexi_Tail0</defName>
+    <label>vexi tail</label>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tail/vexine</graphicPath>
+     <colorType>Skin</colorType>
+      <!-- <drawOffsetNorth>(0.1, 0.2, -0.25)</drawOffsetNorth> <drawOffsetSouth>(-0.1, -0.1, -0.25)</drawOffsetSouth> <drawOffsetEast>(-0.5, -0.1, -0.15)</drawOffsetEast> -->
+    </graphicData>
+    <selectionWeight>0.05</selectionWeight>
+  </GeneDef>
+  <GeneDef ParentName="dIl_Vexi_Tail">
+    <defName>dIl_Vexi_Tail1</defName>
+    <label>vexi tail op variety</label>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tail/vexine</graphicPath>
+      <colorType>Skin</colorType>
+      <!-- <drawOffsetNorth>(0.1, 0.2, -0.25)</drawOffsetNorth> <drawOffsetSouth>(-0.1, -0.1, -0.25)</drawOffsetSouth> <drawOffsetEast>(-0.5, -0.1, -0.15)</drawOffsetEast> -->
+    </graphicData>
+    <selectionWeight>0.05</selectionWeight>
+  </GeneDef>
+  <GeneDef ParentName="dIl_Vexi_Tail">
+    <defName>dIl_Vexi_Tail2</defName>
+    <label>vexi tail dgr variety</label>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tail/dgr</graphicPath>
+     <colorType>Skin</colorType>
+      <!-- <drawOffsetNorth>(0.1, 0.2, -0.25)</drawOffsetNorth> <drawOffsetSouth>(-0.1, -0.1, -0.25)</drawOffsetSouth> <drawOffsetEast>(-0.5, -0.1, -0.15)</drawOffsetEast> -->
+    </graphicData>
+    <selectionWeight>0.05</selectionWeight>
+  </GeneDef>
+  <GeneDef ParentName="dIl_Vexi_Tail">
+    <defName>dIl_Vexi_Tail3</defName>
+    <label>vexi tail fennex variety</label>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <biostatCpx>3</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <graphicData>
+      <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tail/dgr</graphicPath>
+      <colorType>Hair</colorType>
+      <!-- <drawOffsetNorth>(0.1, 0.2, -0.25)</drawOffsetNorth> <drawOffsetSouth>(-0.1, -0.1, -0.25)</drawOffsetSouth> <drawOffsetEast>(-0.5, -0.1, -0.15)</drawOffsetEast> -->
+    </graphicData>
+    <selectionWeight>0.05</selectionWeight>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>dIl_Vexi_Fur</defName>
+    <label>furred</label>
+    <labelShortAdj>furrier than thou</labelShortAdj>
+    <description>Fur! This gene causes the bearer to grow primary and secondary fur replacing most sweat glands altering equilibrium temperature to a few degrees below the baseline while significantly increasing cold tolerance.</description>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <displayOrderInCategory>139</displayOrderInCategory>
+    <iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
+    <iconColor>(0.50, 0.25, 0.25)</iconColor>
+    <forcedHeadTypes>
+      <li>dIl_Vexi_HeadTypeF1</li>
+      <li>dIl_Vexi_HeadTypeM1</li>
+      <li>dIl_Vexi_HeadTypeF2</li>
+      <li>dIl_Vexi_HeadTypeM2</li>
+    </forcedHeadTypes>
+    <beardTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>NoBeard</li>
+      </tags>
+    </beardTagFilter>
+    <hairTagFilter>
+      <whitelist>true</whitelist>
+      <tags>
+        <li>Bald</li>
+      </tags>
+    </hairTagFilter>
+    <exclusionTags>
+      <li>HairStyle</li>
+      <li>Fur</li>
+      <li>BeardStyle</li>
+    </exclusionTags>
+    <statOffsets>
+      <ComfyTemperatureMin>-23</ComfyTemperatureMin>
+    </statOffsets>
+    <graphicData>
+      <fur>Furskin</fur>
+      <colorType>Hair</colorType>
+      <skinIsHairColor>false</skinIsHairColor>
+      <tattoosVisible>false</tattoosVisible>
+    </graphicData>
+    <symbolPack>
+      <prefixSymbols>
+        <li><symbol>fur</symbol></li>
+        <li><symbol>paw</symbol></li>
+        <li><symbol>cold</symbol></li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li><symbol>fox</symbol></li>
+      </suffixSymbols>
+    </symbolPack>
+
+  </GeneDef>
+
+  <GeneDef>
+    <defName>dIl_Vexi_Brain</defName>
+    <label>vexi brain</label>
+    <description>The non-human Vexi brain is coded by this gene.</description>
+    <iconPath>ui/Xenotypes/VexiSp</iconPath>
+
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <displayOrderInCategory>180</displayOrderInCategory>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <statOffsets>
+      <!--
+      <PsychicSensitivity>0.1</PsychicSensitivity>
+      <MeditationFocusGain>0.1</MeditationFocusGain>
+      <PsychicEntropyRecoveryRate>0.1</PsychicEntropyRecoveryRate>
+    -->
+      <MentalBreakThreshold>0.1</MentalBreakThreshold>
+      <WorkSpeedGlobal>-0.1</WorkSpeedGlobal>
+      <!-- MeleeDodgeChance is set to a high value because it has so little
+           affect. One of the Vexi concepts is being able to escape... for an
+           untrained Vexi, the vast majority, this will make no difference
+          at all. If a Vexi is trained, they'll simply be very dodgy and
+           avoid a good number of blows. -->
+      <MeleeDodgeChance>5</MeleeDodgeChance>
+      <PawnTrapSpringChance>-0.90</PawnTrapSpringChance>
+    </statOffsets>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>dura</symbol>
+        </li>
+        <li>
+          <symbol>eat</symbol>
+        </li>
+        <li>
+          <symbol>feed</symbol>
+        </li>
+        <li>
+          <symbol>cram</symbol>
+        </li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li>
+          <symbol>vore</symbol>
+        </li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+  <GeneDef>
+    <defName>dIl_Crepuscular_Vision</defName>
+    <label>Low-lighting adaptation</label>
+    <description>Carriers of this gene possess an adapted iris, tapetum lucidum, and a brain able to synthesize visual input with other senses.</description>
+    <iconPath>UI/Icons/Genes/Gene_Darkvision</iconPath>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <displayOrderInCategory>191</displayOrderInCategory>
+    <ignoreDarkness>true</ignoreDarkness>
+    <biostatCpx>2</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <symbolPack>
+      <prefixSymbols>
+        <li>
+          <symbol>dark</symbol>
+        </li>
+        <li>
+          <symbol>night</symbol>
+        </li>
+        <li>
+          <symbol>dim</symbol>
+        </li>
+        <li>
+          <symbol>gloom</symbol>
+        </li>
+        <li>
+          <symbol>murk</symbol>
+        </li>
+        <li>
+          <symbol>deep</symbol>
+        </li>
+        <li>
+          <symbol>umbra</symbol>
+        </li>
+      </prefixSymbols>
+      <suffixSymbols>
+        <li>
+          <symbol>shadow</symbol>
+        </li>
+      </suffixSymbols>
+    </symbolPack>
+  </GeneDef>
+
+</Defs>

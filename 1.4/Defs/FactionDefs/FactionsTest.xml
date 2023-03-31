@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+  <PawnKindDef ParentName="dIl_ScholarBase">
+    <defName>TownScribeVexiTest</defName>
+    <label>town scribe</label>
+    <apparelMoney>0~1000</apparelMoney>
+    <apparelRequired Inherit="False"/>
+    <techHediffsTags Inherit="False"/>
+    <forcedTraits Inherit="False"/>
+    <requiredWorkTags>Intellectual</requiredWorkTags>
+    <defaultFactionType Inherit="False"/>
+
+  </PawnKindDef>
+-->
+  <FactionDef ParentName="OutlanderFactionBase">
+    <defName>OutlanderCivilVexi</defName>
+    <label>civil den union</label>
+    <description>These people may or may not have been here for centuries and so have adapted to their status in the world as well as they can.\n\nThey are concerned with the practical matters of trade, trust, and survival.\n\nThis particular group holds
+      civil behavior in high regard.</description>
+    <colorSpectrum>
+      <li>(0.35, 0.30, 0.60)</li>
+      <li>(0.45, 0.40, 0.90)</li>
+    </colorSpectrum>
+    <allowedCultures>
+      <li>Vexine</li>
+    </allowedCultures>
+    <xenotypeSet>
+      <xenotypeChances Inherit="False">
+        <Vexi>0.975</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>OutlanderRoughVexi</li>
+          <li>Outlander</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <maxConfigurableAtWorldCreation>99</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>10</configurationListOrderPriority>
+    <factionNameMaker>NamerFactionOutlanderVexi</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlanderVexi</settlementNameMaker>
+    <pawnGroupMakers>
+      <li>
+        <!-- Normal fights, standard mix -->
+        <kindDef>Combat</kindDef>
+        <options>
+          <Villager>5</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Grenadier_Destructive>1.5</Grenadier_Destructive>
+          <Mercenary_Slasher>7</Mercenary_Slasher>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+          <Mercenary_Elite>10</Mercenary_Elite>
+          <Town_Councilman>10</Town_Councilman>
+        </options>
+      </li>
+      <li>
+        <kindDef>Peaceful</kindDef>
+        <options>
+          <Villager>20</Villager>
+          <Villager_Child MayRequire="Ludeon.RimWorld.Biotech">10</Villager_Child>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+          <Mercenary_Elite>10</Mercenary_Elite>
+        </options>
+      </li>
+      <li>
+        <kindDef>Trader</kindDef>
+        <traders>
+          <Town_Trader>1</Town_Trader>
+        </traders>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Caribou>3</Caribou>
+        </carriers>
+        <guards>
+          <Villager>3</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Mercenary_Slasher>7</Mercenary_Slasher>
+          <Mercenary_Gunner>10</Mercenary_Gunner>
+          <Mercenary_Elite>10</Mercenary_Elite>
+        </guards>
+      </li>
+      <!--
+      <li>
+        <kindDef>Revellers</kindDef>
+        <carriers>
+          <Muffalo>6</Muffalo>
+          <Dromedary>5</Dromedary>
+          <Horse>6</Horse>
+        </carriers>
+        <guards>
+          <Villager>3</Villager>
+          <Town_Guard>2</Town_Guard>
+          <Mercenary_Gunner>3</Mercenary_Gunner>
+          <Mercenary_Elite>3</Mercenary_Elite>
+        </guards>
+      </li>
+    -->
+      <li>
+        <kindDef>Settlement</kindDef>
+        <options>
+          <Villager>20</Villager>
+          <Town_Guard>10</Town_Guard>
+          <Mercenary_Slasher>7</Mercenary_Slasher>
+          <Mercenary_Gunner>30</Mercenary_Gunner>
+          <Mercenary_Elite>20</Mercenary_Elite>
+          <Town_Councilman>10</Town_Councilman>
+        <!--  <TownScribeVexiTest>1</TownScribeVexiTest> -->
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Miners</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Miner>1</Miner>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Hunters</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Hunter>1</Hunter>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Loggers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Logger>1</Logger>
+        </options>
+      </li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">
+        <kindDef>Farmers</kindDef>
+        <commonality>1</commonality>
+        <options>
+          <Farmer>1</Farmer>
+        </options>
+      </li>
+    </pawnGroupMakers>
+  </FactionDef>
+<!--
+  <FactionDef ParentName="FactionBase">
+    <defName>OutlanderRefugeeVexi</defName>
+    <label>vexi refugee group</label>
+    <pawnSingular>refugee</pawnSingular>
+    <pawnsPlural>refugees</pawnsPlural>
+    <categoryTag>OutlanderRefugee</categoryTag>
+    <canMakeRandomly>false</canMakeRandomly>
+    <canSiege>false</canSiege>
+    <canStageAttacks>false</canStageAttacks>
+    <hidden>true</hidden>
+    <description>A group of vexi refugees claiming to have lost their home.</description>
+    <factionIconPath>World/WorldObjects/Expanding/SettlementTemporary</factionIconPath>
+    <factionNameMaker>NamerFactionOutlanderVexi</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlanderVexi</settlementNameMaker>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+    </disallowedMemes>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+      <Vexi>9.975</Vexi>
+      <Highmate MayRequire="Ludeon.RimWorld.Biotech">0.025</Highmate>
+      </xenotypeChances>
+    </xenotypeSet>
+    <colorSpectrum>
+      <li>(0.93, 0.39, 0.32)</li>
+      <li>(0.35, 0.90, 0.57)</li>
+      <li>(0.25, 0.66, 0.94)</li>
+      <li>(0.98, 0.75, 0.37)</li>
+      <li>(0.97, 0.62, 0.52)</li>
+    </colorSpectrum>
+    <generateNewLeaderFromMapMembersOnly>true</generateNewLeaderFromMapMembersOnly>
+    <leaderTitle>leader</leaderTitle>
+    <requiredCountAtGameStart>0</requiredCountAtGameStart>
+    <mustStartOneEnemy>false</mustStartOneEnemy>
+    <maxCountAtGameStart>0</maxCountAtGameStart>
+    <techLevel>Industrial</techLevel>
+    <basicMemberKind>Refugee</basicMemberKind>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Outlander</li>
+        </categories>
+        <commonality>0.35</commonality>
+      </li>
+      <li>
+        <categories>
+          <li>Offworld</li>
+        </categories>
+        <commonality>0.65</commonality>
+      </li>
+    </backstoryFilters>
+    <settlementTexturePath>World/WorldObjects/DefaultSettlement</settlementTexturePath>
+  </FactionDef>
+-->
+</Defs>

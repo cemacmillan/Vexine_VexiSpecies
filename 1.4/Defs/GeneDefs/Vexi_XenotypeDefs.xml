@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <XenotypeDef>
+    <defName>Vexi</defName>
+    <label>vexi</label>
+    <description>Vexi are a vulpecular furred species of uncertain origin adapted to many of the same niches as humans. While they are at least as diverse from one individual to the next as baseliners, they are often regarded as having a natural curiosity. Whether for historical or cultural reasons or as consequence of their genetic legacy they are happier in a colony where there are many other Vexi and prefer communal sleeping arrangements.</description>
+    <descriptionShort>Looks like a fox on two legs.</descriptionShort>
+    <iconPath>ui/Xenotypes/VexiSp</iconPath>
+    <inheritable>true</inheritable>
+    <genes>
+      <li>Body_Standard</li>
+      <li>Body_Thin</li>
+      <!--
+      <li>Hair_BaldOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>Skin_PaleYellow</li>
+      <li>Skin_LightGray</li>
+      -->
+      <li>Hair_BaldOnly</li>
+      <li>Beard_NoBeardOnly</li>
+      <li>dIl_Vexi_Body</li>
+      <li>dIl_Vexi_Brain</li>
+      <li>dIl_Vexi_Fur</li>
+      <li>dIl_Clawed_Hands</li>
+      <li>dIl_Fanged_Dentition</li>
+      <li>dIl_Vexi_Tail0</li>
+      <li>dIl_Vexi_Tail1</li>
+      <li>dIl_Vexi_Tail2</li>
+      <li>dIl_Vexi_Tail3</li>
+      <li>dIl_Vexi_MuzzleB</li>
+      <li>dIl_Vexi_FringeB</li>
+      <li>dIl_Vexi_Gallbladder</li>
+      <li>dIl_Crepuscular_Vision</li>
+      <li>dIl_Vexi_EarsB</li>
+      <li>Vexi_SkulkInstinct</li>
+
+    </genes>
+  </XenotypeDef>
+
+</Defs>

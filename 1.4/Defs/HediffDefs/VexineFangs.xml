@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>dIl_VexiFangs</defName>
+		<label>vexi fangs</label>
+		<description>Vexi dentition follows the generalized canine model, and closely resembles that of the red fox, with prominent fangs and molars (carnassials) designed for tearing of flesh. They are much larger than a fox however which makes their bite extremely powerful, in the same class as large predatory animals.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>Fangs</label>
+						<capacities>
+							<li>Bite</li>
+						</capacities>
+						<power>14</power>
+						<cooldownTime>2.0</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<solid>true</solid>
+			<betterThanNatural>true</betterThanNatural>
+		</addedPartProps>
+	</HediffDef>
+
+</Defs>

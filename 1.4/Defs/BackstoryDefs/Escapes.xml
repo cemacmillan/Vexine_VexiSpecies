@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!--============================== Non-specific (could work for various planet types) ============================-->
+
+  <BackstoryDef>
+    <defName>CrecheGrownSoldier01</defName>
+    <title>Creche-Raised</title>
+    <titleShort>crech-raised</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up in a creche where they learned a core curriculum based on institutional standards. [PAWN_possessive] quick reflexes and natural nervousness making them disagreeable to others, [PAWN_nameDef] still has a proclivity for combat of all kinds and an aversion to human contact.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li><key>Melee</key><value>4</value></li>
+      <li><key>Shooting</key><value>4</value></li>
+      <li><key>Crafting</key><value>1</value></li>
+    </skillGains>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+      <li>OutlanderRoughVexi</li>
+      <li>OutlanderCivilVexi</li>
+      <li>PirateVexi</li>
+    </spawnCategories>
+    <workDisables>
+      <li>Social</li>
+      <li>Caring</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CrecheGrownSoldier02</defName>
+    <title>Creche-Raised</title>
+    <titleShort>creche-raised</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up in a creche where they learned a core curriculum based on institutional standards. [PAWN_possessive] quick reflexes and natural nervousness making them disagreeable to others, [PAWN_nameDef] and made them turn to carving figurines.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li><key>Melee</key><value>-2</value></li>
+      <li><key>Shooting</key><value>-2</value></li>
+      <li><key>Crafting</key><value>3</value></li>
+      <li><key>Artistic</key><value>2</value></li>
+    </skillGains>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+      <li>OutlanderRoughVexi</li>
+      <li>OutlanderCivilVexi</li>
+      <li>PirateVexi</li>
+    </spawnCategories>
+    <workDisables>
+      <li>Social</li>
+      <li>Caring</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>CrecheGrownCivil01</defName>
+    <title>Creche-Raised</title>
+    <titleShort>creche-raised</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up in a creche where they learned a core curriculum based on institutional standards, the nature of that institution being open to debate. [PAWN_possessive] general acuity for games and contests was minimal, though they were well liked. [PAWN_nameDef] will never be a leader or a fighter, but they may do something someday.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li><key>Artistic</key><value>2</value></li>
+      <li><key>Crafting</key><value>2</value></li>
+    </skillGains>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+      <li>OutlanderRoughVexi</li>
+      <li>OutlanderCivilVexi</li>
+      <li>PirateVexi</li>
+    </spawnCategories>
+    <workDisables>
+      <li>Social</li>
+      <li>Caring</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <!-- gardening cults or drug labs -->
+    <defName>CrecheGrownCivil12</defName>
+    <title>Creche-Raised</title>
+    <titleShort>creche-raised</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up in a creche where they learned a core curriculum based on institutional standards, the nature of that institution being open to debate. [PAWN_possessive] general acuity for games and contests was minimal, though they were well liked. [PAWN_nameDef] will never be a leader or a fighter, but they may do something someday.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li><key>Artistic</key><value>2</value></li>
+      <li><key>Crafting</key><value>2</value></li>
+      <li><key>Social</key><value>2</value></li>
+      <li><key>Plants</key><value>6</value></li>
+    </skillGains>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+      <li>OutlanderRoughVexi</li>
+      <li>OutlanderCivilVexi</li>
+      <li>PirateVexi</li>
+      <li>Madman</li>
+    </spawnCategories>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <!-- grown for parts all kinds -->
+    <defName>CrecheGrownCivil03</defName>
+    <title>Facility-Raised</title>
+    <titleShort>facility-raised</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up in a sort of facility or institution, the nature of which is unclear. [PAWN_nameDef] was entirely uncooperative, and decided to escape at the first opportunity.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li><key>Artistic</key><value>3</value></li>
+      <li><key>Crafting</key><value>1</value></li>
+      <li><key>Social</key><value>3</value></li>
+    </skillGains>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+      <li>OutlanderRoughVexi</li>
+      <li>OutlanderCivilVexi</li>
+      <li>PirateVexi</li>
+      <li>Madman</li>
+    </spawnCategories>
+    <workDisables>
+      <li>Violent</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <!-- grown for parts all kinds -->
+    <defName>CrecheGrownCivil04</defName>
+    <title>Facility-Raised</title>
+    <titleShort>facility-raised</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up in a sort of facility or institution and will not discuss it. [PAWN_nameDef] seems to have escaped from a terrible place.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li><key>Artistic</key><value>3</value></li>
+      <li><key>Crafting</key><value>1</value></li>
+      <li><key>Social</key><value>3</value></li>
+      <li><key>Melee</key><value>3</value></li>
+    </skillGains>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+      <li>OutlanderRoughVexi</li>
+      <li>OutlanderCivilVexi</li>
+      <li>PirateVexi</li>
+      <li>Madman</li>
+    </spawnCategories>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <!-- grown for parts all kinds -->
+    <defName>CrecheGrownCivil05</defName>
+    <title>Facility-Raised</title>
+    <titleShort>facility-raised</titleShort>
+    <baseDesc>[PAWN_nameDef] grew up in a sort of facility or institution and will not discuss it. [PAWN_nameDef] fought [PAWN_pronoun] way out of a tough situation.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li><key>Artistic</key><value>1</value></li>
+      <li><key>Crafting</key><value>0</value></li>
+      <li><key>Social</key><value>3</value></li>
+      <li><key>Melee</key><value>3</value></li>
+    </skillGains>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>Outlander</li>
+      <li>OutlanderRoughVexi</li>
+      <li>OutlanderCivilVexi</li>
+      <li>PirateVexi</li>
+      <li>Madman</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+
+</Defs>

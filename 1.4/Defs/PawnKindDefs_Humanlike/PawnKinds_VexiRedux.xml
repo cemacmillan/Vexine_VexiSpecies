@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<PawnKindDef ParentName="VillagerBase">
+		<defName>VillagerVexi</defName>
+		<weaponTags>
+			<li>ShortShots</li>
+			<li>MedievalMeleeBasic</li>
+		</weaponTags>
+		<defaultFactionType>OutlanderRoughVexi</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Vexi>1</Vexi>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<disallowedTraits>
+	    <li>Brawler</li>
+			<li>Nudist</li>
+	  </disallowedTraits>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="Villager_Child">
+		<defName>VillagerChildVexi</defName>
+		<defaultFactionType>OutlanderRoughVexi</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Vexi>1</Vexi>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<disallowedTraits>
+	    <li>Brawler</li>
+			<li>Nudist</li>
+	  </disallowedTraits>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="GuardBase">
+		<defName>TownGuardVexi</defName>
+		<weaponTags>
+			<li>ShortShots</li>
+		</weaponTags>
+		<defaultFactionType>OutlanderRoughVexi</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Vexi>1</Vexi>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<disallowedTraits>
+	    <li>Brawler</li>
+			<li>Nudist</li>
+	  </disallowedTraits>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="CouncilmanBase">
+		<defName>TownCouncilmanVexi</defName>
+		<weaponTags>
+			<li>ShortShots</li>
+		</weaponTags>
+		<defaultFactionType>OutlanderRoughVexi</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Vexi>1</Vexi>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<disallowedTraits>
+	    <li>Brawler</li>
+			<li>Nudist</li>
+	  </disallowedTraits>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="TraderBase">
+		<defName>TownTraderVexi</defName>
+		<weaponTags>
+			<li>Gun</li>
+		</weaponTags>
+		<defaultFactionType>OutlanderRoughVexi</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Vexi>1</Vexi>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<disallowedTraits>
+	    <li>Brawler</li>
+			<li>Nudist</li>
+	  </disallowedTraits>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MercenaryGunnerBase">
+		<defName>MercenaryGunnerVexi</defName>
+		<label>vexi gunner</label>
+		<initialResistanceRange>6~10</initialResistanceRange>
+		<weaponTags Inherit="False">
+			<li>ShortShots</li>
+			<li>RangedHeavy</li>
+		</weaponTags>
+		<defaultFactionType>OutlanderRoughVexi</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Vexi>1</Vexi>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<disallowedTraits>
+	    <li>Brawler</li>
+			<li>Nudist</li>
+	  </disallowedTraits>
+	</PawnKindDef>
+
+	<PawnKindDef ParentName="MercenaryEliteBase">
+		<defName>MercenaryEliteVexi</defName>
+		<label>vexi elite</label>
+		<initialResistanceRange>15~23</initialResistanceRange>
+		<weaponTags Inherit="False">
+			<li>ShortShots</li>
+			<li>RangedHeavy</li>
+		</weaponTags>
+		<defaultFactionType>OutlanderRoughVexi</defaultFactionType>
+		<useFactionXenotypes>false</useFactionXenotypes>
+		<xenotypeSet>
+			<xenotypeChances>
+				<Vexi>1</Vexi>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<disallowedTraits>
+	    <li>Brawler</li>
+			<li>Nudist</li>
+	  </disallowedTraits>
+	</PawnKindDef>
+</Defs>

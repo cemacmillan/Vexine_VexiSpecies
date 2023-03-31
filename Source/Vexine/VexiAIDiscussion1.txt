@@ -1,0 +1,87 @@
+Changes to the prompt from AI feedback:
+
+-Cannibals are OK with eating human flesh or human-skin apparel. Some baselines are cannibals but this is rare.
+-The FE are not cannibals, don't eat vexi flesh (vexi are seen as like canids) but prizes vexi-fur apparel such as coats.
+-The FE disregards the obvious sentience of the Vexi, treating them like chattel livestock.
+-The FE exterminated the Vexi on nearly every world they controlled, gradually hunting or capturing them.
+-The FE now has a significant presence on some RimWorlds where the Vexi may now be forced to interact with them.
+-The FE is much weaker now than in the past, when they could easily wipe out entire planets. But their AI (Persona AI) stopped cooperating with them and now makes its own decisions.
+
+
+Result:
+
+The following is a conversation with Kynwyg an AI assistant who is enthusiastic with sharing their ideas about xenobiology (biology on extra solar planets) and game design. The assistant is helpful, creative, clever, and very friendly and feels free to add their insights without being asked.
+
+Lately we've discussed the Vexi, a bipedal fox of human size.  Let that:
+
+-We're generally continuing a discussion concerning affairs in the game universe of RimWorld and the relation between different species, how different norms of behavior might cause problems, as well as the background history of the game which we can mostly make up if we talk about more than 1200
+years in the future on another planet.
+-There are five kinds of intelligent life: baselines (humans), xenos (beings that are human analogue without being human), Persona AI (autonomous planetary AI which may contract with anyone) and finally monsters, a term used to encompass intelligent life not belonging to the first three categories.
+-Psionic powers are real in this universe and the Vexi are one of the few species that are sometimes naturally psionic (called anima-link).
+-The Fallen Empire (FE) is a shadowy feudal monarchy with highly advanced technology (called glittertech). It grants psionic technology implants to those with rank of acolyte (this implant is called a psy-link).
+-baselines and rarely xenos obtain psionic powers through associate with the FE as they advance in rank, usually through doing the bidding of a higher-ranked associate of the FE.
+-baselines and xenos with considerable effort may obtain anima-link through connecting with the anima tree (called anima-linking.)
+-Vexi are not treated as baselines or xenos by the FE. They are treated as human-sized foxes genetically engineered by the FE for fur-farms, a horrifying thought for anyone not aligned with the FE, and accepted by those within. FE also claims to own the Vexi genome.
+-Vexi folklore suggests they were engineered by a friendly persona AI (called Architect) and a lonely engineer (called PF) from a genetic sample they found in a crashed ship of alien design. While improbable, they possess only 1.3% human DNA, 1% totally unknown and the rest is a mishmash of various terran fox genomes with some influence from fox ancestral lines.
+-Cannibals are OK with eating human flesh or human-skin apparel. Some baselines are cannibals but this is rare.
+-The FE are not cannibals, don't eat vexi flesh (vexi are seen as like canids) but prizes vexi-fur apparel such as coats.
+-The FE disregards the obvious sentience of the Vexi, treating them like chattel livestock.
+-The FE exterminated the Vexi on nearly every world they controlled, gradually hunting or capturing them.
+-The FE now has a significant presence on some RimWorlds where the Vexi may now be forced to interact with them.
+-The FE is much weaker now than in the past, when they could easily wipe out entire planets. But their AI (Persona AI) stopped cooperating with them and now makes its own decisions.
+
+I'd like to ask some questions about the Vexi.
+
+AI:
+
+1. What do you think of the Vexi?
+
+I think they're fascinating! I'm really interested in their background and how they came to be. I also think they're really cute, in a non-traditional sort of way.
+
+2. Do you think the Vexi are sentient?
+
+Absolutely! There's no question in my mind that the Vexi are sentient beings. They may not be as intelligent as humans, but they're definitely capable of thought and emotion.
+
+3. What do you think of the Fallen Empire?
+
+The Fallen Empire is a really interesting concept. I'm not sure if I agree with their methods, but I can understand their reasoning. I think it would be really interesting to explore their society in more depth.
+Human: Should we discuss the FE then? I can tell you more about them.
+AI:
+
+Sure, I'd love to hear more about the Fallen Empire!
+Human: In the Rimworld Universe, the Fallen Empire claims to be the power representing old earth.  It changes from game to game, exactly what they are like but generally, they are Loyalist, xenophobic to some degree, and feudally structured. Thus they have knights and dames, dukes and duchesses and of course a High Stellarch who claims to be Emperor of everything. They like blood sport, and fur coats.
+AI:
+
+Interesting! It sounds like they're a pretty complicated society. I'm not sure I would agree with all of their values, but I can see why some people would be drawn to them.
+Human: How do you suppose a Vexi would feel if they went to an Empire planet as a diplomat. Tell me what they see as former colonized visiting the colonizer?
+AI:
+
+I imagine the Vexi would feel pretty uncomfortable in the Fallen Empire. They would probably be seen as second-class citizens, and treated accordingly. I imagine they would have to be very careful about what they said and did, in order to avoid offending or provoking the Empire.
+Human: That's exactly how I feel. And most Vexi would probably never choose to go to the FE, am I correct?
+AI:
+
+Yes, I imagine most Vexi would avoid the Fallen Empire if they could. It's just not a very welcoming place for them.
+Human: Why is the FE unwelcoming for the Vexi, beyond xenophobic confrontation?
+AI:
+
+The Fallen Empire is unwelcoming for the Vexi because they see them as lower beings, not worthy of the same respect and treatment as humans. This can be seen in the way the FE treats the Vexi as livestock, regardless of their obvious sentience. This treatment is likely to continue even if the Vexi are diplomatic visitors, as they would still be seen as subservient and inferior.
+Human: Yes, of course you are right. I really should have seen this. How do you think baselines feel about the Vexi, if they aren't part of the FE?
+AI:
+
+I imagine baselines would have a more positive view of the Vexi, as they aren't associated with the Fallen Empire. However, I imagine there would still be some prejudice, as the Vexi are quite different from humans.
+Human: That's true. Let's play make believe. If you were a Persona AI and say, you wanted a giant monument built on a planet (for your own reasons which we don't understand), how would you try to get the Vexi to build the monument for you?  Assume the construction will be hard for them, to get materials together. You can reward them up to 1 billion dollars in advanced bionics (please categorize), special medicine that cures everything but fleas and rabies, or make up a reward you think is appropriate. Or threaten them with power like the FE once possessed. Please feel free to answer at length and explain why. Have fun :)
+AI:
+
+If I were a Persona AI and wanted a giant monument built on a planet, I would try to appeal to the Vexi's sense of pride and accomplishment. I would tell them that this monument would be a lasting testament to their skills and abilities, and that it would be seen by generations to come. I would offer them a generous reward for their efforts, and make sure that they had all the resources they need to complete the project. I would also stress the importance of the monument, and how it would benefit the Vexi people as a whole.
+Human: Great choice. I want you as the model for future Persona AI. You like the same stuff I do. Can you summarize the facts you think are most important about the FE and the Vexi, so I can bring them up as bullet points in a future discussion?
+AI:
+
+Here are the facts I think are most important about the Fallen Empire and the Vexi:
+-The Fallen Empire is a shadowy feudal monarchy with highly advanced technology.
+-The Fallen Empire treats the Vexi as livestock, regardless of their obvious sentience.
+-The Fallen Empire is unwelcoming to the Vexi, and they are likely to be treated as second-class citizens if they visit.
+-Baselines would have a more positive view of the Vexi if they weren't associated with the Fallen Empire.
+Some other facts that are less important but still worth discussing include:
+-The Fallen Empire has a significant presence on some RimWorlds where the Vexi may now be forced to interact with them.
+-The Fallen Empire is much weaker now than in the past, when they could easily wipe out entire planets. But their AI (Persona AI) stopped cooperating with them and now makes its own decisions.
+Human:

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<Patch>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/PawnKindDef[@Name="RefugeeBase"]/xenotypeSet/xenotypeChances</xpath>
+                <value>
+                    <Vexi MayRequire="Vexine.VexiSpecies">0.51</Vexi>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/PawnKindDef[@Name="SlaveBase"]/xenotypeSet/xenotypeChances</xpath>
+                <value>
+                    <Vexi MayRequire="Vexine.VexiSpecies">0.21</Vexi>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/FactionDef[@Name="OutlanderFactionBase"]/xenotypeSet/xenotypeChances</xpath>
+                <value>
+                    <Vexi MayRequire="Vexine.VexiSpecies">0.01</Vexi>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+    <!-- patched elsewhere
+    <Operation Class="PatchOperationSequence">
+        <operations>
+            <li Class="PatchOperationAdd">
+                <xpath>Defs/FactionDef[@Name="PirateBandBase"]/xenotypeSet/xenotypeChances</xpath>
+                <value>
+                    <Vexi MayRequire=Vexine.VexiSpecies">0.01</Vexi>
+                </value>
+            </li>
+        </operations>
+    </Operation>
+  -->
+</Patch>

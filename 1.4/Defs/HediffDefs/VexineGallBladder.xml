@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>VexiGallBladder</defName>
+		<label>gallbladder</label>
+		<description>The gallbladder of some poor individual who once used it to improve their digestion.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+		</comps>
+		<addedPartProps>
+			<betterThanNatural>true</betterThanNatural>
+      <solid>true</solid>
+    </addedPartProps>
+	</HediffDef>
+
+	<ThingDef ParentName="BodyPartNaturalBase">
+    <defName>GallBladder</defName>
+    <label>gallbladder</label>
+    <description>The gallbladder is a crucial organ in vexi anatomy, supplementing the digestive activity of the stomach. It helps to break down ingested substances, protecting against food poisoning and allowing Vexi to eat practically anything nutrititive. It is said, a Vexi will never starve unless they can't move.</description>
+  </ThingDef>
+
+
+</Defs>

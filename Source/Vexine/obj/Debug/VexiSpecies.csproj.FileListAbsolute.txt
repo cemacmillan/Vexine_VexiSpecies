@@ -1,0 +1,5 @@
+/Users/cem/projects/_VSTmpl/1.4/Assemblies/Any.dll
+/Users/cem/projects/_VSTmpl/1.4/Source/VSTmpl/obj/Debug/VexiSpecies.csproj.AssemblyReference.cache
+/Users/cem/projects/_VSTmpl/1.4/Source/VSTmpl/obj/Debug/VexiSpecies.csproj.CoreCompileInputs.cache
+/Users/cem/projects/_VSTmpl/1.4/Source/VSTmpl/obj/Debug/VexiSpecies.csproj.CopyComplete
+/Users/cem/projects/_VSTmpl/1.4/Source/VSTmpl/obj/Debug/Any.dll

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<FactionDef ParentName="PlayerFactionBase">
+		<defName>PlayerColony_Vexi</defName>
+		<label>New Arrivals</label>
+		<description>A colony of recently-arrived off-worlder Vexi.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>ColonistVexi</basicMemberKind>
+		<pawnSingular>colonist</pawnSingular>
+		<pawnsPlural>colonists</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<factionNameMaker>NamerFactionOutlanderVexi</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlanderVexi</settlementNameMaker>
+		<allowedCultures><li>Vexine</li></allowedCultures>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Offworld</li>
+					<li>OffworldVexi</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<factionIconPath>World/WorldObjects/Expanding/Town</factionIconPath>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<startingTechprintsResearchTags>
+			<li>ClassicStart</li>
+			<li>ClassicStartTechprints</li>
+		</startingTechprintsResearchTags>
+		<apparelStuffFilter>
+			<thingDefs>
+				<li>Synthread</li>
+			</thingDefs>
+		</apparelStuffFilter>
+	</FactionDef>
+
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>PlayerTribe_Vexi</defName>
+    <label>New Den</label>
+    <description>A small den of Vexi.</description>
+    <isPlayer>true</isPlayer>
+    <categoryTag>Tribal</categoryTag>
+		<pawnSingular>tribesman</pawnSingular>
+    <pawnsPlural>tribespeople</pawnsPlural>
+    <basicMemberKind>Tribesvexi</basicMemberKind>
+    <techLevel>Neolithic</techLevel>
+		<factionNameMaker>NamerFactionOutlanderVexi</factionNameMaker>
+    <settlementNameMaker>NamerSettlementOutlanderVexi</settlementNameMaker>
+    <allowedCultures>
+      <li>Vexine</li>
+    </allowedCultures>
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+    </disallowedMemes>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <forageabilityFactor>1.7</forageabilityFactor>
+    <startingResearchTags>
+      <li>TribalStart</li>
+    </startingResearchTags>
+    <startingTechprintsResearchTags>
+      <li>TribalStart</li>
+      <li>TribalStartTechprints</li>
+    </startingTechprintsResearchTags>
+    <apparelStuffFilter>
+      <thingDefs>
+        <li>Cloth</li>
+      </thingDefs>
+    </apparelStuffFilter>
+    <recipePrerequisiteTags>
+      <li>Tribal</li>
+    </recipePrerequisiteTags>
+  </FactionDef>
+
+  <FactionDef ParentName="PlayerFactionBase">
+    <defName>PlayerSkulk_Vexi</defName>
+    <label>New Skulk</label>
+    <description>A small skulk.</description>
+		<isPlayer>true</isPlayer>
+		<basicMemberKind>ColonistVexi</basicMemberKind>
+		<pawnSingular>colonist</pawnSingular>
+		<pawnsPlural>colonists</pawnsPlural>
+		<techLevel>Industrial</techLevel>
+		<factionNameMaker>NamerFactionOutlanderVexi</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlanderVexi</settlementNameMaker>
+		<allowedCultures><li>Vexine</li></allowedCultures>
+    <backstoryFilters>
+      <li>
+        <categories>
+          <li>TribalVexi</li>
+          <li>OffworldVexi</li>
+          <li>OffworldForested</li>
+          <li>Tribal</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+    <factionIconPath>World/WorldObjects/Expanding/Village</factionIconPath>
+    <settlementTexturePath>World/WorldObjects/TribalSettlement</settlementTexturePath>
+    <forageabilityFactor>1.7</forageabilityFactor>
+		<startingResearchTags>
+			<li>ClassicStart</li>
+		</startingResearchTags>
+		<startingTechprintsResearchTags>
+			<li>ClassicStart</li>
+			<li>ClassicStartTechprints</li>
+		</startingTechprintsResearchTags>
+  </FactionDef>
+</Defs>

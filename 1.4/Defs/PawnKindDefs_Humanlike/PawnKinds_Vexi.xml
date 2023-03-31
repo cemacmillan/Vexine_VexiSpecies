@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+  <!--
+  <PawnKindDef ParentName="VillagerBase">
+    <defName>VillagerVexi</defName>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>999</Vexi>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="Villager_Child">
+    <defName>VillagerChildVexi</defName>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>999</Vexi>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="GuardBase">
+    <defName>TownGuardVexi</defName>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Vexi>999</Vexi>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="CouncilmanBase">
+    <defName>TownCouncilmanVexi</defName>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Vexi>999</Vexi>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="TraderBase">
+    <defName>TownTraderVexi</defName>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <trader>true</trader>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Vexi>999</Vexi>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+    <apparelRequired Inherit="False">
+      <li>Apparel_BowlerHat</li>
+      <li>Apparel_Cape</li>
+    </apparelRequired>
+    <requiredWorkTags>
+      <li>Animals</li>
+    </requiredWorkTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="dIl_ScholarBase">
+    <defName>TownScholarVexi</defName>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OffworldVexi</li>
+          <li>OutlanderRoughVexi</li>
+          <li>Outlander</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Vexi>999</Vexi>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="dIl_NobleBase">
+    <defName>TownNobleVexi</defName>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OffworldVexi</li>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Vexi>999</Vexi>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="dIl_NobleBase">
+    <defName>TownNobleLeaderVexi</defName>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OffworldVexi</li>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <useFactionXenotypes>false</useFactionXenotypes>
+    <factionLeader>true</factionLeader>
+    <xenotypeSet>
+      <xenotypeChances>
+        <Vexi>999</Vexi>
+      </xenotypeChances>
+      <warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+  </PawnKindDef>
+-->
+</Defs>

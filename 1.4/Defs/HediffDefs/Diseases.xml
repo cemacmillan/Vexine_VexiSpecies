@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <HediffDef ParentName="InfectionBase">
+    <defName>Hediff_FleaInfestation</defName>
+    <description>This creature has fleas.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <makesSickThought>true</makesSickThought>
+    <label>flea infestation</label>
+    <tendable>true</tendable>
+    <scenarioCanAdd>false</scenarioCanAdd>
+    <!-- <maxSeverity>1.0</maxSeverity> <severityPerDayNotImmune>0.05</severityPerDayNotImmune> <infectionChance>0.1</infectionChance> <tendDuration>1</tendDuration> -->
+    <stages>
+      <li>
+        <label>trivial</label>
+      </li>
+      <li>
+        <minSeverity>0.2</minSeverity>
+        <label>minor</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.1</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.4</minSeverity>
+        <label>moderate</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.2</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.6</minSeverity>
+        <label>severe</label>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <offset>-0.4</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.8</minSeverity>
+        <label>extreme</label>
+        <lifeThreatening>true</lifeThreatening>
+        <capMods>
+          <li>
+            <capacity>Consciousness</capacity>
+            <setMax>0.50</setMax>
+          </li>
+        </capMods>
+      </li>
+    </stages>
+    <comps>
+      <!-- <li> <compClass>HediffComp_Infecter</compClass> <hediffToInfect>Hediff_FleaInfestation</hediffToInfect> <severityPerDay>1</severityPerDay> <tendSeverity>0.5</tendSeverity> <pctChanceToInfect>1</pctChanceToInfect>
+      <partToAffect>WholeBody</partToAffect> </li> -->
+      <li Class="HediffCompProperties_TendDuration">
+        <baseTendDurationHours>6</baseTendDurationHours>
+        <severityPerDayTended>-0.18</severityPerDayTended>
+      </li>
+      <li Class="HediffCompProperties_MessageAfterTicks">
+        <ticks>600</ticks>
+        <letterLabel>{0_labelShort} has fleas.</letterLabel>
+        <letterText>{0_labelShort} is flea infested!</letterText>
+      </li>
+      <li Class="HediffCompProperties_Disappears">
+        <disappearsAfterTicks>900000~1200000</disappearsAfterTicks>
+        <showRemainingTime>false</showRemainingTime>
+      </li>
+      <li Class="HediffCompProperties_Immunizable">
+        <immunityPerDayNotSick>-0.03</immunityPerDayNotSick>
+        <immunityPerDaySick>0.08</immunityPerDaySick>
+        <severityPerDayNotImmune>0.337</severityPerDayNotImmune>
+        <severityPerDayImmune>-0.27</severityPerDayImmune>
+        <severityPerDayNotImmuneRandomFactor>
+          <min>0.85</min>
+          <max>2.00</max>
+        </severityPerDayNotImmuneRandomFactor>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <HediffDef ParentName="DiseaseBase">
+    <defName>Hediff_VexineParalysis</defName>
+    <label>vexine paralysis syndrome</label>
+    <description>Vexine progressive paralysis is a condition that slowly impairs the affected individual's ability to walk or move, while leaving other abilities intact. When caught early, this disease can be treated with advanced medical techniques. If left untreated, all voluntary muscle control will be lost except for the muscles in the face, which remain functional.</description>
+    <descriptionShort>Vexine progressive paralysis is a disease that gradually causes loss of mobility, but does not affect other faculties. Early treatment can lead to a cure.</descriptionShort>
+    <hediffClass>HediffWithComps</hediffClass>
+    <makesSickThought>true</makesSickThought>
+    <lethalSeverity>1.00</lethalSeverity>
+    <comps>
+      <li Class="HediffCompProperties_SeverityPerDay">
+        <severityPerDay>0.01</severityPerDay>
+      </li>
+    </comps>
+    <stages>
+      <li>
+        <label>early</label>
+        <becomeVisible>false</becomeVisible>
+      </li>
+      <li>
+        <minSeverity>0.10</minSeverity>
+        <label>early</label>
+      </li>
+      <li>
+        <minSeverity>0.25</minSeverity>
+        <label>moderate</label>
+        <capMods>
+          <li>
+            <capacity>Moving</capacity>
+            <offset>-0.10</offset>
+          </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.40</minSeverity>
+        <label>advanced</label>
+        <capMods>
+          <li>
+          <capacity>Moving</capacity>
+          <offset>-0.20</offset>
+        </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.55</minSeverity>
+        <label>severe</label>
+        <capMods>
+          <li>
+          <capacity>Moving</capacity>
+          <offset>-0.40</offset>
+        </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.7</minSeverity>
+        <label>total</label>
+        <mentalBreakMtbDays>0.25</mentalBreakMtbDays>
+        <capMods>
+          <li>
+          <capacity>Moving</capacity>
+          <offset>-0.60</offset>
+        </li>
+        </capMods>
+      </li>
+      <li>
+        <minSeverity>0.85</minSeverity>
+        <label>paralyzed</label>
+        <capMods>
+          <li>
+          <capacity>Moving</capacity>
+          <setMax>0.10</setMax>
+        </li>
+        </capMods>
+      </li>
+    </stages>
+  </HediffDef>
+
+  <RecipeDef ParentName="SurgeryFlesh">
+    <defName>CureVexineParalysis</defName>
+    <label>anti-vexine paralysis mechanite infusion</label>
+    <description>This special medical operation uses a massive dose of mechanites to saturate brain tissue and execute a coordinated restructure of neural activity without damaging the brain. It cures a patient's vexine paralysis, but consumes a large amount of glitterworld medicine.</description>
+    <workerClass>Recipe_RemoveHediff</workerClass>
+    <jobString>Infusing anti-vexine paralysis mechanites.</jobString>
+    <workAmount>2000</workAmount>
+    <hideBodyPartNames>true</hideBodyPartNames>
+    <isViolation>false</isViolation>
+    <targetsBodyPart>false</targetsBodyPart>
+    <removesHediff>Hediff_VexineParalysis</removesHediff>
+    <successfullyRemovedHediffMessage>{0} has successfully cured {1}'s vexine paralysis.</successfullyRemovedHediffMessage>
+    <skillRequirements>
+      <Medicine>8</Medicine>
+    </skillRequirements>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>MedicineUltratech</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>Medicine</li>
+      </categories>
+    </fixedIngredientFilter>
+  </RecipeDef>
+
+<DiseaseIncidentDef>
+  <defName>FleaInfestation</defName>
+  <disease>
+    <defName>FleaInfestation</defName>
+    <hediff>
+      <defName>FleaInfestation</defName>
+      <severity>1</severity>
+    </hediff>
+    <transmissionModes>
+      <li>Touch</li>
+      <li>Food</li>
+      <li>Air</li>
+    </transmissionModes>
+    <incubationDays>1</incubationDays>
+    <diseaseLethality>0.1</diseaseLethality>
+    <movementSpeedFactor>0.9</movementSpeedFactor>
+  </disease>
+</DiseaseIncidentDef>
+
+
+
+</Defs>

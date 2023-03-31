@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Patch>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/FactionDef[defName="PirateWaster"]/xenotypeSet/xenotypeChances</xpath>
+		<value>
+			<Vexi>0.05</Vexi>
+		</value>
+	</Operation>
+
+<!--
+	<Operation Class="PatchOperationAdd">
+		<xpath>Defs/FactionDef[defName="Pirate"]/xenotypeSet/xenotypeChances</xpath>
+		<value>
+			<Vexi>0.05</Vexi>
+		</value>
+	</Operation>
+-->
+</Patch>

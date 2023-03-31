@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <PlaceDef>
+    <defName>ThaliaIV</defName>
+    <tags>
+      <li>OriginTechnoFeudal</li>
+    </tags>
+    <placeRules>
+      <include>
+        <li MayRequire="Ludeon.RimWorld.Ideology">PlaceMakerCommon</li>
+      </include>
+      <rulesStrings>
+        <!-- Thalia IV is considered to be the place where independent Vexi culture thrived more than any other. It is now an unremarkable iceball planet. -->
+        <li>place_name->Thalia</li>
+        <li>place_adjective->Thalian</li>
+        <li>place_summary->techno-feudal world</li>
+        <li>place_community->den</li>
+        <li>place_community->school</li>
+        <li>place_job->dam</li>
+        <li>place_job->scribe</li>
+        <li>place_job->scout</li>
+        <li>place_job->doctor</li>
+        <li>place_job->crafter</li>
+        <li>place_personalWeapon->machine pistol</li>
+        <li>place_personalWeapon->gladius</li>
+        <li>place_massWeapon->a planet-killer</li>
+        <li>place_massWeapon->a bio-engineered plague targeting our kind</li>
+        <li>place_massWeapon->an a group of janissaries</li>
+        <li>place_foeLeader->highstellarch</li>
+        <li>place_foeSoldiers->the empire's soldiers</li>
+      </rulesStrings>
+    </placeRules>
+  </PlaceDef>
+
+</Defs>

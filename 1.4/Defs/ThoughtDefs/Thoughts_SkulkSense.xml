@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<ThoughtDef>
+		<defName>dIl_SkulkSenseThought</defName>
+		<thoughtClass>Vexine.Thought_SkulkSense</thoughtClass>
+		<workerClass>Vexine.ThoughtWorker_SkulkSense</workerClass>
+		<validWhileDespawned>true</validWhileDespawned>
+		<stages>
+			<li>
+				<label>Denmates</label>
+				<description>It feels right.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+		</stages>
+
+	</ThoughtDef>
+
+</Defs>

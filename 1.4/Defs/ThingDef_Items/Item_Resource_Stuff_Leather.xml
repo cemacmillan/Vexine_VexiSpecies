@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThingDef ParentName="LeatherBase">
+  <defName>dIl_Vexilour</defName>
+  <label>vexilour</label>
+  <description>Vexilour is a rare and highly sought-after fur. It is known for its exceptional warmth and softness, making it a luxurious and comfortable choice for cold weather clothing.
+    Its unique shimmering coloration is prized by collectors and fashion enthusiasts alike.
+    Despite its high price tag, demand for Vexilour remains strong due to its rarity and enduring appeal.</description>
+  <graphicData>
+    <color>(178,100,34)</color>
+  </graphicData>
+  <comps>
+    <li>
+      <compClass>CompColorable</compClass>
+    </li>
+  </comps>
+  <statBases>
+    <MarketValue>7.0</MarketValue>
+    <StuffPower_Armor_Sharp>0.71</StuffPower_Armor_Sharp>
+    <StuffPower_Armor_Blunt>0.21</StuffPower_Armor_Blunt>
+    <StuffPower_Insulation_Cold>20</StuffPower_Insulation_Cold>
+  </statBases>
+  <stuffCategories>
+    <li>Leathery</li>
+  </stuffCategories>
+  <stuffProps>
+    <color>(178,100,34)</color>
+    <commonality>0.005</commonality>
+    <statFactors>
+      <MaxHitPoints>1.0</MaxHitPoints>
+      <Beauty>2.25</Beauty>
+    </statFactors>
+  </stuffProps>
+</ThingDef>
+
+</Defs>

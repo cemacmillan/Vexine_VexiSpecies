@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <PawnKindDef ParentName="ThrasherBase">
+    <defName>Thrasher_Vexi</defName>
+    <label>well-armed vexi</label>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelMoney>0</apparelMoney>
+    <apparelRequired>
+      <li>Apparel_Sash</li>
+    </apparelRequired>
+    <apparelTags Inherit="False" />
+    <apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+    <defaultFactionType>Pirate</defaultFactionType>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryGunnerBase">
+    <defName>Mercenary_Gunner_Vexi</defName>
+    <label>well-armed vexi</label>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <initialResistanceRange>6~10</initialResistanceRange>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
+    <defaultFactionType>Pirate</defaultFactionType>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryHeavyBase">
+    <defName>Mercenary_Heavy_Vexi</defName>
+    <label>well-armed vexi</label>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
+    <defaultFactionType>Pirate</defaultFactionType>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenarySlasherBase">
+      <defName>Mercenary_Slasher_Vexi</defName>
+    <label>well-armed vexi</label>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
+    <backstoryFiltersOverride>
+      <li>
+        <categories>
+          <li>OutlanderRoughVexi</li>
+          <li>Outsider</li>
+        </categories>
+      </li>
+    </backstoryFiltersOverride>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenarySniperBase">
+    <defName>Mercenary_Sniper_Vexi</defName>
+    <label>vexi sniper</label>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+    </apparelTags>
+    <apparelAllowHeadgearChance>0.25</apparelAllowHeadgearChance>
+    <initialResistanceRange>13~20</initialResistanceRange>
+  </PawnKindDef>
+
+  <PawnKindDef ParentName="MercenaryEliteBase">
+    <defName>Mercenary_Elite_Vexi</defName>
+    <label>vexi elite mercenary</label>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
+    <apparelTags Inherit="False">
+      <li>IndustrialMilitaryBasic</li>
+      <li>IndustrialMilitaryAdvanced</li>
+      <li>SpacerMilitary</li>
+      <li>BeltDefensePop</li>
+    </apparelTags>
+    <initialResistanceRange>15~23</initialResistanceRange>
+  </PawnKindDef>
+
+</Defs>

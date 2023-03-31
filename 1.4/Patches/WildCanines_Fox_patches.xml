@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="ThingBaseFox"]/race/maxPreyBodySize</xpath>
+		<value>
+			<maxPreyBodySize>0.35</maxPreyBodySize>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[@Name="ThingBaseFox"]/race/foodType</xpath>
+		<value>
+			<foodType>OmnivoreAnimal, OvivoreAnimal</foodType>
+		</value>
+	</Operation>
+
+	<Operation Class="PatchOperationReplace">
+		<xpath>Defs/ThingDef[defName="Lynx"]/race/maxPreyBodySize</xpath>
+		<value>
+			<maxPreyBodySize>0.55</maxPreyBodySize>
+		</value>
+	</Operation>
+
+</Patch>

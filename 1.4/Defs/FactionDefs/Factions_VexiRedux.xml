@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+
+	<FactionDef ParentName="TribeBase">
+		<defName>TribeCivilVexi</defName>
+		<label>vexi tribe</label>
+		<description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe pursues a gentle way of life where they can. They are quite open to trade and alliances, even with strange peoples.</description>
+		<colorSpectrum>
+			<li>(0.65, 0.55, 0.37)</li>
+			<li>(0.75, 0.41, 0.06)</li>
+		</colorSpectrum>
+		<factionNameMaker>NamerFactionOutlanderVexi</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlanderVexi</settlementNameMaker>
+		<!-- because we inherit from TribeBase -->
+		<xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+				<!--
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.025</Dirtmole>
+        <Highmate MayRequire="Ludeon.RimWorld.Biotech">0.050</Highmate>
+        <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.050</Baseliner>
+			-->
+      </xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Tribal</li>
+					<li>TribalVexi</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<!-- tribal Transhumanist vexi ? I've done it with humans, why not ? -->
+		<disallowedMemes Inherit="False">
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Raider</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>30</configurationListOrderPriority>
+
+
+  </FactionDef>
+
+	<FactionDef ParentName="TribeBase" Name="TribeRoughBaseVexi" Abstract="True">
+		<naturalEnemy>true</naturalEnemy>
+		<xenotypeSet Inherit="False">
+			<xenotypeChances>
+				<Vexi>1</Vexi>
+				<!--
+				<Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.025</Dirtmole>
+				<Highmate MayRequire="Ludeon.RimWorld.Biotech">0.050</Highmate>
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.050</Baseliner>
+			-->
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<disallowedMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Supremacist</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">PainIsVirtue</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+		</disallowedMemes>
+		<colorSpectrum>
+			<li>(0.03, 0.47, 0.16)</li>
+			<li>(0.49, 0.96, 0.51)</li>
+		</colorSpectrum>
+		<maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>40</configurationListOrderPriority>
+	</FactionDef>
+
+	<FactionDef ParentName="TribeRoughBaseVexi">
+    <defName>TribeRoughVexi</defName>
+    <label>vexi fierce tribe</label>
+    <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe values warlike dominance; it may be difficult to turn them into an ally.</description>
+		<factionNameMaker>NamerFactionOutlanderVexi</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlanderVexi</settlementNameMaker>
+    <factionIconPath>World/WorldObjects/Expanding/VillageRough</factionIconPath>
+  </FactionDef>
+
+	<FactionDef ParentName="OutlanderRoughBase" Name="OutlanderRoughVexi">
+		<defName>OutlanderRoughVexi</defName>
+		<label>rough vexi skulk</label>
+		<description>These xenovulpines have improbably made a foothold for themselves on this world.</description>
+		<factionIconPath>World/WorldObjects/DenRough</factionIconPath>
+		<colorSpectrum>
+			<li>(0.40, 0.10, 0.10)</li>
+			<li>(0.60, 0.30, 0.20)</li>
+		</colorSpectrum>
+		<allowedCultures>
+			<li>Vexine</li>
+		</allowedCultures>
+		<factionNameMaker>NamerFactionOutlanderVexi</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlanderVexi</settlementNameMaker>
+		<pawnSingular>vexi</pawnSingular>
+		<pawnsPlural>vexi</pawnsPlural>
+		<replacesFaction>OutlanderRough</replacesFaction>
+		<xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>0.975</Vexi>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.025</Dirtmole>
+        <Highmate MayRequire="Ludeon.RimWorld.Biotech">0.050</Highmate>
+        <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.050</Baseliner>
+      </xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+		<backstoryFilters>
+			<li>
+				<categories>
+					<li>Outlander</li>
+					<li>OutlanderRoughVexi</li>
+					<li>OutlanderForested</li>
+				</categories>
+			</li>
+		</backstoryFilters>
+		<maxConfigurableAtWorldCreation>21</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>321</configurationListOrderPriority>
+		<requiredCountAtGameStart>0</requiredCountAtGameStart>
+		<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+		<canMakeRandomly>true</canMakeRandomly>
+		<canSiege>true</canSiege>
+		<canStageAttacks>true</canStageAttacks>
+		<leaderTitle>boss</leaderTitle>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+		</requiredMemes>
+
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+    </disallowedMemes>
+    <structureMemeWeights>
+      <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">3</Structure_Animist>
+      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Archist>
+    </structureMemeWeights>
+		<pawnGroupMakers Inherit="False">
+			<li>
+				<kindDef>Combat</kindDef>
+				<options>
+					<VillagerVexi>5</VillagerVexi>
+					<TownGuardVexi>10</TownGuardVexi>
+					<Mercenary_Slasher>10</Mercenary_Slasher>
+					<MercenaryGunnerVexi>7</MercenaryGunnerVexi>
+					<MercenaryEliteVexi>10</MercenaryEliteVexi>
+					<TownCouncilmanVexi>10</TownCouncilmanVexi>
+				</options>
+			</li>
+			<li>
+				<kindDef>Peaceful</kindDef>
+				<options>
+					<VillagerVexi>20</VillagerVexi>
+					<VillagerChildVexi>10</VillagerChildVexi>
+					<TownGuardVexi>10</TownGuardVexi>
+					<TownCouncilmanVexi>10</TownCouncilmanVexi>
+				</options>
+			</li>
+			<li>
+				<kindDef>Trader</kindDef>
+				<traders>
+					<TownTraderVexi>1</TownTraderVexi>
+				</traders>
+				<carriers>
+					<Muffalo>3</Muffalo>
+					<Dromedary>3</Dromedary>
+					<Alpaca>2</Alpaca>
+					<Caribou MayRequire="Ludeon.RimWorld.Ideology">6</Caribou>
+				</carriers>
+				<guards>
+					<VillagerVexi>3</VillagerVexi>
+					<TownGuardVexi>10</TownGuardVexi>
+					<Mercenary_Slasher>10</Mercenary_Slasher>
+					<MercenaryGunnerVexi>7</MercenaryGunnerVexi>
+					<MercenaryEliteVexi>10</MercenaryEliteVexi>
+				</guards>
+			</li>
+			<li>
+				<kindDef>Settlement</kindDef>
+				<options>
+					<VillagerVexi>10</VillagerVexi>
+					<TownGuardVexi>10</TownGuardVexi>
+					<Grenadier_Destructive>10</Grenadier_Destructive>
+					<Mercenary_Slasher>10</Mercenary_Slasher>
+					<MercenaryGunnerVexi>7</MercenaryGunnerVexi>
+					<MercenaryEliteVexi>10</MercenaryEliteVexi>
+					<TownCouncilmanVexi>10</TownCouncilmanVexi>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Miners</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Miner>1</Miner>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Hunters</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Hunter>1</Hunter>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Loggers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Logger>1</Logger>
+				</options>
+			</li>
+			<li MayRequire="Ludeon.RimWorld.Ideology">
+				<kindDef>Farmers</kindDef>
+				<commonality>1</commonality>
+				<options>
+					<Farmer>1</Farmer>
+				</options>
+			</li>
+		</pawnGroupMakers>
+	</FactionDef>
+
+<FactionDef ParentName="OutlanderRoughVexi">
+	<defName>OutlanderVexi</defName>
+	<label>civil vexi skulk</label>
+	<description>These xenovulpines have made a foothold for themselves on this world through adaptation.</description>
+	<factionIconPath>World/WorldObjects/DenCivil</factionIconPath>
+</FactionDef>
+
+<!-- Replaced
+	<FactionDef ParentName="TribeBase" Name="TribeCivil">
+    <defName>TribeCivilVexi</defName>
+    <label>gentle skulk</label>
+    <description>These people have been here a very long time. Maybe their ancestors crashed here a thousand years ago. Maybe they survived some cataclysm that destroyed a technological civilization here. In any case, the tribals are mostly nomadic people who live off the land using primitive tools and weapons.\n\nDespite their apparent technological weakness, the tribals can be dangerous enemies and valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe pursues a gentle way of life where they can. They are quite open to trade and alliances, even with strange peoples.</description>
+    <colorSpectrum>
+      <li>(0.65, 0.55, 0.17)</li>
+      <li>(0.80, 0.70, 0.26)</li>
+    </colorSpectrum>
+    <maxConfigurableAtWorldCreation>99</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>30</configurationListOrderPriority>
+		<replacesFaction>TribeCivil</replacesFaction>
+		<xenotypeSet Inherit="False">
+			<xenotypeChances>
+				<Vexi>0.975</Vexi>
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.025</Baseliner>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+  </FactionDef>
+
+  <FactionDef ParentName="VexiTribeBase" Name="VexiTribeRoughBase" Abstract="True">
+    <naturalEnemy>true</naturalEnemy>
+    <colorSpectrum>
+      <li>(0.03, 0.47, 0.16)</li>
+      <li>(0.49, 0.96, 0.51)</li>
+    </colorSpectrum>
+    <maxConfigurableAtWorldCreation>9999</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>40</configurationListOrderPriority>
+		<replacesFaction>TribeRough</replacesFaction>
+		<xenotypeSet Inherit="False">
+			<xenotypeChances>
+				<Vexi>1</Vexi>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+		<backstoryFilters>
+      <li>
+        <categories>
+          <li>Tribal</li>
+          <li>Outlander</li>
+          <li>TribalVexi</li>
+          <li>OutlanderRoughVexi</li>
+        </categories>
+      </li>
+    </backstoryFilters>
+  </FactionDef>
+-->
+<!--
+	<FactionDef ParentName="VexiTribeRoughBase">
+    <defName>TribeRoughVexi</defName>
+    <label>unpleasant skulk</label>
+    <description>These people have been here a very long time, long enough to have lost the knowledge of advanced technology, hard as that might seem. These people call themselves a tribe but they're really a mish-mosh of xenos and baseliners who don't fit in elsewhere.\n\nDespite their apparent technological weakness, such a den can make for dangerous enemies or valuable friends because of their skill with low-tech warfare, their numbers, and their hardiness.\n\nThis particular tribe pursues a way of life which revolves around preventing encroachment on their territory. They are quite open to trade and alliances, so long as proper exchanges of gifts and or prisoners take place as custom requires.</description>
+    <colorSpectrum>
+      <li>(0.85, 0.75, 0.37)</li>
+      <li>(0.94, 0.61, 0.06)</li>
+    </colorSpectrum>
+    <maxConfigurableAtWorldCreation>99</maxConfigurableAtWorldCreation>
+    <configurationListOrderPriority>31</configurationListOrderPriority>
+		<replacesFaction>TribeRough</replacesFaction>
+		<xenotypeSet Inherit="False">
+			<xenotypeChances>
+				<Vexi>0.975</Vexi>
+				<Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.025</Baseliner>
+			</xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+		</xenotypeSet>
+  </FactionDef>
+-->
+
+<!-- Wrong -->
+
+<!--
+	<FactionDef ParentName="OutlanderFactionBase">
+		<defName>dIl_OutlanderVexi</defName>
+		<label>Vexi Den Junxion</label>
+		<description>These xenovulpines have improbably made a foothold for themselves on this world. They should cease to appear in future games.</description>
+		<factionIconPath>World/WorldObjects/DenCivil</factionIconPath>
+		<colorSpectrum>
+			<li>(0.50, 0.10, 0)</li>
+			<li>(0.70, 0.30, 0.10)</li>
+		</colorSpectrum>
+		<allowedCultures>
+			<li>Vexine</li>
+		</allowedCultures>
+		<factionNameMaker>NamerFactionOutlanderVexi</factionNameMaker>
+		<settlementNameMaker>NamerSettlementOutlanderVexi</settlementNameMaker>
+		<pawnSingular>vexi</pawnSingular>
+		<pawnsPlural>vexi</pawnsPlural>
+    <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>0.875</Vexi>
+        <Dirtmole MayRequire="Ludeon.RimWorld.Biotech">0.025</Dirtmole>
+        <Yttakin MayRequire="Ludeon.RimWorld.Biotech">0.050</Yttakin>
+        <Baseliner MayRequire="Ludeon.RimWorld.Biotech">0.050</Baseliner>
+      </xenotypeChances>
+			<warnIfTotalAbove1>false</warnIfTotalAbove1>
+    </xenotypeSet>
+		<maxConfigurableAtWorldCreation>21</maxConfigurableAtWorldCreation>
+		<configurationListOrderPriority>321</configurationListOrderPriority>
+		<requiredCountAtGameStart>0</requiredCountAtGameStart>
+		<startingCountAtWorldCreation>0</startingCountAtWorldCreation>
+		<requiredMemes>
+			<li MayRequire="Ludeon.RimWorld.Ideology">Transhumanist</li>
+		</requiredMemes>
+
+    <disallowedMemes>
+      <li MayRequire="Ludeon.RimWorld.Ideology">HumanPrimacy</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Nudism</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">Blindsight</li>
+      <li MayRequire="Ludeon.RimWorld.Ideology">FleshPurity</li>
+    </disallowedMemes>
+    <structureMemeWeights>
+        <Structure_Animist MayRequire="Ludeon.RimWorld.Ideology">2</Structure_Animist>
+	      <Structure_TheistEmbodied MayRequire="Ludeon.RimWorld.Ideology">3</Structure_TheistEmbodied>
+	      <Structure_TheistAbstract MayRequire="Ludeon.RimWorld.Ideology">2</Structure_TheistAbstract>
+	      <Structure_Ideological MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Ideological>
+	      <Structure_Archist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_Archist>
+	      <Structure_OriginChristian MayRequire="Ludeon.RimWorld.Ideology">2</Structure_OriginChristian>
+	      <Structure_OriginIslamic MayRequire="Ludeon.RimWorld.Ideology">2</Structure_OriginIslamic>
+	      <Structure_OriginHindu MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginHindu>
+	      <Structure_OriginBuddhist MayRequire="Ludeon.RimWorld.Ideology">1</Structure_OriginBuddhist>
+	  </structureMemeWeights>
+	</FactionDef>
+-->
+
+</Defs>

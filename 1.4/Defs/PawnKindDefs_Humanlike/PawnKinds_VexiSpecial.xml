@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+<!-- Refugee -->
+<PawnKindDef ParentName="RefugeeBase">
+  <defName>RefugeeVexi</defName>
+  <label>refugee</label>
+  <!-- Why? Because in both the dark storyline and the ordinary there are Vexi moving around -->
+  <acceptArrestChanceFactor>0.5</acceptArrestChanceFactor>
+  <backstoryFilters>
+    <li>
+      <categories>
+        <li>OutlanderRefugee</li>
+      </categories>
+    </li>
+  </backstoryFilters>
+  <combatPower>35</combatPower>
+  <invNutrition>0</invNutrition>
+  <gearHealthRange>0.2~0.6</gearHealthRange>
+  <itemQuality>Poor</itemQuality>
+  <apparelMoney>90~280</apparelMoney>
+  <xenotypeSet>
+    <xenotypeChances Inherit="False">
+      <Vexi MayRequire="Vexine.VexiSpecies">1</Vexi>
+    </xenotypeChances>
+  </xenotypeSet>
+  <apparelAllowHeadgearChance>0.2</apparelAllowHeadgearChance>
+  <apparelTags>
+    <li>IndustrialBasic</li>
+    <li>IndustrialAdvanced</li>
+  </apparelTags>
+  <weaponMoney>60~200</weaponMoney>
+  <weaponTags>
+    <li>ShortShots</li>
+    <li>NeolithicMeleeBasic</li>
+  </weaponTags>
+  <techHediffsMoney>50~50</techHediffsMoney>
+  <techHediffsTags>
+    <li>Poor</li>
+  </techHediffsTags>
+  <techHediffsChance>0.15</techHediffsChance>
+  <inventoryOptions>
+    <skipChance>0.9</skipChance>
+    <subOptionsChooseOne>
+      <li>
+        <thingDef>Silver</thingDef>
+        <countRange>30~70</countRange>
+      </li>
+      <li>
+        <thingDef>MedicineIndustrial</thingDef>
+        <countRange>1</countRange>
+      </li>
+    </subOptionsChooseOne>
+  </inventoryOptions>
+  <initialWillRange>0~1</initialWillRange>
+  <initialResistanceRange>0~2</initialResistanceRange>
+  <humanPregnancyChance>0.33</humanPregnancyChance>
+</PawnKindDef>
+
+</Defs>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+
+  <GeneCategoryDef>
+    <defName>dIl_Vexi_Endogenes</defName>
+    <label>Genes which are inherent to the Vexi species, vulpecular bipeds of near human proportions.</label>
+    <displayPriorityInXenotype>1500</displayPriorityInXenotype>
+  </GeneCategoryDef>
+
+</Defs>

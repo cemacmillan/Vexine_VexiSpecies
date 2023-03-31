@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<HediffDef>
+		<defName>dIl_VexiClaws</defName>
+		<label>vexi claws</label>
+		<description>The Vexi are a species known for their semi-retractable claws, which are believed to have been created through splicing together the genomes of various other species, including insectoids.
+      Their wrists are highly specialized, featuring reinforced tarsal bones that closely resemble human hands. These claws can be extended voluntarily for grooming or expressive purposes, but in high stress
+      situations they will automatically extend and become lethal weapons. This splicing process has never been successfully replicated.</description>
+		<hediffClass>HediffWithComps</hediffClass>
+		<scenarioCanAdd>false</scenarioCanAdd>
+		<maxSeverity>1.0</maxSeverity>
+		<isBad>false</isBad>
+		<comps>
+			<li Class="HediffCompProperties_VerbGiver">
+				<tools>
+					<li>
+						<label>claws</label>
+						<capacities>
+							<li>Cut</li>
+						</capacities>
+						<power>9</power>
+						<cooldownTime>1.75</cooldownTime>
+					</li>
+				</tools>
+			</li>
+		</comps>
+		<addedPartProps>
+			<betterThanNatural>true</betterThanNatural>
+      <solid>true</solid>
+    </addedPartProps>
+	</HediffDef>
+
+</Defs>

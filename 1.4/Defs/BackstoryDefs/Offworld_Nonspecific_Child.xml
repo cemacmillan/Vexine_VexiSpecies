@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<BackstoryDef>
+  <defName>CrecheGrownCivil13</defName>
+  <title>Creche-Baby</title>
+  <titleShort>placed child</titleShort>
+  <baseDesc>When [PAWN_nameDef] was born with an unexpected xenotype the parents placed them in a creche and forgot about them. [PAWN_pronoun] woke up in crypto-sleep casket, which was eventually loaded onto a Rim-Bound shuttle. They awoke inside the hold of the freighter, where [PAWN_pronoun] ate as little as possible so as not to be noticed. [PAWN_possessive] body suffered from privation.</baseDesc>
+  <slot>Childhood</slot>
+  <skillGains>
+    <li><key>Social</key><value>6</value></li>
+    <li><key>Construction</key><value>-2</value></li>
+    <li><key>Mining</key><value>-1</value></li>
+    <li><key>Plants</key><value>-1</value></li>
+
+  </skillGains>
+  <spawnCategories>
+    <li>Offworld</li>
+    <li>OffworldVexi</li>
+    <li>OutlanderRoughVexi</li>
+    <li>PirateVexi</li>
+  </spawnCategories>
+</BackstoryDef>
+
+<BackstoryDef>
+  <!-- gardening cults or drug labs -->
+  <defName>CrecheGrownCivil02</defName>
+  <title>Creche-Raised</title>
+  <titleShort>creche-raised</titleShort>
+  <baseDesc>[PAWN_nameDef] grew up in a creche where they learned a core curriculum based on institutional standards, the nature of that institution being open to debate. [PAWN_possessive] general acuity for games and contests was minimal, though they were well liked. [PAWN_nameDef] will never be a leader or a fighter, but they may do something someday.</baseDesc>
+  <slot>Childhood</slot>
+  <skillGains>
+    <li><key>Artistic</key><value>2</value></li>
+    <li><key>Crafting</key><value>2</value></li>
+    <li><key>Social</key><value>2</value></li>
+    <li><key>Plants</key><value>6</value></li>
+  </skillGains>
+  <spawnCategories>
+    <li>Offworld</li>
+    <li>Outlander</li>
+    <li>OutlanderRoughVexi</li>
+    <li>OutlanderCivilVexi</li>
+    <li>Pirate</li>
+    <li>Madman</li>
+  </spawnCategories>
+  <workDisables>
+    <li>ManualDumb</li>
+  </workDisables>
+</BackstoryDef>
+
+<BackstoryDef>
+    <defName>IceballerChild09</defName>
+    <title>Iceballer Child</title>
+    <titleShort>Iceballer</titleShort>
+    <baseDesc>Growing up on the harsh surface of an Iceball, [PAWN_nameDef] learned to survive with the help of their parents who were skilled in crafting and living off the land. [PAWN_pronoun] received limited formal education, but gained a wealth of practical skills necessary for survival in the hostile environment.</baseDesc>
+    <slot>Childhood</slot>
+    <skillGains>
+      <li><key>Crafting</key><value>5</value></li>
+      <li><key>Construction</key><value>4</value></li>
+      <li><key>Shooting</key><value>3</value></li>
+      <li><key>Plants</key><value>-1</value></li>
+    </skillGains>
+    <forcedTraits>
+      <Nerves>1</Nerves>
+    </forcedTraits>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>OffworldVexi</li>
+      <li>OutlanderRoughVexi</li>
+      <li>OutlanderCivilVexi</li>
+      <li>Refugee</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+  <BackstoryDef>
+  <defName>FringerChild08</defName>
+  <title>fringe settlement miner</title>
+  <titleShort>fringer miner</titleShort>
+  <baseDesc>[PAWN_nameDef] grew up in a fringe settlement on the outskirts of a bustling Urbworld, where [PAWN_pronoun] learned to mine and scavenge for resources to survive.</baseDesc>
+  <slot>Childhood</slot>
+  <skillGains>
+    <li><key>Mining</key><value>3</value></li>
+    <li><key>Construction</key><value>2</value></li>
+    <li><key>Plants</key><value>-1</value></li>
+  </skillGains>
+  <spawnCategories>
+    <li>Offworld</li>
+    <li>OffworldVexi</li>
+    <li>OutlanderRoughVexi</li>
+    <li>OutlanderCivilVexi</li>
+    <li>Refugee</li>
+  </spawnCategories>
+  <forcedTraits>
+    <Nerves>1</Nerves>
+  </forcedTraits>
+  <possessions>
+    <li>
+      <key>MeleeWeapon_BreachAxe</key>
+      <value>1</value>
+    </li>
+  </possessions>
+</BackstoryDef>
+
+<BackstoryDef>
+  <defName>FringerSettlementChildGreen</defName>
+  <title>fringe settlement child</title>
+  <titleShort>fringer kid</titleShort>
+  <baseDesc>[PAWN_nameDef] grew up in a fringe settlement on the outskirts of a bustling Urbworld. Despite the lack of resources and opportunities, [PAWN_pronoun] was determined to make a better life for [PAWN_objective]. [PAWN_pronoun] was resourceful and adaptable, learning to make do with whatever was available.</baseDesc>
+  <slot>Childhood</slot>
+  <skillGains>
+    <li><key>Intellectual</key><value>3</value></li>
+    <li><key>Construction</key><value>2</value></li>
+    <li><key>Social</key><value>2</value></li>
+    <li><key>Mining</key><value>-2</value></li>
+  </skillGains>
+  <spawnCategories>
+    <li>Offworld</li>
+    <li>OffworldVexi</li>
+    <li>OutlanderRoughVexi</li>
+    <li>OutlanderCivilVexi</li>
+    <li>Refugee</li>
+  </spawnCategories>
+  <forcedTraits>
+    <Nerves>1</Nerves>
+  </forcedTraits>
+</BackstoryDef>
+
+<BackstoryDef>
+  <defName>UrbworldUpbringing17</defName>
+  <title>Urbworld Upbringing</title>
+  <titleShort>Urbworld</titleShort>
+  <baseDesc>[PAWN_nameDef] grew up in an urban area of an Urbworld. Despite facing challenges such as poverty and limited opportunities, [PAWN_pronoun] was determined to make the most of [PAWN_possessive] circumstances and received a comprehensive education. However, [PAWN_pronoun] has a history of impulsive behavior, poor decision-making and tendency to flit from one thing to another, and always seeking perfection.</baseDesc>
+  <slot>Childhood</slot>
+  <skillGains>
+    <li><key>Intellectual</key><value>4</value></li>
+    <li><key>Social</key><value>3</value></li>
+  </skillGains>
+  <forcedTraits>
+    <Nerves>1</Nerves>
+  </forcedTraits>
+  <spawnCategories>
+    <li>Offworld</li>
+  </spawnCategories>
+</BackstoryDef>
+
+<BackstoryDef>
+  <defName>ForestedFringerChild10</defName>
+  <title>Forest-Born Fringer</title>
+  <titleShort>Forest-Born Fringer</titleShort>
+  <baseDesc>[PAWN_nameDef] was born and raised in the thick forests surrounding an urbworld. [PAWN_pronoun] was taken in by a group of outlanders who taught [PAWN_objective] how to survive off the land. However, [PAWN_pronoun] was eventually discovered by urbworld authorities and sent away to the next colony without any preparation.</baseDesc>
+  <slot>Childhood</slot>
+  <skillGains>
+      <li><key>Plants</key><value>2</value></li>
+      <li><key>Shooting</key><value>2</value></li>
+      <li><key>Construction</key><value>2</value></li>
+      <li><key>Intellectual</key><value>1</value></li>
+  </skillGains>
+  <forcedTraits>
+      <Nerves>-1</Nerves>
+  </forcedTraits>
+  <spawnCategories>
+    <li>Offworld</li>
+    <li>OffworldVexi</li>
+    <li>OffworldForested</li>
+    <li>OutlanderRoughVexi</li>
+    <li>OutlanderCivilVexi</li>
+    <li>Refugee</li>
+  </spawnCategories>
+</BackstoryDef>
+
+<BackstoryDef>
+  <!-- Blue pawn variant -->
+  <defName>ForestedFringerChild11</defName>
+  <title>Forest-Born Fringer</title>
+  <titleShort>Forest-Born Fringer</titleShort>
+  <baseDesc>[PAWN_nameDef] was born and raised in the thick forests surrounding an urbworld. [PAWN_pronoun] was taken in by a group of well-meaning outlanders who wanted [PAWN_objective] to adopt their way of life. However, [PAWN_pronoun] was an extra mouth being fed without paperwork. Following procedure urbworld authorities put them into a crypto sleep casket and sent them to next departing shuttle without any preparation.</baseDesc>
+  <slot>Childhood</slot>
+  <skillGains>
+      <li><key>Plants</key><value>2</value></li>
+      <li><key>Shooting</key><value>2</value></li>
+      <li><key>Construction</key><value>2</value></li>
+      <li><key>Intellectual</key><value>1</value></li>
+  </skillGains>
+  <forcedTraits>
+      <VexineNerves>-1</VexineNerves>
+  </forcedTraits>
+  <spawnCategories>
+    <li>Offworld</li>
+    <li>OffworldVexi</li>
+    <li>OutlanderRoughVexi</li>
+    <li>OutlanderCivilVexi</li>
+    <li>Refugee</li>
+  </spawnCategories>
+</BackstoryDef>
+
+
+
+<BackstoryDef>
+  <!-- Blue pawn from Pullman planet outsettlement, ie. the zones -->
+  <defName>FringerChildFromPullman09</defName>
+  <identifier>FringerChildFromPullman09</identifier>
+  <slot>Childhood</slot>
+  <title>Fringer child from Thalia IV</title>
+  <titleShort>Fringer child</titleShort>
+  <baseDesc>Growing up in one of the crime-ridden and corrupt settlements around the district, [PAWN_nameDef] learned to rely on [PAWN_possessive] wits and physical skills to survive. Despite the constant danger, [PAWN_pronoun] also developed a strong sense of community and the ability to read and manipulate people to [PAWN_possessive] advantage.</baseDesc>
+  <skillGains>
+      <li>
+          <key>Melee</key>
+          <value>4</value>
+      </li>
+      <li>
+          <key>Social</key>
+          <value>5</value>
+      </li>
+  </skillGains>
+  <requiredWorkTags>
+    <li>Violent</li>
+  </requiredWorkTags>
+  <spawnCategories>
+    <li>Offworld</li>
+    <li>OffworldVexi</li>
+    <li>OutlanderRoughVexi</li>
+    <li>OutlanderCivilVexi</li>
+    <li>Refugee</li>
+  </spawnCategories>
+  <forcedTraits>
+      <VexineNerves>1</VexineNerves>
+  </forcedTraits>
+</BackstoryDef>
+
+</Defs>

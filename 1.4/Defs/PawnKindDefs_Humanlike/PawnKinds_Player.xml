@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+    <defName>ColonistVexi</defName>
+		<label>colonist</label>
+		<defaultFactionType>PlayerColony</defaultFactionType>
+		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+    <apparelColor>(58,5,7)</apparelColor>
+    <apparelTags>
+      <li>IndustrialBasic</li>
+    </apparelTags>
+		<apparelAllowHeadgearChance>0</apparelAllowHeadgearChance>
+		<apparelMoney>350~600</apparelMoney>
+		<backstoryCryptosleepCommonality>0.4</backstoryCryptosleepCommonality>
+		<techHediffsChance>0.03</techHediffsChance>
+		<techHediffsMoney>50~800</techHediffsMoney>
+		<techHediffsTags>
+			<li>Simple</li>
+			<li>ImplantEmpireCommon</li>
+		</techHediffsTags>
+		<techHediffsDisallowTags>
+			<li>PainCauser</li>
+		</techHediffsDisallowTags>
+		 <initialResistanceRange>15~30</initialResistanceRange>
+		 <humanPregnancyChance>0.08</humanPregnancyChance>
+  </PawnKindDef>
+
+
+	<PawnKindDef ParentName="BasePlayerPawnKind">
+		<defName>Tribesvexi</defName>
+		<label>member</label>
+		<race>Human</race>
+		<defaultFactionType>PlayerTribe</defaultFactionType>
+		<chemicalAddictionChance>0.06</chemicalAddictionChance>
+		<apparelTags>
+			<li>Neolithic</li>
+		</apparelTags>
+		<apparelMoney>200~200</apparelMoney>
+		<backstoryCryptosleepCommonality>0</backstoryCryptosleepCommonality>
+		<techHediffsMoney>50~400</techHediffsMoney>
+		<techHediffsTags>
+			<li>Poor</li>
+			<li>Simple</li>
+		</techHediffsTags>
+		<techHediffsChance>0.02</techHediffsChance>
+		<initialResistanceRange>12~30</initialResistanceRange>
+		<humanPregnancyChance>0.08</humanPregnancyChance>
+	</PawnKindDef>
+
+</Defs>

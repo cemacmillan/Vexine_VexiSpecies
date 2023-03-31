@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+
+
+  <BackstoryDef>
+    <!-- Use xeno differences and preferred xenotype feature to create analogs to existing BackstoryDef -->
+    <defName>FallenProdigy7040</defName>
+    <ignoreIllegalLabelCharacterConfigError>False</ignoreIllegalLabelCharacterConfigError>
+    <identifier>FallenProdigy40</identifier>
+    <slot>Childhood</slot>
+    <title>fallen prodigy</title>
+    <titleShort>prodigy</titleShort>
+    <baseDesc>[PAWN_nameDef] was born in a xeno ghetto. [PAWN_possessive] father was killed accidentally by peace keeping forces.
+
+[PAWN_pronoun] as xeno, struggled for a scholarship at the prestigious Utmaior Academy where they were sometimes bullied, sometimes treated as one of the good ones of [PAWN_possessive] kind. A genius, [PAWN_pronoun] was called a "xeno freak" even by the staff. Eventually their parents were forced to to move on to another settlement and their high quality education came to an end.</baseDesc>
+    <skillGains>
+      <li>
+        <key>Construction</key>
+        <value>2</value>
+      </li>
+      <li>
+        <key>Plants</key>
+        <value>2</value>
+      </li>
+      <li>
+        <key>Intellectual</key>
+        <value>5</value>
+      </li>
+      <li>
+        <key>Medicine</key>
+        <value>3</value>
+      </li>
+      <li>
+        <key>Melee</key>
+        <value>2</value>
+      </li>
+    </skillGains>
+    <workDisables>Social</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <forcedTraits>
+      <TooSmart>0</TooSmart>
+    </forcedTraits>
+    <shuffleable>False</shuffleable>
+    <spawnCategories>
+      <li>OffworldVexi</li>
+    </spawnCategories>
+  </BackstoryDef>
+
+</Defs>

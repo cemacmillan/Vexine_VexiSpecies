@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+	<ThoughtDef>
+	  <defName>Thought_FleaInfestation_Vexine</defName>
+		<workerClass>ThoughtWorker_Hediff</workerClass>
+		<hediff>Hediff_FleaInfestation</hediff>
+	  <description>Fleas, one of the challenges of furred existence.</description>
+	  <stages>
+	    <li>
+	      <label>Thought_FleaInfestation_Vexine_1</label>
+	      <description>You are noticing more fleas than usual.</description>
+	      <baseMoodEffect>0</baseMoodEffect>
+	    </li>
+	    <li>
+	      <label>Thought_FleaInfestation_Vexine_2</label>
+	      <description>The flea eggs begin to hatch, you begin to scratch.</description>
+	      <baseMoodEffect>-3</baseMoodEffect>
+	    </li>
+	    <li>
+	      <label>Thought_FleaInfestation_Vexine_3</label>
+	      <description>Annoyance, suffering, fleas.</description>
+	      <baseMoodEffect>-7</baseMoodEffect>
+	    </li>
+	    <li>
+	      <label>Thought_FleaInfestation_Vexine_4</label>
+	      <description>Lack of sleep and the constant itching has made your temper brittle.</description>
+	      <baseMoodEffect>-15</baseMoodEffect>
+	    </li>
+	    <li>
+	      <label>Thought_FleaInfestation_Vexine_5</label>
+	      <description>You want to kill all the fleas... and everyone else too.</description>
+	      <baseMoodEffect>-25</baseMoodEffect>
+	    </li>
+	  </stages>
+	</ThoughtDef>
+</Defs>

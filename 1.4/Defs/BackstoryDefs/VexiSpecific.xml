@@ -1,0 +1,695 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!-- dIl_VexiSpecies_ -->
+<TraitDef>
+  <defName>VexineNerves</defName>
+  <commonality>2</commonality>
+  <degreeDatas>
+    <li>
+      <label>iron-willed</label>
+      <description>[PAWN_nameDef]'s will is an iron shield. [PAWN_pronoun] keeps going through thick and thin, when others broke down long before.</description>
+      <degree>2</degree>
+      <statOffsets>
+        <!-- debuff because already significant buff -->
+        <MentalBreakThreshold>-0.15</MentalBreakThreshold>
+      </statOffsets>
+      <statFactors>
+        <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.25</CertaintyLossFactor>
+      </statFactors>
+    </li>
+    <li>
+      <label>steadfast</label>
+      <description>[PAWN_nameDef] is mentally tough and won't break down under stresses that would crack most people.</description>
+      <degree>1</degree>
+      <statOffsets>
+          <!-- debuff because already significant buff -->
+        <MentalBreakThreshold>-0.07</MentalBreakThreshold>
+      </statOffsets>
+      <statFactors>
+        <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
+      </statFactors>
+    </li>
+    <li>
+      <label>nervous</label>
+      <description>[PAWN_nameDef] tends to crack under pressure.</description>
+      <degree>-1</degree>
+      <statOffsets>
+          <!-- debuff because they are already harder to break by -0.15 -->
+        <MentalBreakThreshold>0.1</MentalBreakThreshold>
+      </statOffsets>
+      <statFactors>
+        <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">2</CertaintyLossFactor>
+      </statFactors>
+    </li>
+    <li>
+      <label>volatile</label>
+      <description>[PAWN_nameDef] is on a hair-trigger all the time. [PAWN_pronoun] is the first to break in any tough situation.</description>
+      <degree>-2</degree>
+      <statOffsets>
+        <MentalBreakThreshold>0.25</MentalBreakThreshold>
+      </statOffsets>
+      <statFactors>
+        <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">3</CertaintyLossFactor>
+      </statFactors>
+    </li>
+  </degreeDatas>
+  <conflictingTraits>
+    <li>TooSmart</li>
+    <li>Nerves</li>
+    <li>SlowLearner</li>
+  </conflictingTraits>
+  </TraitDef>
+  <TraitDef>
+      <defName>VexineTooSmart</defName>
+      <degreeDatas>
+        <li>
+          <label>too smart</label>
+          <description>{PAWN_nameDef} is said to have seen too much for {PAWN_possessive} own good. {PAWN_pronoun} learns everything quickly and is usually disappointed with what they learn.</description>
+          <statOffsets>
+            <GlobalLearningFactor>0.80</GlobalLearningFactor>
+            <MentalBreakThreshold>0.18</MentalBreakThreshold>
+          </statOffsets>
+          <statFactors>
+            <CertaintyLossFactor MayRequire="Ludeon.RimWorld.Ideology">0.5</CertaintyLossFactor>
+          </statFactors>
+        </li>
+      </degreeDatas>
+      <requiredWorkTags>
+        <li>Intellectual</li>
+      </requiredWorkTags>
+    </TraitDef>
+  <BackstoryDef>
+    <defName>NaturalScientist00</defName>
+    <title>natural scientist</title>
+    <titleShort>scientist</titleShort>
+    <baseDesc>[PAWN_nameDef] is fairly well known to those who have access to research journals which on the Rim amounts to practically no one. [PAWN_pronoun] never made tenure and when things got dire shipped out to the first RimWorld they could to continue overturning leaves to look at slugs.</baseDesc>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <key>Intellectual</key>
+        <value>8</value>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Offworld</li>
+      <li>Scientist</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <workDisables>
+      <li>ManualDumb</li>
+    </workDisables>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>NaturalScientist01</defName>
+    <title>natural scientist</title>
+    <titleShort>scientist</titleShort>
+    <baseDesc>[PAWN_nameDef] watched others fail in their attempts to establish themselves as scientists through a university education. [PAWN_pronoun] wasn't fooled and now knows more about mushrooms than anyone and has all day to think about political theory.</baseDesc>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li>
+        <key>Intellectual</key>
+        <value>8</value>
+      </li>
+    </skillGains>
+    <spawnCategories>
+      <li>Scientist</li>
+      <li>OffworldVexi</li>
+      <li>Hunter</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>NaturalScientist02</defName>
+    <title>natural scientist</title>
+    <titleShort>scientist</titleShort>
+    <baseDesc>No one expected [PAWN_nameDef] to amount to anything. Then [PAWN_pronoun] said something astounding and others began to listen. [PAWN_nameDef] watched [PAWN_possessive] credibility increase with fame. Then tragedy struck as a ship was split in two over a RimWorld, proving [PAWN_possessive] modifications unsafe. [PAWN_pronoun] knew [PAWN_possessive] time was up changed fields and identity. That didn't work out either.</baseDesc>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li><key>Intellectual</key><value>6</value></li>
+      <li><key>Shooting</key><value>2</value></li>
+      <li><key>Crafting</key><value>-3</value></li>
+    </skillGains>
+    <spawnCategories>
+      <li>PirateVexi</li>
+      <li>OutlanderRoughVexi</li>
+      <li>OffworldVexi</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+    <forcedTraits>
+      <VexineTooSmart>0</VexineTooSmart>
+    </forcedTraits>
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>NaturalScientist03</defName>
+    <title>site supervisor</title>
+    <titleShort>supervisor</titleShort>
+    <baseDesc>[PAWN_nameDef] was seen as certain to be the next site supervisor of an important shipyard, when unexpectedly their contract was terminated and they were given a ticket anywhere. Unfortunately there was only one outbound ship leaving and many people trying to board it. [PAWN_possessive] sleep is alwayed troubled now.</baseDesc>
+    <slot>Adulthood</slot>
+    <skillGains>
+      <li><key>Intellectual</key><value>4</value></li>
+      <li><key>Social</key><value>2</value></li>
+      <li><key>Construction</key><value>2</value></li>
+    </skillGains>
+    <spawnCategories>
+      <li>OutlanderRoughVexi</li>
+      <li>OffworldVexi</li>
+      <li>OutlanderRoughVexi</li>
+      <li>Scientist</li>
+      <li>Madman</li>
+    </spawnCategories>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <bodyTypeFemale>Female</bodyTypeFemale>
+    <requiredWorkTags>
+      <li>Intellectual</li>
+    </requiredWorkTags>
+
+  </BackstoryDef>
+
+  <BackstoryDef>
+    <defName>PitFighter7001</defName>
+    <ignoreIllegalLabelCharacterConfigError>False</ignoreIllegalLabelCharacterConfigError>
+    <identifier>PitFighter01</identifier>
+    <slot>Adulthood</slot>
+    <title>pit fighter</title>
+    <titleShort>fighter</titleShort>
+    <baseDesc>While they may not have planned [PAWN_pronoun] their life around pit-fighting, [PAWN_nameDef] survived a long time. [PAWN_pronoun] life since those days has changed very little except for the kind of enemies.</baseDesc>
+    <skillGains>
+      <li>
+        <key>Intellectual</key>
+        <value>2</value>
+      </li>
+      <li>
+        <key>Shooting</key>
+        <value>5</value>
+      </li>
+      <li>
+        <key>Social</key>
+        <value>-1</value>
+      </li>
+      <li>
+        <key>Crafting</key>
+        <value>3</value>
+      </li>
+    </skillGains>
+    <workDisables>Caring, Artistic, PlantWork, Mining</workDisables>
+    <requiredWorkTags>None</requiredWorkTags>
+    <spawnCategories>
+      <li>Pirate</li>
+      <li>Offworld</li>
+      <li>OutlanderRoughVexi</li>
+      <li>Madman</li>
+    </spawnCategories>
+    <bodyTypeGlobal>Male</bodyTypeGlobal>
+    <bodyTypeFemale>Male</bodyTypeFemale>
+    <bodyTypeMale>Male</bodyTypeMale>
+    <forcedTraits>
+      <Brawler>0</Brawler>
+      <VexineNerves>2</VexineNerves>
+    </forcedTraits>
+    <shuffleable>False</shuffleable>
+  </BackstoryDef>
+
+
+    <!-- bits for type definition
+      malnourished ==1,
+      impoverished == 2,
+      unhealthy == 4,
+      hardened == 8,
+      transgressive == 16,
+      migrator == 32,
+
+    -->
+    <BackstoryDef>
+      <defName>Policeman845</defName>
+      <title>policeman</title>
+      <titleShort>policeman</titleShort>
+      <titleFemale>policewoman</titleFemale>
+      <titleShortFemale>policewoman</titleShortFemale>
+      <slot>Adulthood</slot>
+      <bodyTypeMale>Male</bodyTypeMale>
+      <bodyTypeFemale>Female</bodyTypeFemale>
+      <baseDesc>[PAWN_nameDef] kept the peace as a civil guard in a rough settlement constantly havng to deal with drunken outlanders.
+    \n[PAWN_pronoun] was trained in de-escalation and peacekeeping best practices..</baseDesc>
+      <spawnCategories>
+        <li>OutlanderRoughVexi</li>
+        <li>OutlanderCivilVexi</li>
+        <li>PirateVexi</li>
+      </spawnCategories>
+      <skillGains>
+        <li><key>Social</key><value>3</value></li>
+        <li><key>Shooting</key><value>4</value></li>
+        <li><key>Melee</key><value>3</value></li>
+      </skillGains>
+      <requiredWorkTags>
+        <li>Social</li>
+        <li>Violent</li>
+      </requiredWorkTags>
+
+    </BackstoryDef>
+
+    <BackstoryDef>
+      <defName>Chef7052</defName>
+      <title>chef</title>
+      <titleShort>chef</titleShort>
+      <baseDesc>[PAWN_nameDef] once ran a high-class restaurant. [PAWN_pronoun] is said to have gotten in too deep with certain shady patrons of [PAWN_possessive] culturally-themed restaurant. [PAWN_possessive] disdain for certain kind of jobs made others say he didn't want to get his hands dirty.</baseDesc>
+      <slot>Adulthood</slot>
+      <workDisables>
+        <li>Cleaning</li>
+        <li>ManualDumb</li>
+      </workDisables>
+      <requiredWorkTags>
+        <li>Cooking</li>
+      </requiredWorkTags>
+      <skillGains>
+        <li><key>Cooking</key><value>6</value></li>
+        <li><key>Social</key><value>2</value></li>
+      </skillGains>
+      <spawnCategories>
+        <li>OutlanderRoughVexi</li>
+        <li>OutlanderCivilVexi</li>
+        <li>PirateVexi</li>
+      </spawnCategories>
+      <bodyTypeMale>Male</bodyTypeMale>
+      <bodyTypeFemale>Female</bodyTypeFemale>
+      <possessions>
+        <li>
+          <key>MealFine</key>
+          <value>3</value>
+        </li>
+      </possessions>
+    </BackstoryDef>
+
+    <BackstoryDef>
+      <defName>LowWageWorker7008</defName>
+      <title>low-wage worker</title>
+      <titleShort>grunt</titleShort>
+      <baseDesc>[PAWN_nameDef] was sent as a contract worker to pay of the debts of [PAWN_possessive] family. Through constantly changing tasks [PAWN_nameDef] learned a diverse set of skills.</baseDesc>
+      <slot>Adulthood</slot>
+      <requiredWorkTags>
+        <li>ManualDumb</li>
+        <li>Cleaning</li>
+      </requiredWorkTags>
+      <skillGains>
+        <li><key>Cooking</key><value>4</value></li>
+        <li><key>Plants</key><value>3</value></li>
+        <li><key>Crafting</key><value>3</value></li>
+      </skillGains>
+        <spawnCategories>
+          <li>OutlanderRoughVexi</li>
+          <li>OutlanderCivilVexi</li>
+          <li>PirateVexi</li>
+        </spawnCategories>
+      <bodyTypeMale>Male</bodyTypeMale>
+      <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+
+    <BackstoryDef>
+      <defName>Evangelist7039</defName>
+      <title>evangelist</title>
+      <titleShort>evangelist</titleShort>
+      <baseDesc>As a youth, [PAWN_nameDef] experienced a religious awakening. [PAWN_pronoun] decided to spend the rest of [PAWN_possessive] life spreading the word of [PAWN_possessive] deity, the beauty of its culture, and its unusual medical tradition.</baseDesc>
+      <slot>Adulthood</slot>
+      <requiredWorkTags>
+        <li>Social</li>
+        <li>Caring</li>
+      </requiredWorkTags>
+      <skillGains>
+        <li><key>Social</key><value>4</value></li>
+        <li><key>Artistic</key><value>4</value></li>
+        <li><key>Medicine</key><value>-3</value></li>
+      </skillGains>
+      <spawnCategories>
+        <li>OutlanderRoughVexi</li>
+        <li>OutlanderCivilVexi</li>
+        <li>PirateVexi</li>
+      </spawnCategories>
+      <bodyTypeMale>Male</bodyTypeMale>
+      <bodyTypeFemale>Female</bodyTypeFemale>
+    </BackstoryDef>
+    <BackstoryDef>
+      <!-- Added this to ensure that archeology is a thing among all Vexi factions except Civil. Less Construction
+          to account for less actual work, more social more bored crafting like all Vexi -->
+      <defName>Archaeologist7085</defName>
+      <ignoreIllegalLabelCharacterConfigError>False</ignoreIllegalLabelCharacterConfigError>
+      <identifier>Archaeologist7085</identifier>
+      <slot>Adulthood</slot>
+      <title>archaeologist</title>
+      <titleShort>explorer</titleShort>
+      <baseDesc>[PAWN_pronoun] was trapped in an uninspired life. One day, [PAWN_pronoun] jumped on a ship to learn archaeology and see the universe. [PAWN_pronoun] learned how to survive. [PAWN_pronoun] also learned about people - although [PAWN_pronoun] understood the dead better than the living.</baseDesc>
+      <skillGains>
+        <li>
+          <key>Construction</key>
+          <value>3</value>
+        </li>
+        <li>
+          <key>Intellectual</key>
+          <value>6</value>
+        </li>
+        <li>
+          <key>Shooting</key>
+          <value>2</value>
+        </li>
+        <li>
+          <key>Social</key>
+          <value>-3</value>
+        </li>
+        <li>
+          <key>Crafting</key>
+          <value>3</value>
+        </li>
+      </skillGains>
+      <workDisables>None</workDisables>
+      <requiredWorkTags>None</requiredWorkTags>
+      <spawnCategories>
+        <li>OutlanderRoughVexi</li>
+        <li>OutlanderCivilVexi</li>
+        <li>PirateVexi</li>
+      </spawnCategories>
+      <bodyTypeGlobal>Male</bodyTypeGlobal>
+      <bodyTypeFemale>Male</bodyTypeFemale>
+      <bodyTypeMale>Male</bodyTypeMale>
+      <shuffleable>False</shuffleable>
+    </BackstoryDef>
+    <!-- from here -->
+      <BackstoryDef>
+        <defName>Inventor7006</defName>
+        <title>inventor</title>
+        <titleShort>inventor</titleShort>
+        <baseDesc>On [PAWN_possessive] homeworld, [PAWN_nameDef] worked as a moderately successful inventor. [PAWN_pronoun] developed several minor technologies.</baseDesc>
+        <slot>Adulthood</slot>
+        <requiredWorkTags>
+          <li>Intellectual</li>
+          <li>Crafting</li>
+        </requiredWorkTags>
+        <skillGains>
+          <li><key>Crafting</key><value>5</value></li>
+          <li><key>Intellectual</key><value>2</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>OutlanderRoughVexi</li>
+          <li>OutlanderCivilVexi</li>
+          <li>PirateVexi</li>
+        </spawnCategories>
+        <bodyTypeMale>Thin</bodyTypeMale>
+        <bodyTypeFemale>Thin</bodyTypeFemale>
+      </BackstoryDef>
+
+      <!-- Backstory Oppressed -->
+      <BackstoryDef>
+        <defName>Teacher7020</defName>
+        <title>teacher</title>
+        <titleShort>teacher</titleShort>
+        <baseDesc>[PAWN_nameDef] received an education in the classics of the Literature of the Rim. [PAWN_pronoun] was widely known and much-missed by [PAWN_possessive] students of Cultural Xenology when they were suddenly bagged by trappers.</baseDesc>
+        <slot>Adulthood</slot>
+        <requiredWorkTags>
+          <li>Intellectual</li>
+          <li>Social</li>
+        </requiredWorkTags>
+        <skillGains>
+          <li><key>Intellectual</key><value>3</value></li>
+          <li><key>Social</key><value>4</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>OutlanderRoughVexi</li>
+          <li>OutlanderCivilVexi</li>
+          <li>PirateVexi</li>
+        </spawnCategories>
+        <forcedTraits>
+          <VexineTooSmart>0</VexineTooSmart>
+        </forcedTraits>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+      <BackstoryDef>
+        <defName>MedievalMinstrel7095</defName>
+        <title>vagabond musician</title>
+        <titleShort>vagabond musician</titleShort>
+        <baseDesc>[PAWN_nameDef] comes from a family who have always played music, it appears. [PAWN_pronoun] has extensively travelled and now fallen upon hard times must make [PAWN_possessive] way as a vagabond performer.</baseDesc>
+        <slot>Adulthood</slot>
+        <workDisables>
+          <li>ManualSkilled</li>
+          <li>Hauling</li>
+        </workDisables>
+        <skillGains>
+          <li><key>Intellectual</key><value>3</value></li>
+          <li><key>Social</key><value>4</value></li>
+          <li><key>Artistic</key><value>3</value></li>
+          <li><key>Shooting</key><value>2</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>OutlanderRoughVexi</li>
+          <li>OutlanderCivilVexi</li>
+          <li>PirateVexi</li>
+        </spawnCategories>
+        <forcedTraits>
+          <VexineTooSmart>0</VexineTooSmart>
+        </forcedTraits>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+
+
+      <BackstoryDef>
+        <defName>CivilServant7002</defName>
+        <title>civil servant</title>
+        <titleShort>bureaucrat</titleShort>
+        <baseDesc>[PAWN_nameDef] worked as a mid-level bureaucrat for an insignificant government agency when a strange stack of papers showed up on his desk. [PAWN_pronoun] is known to sleep with their sidearm and awake shooting.</baseDesc>
+        <slot>Adulthood</slot>
+        <skillGains>
+          <li><key>Social</key><value>3</value></li>
+          <li><key>Intellectual</key><value>3</value></li>
+          <li><key>Construction</key><value>1</value></li>
+          <li><key>Shooting</key><value>3</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>OffworldVexi</li>
+          <li>PirateVexi</li>
+          <li>OutlanderRoughVexi</li>
+          <li>ImperialCommon</li>
+        </spawnCategories>
+        <forcedTraits>
+          <VexineNerves>2</VexineNerves>
+        </forcedTraits>
+        <possessions>
+          <li>
+            <key>Gun_Autopistol</key>
+            <value>1</value>
+          </li>
+        </possessions>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+      <BackstoryDef>
+        <defName>Nurse7061</defName>
+        <title>nurse</title>
+        <titleShort>nurse</titleShort>
+        <baseDesc>[PAWN_nameDef] worked as a nurse, doing routine work such as changing bandages and taking temperatures.\n\nIt was a busy job, but [PAWN_pronoun] could always find time for a chat with a patient.</baseDesc>
+        <slot>Adulthood</slot>
+        <workDisables>
+          <li>Violent</li>
+        </workDisables>
+        <requiredWorkTags>
+          <li>Caring</li>
+        </requiredWorkTags>
+        <skillGains>
+          <li><key>Social</key><value>4</value></li>
+          <li><key>Medicine</key><value>5</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>OffworldVexi</li>
+          <li>OutlanderVexi</li>
+          <li>ImperialCommon</li>
+          <li>Scientist</li>
+        </spawnCategories>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+      <BackstoryDef>
+        <defName>Nurse7063</defName>
+        <title>nurse</title>
+        <titleShort>nurse</titleShort>
+        <baseDesc>[PAWN_nameDef] worked as a nurse in an underfunded and understaffed hospital, serving a population that had been displaced by economic or political factors. Despite the challenges, [PAWN_pronoun] found fulfillment in being able to provide even basic care to those in need.</baseDesc>
+        <slot>Adulthood</slot>
+        <workDisables>
+          <li>Violent</li>
+        </workDisables>
+        <requiredWorkTags>
+          <li>Caring</li>
+        </requiredWorkTags>
+        <skillGains>
+          <li><key>Social</key><value>4</value></li>
+          <li><key>Medicine</key><value>5</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>OffworldVexi</li>
+          <li>OutlanderVexi</li>
+          <li>ImperialCommon</li>
+        </spawnCategories>
+        <forcedTraits>
+          <VexineNerves>-2</VexineNerves>
+        </forcedTraits>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+
+      <BackstoryDef>
+        <defName>EscapedConvict7090</defName>
+        <title>escaped convict</title>
+        <titleShort>escapee</titleShort>
+        <baseDesc>[PAWN_nameDef] is unable to explain the evidence used to guarantee [PAWN_possessive] incarceration in a brutal penal colony of [PAWN_xenotype]. [PAWN_pronoun] clawed their way throw solid rock to escape.</baseDesc>
+        <slot>Adulthood</slot>
+        <workDisables>
+          <li>Caring</li>
+        </workDisables>
+        <requiredWorkTags>
+          <li>Violent</li>
+        </requiredWorkTags>
+        <skillGains>
+          <li><key>Mining</key><value>4</value></li>
+          <li><key>Crafting</key><value>2</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>OffworldVexi</li>
+          <li>OutlanderVexi</li>
+          <li>Miner</li>
+        </spawnCategories>
+        <possessions>
+          <li>
+            <key>Gun_Autopistol</key>
+            <value>1</value>
+          </li>
+        </possessions>
+        <forcedTraits>
+          <VexineNerves>-2</VexineNerves>
+        </forcedTraits>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+      <BackstoryDef>
+        <defName>HouseServant7063</defName>
+        <title>house servant</title>
+        <titleShort>servant</titleShort>
+        <baseDesc>[PAWN_nameDef] was forced to work by wealthy homeowners who believed they could order them to do anything they like.\n\n[PAWN_pronoun] got to know the kitchens and basements of [PAWN_possessive] master's mansion well, and secretely began a resistance cell.</baseDesc>
+        <slot>Adulthood</slot>
+        <workDisables>
+          <li>Intellectual</li>
+        </workDisables>
+        <requiredWorkTags>
+          <li>ManualDumb</li>
+          <li>Cleaning</li>
+        </requiredWorkTags>
+        <skillGains>
+          <li><key>Cooking</key><value>4</value></li>
+          <li><key>Plants</key><value>-3</value></li>
+          <li><key>Mining</key><value>-3</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>OffworldVexi</li>
+          <li>OutlanderRoughVexi</li>
+          <li>ImperialCommon</li>
+        </spawnCategories>
+        <forcedTraits>
+          <VexineNerves>-2</VexineNerves>
+        </forcedTraits>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+      <BackstoryDef>
+        <defName>Drifter7067</defName>
+        <title>drifter</title>
+        <titleShort>drifter</titleShort>
+        <baseDesc>[PAWN_nameDef] never figured out what to do with [PAWN_possessive] life. [PAWN_pronoun] travelled often, taking up casual work wherever [PAWN_pronoun] found it.\n\n[PAWN_pronoun] also occasionally worked on a novel that [PAWN_pronoun] knew would be a bestseller - just as soon as [PAWN_pronoun] could find a publisher who was interested.</baseDesc>
+        <slot>Adulthood</slot>
+        <skillGains>
+          <li><key>Cooking</key><value>3</value></li>
+          <li><key>Construction</key><value>3</value></li>
+          <li><key>Artistic</key><value>-4</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>OffworldVexi</li>
+          <li>OutlanderRoughVexi</li>
+          <li>PirateVexi</li>
+        </spawnCategories>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+      <BackstoryDef>
+        <defName>Hunter7089</defName>
+        <title>hunter</title>
+        <titleShort>hunter</titleShort>
+        <baseDesc>[PAWN_nameDef] hunted wild animals to help feed [PAWN_possessive] community. Their success as a hunter led the authorities to see [PAWN_objective] as a supporter of resitance.</baseDesc>
+        <slot>Adulthood</slot>
+        <requiredWorkTags>
+          <li>Violent</li>
+          <li>Animals</li>
+        </requiredWorkTags>
+        <skillGains>
+          <li><key>Animals</key><value>3</value><key>Shooting</key><value>5</value></li>
+        </skillGains>
+        <spawnCategories>
+          <li>Offworld</li>
+          <li>OutlanderVexi</li>
+          <li>PirateVexi</li>
+          <li>Hunter</li>
+        </spawnCategories>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+      <BackstoryDef>
+        <defName>CropFarmer7017</defName>
+        <title>crop farmer</title>
+        <titleShort>farmer</titleShort>
+        <baseDesc>[PAWN_nameDef] worked at a large agricultural facility. [PAWN_pronoun] analyzed soil and found evidence the authorities desperately wanted suppressed.</baseDesc>
+        <slot>Adulthood</slot>
+        <spawnCategories>
+          <li>PirateVexi</li>
+          <li>OffworldVexi</li>
+    	    <li>Farmer</li>
+        </spawnCategories>
+        <skillGains>
+          <li><key>Plants</key><value>8</value></li>
+          <li><key>Shooting</key><value>8</value></li>
+        </skillGains>
+        <requiredWorkTags>
+          <li>PlantWork</li>
+        </requiredWorkTags>
+        <possessions>
+          <li>
+            <key>Gun_Autopistol</key>
+            <value>1</value>
+          </li>
+        </possessions>
+        <forcedTraits>
+          <VexineNerves>1</VexineNerves>
+        </forcedTraits>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Female</bodyTypeFemale>
+      </BackstoryDef>
+
+
+</Defs>

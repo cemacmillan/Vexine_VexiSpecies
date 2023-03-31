@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<!--
+<IncidentDef>
+  <defName>FleaInfestationNot</defName>
+  <diseaseType>FleaInfestation</diseaseType>
+  <hediff>FleaInfestation</hediff>
+  <chanceFactor>0.1</chanceFactor>
+  <workerClass>IncidentWorker_Disease</workerClass>
+</IncidentDef>
+
+
+<IncidentDef ParentName="DiseaseIncident">
+  <defName>FleaInfestation</defName>
+  <label>flea infestation</label>
+  <diseaseIncident>FleaInfestation</diseaseIncident>
+  <letterLabel>Disease Flea Infestation!</letterLabel>
+</IncidentDef>
+
+-->
+
+</Defs>

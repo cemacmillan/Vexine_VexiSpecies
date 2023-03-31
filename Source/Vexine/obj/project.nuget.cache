@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "tNWd694grGUSJo40qXQEzlZyFRcq7Mtv5sn5T+BMym1qwOspA/6d8ZK7r1HZTSAa4meFyID+k3AbvEjqi0mHUQ==",
+  "success": true,
+  "projectFilePath": "/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/VexiSpecies.csproj",
+  "expectedPackageFiles": [
+    "/Users/cem/.nuget/packages/krafs.rimworld.ref/1.4.3580/krafs.rimworld.ref.1.4.3580.nupkg.sha512",
+    "/Users/cem/.nuget/packages/lib.harmony/2.2.2/lib.harmony.2.2.2.nupkg.sha512"
+  ],
+  "logs": []
+}

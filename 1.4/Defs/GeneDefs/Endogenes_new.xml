@@ -1,0 +1,76 @@
+<GeneDef ParentName="GeneTailBase" Name="dIl_Vexi_TailBase" Abstract="true">
+    <description>This gene codes for a thick tail often compared to that of a fox. It is included in certain patented gene types and is illegal to trade in certain jurisdictions.</description>
+    <iconPath>ui/Xenotypes/VexiSp</iconPath>
+    <iconColor>(0.35, 0.15, 0.35)</iconColor>
+    <displayOrderInCategory>138</displayOrderInCategory>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>0.15</offset>
+      </li>
+    </capMods>
+    <statOffsets>
+      <MoveSpeed>0.1</MoveSpeed>
+    </statOffsets>
+    <biostatCpx>1</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <graphicData>
+      <graphicPath>vexi/tail/leeani</graphicPath>
+      <colorType>Hair</colorType>
+      <drawLoc>Tailbone</drawLoc>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <exclusionTags>
+      <li>Tail</li>
+    </exclusionTags>
+    <randomBrightnessFactor>0.15</randomBrightnessFactor>
+  </GeneDef>
+  
+  <GeneDef ParentName="dIl_Vexi_TailBase" Name="dIl_Vexi_TailDgr">
+    <description>A thick and bushy tail, typical of the Vexi species.</description>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <graphicData>
+      <graphicPath>vexi/tail/vexine</graphicPath>
+      <colorType>Hair</colorType>
+      <drawOffsetNorth>(0.1, 0.2, -0.25)</drawOffsetNorth>
+      <drawOffsetSouth>(-0.1, -0.1, -0.25)</drawOffsetSouth>
+      <drawOffsetEast>(-0.5, -0.1, -0.15)</drawOffsetEast>
+      <drawLoc>Tailbone</drawLoc>
+      <drawSize>1.0</drawSize>
+    </graphicData>
+    <randomChosen>true</randomChosen>
+    <selectionWeight>0.05</selectionWeight>
+  </GeneDef>
+  
+  <GeneDef ParentName="dIl_Vexi_TailBase">
+    <defName>dIl_Vexi_TailVexine</defName>
+    <label>Vexine tail</label>
+    <description>A long, bushy tail with a pointed tip, resembling that of a fox.</description>
+    <iconPath>Things/Item/BodyParts/TailDgr</iconPath>
+    <iconColor>(0.75, 0.75, 0.75)</iconColor>
+    <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+    <capMods>
+      <li>
+        <capacity>Manipulation</capacity>
+        <offset>0.15</offset>
+      </li>
+    </capMods>
+    <statOffsets>
+      <MoveSpeed>0.1</MoveSpeed>
+    </statOffsets>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <graphicData>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <texPath>vexi/tail/dgr</texPath>
+      <drawSize>2</drawSize>
+      <drawOffsetNorth>(0, 0.00, 0)</drawOffsetNorth>
+      <drawOffsetSouth>(0, 0.00, -0.10)</drawOffsetSouth>
+      <drawOffsetEast>(0, 0.25, -0.15)</drawOffsetEast>
+    </graphicData>
+    <exclusionTags>
+      <li>dIl_Vexi_TailVexine</li>
+    </exclusionTags>
+    <randomBrightnessFactor>0.15</randomBrightnessFactor>
+  </GeneDef>

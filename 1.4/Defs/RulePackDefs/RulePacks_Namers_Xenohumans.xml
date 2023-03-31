@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+
+  <RulePackDef>
+    <defName>NamerPersonVexine</defName>
+    <rulePack>
+      <rulesStrings>
+        <li>r_name->[firstName] [lastName]</li>
+        <li>r_name->[firstName] '[nickName]' [lastName]</li>
+
+        <li>maybeHyphen(p=4)-></li>
+        <li>maybeHyphen->-</li>
+
+        <li>firstName(p=1)->[SylP][nameEnd]</li>
+        <li>firstName(p=3)->[SylP][nameEnd]</li>
+
+        <li>nickName->[nicknameVexi]</li>
+
+        <li>lastName(p=3)->[lastGenerated]</li>
+        <li>lastGenerated->[SylP][nameEnd]</li>
+        <li>lastGenerated->[SylP][maybeHyphen][SylP][nameEnd]</li>
+
+        <li>nameEnd(p=3)->gal</li>
+        <li>nameEnd->esh</li>
+        <li>nameEnd->ott</li>
+        <li>nameEnd->ash</li>
+        <li>nameEnd->on</li>
+        <li>nameEnd->rik</li>
+        <li>nameEnd->eresh</li>
+        <li>nameEnd->ur</li>
+        <li>nameEnd->yon</li>
+        <li>nameEnd->an</li>
+        <li>nameEnd->ul</li>
+        <li>nameEnd->ya</li>
+        <li>nameEnd->cha</li>
+        <li>nameEnd->tcha</li>
+        <li>nameEnd->nin</li>
+
+      </rulesStrings>
+      <rulesFiles>
+        <li>SylP->WordParts/Syllables_Vexi</li>
+        <li>nicknameVexi->Names/Nick_Unisex_Animal</li>
+      </rulesFiles>
+    </rulePack>
+  </RulePackDef>
+
+
+</Defs>
