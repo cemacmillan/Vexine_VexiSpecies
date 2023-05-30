@@ -1,4 +1,4 @@
-﻿using RimWorld;
+using RimWorld;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +20,10 @@ namespace Vexine
         public static XenotypeDef Vexi;
 
         public static ThoughtDef dIl_SkulkSenseThought;
+        
+    
         /*
+        -- moved to DarkStory  
         public static ThoughtDef Pragmatism_AnimalMassPerCapita;
         */
 

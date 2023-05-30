@@ -1,0 +1,374 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"project",
+				"project_id"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"condens",
+				"condensedWordCounts"
+			],
+			[
+				"get",
+				"getTopWords"
+			],
+			[
+				"consol",
+				"console.log"
+			],
+			[
+				"di",
+				"dIl_Vexi_TailVexine"
+			],
+			[
+				"conso",
+				"console.log"
+			],
+			[
+				"draw",
+				"drawOffsetSouth"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"prett",
+				"Preferences: Settings"
+			],
+			[
+				"vue",
+				"VUEFormatter"
+			],
+			[
+				"pretti",
+				"HTMLPrettify"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"Term",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"te",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"",
+				"Build: New Build System"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/cem/projects/WSpace/server/app.js",
+		"/Users/cem/projects/WSpace/server/controllers/projectController.js",
+		"/Users/cem/projects/WSpace/server/migrations/20230401144708-add_username_to_users.js",
+		"/Users/cem/projects/WSpace/frontend/src/components/CreateProject.vue",
+		"/Users/cem/projects/WSpace/frontend/src/components/UserRegister.vue",
+		"/Users/cem/projects/WSpace/server/models/User.js",
+		"/Users/cem/projects/WSpace/frontend/src/components/HeaderComp.vue",
+		"/Users/cem/projects/WSpace/frontend/src/routes/index.js",
+		"/Users/cem/projects/WSpace/frontend/src/api.js",
+		"/Users/cem/projects/WSpace/server/routes/userRoutes.js",
+		"/Users/cem/projects/WSpace/Documents/ProjectsImplementation.md",
+		"/Users/cem/projects/WSpace/frontend/src/components/IssueList.vue",
+		"/Users/cem/projects/WSpace/server/routes/projectRoutes.js",
+		"/Users/cem/projects/WSpace/frontend/src/App.vue",
+		"/Users/cem/projects/WSpace/frontend/src/components/ProjectCreate.vue",
+		"/Users/cem/projects/WSpace/frontend/src/components/ProjectList.vue",
+		"/Users/cem/projects/WSpace/frontend/src/components/IssueItem.vue",
+		"/Users/cem/projects/WSpace/frontend/src/components/projectCreate.vue",
+		"/Users/cem/projects/WSpace/server/models/Issue.js",
+		"/Users/cem/projects/WSpace/server/routes/authRoutes.js",
+		"/Users/cem/projects/WSpace/frontend/src/components/IssueCreate.vue",
+		"/Users/cem/projects/WSpace/server/controllers/issueController.js",
+		"/Users/cem/projects/WSpace/server/migrations/20230330065825-add-owner-and-namespace-to-project.js",
+		"/Users/cem/projects/WSpace/server/migrations/20230329211513-create-project-table.js",
+		"/Users/cem/projects/WSpace/server/migrations/20230330063214-add-description-to-issue.js",
+		"/Users/cem/projects/WSpace/server/migrations/20230330064053-add-description-to-project.js",
+		"/Users/cem/projects/WSpace/server/migrations/20230330070252-add-ownerid-namespace-to-project.js",
+		"/Users/cem/projects/WSpace/server/models/Project.js",
+		"/Users/cem/projects/WSpace/server/migrations/20230330065433-add-status-to-project.js",
+		"/Users/cem/projects/WSpace/server/migrations/20230329212702-create-Project.js",
+		"/Users/cem/projects/WSpace/server/migrations/20230329210919-add-project-id-to-issue.js",
+		"/Users/cem/projects/WSpace/server/config/config.json",
+		"/Users/cem/projects/WSpace/server/config/database.js",
+		"/Users/cem/projects/WSpace/server/models/Document.js",
+		"/Users/cem/projects/WSpace/server/models/WCD.js",
+		"/Users/cem/projects/WSpace/server/models/index.js",
+		"/Users/cem/projects/WSpace/frontend/src/components/LoginPage.vue",
+		"/Users/cem/projects/WSpace/Documents/Implementing EntityAnimate.md",
+		"/Users/cem/projects/WSpace/frontend/src/main.js",
+		"/Users/cem/projects/WSpace/server/routes/documentRoutes.js",
+		"/Users/cem/projects/WSpace/frontend/src/components/Documents.vue",
+		"/Users/cem/projects/WSpace/frontend/src/components/Login.vue",
+		"/Users/cem/projects/WSpace/server/routes/index.js",
+		"/Users/cem/projects/WSpace/server/package.json",
+		"/Users/cem/projects/WSpace/frontend/src/__App.vue",
+		"/Users/cem/projects/WSpace/frontend/src/components/App.vue",
+		"/Users/cem/projects/WSpace/frontend/src/components/issueItem.vue",
+		"/Users/cem/projects/WSpace/Documents/GUI: Work Plan.md",
+		"/Users/cem/projects/WSpace/server/controllers/documentController.js",
+		"/Users/cem/projects/WSpace/Documents/Filed: Search",
+		"/Users/cem/projects/WSpace/server/routes/wcdRoutes.js",
+		"/Users/cem/projects/WSpace/server/routes/issueRoutes.js",
+		"/Users/cem/projects/WSpace/Documents/Security Todo.md",
+		"/Users/cem/projects/WSpace/server/middleware/authMiddleware.js",
+		"/Users/cem/projects/WSpace/server/middleware/errorHandler.js",
+		"/Users/cem/projects/WSpace/src/lib/spatiomundi.js",
+		"/Users/cem/projects/WSpace/server/controllers/wcdController.js",
+		"/Users/cem/projects/Animalitor/About/AboutNew.xml",
+		"/Users/cem/projects/WSpace/server/constants.js",
+		"/Users/cem/projects/WSpace/server/models/user.js",
+		"/Users/cem/projects/WSpace/server/index.js",
+		"/Users/cem/projects/WSpace/server/routes/auth.js",
+		"/Users/cem/projects/WSpace/server/src/models/user.js",
+		"/Users/cem/projects/WSpace/server/src/routes/auth.js",
+		"/Users/cem/projects/WSpace/server/main.js",
+		"/Users/cem/projects/WSpace/server/routes/const express = require('express');.js",
+		"/Users/cem/projects/WSpace/Documents/Project Description.md",
+		"/Users/cem/projects/WSpace/Documents/Example Formats.md",
+		"/Users/cem/projects/spatiomundi/front-end/src/App.vue",
+		"/Users/cem/projects/spatiomundi/front-end/src/services/apiService.js",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/components/TreeView.vue",
+		"/Users/cem/projects/worldspacegen/backend/app.js",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/components/IndexView.vue",
+		"/Users/cem/projects/worldspacegen/src/services/apiService.js",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/App.vue",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/components/AboutView.vue",
+		"/Users/cem/projects/worldspacegen/backend/routes/centralIssues.js",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/router/index.js",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/components/Home.vue",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/components/About.vue",
+		"/Users/cem/projects/worldspacegen/src/lib/spatiomundi.js",
+		"/Users/cem/projects/worldspacegen/backend/models/dataStore.js",
+		"/Users/cem/projects/worldspacegen/backend/routes/localIssues.js",
+		"/Users/cem/projects/worldspacegen/backend/routes/issues.js",
+		"/Users/cem/projects/worldspacegen/backend/getAllWCDNetworks.js",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/services/apiService.js",
+		"/Users/cem/projects/worldspacegen/backend/models/Certainly! Here's a plan that focuses on implement",
+		"/Users/cem/projects/worldspacegen/topics/topics.json",
+		"/Users/cem/projects/worldspacegen/backend/models/memDb.js",
+		"/Users/cem/projects/worldspacegen/backend/utils/configUtils.js",
+		"/Users/cem/projects/worldspacegen/backend/Notes.md",
+		"/Users/cem/Library/Application Support/Sublime Text/Packages/HTML-CSS-JS Prettify/.jsbeautifyrc.defaults.json",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/main.js",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/AppBork.vue",
+		"/Users/cem/Library/Application Support/Sublime Text/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/Users/cem/projects/worldspacegen/stand-alone/spatiomundiApp.js",
+		"/Users/cem/projects/worldspacegen/worldspacegen.js",
+		"/Users/cem/projects/worldspacegen/front-end/worldspacegen-app/src/components/IssueNode.vue",
+		"/Users/cem/projects/worldspacegen/topics/index.js",
+		"/Users/cem/projects/worldspacegen/interjection.js",
+		"/Users/cem/projects/worldspacegen/topics/worldspacegen.js",
+		"/Users/cem/projects/worldspacegen/worldspacegen_v0.1.js",
+		"/Users/cem/projects/worldspacegen/topics/init.js",
+		"/Users/cem/projects/worldspacegen/topics/programming.json",
+		"/Users/cem/projects/worldspacegen/topics/fishing.json",
+		"/Users/cem/projects/worldspacegen/topics/gardening.json",
+		"/Users/cem/projects/worldspacegen/words/programming.js",
+		"/Users/cem/projects/guithing/ExaminationsSerialization/worldcloud.js",
+		"/Users/cem/projects/guithing/ExaminationsSerialization/generator.py",
+		"/Users/cem/projects/guithing/generator.py",
+		"/Users/cem/projects/guithing/gui.py",
+		"/Users/cem/projects/guithing/app.js",
+		"/Users/cem/projects/guithing/index.html",
+		"/Users/cem/projects/_Archives/Vexine_VexiSpecies_0.5b/Vexine_VexiSpecies_0.5b/1.4/Defs/GeneDefs/Vexi_Endogenes.xml",
+		"/Users/cem/projects/TestMaterial/Utilitari/client.js",
+		"/Users/cem/projects/TestMaterial/Utilitari/Othertest.js",
+		"/Users/cem/projects/TestMaterial/Utilitari/nutestor.js",
+		"/Users/cem/projects/TestMaterial/Utilitari/nuserver.js",
+		"/Users/cem/projects/TestMaterial/Utilitari/diffclient.js",
+		"/Users/cem/projects/TestMaterial/Utilitari/SagaxClient.js",
+		"/Users/cem/projects/TestMaterial/Utilitari/Sagax.js",
+		"/Volumes/Core/Oniros/Documents/._Creativerse - Facilitating Workflows - editing",
+		"/Users/cem/projects/_Archives/Vexine_VexiSpecies_0.5b/Vexine_VexiSpecies_0.5b/About/About.xml",
+		"/Users/cem/projects/RW1.4-Decompile/Verse/EndogeneCategory.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/BodyPartDefOf.cs",
+		"/Volumes/Core/Oniros/Documents/Creativerse - Facilitating Workflows - editing",
+		"/Users/cem/projects/DnetCreeper/Documentation/Roles:",
+		"/Users/cem/projects/TestMaterial/Utilitari/advice"
+	],
+	"find":
+	{
+		"height": 53.0
+	},
+	"find_in_files":
+	{
+		"height": 257.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 53.0
+	},
+	"input":
+	{
+		"height": 95.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Here.sublime-project",
+	"replace":
+	{
+		"height": 100.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 875.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/guithing/jbs.sublime-project"
+			]
+		],
+		"width": 665.0
+	},
+	"select_symbol":
+	{
+		"height": 370.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 1036.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 454.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -54,6 +54,7 @@
     <Compile Include="ModExtensions\GenomeExtension.cs" />
     <Compile Include="ModExtensions\NaturalPartWithHediff.cs" />
 
+    <Compile Include="HarmonyPatches\SleptInBarracksVexi.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">

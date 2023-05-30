@@ -10,30 +10,22 @@
     <genes>
       <li>Body_Standard</li>
       <li>Body_Thin</li>
-      <!--
-      <li>Hair_BaldOnly</li>
-      <li>Beard_NoBeardOnly</li>
-      <li>Skin_PaleYellow</li>
-      <li>Skin_LightGray</li>
-      -->
-      <li>Hair_BaldOnly</li>
-      <li>Beard_NoBeardOnly</li>
       <li>dIl_Vexi_Body</li>
       <li>dIl_Vexi_Brain</li>
       <li>dIl_Vexi_Fur</li>
       <li>dIl_Clawed_Hands</li>
       <li>dIl_Fanged_Dentition</li>
-      <li>dIl_Vexi_Tail0</li>
-      <li>dIl_Vexi_Tail1</li>
-      <li>dIl_Vexi_Tail2</li>
-      <li>dIl_Vexi_Tail3</li>
+      <li>dIl_Vexi_EarsA</li>
+      <li>dIl_Vexi_EarsB</li>
+      <li>dIl_Vexi_EarsC</li>
+      <li>dIl_Vexi_EarsD</li>
+      <li>dIl_Vexi_TailDgr</li>
+      <li>dIl_Vexi_TailVexine</li>
       <li>dIl_Vexi_MuzzleB</li>
       <li>dIl_Vexi_FringeB</li>
       <li>dIl_Vexi_Gallbladder</li>
       <li>dIl_Crepuscular_Vision</li>
-      <li>dIl_Vexi_EarsB</li>
       <li>Vexi_SkulkInstinct</li>
-
     </genes>
   </XenotypeDef>
 

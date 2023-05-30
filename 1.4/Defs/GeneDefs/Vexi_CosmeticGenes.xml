@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+    <GeneDef ParentName="GeneHeadboneBase">
+        <defName>dIl_Vexi_FringeB</defName>
+        <label>vexine facial fur</label>
+        <description>This gene codes for a certain volume of fur on the vexi head.</description>
+        <iconPath>ui/Xenotypes/VexiSp</iconPath>
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/FringeB</graphicPath>
+            <!-- <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset> -->
+            <useSkinShader>false</useSkinShader>
+            <drawScale>1</drawScale>
+            <drawOffsetEast>0,0.55,0</drawOffsetEast>
+            <drawOffsetSouth>0,0.55,0</drawOffsetSouth>
+            <!--<drawOffsetEast>(0.26, 0, -0.125)</drawOffsetEast>
+    <drawOffsetSouth>(-0.01, 0, -0.13)</drawOffsetSouth>-->
+            <layer>PostSkin</layer>
+            <colorType>Skin</colorType>
+        </graphicData>
+        <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+        <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>vexine</symbol>
+                </li>
+                <li>
+                    <symbol>fringer</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>vulpine</symbol>
+                </li>
+                <li>
+                    <symbol>face</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+     <GeneDef ParentName="GeneNoseBase">
+        <defName>dIl_Vexi_MuzzleA</defName>
+        <label>vexine muzzle</label>
+        <description>This gene codes a specific Vexi Muzzle.</description>
+        <iconPath>ui/Xenotypes/VexiSp</iconPath>
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/MuzzleA</graphicPath>
+            <!-- <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset> -->
+            <useSkinShader>false</useSkinShader>
+            <drawScale>1</drawScale>
+            <!--<drawOffsetEast>(0.26, 0, -0.125)</drawOffsetEast>
+    <drawOffsetSouth>(-0.01, 0, -0.13)</drawOffsetSouth>-->
+            <layer>PostSkin</layer>
+        </graphicData>
+        <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+        <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>vexine</symbol>
+                </li>
+                <li>
+                    <symbol>muzzle</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>vulpine</symbol>
+                </li>
+                <li>
+                    <symbol>nose</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+     <GeneDef ParentName="GeneNoseBase">
+        <defName>dIl_Vexi_MuzzleB</defName>
+        <label>vexine muzzle</label>
+        <description>This gene codes a specific Vexi Muzzle.</description>
+        <iconPath>ui/Xenotypes/VexiSp</iconPath>
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/MuzzleB</graphicPath>
+            <!-- <narrowCrownHorizontalOffset>0.03</narrowCrownHorizontalOffset> -->
+            <useSkinShader>false</useSkinShader>
+            <drawScale>0.97</drawScale>
+            <!--<drawOffsetEast>(0.26, 0, -0.125)</drawOffsetEast>
+    <drawOffsetSouth>(-0.01, 0, -0.13)</drawOffsetSouth>-->
+            <layer>PostSkin</layer>
+        </graphicData>
+        <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+        <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>vexine</symbol>
+                </li>
+                <li>
+                    <symbol>muzzle</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>vulpine</symbol>
+                </li>
+                <li>
+                    <symbol>nose</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+   
+    <GeneDef ParentName="GeneEarsBase" Name="dIl_Vexi_Ears">
+         <defName>dIl_Vexi_Ears</defName>
+        <description>This gene codes for ears ressembling those of a fox.</description>
+        <iconPath>ui/Xenotypes/VexiSp</iconPath>
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/EarsB</graphicPath>
+            <useSkinShader>false</useSkinShader>
+            <drawScale>1</drawScale>
+            <drawOffsetEast>0,0.65,0</drawOffsetEast>
+            <drawOffsetSouth>0,0.65,0</drawOffsetSouth>
+            <layer>PostSkin</layer>
+            <colorType>Skin</colorType>
+        </graphicData>
+        <missingGeneRomanceChanceFactor>0.2</missingGeneRomanceChanceFactor>
+        <displayCategory>dIl_Vexi_Endogenes</displayCategory>
+        <displayOrderInCategory>2</displayOrderInCategory>
+        <symbolPack>
+            <prefixSymbols>
+                <li>
+                    <symbol>vexine</symbol>
+                </li>
+                <li>
+                    <symbol>fringer</symbol>
+                </li>
+            </prefixSymbols>
+            <suffixSymbols>
+                <li>
+                    <symbol>vulpine</symbol>
+                </li>
+                <li>
+                    <symbol>face</symbol>
+                </li>
+            </suffixSymbols>
+        </symbolPack>
+    </GeneDef>
+   
+    <GeneDef ParentName="dIl_Vexi_Ears" Name="dIl_Vexi_EarsA">
+        <defName>dIl_Vexi_EarsA</defName>
+        <label>vexi ears</label>
+        <description>A variant of the Vexine ears gene.</description>
+        <graphicData>
+            
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/EarsA</graphicPath>
+        </graphicData>
+    </GeneDef>
+   
+    <GeneDef ParentName="dIl_Vexi_Ears" Name="dIl_Vexi_EarsB">
+        <defName>dIl_Vexi_EarsB</defName>
+        <label>vexi ears</label>
+        <description>A variant of the Vexine ears gene.</description>
+        <graphicData>
+            
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/EarsB</graphicPath>
+        </graphicData>
+    </GeneDef>
+   
+    <GeneDef ParentName="dIl_Vexi_Ears" Name="dIl_Vexi_EarsC">
+        <defName>dIl_Vexi_EarsC</defName>
+        <label>vexi ears</label>
+        <description>A variant of the Vexine ears gene.</description>
+        <graphicData>
+            
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/EarsC</graphicPath>
+        </graphicData>
+    </GeneDef>
+    
+    <GeneDef ParentName="dIl_Vexi_Ears" Name="dIl_Vexi_EarsD">
+        <defName>dIl_Vexi_EarsD</defName>
+        <label>vexi ears</label>
+        <description>A variant of the Vexine ears gene.</description>
+        <graphicData>
+            <graphicPath>Things/Pawn/Humanlike/HeadAttachments/EarsD</graphicPath>
+        </graphicData>
+    </GeneDef>
+   </Defs>

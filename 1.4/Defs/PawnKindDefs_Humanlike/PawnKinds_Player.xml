@@ -4,6 +4,11 @@
 	<PawnKindDef ParentName="BasePlayerPawnKind">
     <defName>ColonistVexi</defName>
 		<label>colonist</label>
+		<xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
 		<defaultFactionType>PlayerColony</defaultFactionType>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>
     <apparelColor>(58,5,7)</apparelColor>
@@ -30,6 +35,11 @@
 	<PawnKindDef ParentName="BasePlayerPawnKind">
 		<defName>Tribesvexi</defName>
 		<label>member</label>
+		<xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
 		<race>Human</race>
 		<defaultFactionType>PlayerTribe</defaultFactionType>
 		<chemicalAddictionChance>0.06</chemicalAddictionChance>

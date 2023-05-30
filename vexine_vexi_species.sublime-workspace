@@ -1,0 +1,1010 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"develo",
+				"developmentalStageFilter"
+			],
+			[
+				"project",
+				"project_id"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"condens",
+				"condensedWordCounts"
+			],
+			[
+				"get",
+				"getTopWords"
+			],
+			[
+				"consol",
+				"console.log"
+			],
+			[
+				"di",
+				"dIl_Vexi_TailVexine"
+			],
+			[
+				"conso",
+				"console.log"
+			],
+			[
+				"draw",
+				"drawOffsetSouth"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "problems:\n\nAttack patch fix or remove totally : fixed\n",
+			"settings":
+			{
+				"buffer_size": 54,
+				"line_ending": "Unix",
+				"name": "problems:"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"insert",
+					{
+						"characters": "problems:"
+					},
+					"CQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAAAAAABwAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAkAAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					2,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAAkAAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAALAAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAJAAAAAAAAAAkAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": "Attacl"
+					},
+					"BgAAAAsAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAANAAAAAAAAAAAAAAANAAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAAAAAADwAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABEAAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAALAAAAAAAAAAsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					4,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAABEAAAAAAAAAEgAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					5,
+					1,
+					"",
+					null,
+					"AQAAABIAAAAAAAAAEwAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					6,
+					1,
+					"",
+					null,
+					"AQAAABIAAAAAAAAAEgAAAAAAAAABAAAAXg",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAATAAAAAAAAABMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": "^"
+					},
+					"AQAAABIAAAAAAAAAEwAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					8,
+					3,
+					"left_delete",
+					null,
+					"AwAAABIAAAAAAAAAEgAAAAAAAAABAAAAXhEAAAAAAAAAEQAAAAAAAAABAAAAIBAAAAAAAAAAEAAAAAAAAAABAAAAbA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAATAAAAAAAAABMAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					9,
+					1,
+					"insert",
+					{
+						"characters": "k"
+					},
+					"AQAAABAAAAAAAAAAEQAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": " patch"
+					},
+					"BgAAABEAAAAAAAAAEgAAAAAAAAAAAAAAEgAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABQAAAAAAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAWAAAAAAAAAAAAAAAWAAAAAAAAABcAAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": " fix"
+					},
+					"BAAAABcAAAAAAAAAGAAAAAAAAAAAAAAAGAAAAAAAAAAZAAAAAAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAXAAAAAAAAABcAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAABsAAAAAAAAAHAAAAAAAAAAAAAAAHAAAAAAAAAAdAAAAAAAAAAAAAAAdAAAAAAAAAB4AAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAbAAAAAAAAABsAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": " remove"
+					},
+					"BwAAAB4AAAAAAAAAHwAAAAAAAAAAAAAAHwAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAACEAAAAAAAAAAAAAACEAAAAAAAAAIgAAAAAAAAAAAAAAIgAAAAAAAAAjAAAAAAAAAAAAAAAjAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAJQAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAeAAAAAAAAAB4AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					14,
+					1,
+					"insert",
+					{
+						"characters": " totally"
+					},
+					"CAAAACUAAAAAAAAAJgAAAAAAAAAAAAAAJgAAAAAAAAAnAAAAAAAAAAAAAAAnAAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAAKQAAAAAAAAAAAAAAKQAAAAAAAAAqAAAAAAAAAAAAAAAqAAAAAAAAACsAAAAAAAAAAAAAACsAAAAAAAAALAAAAAAAAAAAAAAALAAAAAAAAAAtAAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAlAAAAAAAAACUAAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAC0AAAAAAAAALgAAAAAAAAAAAAAA",
+					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAtAAAAAAAAAC0AAAAAAAAAAAAAAAAA8L8"
+				],
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": " fixed"
+					},
+					"BgAAAC0AAAAAAAAALgAAAAAAAAAAAAAALgAAAAAAAAAvAAAAAAAAAAAAAAAvAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAAMQAAAAAAAAAAAAAAMQAAAAAAAAAyAAAAAAAAAAAAAAAyAAAAAAAAADMAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALQAAAAAAAAAtAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": ":"
+					},
+					"AQAAAC4AAAAAAAAALwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALgAAAAAAAAAuAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAC8AAAAAAAAAMAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALwAAAAAAAAAvAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"contents": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\nusing RimWorld;\nusing Verse;\n\nnamespace Vexine\n{\n\tpublic class NaturalPartWithHediff : Gene\n\t{\n\t\tprivate int ticksToRegrow = 180000;\n\n\t\tprivate List<Hediff> LinkedHediff\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (this.pawn?.health?.hediffSet?.hediffs == null)\n\t\t\t\t\treturn new List<Hediff>();\n\n\t\t\t\treturn this.pawn.health.hediffSet.hediffs\n\t\t\t\t\t.Where(hediff => hediff.def == def.GetModExtension<GenomeExtension>()?.linkedHediff).ToList();\n\t\t\t}\n\t\t}\n\n\t\tpublic override void PostAdd()\n\t\t{\n\t\t\tbase.PostAdd();\n\t\t\tProcessParts(false);\n\t\t}\n\n\t\tpublic override void Tick()\n\t\t{\n\t\t\tbase.Tick();\n\n\t\t\tticksToRegrow--;\n\t\t\tif (ticksToRegrow <= 0)\n\t\t\t{\n\t\t\t\tticksToRegrow = 180000; // 3 game days\n\t\t\t\tProcessParts(true);\n\t\t\t}\n\t\t}\n\n\t\tprivate void ProcessParts(bool regrow)\n\t\t{\n\t\t\tif (this.pawn?.def?.race?.body?.AllParts == null)\n\t\t\t\treturn;\n\n\t\t\tvar genomeExtension = def.GetModExtension<GenomeExtension>();\n\t\t\tif (genomeExtension == null)\n\t\t\t\treturn;\n\n\t\t\tvar affectedBodyParts = this.pawn.def.race.body.AllParts\n\t\t\t\t.Where(part => part.def == genomeExtension.affectedPart).ToList();\n\n\t\t\tforeach (var bodyPart in affectedBodyParts)\n\t\t\t{\n\t\t\t\tif (!regrow && !this.pawn.health.hediffSet.PartIsMissing(bodyPart))\n\t\t\t\t{\n\t\t\t\t\tthis.pawn.health.AddHediff(genomeExtension.linkedHediff, bodyPart, null, null);\n\t\t\t\t}\n\n\t\t\t\tif (regrow && this.pawn.health.hediffSet.PartIsMissing(bodyPart))\n\t\t\t\t{\n\t\t\t\t\tvar existingHediffs = this.pawn.health.hediffSet.hediffs\n\t\t\t\t\t\t.Where(hediff => hediff.Part == bodyPart && hediff.def == genomeExtension.linkedHediff).ToList();\n\n\t\t\t\t\tforeach (var existingHediff in existingHediffs)\n\t\t\t\t\t{\n\t\t\t\t\t\texistingHediff.Severity = 0;\n\t\t\t\t\t\tthis.pawn.health.RemoveHediff(existingHediff);\n\t\t\t\t\t}\n\n\t\t\t\t\tthis.pawn.health.AddHediff(genomeExtension.linkedHediff, bodyPart, null, null);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tpublic override void PostRemove()\n\t\t{\n\t\t\tvar hediffsToRemove = LinkedHediff.ToList();\n\t\t\tforeach (Hediff h in hediffsToRemove)\n\t\t\t{\n\t\t\t\tthis.pawn.health.RemoveHediff(h);\n\t\t\t}\n\t\t\tbase.PostRemove();\n\t\t}\n\n\t\tpublic override void Reset() { }\n\t}\n}\n",
+			"settings":
+			{
+				"buffer_size": 2130,
+				"line_ending": "Unix",
+				"name": "using System;"
+			},
+			"undo_stack":
+			[
+				[
+					1,
+					1,
+					"paste",
+					{
+						"event":
+						{
+							"modifier_keys":
+							{
+							},
+							"x": 486.316964286,
+							"y": 95.1495535714
+						}
+					},
+					"AQAAAAAAAAAAAAAAUggAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"file": "Source/Vexine/ModExtensions/NaturalPartWithHediff.cs",
+			"settings":
+			{
+				"buffer_size": 2702,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					2,
+					1,
+					"revert",
+					null,
+					"AgAAAAAAAAAAAAAAAAAAAAAAAAABCgAAdXNpbmcgU3lzdGVtOwp1c2luZyBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYzsKdXNpbmcgU3lzdGVtLkxpbnE7CnVzaW5nIFN5c3RlbS5UZXh0Owp1c2luZyBTeXN0ZW0uVGhyZWFkaW5nLlRhc2tzOwp1c2luZyBSaW1Xb3JsZDsKdXNpbmcgVmVyc2U7CgpuYW1lc3BhY2UgVmV4aW5lCnsKCXB1YmxpYyBjbGFzcyBOYXR1cmFsUGFydFdpdGhIZWRpZmYgOiBHZW5lCgl7CgoJCXB1YmxpYyBMaXN0PEhlZGlmZj4gTGlua2VkSGVkaWZmID0+IHRoaXMucGF3bi5oZWFsdGguaGVkaWZmU2V0LmhlZGlmZnMuV2hlcmUoaGVkaWZmID0+IGhlZGlmZi5kZWYgPT0gZGVmLkdldE1vZEV4dGVuc2lvbjxHZW5vbWVFeHRlbnNpb24+KCkubGlua2VkSGVkaWZmKS5Ub0xpc3QoKTsKCgoJCXB1YmxpYyBvdmVycmlkZSB2b2lkIFBvc3RBZGQoKQoJCXsKCQkgICAgYmFzZS5Qb3N0QWRkKCk7CgoJCQkJdmFyIGFmZmVjdGVkQm9keVBhcnRzID0gbmV3IExpc3Q8Qm9keVBhcnRSZWNvcmQ+KAoJCQkJICAgIHRoaXMucGF3bi5kZWYucmFjZS5ib2R5LkFsbFBhcnRzCgkJCQkgICAgICAgIC5XaGVyZShwYXJ0ID0+IHBhcnQuZGVmID09IGRlZi5HZXRNb2RFeHRlbnNpb248R2Vub21lRXh0ZW5zaW9uPigpLmFmZmVjdGVkUGFydCkKCQkJCSk7CgoJCSAgICB2YXIgaGVkaWZmRGVmID0gZGVmLkdldE1vZEV4dGVuc2lvbjxHZW5vbWVFeHRlbnNpb24+KCkubGlua2VkSGVkaWZmOwoKCQkgICAgZm9yIChpbnQgaSA9IDA7IGkgPCBhZmZlY3RlZEJvZHlQYXJ0cy5Db3VudDsgaSsrKQoJCSAgICB7CgkJICAgICAgICB2YXIgYm9keVBhcnQgPSBhZmZlY3RlZEJvZHlQYXJ0c1tpXTsKCQkgICAgICAgIGlmICghdGhpcy5wYXduLmhlYWx0aC5oZWRpZmZTZXQuUGFydElzTWlzc2luZyhib2R5UGFydCkpCgkJICAgICAgICB7CgkJICAgICAgICAgICAgdGhpcy5wYXduLmhlYWx0aC5BZGRIZWRpZmYoaGVkaWZmRGVmLCBib2R5UGFydCwgbnVsbCwgbnVsbCk7CgkJICAgICAgICB9CgkJICAgIH0KCQl9CgoKCQlwdWJsaWMgb3ZlcnJpZGUgdm9pZCBUaWNrKCkKCQl7CgkJICAgIGJhc2UuVGljaygpOwoKCQkgICAgdGlja3NUb1JlZ3Jvdy0tOwoJCSAgICBpZiAodGlja3NUb1JlZ3JvdyA8PSAwKQoJCSAgICB7CgkJICAgICAgICB0aWNrc1RvUmVncm93ID0gMTgwMDAwOyAvLyAzIGdhbWUgZGF5cwoKICAgICAgICAgICAgICAgIHZhciBhZmZlY3RlZEJvZHlQYXJ0cyA9IG5ldyBMaXN0PEJvZHlQYXJ0UmVjb3JkPigKICAgICAgICAgICAgICAgICAgICAgdGhpcy5wYXduLmRlZi5yYWNlLmJvZHkuQWxsUGFydHMKICAgICAgICAgICAgICAgICAgICAgICAgIC5XaGVyZShwYXJ0ID0+IHBhcnQuZGVmID09IGRlZi5HZXRNb2RFeHRlbnNpb248R2Vub21lRXh0ZW5zaW9uPigpLmFmZmVjdGVkUGFydCkKICAgICAgICAgICAgICAgICApOwoKICAgICAgICAgICAgICAgIHZhciBoZWRpZmZEZWYgPSBkZWYuR2V0TW9kRXh0ZW5zaW9uPEdlbm9tZUV4dGVuc2lvbj4oKS5saW5rZWRIZWRpZmY7CgoJCSAgICAgICAgZm9yIChpbnQgaSA9IDA7IGkgPCBhZmZlY3RlZEJvZHlQYXJ0cy5Db3VudDsgaSsrKQoJCSAgICAgICAgewoJCSAgICAgICAgICAgIHZhciBib2R5UGFydCA9IGFmZmVjdGVkQm9keVBhcnRzW2ldOwoJCSAgICAgICAgICAgIGlmICh0aGlzLnBhd24uaGVhbHRoLmhlZGlmZlNldC5QYXJ0SXNNaXNzaW5nKGJvZHlQYXJ0KSkKCQkgICAgICAgICAgICB7CgkJICAgICAgICAgICAgICAgIC8vIFJlbW92ZSBhbnkgZXhpc3RpbmcgaGVkaWZmcyBvbiB0aGUgbWlzc2luZyBib2R5IHBhcnQKCQkgICAgICAgICAgICAgICAgdmFyIGV4aXN0aW5nSGVkaWZmcyA9IHRoaXMucGF3bi5oZWFsdGguaGVkaWZmU2V0LmhlZGlmZnMKCQkgICAgICAgICAgICAgICAgICAgIC5XaGVyZShoZWRpZmYgPT4gaGVkaWZmLlBhcnQgPT0gYm9keVBhcnQgJiYgaGVkaWZmLmRlZiA9PSBoZWRpZmZEZWYpLlRvTGlzdCgpOwoJCSAgICAgICAgICAgICAgICBmb3IgKGludCBqID0gMDsgaiA8IGV4aXN0aW5nSGVkaWZmcy5Db3VudDsgaisrKQoJCSAgICAgICAgICAgICAgICB7CgkJCQkJCQkJCQkJZXhpc3RpbmdIZWRpZmZzW2pdLlNldmVyaXR5ID0gMDsKCQkJCQkJCQkJCQl0aGlzLnBhd24uaGVhbHRoLlJlbW92ZUhlZGlmZihleGlzdGluZ0hlZGlmZnNbal0pOwoJCQkJCQkJCQkJfQoKCQkJCQkJCQkJCQkvLyBBZGQgdGhlIGhlZGlmZiB0byB0aGUgbWlzc2luZyBib2R5IHBhcnQKCQkJCQkJCQkJCQl0aGlzLnBhd24uaGVhbHRoLkFkZEhlZGlmZihoZWRpZmZEZWYsIGJvZHlQYXJ0LCBudWxsLCBudWxsKTsKCQkJCQkJCQl9CgkJCQkJCX0KCQkJCX0KCQl9CgoKCgoKCgkJcHVibGljIG92ZXJyaWRlIHZvaWQgUG9zdFJlbW92ZSgpCgkJewoKCQkJZm9yZWFjaCAoSGVkaWZmIGggaW4gTGlua2VkSGVkaWZmKQoJCQl7CgkJCQl0aGlzLnBhd24uaGVhbHRoLlJlbW92ZUhlZGlmZihoKTsKCQkJfQoJCQliYXNlLlBvc3RSZW1vdmUoKTsKCQl9CgoJCXB1YmxpYyBvdmVycmlkZSB2b2lkIFJlc2V0KCkKCQl7CgkJfQoKCQlwcml2YXRlIGludCB0aWNrc1RvUmVncm93ID0gMTgwMDAwOwoKCX0KfQoAAAAAAAAAAI4KAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"ope",
+				"OpenAI: New Message"
+			],
+			[
+				"settings packa",
+				"Preferences: Package Control Settings"
+			],
+			[
+				"prett",
+				"Preferences: Settings"
+			],
+			[
+				"vue",
+				"VUEFormatter"
+			],
+			[
+				"pretti",
+				"HTMLPrettify"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"git",
+				"Package Control: Install Package"
+			],
+			[
+				"Term",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"diff",
+				"Set Syntax: Diff"
+			],
+			[
+				"Package Control: ",
+				"Package Control: List Packages"
+			],
+			[
+				"te",
+				"Terminus: Toggle Panel"
+			],
+			[
+				"terminus",
+				"Terminus: Open Default Shell in Panel"
+			],
+			[
+				"",
+				"Build: New Build System"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/cem/projects/Vexine_VexiSpecies",
+		"/Users/cem/projects/Vexine_VexiSpecies/Source",
+		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine",
+		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/ModExtensions",
+		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/StaticCollectionsClass",
+		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/Things",
+		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/Things/Buildings",
+		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/ThoughtWorkers",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/InteractionDefs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/Rooms",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Defs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Defs/HediffDefs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/Common",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/Comps",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/Comps/CompProperties",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/HarmonyPatches",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/MentalStates",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/UI"
+	],
+	"file_history":
+	[
+		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/ModExtensions/NaturalPartWithHediff.cs",
+		"/Users/cem/projects/RW1.4-Decompile/Verse/RaceProperties.cs",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Hediffs/Hediff_Animalitor.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Defs/HediffDefs/Hediffs.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/Paths/Harmonist/HediffComp_MindControl.cs",
+		"/Users/cem/projects/Animalitor/1.4/Defs/HediffDefs/Hediff_LinkedAnimal.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/UI/PsychicStatusGizmo.cs",
+		"/Users/cem/projects/Animalitor/1.4/Defs/HediffDefs/Hediffs_Animalitor.xml",
+		"/Users/cem/projects/Animalitor/1.4/Defs/HediffDefs/Hediff_AnimalitorAbililities.xml",
+		"/Users/cem/projects/Animalitor/1.4/Defs/ThoughtDefs/ThoughtDefs_Misc.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/RuleDefs/Rules_Interior.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/RuleDefs/Rules_Complex.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Ability.cs",
+		"/Users/cem/projects/Animalitor/1.4/Defs/AbilityDefs/Abilities_Misc.xml",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/JobDriver_AnimalWatching.cs",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_Endogenes.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAnimalInsanityPulser.cs",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/HarmonyPatches/PawnKillPatch.cs",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/AnimalitorUtility.cs",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/HarmonyPatches/AnimalAttackPatch.cs",
+		"/Users/cem/projects/Animalitor/1.4/Defs/Scenarios/Scenarios.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Scenarios/Scenarios_Classic.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/HediffGiverSetDef.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/HediffComp_RoyalImplant.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/HediffComp_PsychicHarmonizer.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompGiveHediffSeverity.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/HediffDefs/Hediffs_Mechanitor.xml",
+		"/Users/cem/projects/RW1.4-Decompile/MechanitorUtility.cs",
+		"/Users/cem/projects/RW1.4-Decompile/Verse/PawnGenerator.cs",
+		"/Users/cem/projects/RW1.4-Decompile/Verse/PawnKindDef.cs",
+		"/Users/cem/projects/RW1.4-Decompile/Verse/SkillRange.cs",
+		"/Users/cem/projects/Animalitor/1.4/Defs/PawnKindDefs_Humanlikes/PawnKinds_Special.xml",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/AnimalitorOverlayManager.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/PawnKindDefs_Humanlikes/PawnKinds_Tribal.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/BackstoryDefs/Shuffled/ImperialFighter_Child.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/BackstoryDefs/Shuffled/ImperialRoyal_Child.xml",
+		"/Users/cem/projects/Animalitor/1.4/Defs/BackstoryDefs/Animalitor_Child.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs/Shuffled/Tribal_Child.xml",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Components/AnimalitorGameComponent.cs",
+		"/Users/cem/projects/Animalitor/1.4/Defs/JoyDefs/JoyGivers_Misc.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs/Shuffled/Offworld_Nonspecific_Adult.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/PawnKindDefs_Humanlikes/PawnKinds_Special.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/PawnKindDefs_Humanlikes/PawnKinds_Special.xml",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Components/AnimalitorMapComponent.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2108362126/Defs/Revolus_AnimalsAreFun.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/JoyGiver_GoForWalk.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TaleDefs/Tales_Job.xml",
+		"/Users/cem/projects/Animalitor/1.4/Defs/JobDefs/Jobs_Misc.xml",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/AnimalitorMod.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2108362126/Revolus.AnimalsAreFun/Walkies.cs",
+		"/Users/cem/projects/Animalitor/1.4/Defs/TaleDefs/Tales_Job.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompUseEffect_GainAbility.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/PawnUtility.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Joy/JoyGivers.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/JobDefs/Jobs_Misc.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Races/Races_Animal_CatGroup.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/HediffDefs/Hediffs_Psycasts.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompUsableImplant.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/ArchivedDialog.cs",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/IAnimalitorActions.cs",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Pawn_AnimalitorTracker.cs",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Hediffs/Hediff_LinkedAnimal.cs",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/AnimalitorActions.cs",
+		"/Users/cem/projects/Animalitor/1.4/Defs/PawnRelationDefs/PawnRelations_Misc.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_MechanitorTracker.cs",
+		"/Users/cem/projects/RW1.4-Decompile/Verse.AI/MentalStateHandler.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/DirectPawnRelation.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_PlayerSettings.cs",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingCategoryDefs/ThingCategories.xml",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_CosmeticGenes.xml",
+		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/DefsFromRecipeMakers.cs",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingDef_Items/Item_Resource_Stuff_Leather.xml",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/StuffCategoryDefs/StuffCategoryDefs.xml",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches/FurForEmpire.xml",
+		"/Users/cem/projects/Goldenbell/safety",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Mods/Vexine_VexiSpecies/1.4/Defs/ThingDef_Items/Item_Resource_Stuff_Leather.xml",
+		"/Users/cem/projects/Vexine_VexiSpecies/About/About.xml",
+		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/HarmonyPatches/ButcherTo.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/FactionDefs/Faction_Empire.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThingDefs_Misc/Apparel_Child.xml",
+		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine/HarmonyPatches/DefsFromRecipeMakers.cs",
+		"/Users/cem/projects/RitualCulture/1.4/Defs/ThingDefs_Buildings/Buildings_Art.xml",
+		"/Users/cem/projects/Vexine_DarkStory/About/About.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Dialog_ManageOutfits.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/RecipeDefGenerator.cs",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/HarmonyPatches/ArtComfort.cs",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/CompAffectedByArtFacility.cs",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/CompArtComfortBonus.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompFacility.cs",
+		"/Users/cem/projects/RitualCulture/Source/ArtComps.cs",
+		"/Users/cem/projects/RitualCulture/1.4/Defs/ModExtensions/ModExtensions.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/RoomStatWorker_Space.cs",
+		"/Users/cem/projects/RitualCulture/1.4/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/HarmonyPatches/LikeABedPatch.cs",
+		"/Users/cem/projects/RW1.4-Decompile/Verse/Zone.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/JobDriver_Ingest.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/FoodUtility.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/JobDriver_InteractAnimal.cs",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/RitualCultureDefOf.cs",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/Buildings/RitualCulture_Shelf.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAffectedByFacilities.cs",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/HarmonyPatches/RoomFacilityPatch.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Mods/RitualCulture/Source/RitualCulture/ModExtension.xml",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/LinkableFacilityModExtension.cs",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/RoomFacility.cs",
+		"/Users/cem/projects/Linkable/LinkableSettings/CompAffectedByFacilities_CanPotentiallyLinkTo_Static.cs",
+		"/Users/cem/projects/RitualCulture/Source/RitualCulture/RitualCultureMod.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs/GeneDefs_Cosmetic.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs/GeneDefs_Endogenes.xml",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/PawnKindDefs_Humanlike/PawnKinds_VexiTribal.xml",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/PawnKindDefs_Humanlike/PawnKinds_Player.xml",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/BackstoryDefs/Offworld_Nonspecific_Child.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/QuestUtility.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAbilityEffect_ReimplantXenogerm.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2231295285/1.4/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Dialog_FormCaravan.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompLaunchable.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/BillUtility.cs",
+		"/Users/cem/projects/Goldenbell/1.4/Patches/TraderKinds_Base_OutlanderPatch.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraderKindDefs/TraderKinds_Caravan_Outlander.xml",
+		"/Users/cem/projects/Goldenbell/1.4/Patches/TraderKinds_Caravan_OutlanderPatch.xml",
+		"/Users/cem/projects/Goldenbell/1.4/Defs/ResearchProjectDefs/ResearchProjects.xml",
+		"/Users/cem/projects/Goldenbell/1.4/Defs/Drugs/Psynerge.xml",
+		"/Users/cem/projects/Goldenbell/1.4/Defs/Drugs/Quelflo.xml",
+		"/Users/cem/projects/Goldenbell/1.4/Patches/PlantBiomePatch.xml",
+		"/Users/cem/projects/Goldenbell/1.4/Defs/ThingDefs_Plants/Plants_Wild_General.xml"
+	],
+	"find":
+	{
+		"height": 81.0
+	},
+	"find_in_files":
+	{
+		"height": 257.0,
+		"where_history":
+		[
+			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Defs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/UI,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/Animalitor/Animalitor,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/PawnKinds,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/PawnKindDefs_Humanlikes,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/Animalitor/Animalitor,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs/Shuffled,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/Animalitor/Animalitor,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/Animalitor/Animalitor/Animalitor,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Vexine_DarkStory,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/projects/Vexine_DarkStory,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Items,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Linkable,<project filters>",
+			"/Users/cem/projects/RitualCulture/Source/RitualCulture,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2739581441,<project filters>",
+			"/Users/cem/projects/Linkable/LinkableSettings,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BiomeDefs,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/Goldenbell,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Plants,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Goldenbell/source/Goldenbell,<project filters>",
+			"/Users/cem/projects/Goldenbell/source,<project filters>",
+			"/Users/cem/projects/Goldenbell,<project filters>",
+			"/Users/cem/projects/Goldenbell/source,<project filters>",
+			"/Users/cem/projects/Goldenbell,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Goldenbell,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2279786905,<project filters>",
+			"/Users/cem/projects/ApiniRaceMod,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2279786905,<project filters>",
+			"/Users/cem/projects/ApiniRaceMod,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThoughtDefs,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"hediff",
+			"affected",
+			"Capacity",
+			"consciousn",
+			"Hunger",
+			"HediffComp_MindControl",
+			"nutrition",
+			"NutritionEatenPerDay",
+			"shockThreshold",
+			"Gizmos",
+			"GetGizmosExtra",
+			"ruleset",
+			"Ability",
+			"HediffWith",
+			"HediffWithDuration",
+			"Hediff_LinkedToAnimalitor",
+			"becoming",
+			"Ability",
+			"AbilityWorker",
+			"MeleeDPS",
+			"ArmorRating_Blunt",
+			"modExtension",
+			"AbilityWorker",
+			"pulse",
+			"severity",
+			"Hediff",
+			"severity",
+			"hediff",
+			"warcall",
+			"SkillRange",
+			"skills",
+			"skillrange",
+			"kind",
+			"generatepawn",
+			"mechlinkimplant",
+			"maxinstallcount",
+			"mechlinkimplant",
+			"implant",
+			"mechanitor",
+			"skill",
+			"pawngenerator",
+			"minskill",
+			"skill",
+			"mechanitor",
+			"bolt-action",
+			"weaponTags",
+			"backstory",
+			"categor",
+			"filter",
+			"backstoryfilter",
+			"empire",
+			"herder",
+			"hunter",
+			"shouldfollow",
+			"Saving or loading hediff",
+			"RegisterAnimalitor",
+			"activeAnimalitors",
+			"hunter",
+			"scientist",
+			"trylinkwith",
+			"joygiver_",
+			"ModExtension",
+			"jobdriver",
+			"animal",
+			"play",
+			"fetch",
+			"psylink",
+			"psychicamplifier",
+			"CanBeUsedBy",
+			"psychicamplifier",
+			"upgrade",
+			"psychicamplifier",
+			"thick",
+			"drag",
+			"IsAnimalLinked",
+			"following",
+			"namespace",
+			"GetHediff",
+			"Hediff_Animalitor",
+			"IsValidLinkTarget",
+			"controlledPawns",
+			"Expose",
+			"hediff",
+			"Pawn_Mechanitor",
+			"MapComponent",
+			"mechanitor",
+			"mechanitor_pawntracker",
+			"LinkAnimal",
+			"IsAnimalLinked",
+			"controlGroups",
+			"controlledPawns",
+			"mechanitor",
+			"followingAnimals",
+			"activeAnimalitors",
+			"IsLinkOverlayActive",
+			"obedien",
+			"obedience",
+			"ToggleAnimalFollow",
+			"followFieldwork",
+			"skin",
+			"skinshader",
+			"Fur",
+			"Furs",
+			"stuffProps",
+			"thingFilter",
+			"ThingFilter",
+			"recipedef",
+			"IsStuffAllowed",
+			"IsStuffApplicable",
+			"parka",
+			"stuffProps",
+			"leather",
+			"devilstrand",
+			"clothingFilter",
+			"apparelFilter",
+			"Filter",
+			"Leathery",
+			"devilstrand",
+			"fabric",
+			"tissue",
+			"fabric",
+			"synthread",
+			"apparelFilter",
+			"IsFacilityOf",
+			"IsFacilityOf(Thing facility)\n",
+			"Facility",
+			"CompProperties_Facility",
+			"StatWorker_"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"PsychicSensitivityReducer",
+			"PsychicSensitivityBooster",
+			"baseMoodEffect"
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 54,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54,
+								54
+							]
+						],
+						"settings":
+						{
+							"auto_name": "problems:",
+							"lsp_uri": "buffer://sublime/193",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2130,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2130,
+								2130
+							]
+						],
+						"settings":
+						{
+							"auto_name": "using System;",
+							"lsp_uri": "buffer://sublime/132",
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "Source/Vexine/ModExtensions/NaturalPartWithHediff.cs",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2702,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/ModExtensions/NaturalPartWithHediff.cs",
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 892.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 59.0
+	},
+	"input":
+	{
+		"height": 95.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0
+	},
+	"output.OpenAI Chat":
+	{
+		"height": 256.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.diff_views":
+	{
+		"height": 376.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "vexine_vexi_species.sublime-project",
+	"replace":
+	{
+		"height": 112.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 875.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/projects/guithing/jbs.sublime-project"
+			]
+		],
+		"width": 665.0
+	},
+	"select_symbol":
+	{
+		"height": 370.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 1036.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 594.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

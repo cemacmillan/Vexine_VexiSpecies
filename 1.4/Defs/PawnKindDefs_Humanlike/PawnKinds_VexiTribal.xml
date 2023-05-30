@@ -7,6 +7,11 @@
 <PawnKindDef ParentName="TribalChiefBase">
   <defName>Tribal_ChiefRangedVexi</defName>
   <label>archer chief</label>
+  <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
   <weaponTags>
     <li>NeolithicRangedChief</li>
   </weaponTags>
@@ -21,7 +26,7 @@
   <backstoryFiltersOverride>
     <li>
       <categories>
-        <li>TribalVexi</li>
+        <li>Tribal</li>
       </categories>
     </li>
   </backstoryFiltersOverride>
@@ -35,6 +40,11 @@
 <PawnKindDef ParentName="Tribal_Hunter">
   <defName>Tribal_TraderVexi</defName>
   <label>trader</label>
+  <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
   <trader>true</trader>
   <apparelRequired Inherit="False">
     <li>Apparel_TribalHeaddress</li>
@@ -47,7 +57,7 @@
   <backstoryFiltersOverride>
     <li>
       <categories>
-        <li>TribalVexi</li>
+        <li>Tribal</li>
       </categories>
     </li>
   </backstoryFiltersOverride>
@@ -62,6 +72,11 @@
 <PawnKindDef ParentName="Tribal_Hunter">
   <defName>Tribal_LeaderVexi</defName>
   <label>leader</label>
+  <xenotypeSet Inherit="False">
+      <xenotypeChances>
+        <Vexi>1</Vexi>
+      </xenotypeChances>
+    </xenotypeSet>
   <factionLeader>true</factionLeader>
   <apparelRequired Inherit="False">
     <li>Apparel_TribalHeaddress</li>
@@ -74,7 +89,7 @@
   <backstoryFiltersOverride>
     <li>
       <categories>
-        <li>TribalVexi</li>
+        <li>Tribal</li>
       </categories>
     </li>
   </backstoryFiltersOverride>

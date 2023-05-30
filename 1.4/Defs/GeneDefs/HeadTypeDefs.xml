@@ -5,62 +5,32 @@
     <gender>None</gender>
 
   </HeadTypeDef>
-
-<!--
+ 
   <HeadTypeDef ParentName="dIl_Vexi_HeadType">
     <defName>dIl_Vexi_HeadTypeM1</defName>
     <gender>Male</gender>
-    <graphicPath>vexi/head/Male_Average1_Normal</graphicPath>
+    <graphicPath>Things/Pawn/Humanlike/Head/FurCovered_Average2_Normal</graphicPath>
 
   </HeadTypeDef>
 
   <HeadTypeDef ParentName="dIl_Vexi_HeadType">
     <defName>dIl_Vexi_HeadTypeF1</defName>
     <gender>Female</gender>
-    <graphicPath>vexi/head/Female_Average1_Normal</graphicPath>
+    <graphicPath>Things/Pawn/Humanlike/Head/FurCovered_Average1_Normal</graphicPath>
 
   </HeadTypeDef>
 
   <HeadTypeDef ParentName="dIl_Vexi_HeadType">
     <defName>dIl_Vexi_HeadTypeM2</defName>
     <gender>Male</gender>
-    <graphicPath>vexi/head/Male_Average2_Normal</graphicPath>
+    <graphicPath>Things/Pawn/Humanlike/Head/FurCovered_Average2_Normal</graphicPath>
 
   </HeadTypeDef>
 
   <HeadTypeDef ParentName="dIl_Vexi_HeadType">
     <defName>dIl_Vexi_HeadTypeF2</defName>
     <gender>Female</gender>
-    <graphicPath>vexi/head/Female_Average2_Normal</graphicPath>
-
-  </HeadTypeDef>
--->
-
- <HeadTypeDef ParentName="dIl_Vexi_HeadType">
-    <defName>dIl_Vexi_HeadTypeM1</defName>
-    <gender>Male</gender>
-    <graphicPath>Things/Pawn/Humanlike/Head/All_Average</graphicPath>
-
-  </HeadTypeDef>
-
-  <HeadTypeDef ParentName="dIl_Vexi_HeadType">
-    <defName>dIl_Vexi_HeadTypeF1</defName>
-    <gender>Female</gender>
-    <graphicPath>Things/Pawn/Humanlike/Head/All_Average</graphicPath>
-
-  </HeadTypeDef>
-
-  <HeadTypeDef ParentName="dIl_Vexi_HeadType">
-    <defName>dIl_Vexi_HeadTypeM2</defName>
-    <gender>Male</gender>
-    <graphicPath>Things/Pawn/Humanlike/Head/All_Average</graphicPath>
-
-  </HeadTypeDef>
-
-  <HeadTypeDef ParentName="dIl_Vexi_HeadType">
-    <defName>dIl_Vexi_HeadTypeF2</defName>
-    <gender>Female</gender>
-    <graphicPath>Things/Pawn/Humanlike/Head/All_Average</graphicPath>
+    <graphicPath>Things/Pawn/Humanlike/Head/FurCovered_Average1_Normal</graphicPath>
 
   </HeadTypeDef>
 </Defs>

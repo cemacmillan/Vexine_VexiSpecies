@@ -15,10 +15,8 @@
 
   </skillGains>
   <spawnCategories>
-    <li>Offworld</li>
     <li>OffworldVexi</li>
     <li>OutlanderRoughVexi</li>
-    <li>PirateVexi</li>
   </spawnCategories>
 </BackstoryDef>
 
@@ -36,12 +34,9 @@
     <li><key>Plants</key><value>6</value></li>
   </skillGains>
   <spawnCategories>
-    <li>Offworld</li>
-    <li>Outlander</li>
+    <li>OffworldVexi</li>
     <li>OutlanderRoughVexi</li>
     <li>OutlanderCivilVexi</li>
-    <li>Pirate</li>
-    <li>Madman</li>
   </spawnCategories>
   <workDisables>
     <li>ManualDumb</li>
@@ -64,7 +59,6 @@
       <Nerves>1</Nerves>
     </forcedTraits>
     <spawnCategories>
-      <li>Offworld</li>
       <li>OffworldVexi</li>
       <li>OutlanderRoughVexi</li>
       <li>OutlanderCivilVexi</li>
@@ -84,7 +78,6 @@
     <li><key>Plants</key><value>-1</value></li>
   </skillGains>
   <spawnCategories>
-    <li>Offworld</li>
     <li>OffworldVexi</li>
     <li>OutlanderRoughVexi</li>
     <li>OutlanderCivilVexi</li>
@@ -114,7 +107,6 @@
     <li><key>Mining</key><value>-2</value></li>
   </skillGains>
   <spawnCategories>
-    <li>Offworld</li>
     <li>OffworldVexi</li>
     <li>OutlanderRoughVexi</li>
     <li>OutlanderCivilVexi</li>
@@ -124,7 +116,7 @@
     <Nerves>1</Nerves>
   </forcedTraits>
 </BackstoryDef>
-
+<!--
 <BackstoryDef>
   <defName>UrbworldUpbringing17</defName>
   <title>Urbworld Upbringing</title>
@@ -142,7 +134,7 @@
     <li>Offworld</li>
   </spawnCategories>
 </BackstoryDef>
-
+-->
 <BackstoryDef>
   <defName>ForestedFringerChild10</defName>
   <title>Forest-Born Fringer</title>
@@ -150,7 +142,7 @@
   <baseDesc>[PAWN_nameDef] was born and raised in the thick forests surrounding an urbworld. [PAWN_pronoun] was taken in by a group of outlanders who taught [PAWN_objective] how to survive off the land. However, [PAWN_pronoun] was eventually discovered by urbworld authorities and sent away to the next colony without any preparation.</baseDesc>
   <slot>Childhood</slot>
   <skillGains>
-      <li><key>Plants</key><value>2</value></li>
+      <li><key>Plants</key><value>3</value></li>
       <li><key>Shooting</key><value>2</value></li>
       <li><key>Construction</key><value>2</value></li>
       <li><key>Intellectual</key><value>1</value></li>
@@ -159,7 +151,6 @@
       <Nerves>-1</Nerves>
   </forcedTraits>
   <spawnCategories>
-    <li>Offworld</li>
     <li>OffworldVexi</li>
     <li>OffworldForested</li>
     <li>OutlanderRoughVexi</li>
@@ -185,7 +176,6 @@
       <VexineNerves>-1</VexineNerves>
   </forcedTraits>
   <spawnCategories>
-    <li>Offworld</li>
     <li>OffworldVexi</li>
     <li>OutlanderRoughVexi</li>
     <li>OutlanderCivilVexi</li>
@@ -217,7 +207,6 @@
     <li>Violent</li>
   </requiredWorkTags>
   <spawnCategories>
-    <li>Offworld</li>
     <li>OffworldVexi</li>
     <li>OutlanderRoughVexi</li>
     <li>OutlanderCivilVexi</li>

@@ -30,8 +30,8 @@
 /Users/cem/projects/Vexi/Source/Vexine/obj/Release/VexiSpecies.csproj.CopyComplete
 /Users/cem/projects/Vexine_VexiSpecies/1.4/Assemblies/VexiSpecies.dll
 /Users/cem/projects/Vexine_VexiSpecies/1.4/Assemblies/VexiSpecies.pdb
-/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/obj/Release/VexiSpecies.csproj.AssemblyReference.cache
 /Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/obj/Release/VexiSpecies.csproj.CoreCompileInputs.cache
 /Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/obj/Release/VexiSpecies.csproj.CopyComplete
 /Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/obj/Release/VexiSpecies.dll
 /Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/obj/Release/VexiSpecies.pdb
+/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/obj/Release/VexiSpecies.csproj.AssemblyReference.cache

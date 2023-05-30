@@ -1,10 +1,60 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
-
-  <!--============================== Offworld orphans or drop ins from various planet types) ============================-->
-
-
-
-
-
-  </Defs>
+    <BackstoryDef>
+        <defName>AIEnvoy</defName>
+        <title>AI envoy</title>
+        <titleShort>envoy</titleShort>
+        <baseDesc>As an AI envoy, [PAWN_nameDef] served as a proxy for a powerful Persona AI. [PAWN_pronoun] was responsible for carrying out tasks and interacting with others on the AI's behalf.\n\nSkilled in diplomacy, technical knowledge, and communication, [PAWN_nameDef] became an expert at navigating complex social situations and understanding the intricacies of advanced technology.</baseDesc>
+        <slot>Adulthood</slot>
+        <skillGains>
+            <li>
+                <key>Social</key>
+                <value>8</value>
+            </li>
+            <li>
+                <key>Intellectual</key>
+                <value>4</value>
+            </li>
+        </skillGains>
+        <spawnCategories>
+            <li>OffworldVexi</li>
+            <li>Offworld</li>
+        </spawnCategories>
+        <workDisables>Cooking</workDisables>
+        <requiredWorkTags>
+            <li>Social</li>
+            <li>Intellectual</li>
+        </requiredWorkTags>
+        <bodyTypeMale>Male</bodyTypeMale>
+        <bodyTypeFemale>Thin</bodyTypeFemale>
+    </BackstoryDef>
+    <BackstoryDef>
+        <defName>AthallNativeHunter01</defName>
+        <title>Athall Native Hunter</title>
+        <titleShort>hunter</titleShort>
+        <baseDesc>[PAWN_nameDef] was born and raised on the frigid planet Athall, where [PAWN_pronoun] learned to survive by hunting the dangerous wildlife that roamed the icy landscape. Surrounded by an unforgiving environment and armed with advanced hunting tools passed down through generations, [PAWN_pronoun] became a skilled hunter, adept at navigating both the frozen tundras and the sparse boreal forests near the equator.
+            As Athall transformed into a resort planet for those seeking snowy adventures, [PAWN_nameDef]'s way of life began to change. Eventually, [PAWN_pronoun] was swept up in the influx of offworld visitors and found [PAWN_objective]self transported to a completely new environment, with only [PAWN_possessive] hunting skills and knowledge of Athall's harsh wilderness to help [PAWN_objective] adapt.</baseDesc>
+        <slot>Childhood</slot>
+        <skillGains>
+            <li>
+                <key>Shooting</key>
+                <value>5</value>
+            </li>
+            <li>
+                <key>Melee</key>
+                <value>3</value>
+            </li>
+            <li>
+                <key>Animals</key>
+                <value>4</value>
+            </li>
+        </skillGains>
+        <spawnCategories>
+            <li>OutlanderRoughVexi</li>
+            <li>OutlanderCivilVexi</li>
+            <li>OffworldVexi</li>
+            <li>OffworldForested</li>
+            <li>Refugee</li>
+        </spawnCategories>
+    </BackstoryDef>
+</Defs>

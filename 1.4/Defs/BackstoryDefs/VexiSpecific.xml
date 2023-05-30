@@ -75,6 +75,11 @@
           </statFactors>
         </li>
       </degreeDatas>
+       <conflictingTraits>
+        <li>TooSmart</li>
+        <li>Nerves</li>
+        <li>SlowLearner</li>
+      </conflictingTraits>
       <requiredWorkTags>
         <li>Intellectual</li>
       </requiredWorkTags>
@@ -92,7 +97,8 @@
       </li>
     </skillGains>
     <spawnCategories>
-      <li>Offworld</li>
+      <li>OffworldVexi</li>
+      <li>OffworldForested</li>
       <li>Scientist</li>
     </spawnCategories>
     <bodyTypeMale>Male</bodyTypeMale>
@@ -120,6 +126,7 @@
     <spawnCategories>
       <li>Scientist</li>
       <li>OffworldVexi</li>
+      <li>OffworldForested</li>
       <li>Hunter</li>
     </spawnCategories>
     <bodyTypeMale>Male</bodyTypeMale>
@@ -141,9 +148,9 @@
       <li><key>Crafting</key><value>-3</value></li>
     </skillGains>
     <spawnCategories>
-      <li>PirateVexi</li>
-      <li>OutlanderRoughVexi</li>
-      <li>OffworldVexi</li>
+     <li>OffworldVexi</li>
+      <li>OffworldForested</li>
+      <li>Hunter</li>
     </spawnCategories>
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
@@ -169,8 +176,6 @@
     <spawnCategories>
       <li>OutlanderRoughVexi</li>
       <li>OffworldVexi</li>
-      <li>OutlanderRoughVexi</li>
-      <li>Scientist</li>
       <li>Madman</li>
     </spawnCategories>
     <bodyTypeMale>Male</bodyTypeMale>
@@ -212,6 +217,7 @@
     <spawnCategories>
       <li>Pirate</li>
       <li>Offworld</li>
+      <li>OffworldVexi</li>
       <li>OutlanderRoughVexi</li>
       <li>Madman</li>
     </spawnCategories>
@@ -249,6 +255,7 @@
       <spawnCategories>
         <li>OutlanderRoughVexi</li>
         <li>OutlanderCivilVexi</li>
+        <li>OffworldVexi</li>
         <li>PirateVexi</li>
       </spawnCategories>
       <skillGains>
@@ -283,7 +290,7 @@
       <spawnCategories>
         <li>OutlanderRoughVexi</li>
         <li>OutlanderCivilVexi</li>
-        <li>PirateVexi</li>
+        <li>OffworldVexi</li>
       </spawnCategories>
       <bodyTypeMale>Male</bodyTypeMale>
       <bodyTypeFemale>Female</bodyTypeFemale>
@@ -313,7 +320,7 @@
         <spawnCategories>
           <li>OutlanderRoughVexi</li>
           <li>OutlanderCivilVexi</li>
-          <li>PirateVexi</li>
+          <li>OffworldVexi</li>
         </spawnCategories>
       <bodyTypeMale>Male</bodyTypeMale>
       <bodyTypeFemale>Female</bodyTypeFemale>
@@ -323,7 +330,7 @@
       <defName>Evangelist7039</defName>
       <title>evangelist</title>
       <titleShort>evangelist</titleShort>
-      <baseDesc>As a youth, [PAWN_nameDef] experienced a religious awakening. [PAWN_pronoun] decided to spend the rest of [PAWN_possessive] life spreading the word of [PAWN_possessive] deity, the beauty of its culture, and its unusual medical tradition.</baseDesc>
+      <baseDesc>As a youth, [PAWN_nameDef] experienced a religious awakening. [PAWN_pronoun] decided to spend the rest of [PAWN_possessive] life spreading the word of [PAWN_possessive] ideologeon, the beauty and perfection of its tenets, and its unusual medical tradition.</baseDesc>
       <slot>Adulthood</slot>
       <requiredWorkTags>
         <li>Social</li>
@@ -337,7 +344,7 @@
       <spawnCategories>
         <li>OutlanderRoughVexi</li>
         <li>OutlanderCivilVexi</li>
-        <li>PirateVexi</li>
+        <li>OffworldVexi</li>
       </spawnCategories>
       <bodyTypeMale>Male</bodyTypeMale>
       <bodyTypeFemale>Female</bodyTypeFemale>
@@ -404,7 +411,7 @@
         <spawnCategories>
           <li>OutlanderRoughVexi</li>
           <li>OutlanderCivilVexi</li>
-          <li>PirateVexi</li>
+         <li>OffworldVexi</li>
         </spawnCategories>
         <bodyTypeMale>Thin</bodyTypeMale>
         <bodyTypeFemale>Thin</bodyTypeFemale>
@@ -428,7 +435,7 @@
         <spawnCategories>
           <li>OutlanderRoughVexi</li>
           <li>OutlanderCivilVexi</li>
-          <li>PirateVexi</li>
+          <li>OffworldVexi</li>
         </spawnCategories>
         <forcedTraits>
           <VexineTooSmart>0</VexineTooSmart>
@@ -456,7 +463,7 @@
         <spawnCategories>
           <li>OutlanderRoughVexi</li>
           <li>OutlanderCivilVexi</li>
-          <li>PirateVexi</li>
+          <li>OffworldVexi</li>
         </spawnCategories>
         <forcedTraits>
           <VexineTooSmart>0</VexineTooSmart>
@@ -481,7 +488,6 @@
         </skillGains>
         <spawnCategories>
           <li>OffworldVexi</li>
-          <li>PirateVexi</li>
           <li>OutlanderRoughVexi</li>
           <li>ImperialCommon</li>
         </spawnCategories>
@@ -631,7 +637,6 @@
         <spawnCategories>
           <li>OffworldVexi</li>
           <li>OutlanderRoughVexi</li>
-          <li>PirateVexi</li>
         </spawnCategories>
         <bodyTypeMale>Male</bodyTypeMale>
         <bodyTypeFemale>Female</bodyTypeFemale>
@@ -641,7 +646,7 @@
         <defName>Hunter7089</defName>
         <title>hunter</title>
         <titleShort>hunter</titleShort>
-        <baseDesc>[PAWN_nameDef] hunted wild animals to help feed [PAWN_possessive] community. Their success as a hunter led the authorities to see [PAWN_objective] as a supporter of resitance.</baseDesc>
+        <baseDesc>[PAWN_nameDef] hunted wild animals to help feed [PAWN_possessive] community. Their success as a hunter led the authorities to see [PAWN_objective] as a supporter of the resistance.</baseDesc>
         <slot>Adulthood</slot>
         <requiredWorkTags>
           <li>Violent</li>
@@ -652,6 +657,7 @@
         </skillGains>
         <spawnCategories>
           <li>Offworld</li>
+          <li>OffworldForested</li>
           <li>OutlanderVexi</li>
           <li>PirateVexi</li>
           <li>Hunter</li>
@@ -667,7 +673,7 @@
         <baseDesc>[PAWN_nameDef] worked at a large agricultural facility. [PAWN_pronoun] analyzed soil and found evidence the authorities desperately wanted suppressed.</baseDesc>
         <slot>Adulthood</slot>
         <spawnCategories>
-          <li>PirateVexi</li>
+          <li>OffworldForested</li>
           <li>OffworldVexi</li>
     	    <li>Farmer</li>
         </spawnCategories>

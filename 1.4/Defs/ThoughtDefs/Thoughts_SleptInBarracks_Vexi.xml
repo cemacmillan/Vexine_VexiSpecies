@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+<ThoughtDef>
+		<defName>SleptInBarracksVexi</defName>
+		<durationDays>1</durationDays>
+		<stackLimit>1</stackLimit>
+		<stages>
+			<li>
+				<label>awful barrack</label>
+				<description>I slept in a miserable barracks.</description>
+				<baseMoodEffect>-3</baseMoodEffect>
+			</li>
+			<li>
+				<label>dull barrack</label>
+				<description>I slept in a dull barracks.</description>
+				<baseMoodEffect>-1</baseMoodEffect>
+			</li>
+			<li>
+				<label>mediocre barrack</label>
+				<description>Our barrack is rather drab.</description>
+				<baseMoodEffect>0</baseMoodEffect>
+			</li>
+			<li>
+				<label>decent barrack</label>
+				<description>Our barrack is decent. A few more touches, and it'll comfortable.</description>
+				<baseMoodEffect>2</baseMoodEffect>
+			</li>
+			<li>
+				<label>slightly impressive barrack</label>
+				<description>This barrack is somewhat impressive. A nice place to rest.</description>
+				<baseMoodEffect>3</baseMoodEffect>
+			</li>
+			<li>
+				<label>impressive barrack</label>
+				<description>This is an impressive barrack, a great place to sleep.</description>
+				<baseMoodEffect>4</baseMoodEffect>
+			</li>
+			<li>
+				<label>very impressive barrack</label>
+				<description>Our barrack is very impressive, truly capturing the essence of good communal sleep arrangements.</description>
+				<baseMoodEffect>5</baseMoodEffect>
+			</li>
+			<li>
+				<label>extremely impressive barrack</label>
+				<description>This barrack is extremely impressive. Anyone would be happy to sleep there.</description>
+				<baseMoodEffect>6</baseMoodEffect>
+			</li>
+			<li>
+				<label>unbelievably impressive barrack</label>
+				<description>The barrack is unbelievably impressive, and anyone would be proud to have such a place to sleep.</description>
+				<baseMoodEffect>7</baseMoodEffect>
+			</li>
+			<li>
+				<label>wondrously impressive barrack</label>
+				<description>Our barrack is a perfect sanctuary, beyond compare!</description>
+				<baseMoodEffect>8</baseMoodEffect>
+			</li>
+		</stages>
+	</ThoughtDef>
+</Defs>

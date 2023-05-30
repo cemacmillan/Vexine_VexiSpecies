@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using HarmonyLib;
 using RimWorld;
 using Verse;
-//using static System.Net.Mime.MediaTypeNames;
 
 namespace Vexine
 {
@@ -49,44 +48,20 @@ namespace Vexine
                             if (human.genes != null)
                             {
                                 bool hasFur = human.genes.HasGene(DefDatabase<GeneDef>.GetNamed("dIl_Vexi_Fur"));
-                                //bool hasHeat = human.genes.HasGene(DefDatabase<GeneDef>.GetNamed("FireResistant"));
                                 if (hasFur)
                                 {
-                                    Thing newthing = ThingMaker.MakeThing(DefDatabase<ThingDef>.GetNamed("dIl_Vexilour"), null);
-                                    newthing.stackCount = thing.stackCount;
-                                    thing.Destroy();
-                                    newthing.SetColor(human.story.SkinColor);
-                                    yield return newthing;
-                                }
-                                else
-                                {
-                                    thing.SetColor(human.story.SkinColor);
-                                    yield return thing;
+                                    thing.def = DefDatabase<ThingDef>.GetNamed("dIl_Vexilour");
+                                    thing.SetStuffDirect(DefDatabase<ThingDef>.GetNamed("dIl_Vexilour"));
                                 }
                             }
-                            else
-                            {
-                                thing.SetColor(human.story.SkinColor);
-                                yield return thing;
-                            }
                         }
-                        else
-                        {
-                            thing.SetColor(human.story.SkinColor);
-                            yield return thing;
-                        }
-                    } //else not human leather
-                    else
-                    {
-                        yield return thing;
                     }
                 }
-                else
-                {
-                    yield return thing;
-                }
+                yield return thing;
             }
         }
+
+
     }
 
 }
