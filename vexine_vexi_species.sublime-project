@@ -2,6 +2,9 @@
 	"folders":
 	[
 		{
+			"path": "/Users/cem/projects/PositiveConnections",
+		},
+		{
 			"path": "/Users/cem/projects/Animalitor",
 		},
 		{
@@ -12,6 +15,12 @@
 		},
 		{
 			"path": "/Users/cem/projects/Goldenbell",
+		},
+		{
+			"path": "/Users/cem/projects/AnimaFruit",
+		},
+		{
+			"path": "/Users/cem/projects/PsychicAnimals",
 		},
 		{
 			"path": "/Volumes/Core/RW Art",
@@ -32,7 +41,13 @@
 			"path": "/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2896242489",
 		},
 		{
-			"path": "/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659"
+			"path": "/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659",
+		},
+		{
+			"path": "/Users/cem/projects/ReGrowth-Core",
+		},
+		{
+			"path": "/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/1875168898",
 		},
 	],
 }

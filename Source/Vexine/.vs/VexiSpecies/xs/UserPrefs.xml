@@ -1,7 +1,11 @@
 ﻿<Properties>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="IncidentWorkers/EmptyClass.cs">
+    <Files>
+      <File FileName="IncidentWorkers/EmptyClass.cs" Line="34" Column="42" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -10,6 +14,9 @@
             <Node name="VexiSpecies" expanded="True">
               <Node name="HarmonyPatches" expanded="True" />
               <Node name="Health" expanded="True" />
+              <Node name="IncidentWorkers" expanded="True">
+                <Node name="EmptyClass.cs" selected="True" />
+              </Node>
               <Node name="ModExtensions" expanded="True" />
               <Node name="ThoughtWorkers" expanded="True" />
             </Node>
@@ -18,7 +25,6 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

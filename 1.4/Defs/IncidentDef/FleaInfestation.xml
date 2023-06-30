@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
 
-<!--
 <IncidentDef>
-  <defName>FleaInfestationNot</defName>
-  <diseaseType>FleaInfestation</diseaseType>
-  <hediff>FleaInfestation</hediff>
-  <chanceFactor>0.1</chanceFactor>
-  <workerClass>IncidentWorker_Disease</workerClass>
-</IncidentDef>
-
-
-<IncidentDef ParentName="DiseaseIncident">
   <defName>FleaInfestation</defName>
+  <category>DiseaseHuman</category>
+  <workerClass>Vexine.VexiSpecies.IncidentWorker_FleaInfestation</workerClass>
+  <baseChance>1.0</baseChance>
+  <durationDays>1</durationDays>
   <label>flea infestation</label>
-  <diseaseIncident>FleaInfestation</diseaseIncident>
-  <letterLabel>Disease Flea Infestation!</letterLabel>
+  <description>This creature has fleas.</description>
+  <letterLabel>Flea Infestation!</letterLabel>
+  <letterText>A flea infestation has broken out!\n\nIt will affect furred creatures the worst.</letterText>
+  <targetTags>
+      <li>Map_PlayerHome</li>
+ </targetTags>
 </IncidentDef>
 
--->
+
 
 </Defs>

@@ -55,6 +55,7 @@
     <Compile Include="ModExtensions\NaturalPartWithHediff.cs" />
 
     <Compile Include="HarmonyPatches\SleptInBarracksVexi.cs" />
+    <Compile Include="IncidentWorkers\EmptyClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Krafs.Rimworld.Ref">
@@ -63,6 +64,9 @@
     <PackageReference Include="Lib.Harmony">
       <Version>2.2.2</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="IncidentWorkers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

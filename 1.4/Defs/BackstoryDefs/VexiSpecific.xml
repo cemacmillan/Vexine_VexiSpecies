@@ -150,7 +150,6 @@
     <spawnCategories>
      <li>OffworldVexi</li>
       <li>OffworldForested</li>
-      <li>Hunter</li>
     </spawnCategories>
     <bodyTypeMale>Male</bodyTypeMale>
     <bodyTypeFemale>Female</bodyTypeFemale>
@@ -170,8 +169,8 @@
     <slot>Adulthood</slot>
     <skillGains>
       <li><key>Intellectual</key><value>4</value></li>
-      <li><key>Social</key><value>2</value></li>
-      <li><key>Construction</key><value>2</value></li>
+      <li><key>Social</key><value>3</value></li>
+      <li><key>Construction</key><value>3</value></li>
     </skillGains>
     <spawnCategories>
       <li>OutlanderRoughVexi</li>

@@ -44,238 +44,25 @@
 	"buffers":
 	[
 		{
-			"contents": "problems:\n\nAttack patch fix or remove totally : fixed\n",
+			"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/IncidentWorker_TraderCaravanArrival.cs",
 			"settings":
 			{
-				"buffer_size": 54,
-				"line_ending": "Unix",
-				"name": "problems:"
-			},
-			"undo_stack":
-			[
-				[
-					1,
-					1,
-					"insert",
-					{
-						"characters": "problems:"
-					},
-					"CQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAAAAAAAAYAAAAAAAAABwAAAAAAAAAAAAAABwAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAkAAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					2,
-					1,
-					"insert",
-					{
-						"characters": "\n\n"
-					},
-					"AgAAAAkAAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAALAAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAJAAAAAAAAAAkAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					3,
-					1,
-					"insert",
-					{
-						"characters": "Attacl"
-					},
-					"BgAAAAsAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAANAAAAAAAAAAAAAAANAAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAAAAAADwAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABEAAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAALAAAAAAAAAAsAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					4,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAABEAAAAAAAAAEgAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					5,
-					1,
-					"",
-					null,
-					"AQAAABIAAAAAAAAAEwAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					6,
-					1,
-					"",
-					null,
-					"AQAAABIAAAAAAAAAEgAAAAAAAAABAAAAXg",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAATAAAAAAAAABMAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					7,
-					1,
-					"insert",
-					{
-						"characters": "^"
-					},
-					"AQAAABIAAAAAAAAAEwAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					8,
-					3,
-					"left_delete",
-					null,
-					"AwAAABIAAAAAAAAAEgAAAAAAAAABAAAAXhEAAAAAAAAAEQAAAAAAAAABAAAAIBAAAAAAAAAAEAAAAAAAAAABAAAAbA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAATAAAAAAAAABMAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					9,
-					1,
-					"insert",
-					{
-						"characters": "k"
-					},
-					"AQAAABAAAAAAAAAAEQAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					10,
-					1,
-					"insert",
-					{
-						"characters": " patch"
-					},
-					"BgAAABEAAAAAAAAAEgAAAAAAAAAAAAAAEgAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABQAAAAAAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAWAAAAAAAAAAAAAAAWAAAAAAAAABcAAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAARAAAAAAAAABEAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					11,
-					1,
-					"insert",
-					{
-						"characters": " fix"
-					},
-					"BAAAABcAAAAAAAAAGAAAAAAAAAAAAAAAGAAAAAAAAAAZAAAAAAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAXAAAAAAAAABcAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					12,
-					1,
-					"insert",
-					{
-						"characters": " or"
-					},
-					"AwAAABsAAAAAAAAAHAAAAAAAAAAAAAAAHAAAAAAAAAAdAAAAAAAAAAAAAAAdAAAAAAAAAB4AAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAbAAAAAAAAABsAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					13,
-					1,
-					"insert",
-					{
-						"characters": " remove"
-					},
-					"BwAAAB4AAAAAAAAAHwAAAAAAAAAAAAAAHwAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAACEAAAAAAAAAAAAAACEAAAAAAAAAIgAAAAAAAAAAAAAAIgAAAAAAAAAjAAAAAAAAAAAAAAAjAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAJQAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAeAAAAAAAAAB4AAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					14,
-					1,
-					"insert",
-					{
-						"characters": " totally"
-					},
-					"CAAAACUAAAAAAAAAJgAAAAAAAAAAAAAAJgAAAAAAAAAnAAAAAAAAAAAAAAAnAAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAAKQAAAAAAAAAAAAAAKQAAAAAAAAAqAAAAAAAAAAAAAAAqAAAAAAAAACsAAAAAAAAAAAAAACsAAAAAAAAALAAAAAAAAAAAAAAALAAAAAAAAAAtAAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAlAAAAAAAAACUAAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					15,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AQAAAC0AAAAAAAAALgAAAAAAAAAAAAAA",
-					"BQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA8L8AAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADwvwAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/AAAAAAEAAAAtAAAAAAAAAC0AAAAAAAAAAAAAAAAA8L8"
-				],
-				[
-					3,
-					1,
-					"insert",
-					{
-						"characters": " fixed"
-					},
-					"BgAAAC0AAAAAAAAALgAAAAAAAAAAAAAALgAAAAAAAAAvAAAAAAAAAAAAAAAvAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAAMQAAAAAAAAAAAAAAMQAAAAAAAAAyAAAAAAAAAAAAAAAyAAAAAAAAADMAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAALQAAAAAAAAAtAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					5,
-					1,
-					"insert",
-					{
-						"characters": ":"
-					},
-					"AQAAAC4AAAAAAAAALwAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAALgAAAAAAAAAuAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					6,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAC8AAAAAAAAAMAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAALwAAAAAAAAAvAAAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"contents": "using System;\nusing System.Collections.Generic;\nusing System.Linq;\nusing System.Text;\nusing System.Threading.Tasks;\nusing RimWorld;\nusing Verse;\n\nnamespace Vexine\n{\n\tpublic class NaturalPartWithHediff : Gene\n\t{\n\t\tprivate int ticksToRegrow = 180000;\n\n\t\tprivate List<Hediff> LinkedHediff\n\t\t{\n\t\t\tget\n\t\t\t{\n\t\t\t\tif (this.pawn?.health?.hediffSet?.hediffs == null)\n\t\t\t\t\treturn new List<Hediff>();\n\n\t\t\t\treturn this.pawn.health.hediffSet.hediffs\n\t\t\t\t\t.Where(hediff => hediff.def == def.GetModExtension<GenomeExtension>()?.linkedHediff).ToList();\n\t\t\t}\n\t\t}\n\n\t\tpublic override void PostAdd()\n\t\t{\n\t\t\tbase.PostAdd();\n\t\t\tProcessParts(false);\n\t\t}\n\n\t\tpublic override void Tick()\n\t\t{\n\t\t\tbase.Tick();\n\n\t\t\tticksToRegrow--;\n\t\t\tif (ticksToRegrow <= 0)\n\t\t\t{\n\t\t\t\tticksToRegrow = 180000; // 3 game days\n\t\t\t\tProcessParts(true);\n\t\t\t}\n\t\t}\n\n\t\tprivate void ProcessParts(bool regrow)\n\t\t{\n\t\t\tif (this.pawn?.def?.race?.body?.AllParts == null)\n\t\t\t\treturn;\n\n\t\t\tvar genomeExtension = def.GetModExtension<GenomeExtension>();\n\t\t\tif (genomeExtension == null)\n\t\t\t\treturn;\n\n\t\t\tvar affectedBodyParts = this.pawn.def.race.body.AllParts\n\t\t\t\t.Where(part => part.def == genomeExtension.affectedPart).ToList();\n\n\t\t\tforeach (var bodyPart in affectedBodyParts)\n\t\t\t{\n\t\t\t\tif (!regrow && !this.pawn.health.hediffSet.PartIsMissing(bodyPart))\n\t\t\t\t{\n\t\t\t\t\tthis.pawn.health.AddHediff(genomeExtension.linkedHediff, bodyPart, null, null);\n\t\t\t\t}\n\n\t\t\t\tif (regrow && this.pawn.health.hediffSet.PartIsMissing(bodyPart))\n\t\t\t\t{\n\t\t\t\t\tvar existingHediffs = this.pawn.health.hediffSet.hediffs\n\t\t\t\t\t\t.Where(hediff => hediff.Part == bodyPart && hediff.def == genomeExtension.linkedHediff).ToList();\n\n\t\t\t\t\tforeach (var existingHediff in existingHediffs)\n\t\t\t\t\t{\n\t\t\t\t\t\texistingHediff.Severity = 0;\n\t\t\t\t\t\tthis.pawn.health.RemoveHediff(existingHediff);\n\t\t\t\t\t}\n\n\t\t\t\t\tthis.pawn.health.AddHediff(genomeExtension.linkedHediff, bodyPart, null, null);\n\t\t\t\t}\n\t\t\t}\n\t\t}\n\n\t\tpublic override void PostRemove()\n\t\t{\n\t\t\tvar hediffsToRemove = LinkedHediff.ToList();\n\t\t\tforeach (Hediff h in hediffsToRemove)\n\t\t\t{\n\t\t\t\tthis.pawn.health.RemoveHediff(h);\n\t\t\t}\n\t\t\tbase.PostRemove();\n\t\t}\n\n\t\tpublic override void Reset() { }\n\t}\n}\n",
-			"settings":
-			{
-				"buffer_size": 2130,
-				"line_ending": "Unix",
-				"name": "using System;"
-			},
-			"undo_stack":
-			[
-				[
-					1,
-					1,
-					"paste",
-					{
-						"event":
-						{
-							"modifier_keys":
-							{
-							},
-							"x": 486.316964286,
-							"y": 95.1495535714
-						}
-					},
-					"AQAAAAAAAAAAAAAAUggAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"file": "Source/Vexine/ModExtensions/NaturalPartWithHediff.cs",
-			"settings":
-			{
-				"buffer_size": 2702,
+				"buffer_size": 4276,
 				"line_ending": "Unix"
 			},
 			"undo_stack":
 			[
-				[
-					2,
-					1,
-					"revert",
-					null,
-					"AgAAAAAAAAAAAAAAAAAAAAAAAAABCgAAdXNpbmcgU3lzdGVtOwp1c2luZyBTeXN0ZW0uQ29sbGVjdGlvbnMuR2VuZXJpYzsKdXNpbmcgU3lzdGVtLkxpbnE7CnVzaW5nIFN5c3RlbS5UZXh0Owp1c2luZyBTeXN0ZW0uVGhyZWFkaW5nLlRhc2tzOwp1c2luZyBSaW1Xb3JsZDsKdXNpbmcgVmVyc2U7CgpuYW1lc3BhY2UgVmV4aW5lCnsKCXB1YmxpYyBjbGFzcyBOYXR1cmFsUGFydFdpdGhIZWRpZmYgOiBHZW5lCgl7CgoJCXB1YmxpYyBMaXN0PEhlZGlmZj4gTGlua2VkSGVkaWZmID0+IHRoaXMucGF3bi5oZWFsdGguaGVkaWZmU2V0LmhlZGlmZnMuV2hlcmUoaGVkaWZmID0+IGhlZGlmZi5kZWYgPT0gZGVmLkdldE1vZEV4dGVuc2lvbjxHZW5vbWVFeHRlbnNpb24+KCkubGlua2VkSGVkaWZmKS5Ub0xpc3QoKTsKCgoJCXB1YmxpYyBvdmVycmlkZSB2b2lkIFBvc3RBZGQoKQoJCXsKCQkgICAgYmFzZS5Qb3N0QWRkKCk7CgoJCQkJdmFyIGFmZmVjdGVkQm9keVBhcnRzID0gbmV3IExpc3Q8Qm9keVBhcnRSZWNvcmQ+KAoJCQkJICAgIHRoaXMucGF3bi5kZWYucmFjZS5ib2R5LkFsbFBhcnRzCgkJCQkgICAgICAgIC5XaGVyZShwYXJ0ID0+IHBhcnQuZGVmID09IGRlZi5HZXRNb2RFeHRlbnNpb248R2Vub21lRXh0ZW5zaW9uPigpLmFmZmVjdGVkUGFydCkKCQkJCSk7CgoJCSAgICB2YXIgaGVkaWZmRGVmID0gZGVmLkdldE1vZEV4dGVuc2lvbjxHZW5vbWVFeHRlbnNpb24+KCkubGlua2VkSGVkaWZmOwoKCQkgICAgZm9yIChpbnQgaSA9IDA7IGkgPCBhZmZlY3RlZEJvZHlQYXJ0cy5Db3VudDsgaSsrKQoJCSAgICB7CgkJICAgICAgICB2YXIgYm9keVBhcnQgPSBhZmZlY3RlZEJvZHlQYXJ0c1tpXTsKCQkgICAgICAgIGlmICghdGhpcy5wYXduLmhlYWx0aC5oZWRpZmZTZXQuUGFydElzTWlzc2luZyhib2R5UGFydCkpCgkJICAgICAgICB7CgkJICAgICAgICAgICAgdGhpcy5wYXduLmhlYWx0aC5BZGRIZWRpZmYoaGVkaWZmRGVmLCBib2R5UGFydCwgbnVsbCwgbnVsbCk7CgkJICAgICAgICB9CgkJICAgIH0KCQl9CgoKCQlwdWJsaWMgb3ZlcnJpZGUgdm9pZCBUaWNrKCkKCQl7CgkJICAgIGJhc2UuVGljaygpOwoKCQkgICAgdGlja3NUb1JlZ3Jvdy0tOwoJCSAgICBpZiAodGlja3NUb1JlZ3JvdyA8PSAwKQoJCSAgICB7CgkJICAgICAgICB0aWNrc1RvUmVncm93ID0gMTgwMDAwOyAvLyAzIGdhbWUgZGF5cwoKICAgICAgICAgICAgICAgIHZhciBhZmZlY3RlZEJvZHlQYXJ0cyA9IG5ldyBMaXN0PEJvZHlQYXJ0UmVjb3JkPigKICAgICAgICAgICAgICAgICAgICAgdGhpcy5wYXduLmRlZi5yYWNlLmJvZHkuQWxsUGFydHMKICAgICAgICAgICAgICAgICAgICAgICAgIC5XaGVyZShwYXJ0ID0+IHBhcnQuZGVmID09IGRlZi5HZXRNb2RFeHRlbnNpb248R2Vub21lRXh0ZW5zaW9uPigpLmFmZmVjdGVkUGFydCkKICAgICAgICAgICAgICAgICApOwoKICAgICAgICAgICAgICAgIHZhciBoZWRpZmZEZWYgPSBkZWYuR2V0TW9kRXh0ZW5zaW9uPEdlbm9tZUV4dGVuc2lvbj4oKS5saW5rZWRIZWRpZmY7CgoJCSAgICAgICAgZm9yIChpbnQgaSA9IDA7IGkgPCBhZmZlY3RlZEJvZHlQYXJ0cy5Db3VudDsgaSsrKQoJCSAgICAgICAgewoJCSAgICAgICAgICAgIHZhciBib2R5UGFydCA9IGFmZmVjdGVkQm9keVBhcnRzW2ldOwoJCSAgICAgICAgICAgIGlmICh0aGlzLnBhd24uaGVhbHRoLmhlZGlmZlNldC5QYXJ0SXNNaXNzaW5nKGJvZHlQYXJ0KSkKCQkgICAgICAgICAgICB7CgkJICAgICAgICAgICAgICAgIC8vIFJlbW92ZSBhbnkgZXhpc3RpbmcgaGVkaWZmcyBvbiB0aGUgbWlzc2luZyBib2R5IHBhcnQKCQkgICAgICAgICAgICAgICAgdmFyIGV4aXN0aW5nSGVkaWZmcyA9IHRoaXMucGF3bi5oZWFsdGguaGVkaWZmU2V0LmhlZGlmZnMKCQkgICAgICAgICAgICAgICAgICAgIC5XaGVyZShoZWRpZmYgPT4gaGVkaWZmLlBhcnQgPT0gYm9keVBhcnQgJiYgaGVkaWZmLmRlZiA9PSBoZWRpZmZEZWYpLlRvTGlzdCgpOwoJCSAgICAgICAgICAgICAgICBmb3IgKGludCBqID0gMDsgaiA8IGV4aXN0aW5nSGVkaWZmcy5Db3VudDsgaisrKQoJCSAgICAgICAgICAgICAgICB7CgkJCQkJCQkJCQkJZXhpc3RpbmdIZWRpZmZzW2pdLlNldmVyaXR5ID0gMDsKCQkJCQkJCQkJCQl0aGlzLnBhd24uaGVhbHRoLlJlbW92ZUhlZGlmZihleGlzdGluZ0hlZGlmZnNbal0pOwoJCQkJCQkJCQkJfQoKCQkJCQkJCQkJCQkvLyBBZGQgdGhlIGhlZGlmZiB0byB0aGUgbWlzc2luZyBib2R5IHBhcnQKCQkJCQkJCQkJCQl0aGlzLnBhd24uaGVhbHRoLkFkZEhlZGlmZihoZWRpZmZEZWYsIGJvZHlQYXJ0LCBudWxsLCBudWxsKTsKCQkJCQkJCQl9CgkJCQkJCX0KCQkJCX0KCQl9CgoKCgoKCgkJcHVibGljIG92ZXJyaWRlIHZvaWQgUG9zdFJlbW92ZSgpCgkJewoKCQkJZm9yZWFjaCAoSGVkaWZmIGggaW4gTGlua2VkSGVkaWZmKQoJCQl7CgkJCQl0aGlzLnBhd24uaGVhbHRoLlJlbW92ZUhlZGlmZihoKTsKCQkJfQoJCQliYXNlLlBvc3RSZW1vdmUoKTsKCQl9CgoJCXB1YmxpYyBvdmVycmlkZSB2b2lkIFJlc2V0KCkKCQl7CgkJfQoKCQlwcml2YXRlIGludCB0aWNrc1RvUmVncm93ID0gMTgwMDAwOwoKCX0KfQoAAAAAAAAAAI4KAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
-				]
 			]
+		},
+		{
+			"contents": "Searching 7215 files for \"Faction.OfEmpire\"\n\n~/projects/RW1.4-Decompile/RimWorld/GenStep_Outpost.cs:\n   86  \t\t\tRimWorld.BaseGen.BaseGen.globalSettings.maxFarms = (allowGeneratingFarms ? (-1) : 0);\n   87  \t\t\tRimWorld.BaseGen.BaseGen.symbolStack.Push(\"settlement\", resolveParams);\n   88: \t\t\tif (faction != null && faction == Faction.OfEmpire)\n   89  \t\t\t{\n   90  \t\t\t\tRimWorld.BaseGen.BaseGen.globalSettings.minThroneRooms = (allowGeneratingThronerooms ? 1 : 0);\n   ..\n   92  \t\t\t}\n   93  \t\t\tRimWorld.BaseGen.BaseGen.Generate();\n   94: \t\t\tif (faction != null && faction == Faction.OfEmpire && RimWorld.BaseGen.BaseGen.globalSettings.landingPadsGenerated == 0)\n   95  \t\t\t{\n   96  \t\t\t\tGenStep_Settlement.GenerateLandingPadNearby(resolveParams.rect, map, faction, out var usedRect);\n\n~/projects/RW1.4-Decompile/RimWorld/GenStep_Settlement.cs:\n   54  \t\t\tRimWorld.BaseGen.BaseGen.globalSettings.minBarracks = 1;\n   55  \t\t\tRimWorld.BaseGen.BaseGen.symbolStack.Push(\"settlement\", resolveParams);\n   56: \t\t\tif (faction != null && faction == Faction.OfEmpire)\n   57  \t\t\t{\n   58  \t\t\t\tRimWorld.BaseGen.BaseGen.globalSettings.minThroneRooms = 1;\n   ..\n   60  \t\t\t}\n   61  \t\t\tRimWorld.BaseGen.BaseGen.Generate();\n   62: \t\t\tif (faction != null && faction == Faction.OfEmpire && RimWorld.BaseGen.BaseGen.globalSettings.landingPadsGenerated == 0)\n   63  \t\t\t{\n   64  \t\t\t\tGenerateLandingPadNearby(resolveParams.rect, map, faction, out var _);\n\n~/projects/RW1.4-Decompile/RimWorld/IncidentWorker_CaravanArrivalTributeCollector.cs:\n   15  \t\t\t\treturn false;\n   16  \t\t\t}\n   17: \t\t\tif (Faction.OfEmpire == null)\n   18  \t\t\t{\n   19  \t\t\t\treturn false;\n   20  \t\t\t}\n   21  \t\t\tMap map = (Map)parms.target;\n   22: \t\t\tparms.faction = Faction.OfEmpire;\n   23  \t\t\tparms.traderKind = DefDatabase<TraderKindDef>.AllDefsListForReading.Where((TraderKindDef t) => t.category == \"TributeCollector\").RandomElementByWeight((TraderKindDef t) => TraderKindCommonality(t, map, parms.faction));\n   24  \t\t\treturn true;\n   ..\n   27  \t\tprotected override bool CanFireNowSub(IncidentParms parms)\n   28  \t\t{\n   29: \t\t\tif (!base.CanFireNowSub(parms) || Faction.OfEmpire == null)\n   30  \t\t\t{\n   31  \t\t\t\treturn false;\n   32  \t\t\t}\n   33: \t\t\treturn FactionCanBeGroupSource(Faction.OfEmpire, (Map)parms.target);\n   34  \t\t}\n   35  \n\n~/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs:\n  602  \t\tpublic void AssignHeirIfNone(RoyalTitleDef t, Faction faction)\n  603  \t\t{\n  604: \t\t\tif (!heirs.ContainsKey(faction) && t.Awardable && (Faction.OfEmpire == null || pawn.HomeFaction != Faction.OfEmpire))\n  605  \t\t\t{\n  606  \t\t\t\tSetHeir(t.GetInheritanceWorker(faction).FindHeir(faction, pawn, t), faction);\n\n~/projects/RW1.4-Decompile/RimWorld/QuestPart_LendColonistsToFaction.cs:\n   86  \t\t\t{\n   87  \t\t\t\tbase.Complete(new SignalArgs(new LookTargets(lentColonists).Named(\"SUBJECT\"), lentColonists.Select((Thing c) => c.LabelShort).ToCommaList(useAnd: true).Named(\"PAWNS\")));\n   88: \t\t\t\tif (lendColonistsToFaction != null && lendColonistsToFaction == Faction.OfEmpire)\n   89  \t\t\t\t{\n   90  \t\t\t\t\tThing thing = ThingMaker.MakeThing(ThingDefOf.Shuttle);\n   91: \t\t\t\t\tthing.SetFaction(Faction.OfEmpire);\n   92  \t\t\t\t\tTransportShip transportShip = TransportShipMaker.MakeTransportShip(TransportShipDefOf.Ship_Shuttle, lentColonists, thing);\n   93: \t\t\t\t\ttransportShip.ArriveAt(DropCellFinder.GetBestShuttleLandingSpot(map, Faction.OfEmpire), map.Parent);\n   94  \t\t\t\t\ttransportShip.AddJobs(ShipJobDefOf.Unload, ShipJobDefOf.FlyAway);\n   95  \t\t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld/Reward_Items.cs:\n  119  \t\t\tbool flag = true;\n  120  \t\t\tfloat x2 = (Find.TickManager.TicksGame - Find.History.lastPsylinkAvailable).TicksToDays();\n  121: \t\t\tif (Rand.Chance(QuestTuning.DaysSincePsylinkAvailableToGuaranteedNeuroformerChance.Evaluate(x2)) && ModsConfig.RoyaltyActive && (parms.disallowedThingDefs == null || !parms.disallowedThingDefs.Contains(ThingDefOf.PsychicAmplifier)) && rewardValue >= 600f && (Faction.OfEmpire == null || parms.giverFaction != Faction.OfEmpire))\n  122  \t\t\t{\n  123  \t\t\t\titems.Add(ThingMaker.MakeThing(ThingDefOf.PsychicAmplifier));\n\n~/projects/RW1.4-Decompile/RimWorld/RewardsGenerator.cs:\n   96  \t\t\tbool flag3 = flag2 || flag;\n   97  \t\t\tbool flag4 = parms.giverFaction != null && parms.giverFaction.HostileTo(Faction.OfPlayer);\n   98: \t\t\tbool flag5 = flag2 && Faction.OfEmpire != null && parms.giverFaction == Faction.OfEmpire && !parms.thingRewardItemsOnly;\n   99  \t\t\tbool flag6;\n  100  \t\t\tbool flag7;\n\n~/projects/RW1.4-Decompile/RimWorld/StatsReportUtility.cs:\n   55  \t\t\tquickSearchWidget.Reset();\n   56  \t\t\tPermitsCardUtility.selectedPermit = null;\n   57: \t\t\tPermitsCardUtility.selectedFaction = ((ModLister.RoyaltyInstalled && Current.ProgramState == ProgramState.Playing) ? Faction.OfEmpire : null);\n   58  \t\t}\n   59  \n\n~/projects/RW1.4-Decompile/RimWorld.BaseGen/SymbolResolver_BasePart_Indoors_Leaf_ThroneRoom.cs:\n    9  \t\t\t\treturn false;\n   10  \t\t\t}\n   11: \t\t\tif (rp.faction == null || rp.faction != Faction.OfEmpire)\n   12  \t\t\t{\n   13  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/RimWorld.BaseGen/SymbolResolver_BasePart_Outdoors_Leaf_LandingPad.cs:\n   28  \t\t\t\treturn false;\n   29  \t\t\t}\n   30: \t\t\tif (rp.faction == null || rp.faction != Faction.OfEmpire)\n   31  \t\t\t{\n   32  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestGen_Lord.cs:\n   57  \t\t\tquestPart_WaitForEscort.pawns.AddRange(pawns);\n   58  \t\t\tquestPart_WaitForEscort.mapParent = mapParent;\n   59: \t\t\tquestPart_WaitForEscort.faction = Faction.OfEmpire;\n   60  \t\t\tquestPart_WaitForEscort.addFleeToil = addFleeToil;\n   61  \t\t\tquest.AddPart(questPart_WaitForEscort);\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_Root_BestowingCeremony.cs:\n  108  \t\t\tthing.TryGetComp<CompShuttle>().requiredPawns = list;\n  109  \t\t\tTransportShip transportShip = quest.GenerateTransportShip(TransportShipDefOf.Ship_Shuttle, list, thing).transportShip;\n  110: \t\t\tquest.AddShipJob_Arrive(transportShip, pawn.MapHeld.Parent, pawn, null, ShipJobStartMode.Instant, Faction.OfEmpire);\n  111  \t\t\tquest.AddShipJob(transportShip, ShipJobDefOf.Unload);\n  112  \t\t\tquest.AddShipJob_WaitForever(transportShip, leaveImmediatelyWhenSatisfied: true, showGizmos: false, list.Cast<Thing>().ToList()).sendAwayIfAnyDespawnedDownedOrDead = new List<Thing> { pawn2 };\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_Root_Mission.cs:\n  124  \t\t\t\tQuestUtility.AddQuestTag(ref transportShip.questTags, text);\n  125  \t\t\t\tquest.SendTransportShipAwayOnCleanup(transportShip, unloadContents: true, TransportShipDropMode.None);\n  126: \t\t\t\tquest.AddShipJob_Arrive(transportShip, colonyMap.Parent, null, null, ShipJobStartMode.Instant, Faction.OfEmpire);\n  127  \t\t\t\tquest.AddShipJob_WaitSendable(transportShip, site, leaveImmeiatelyWhenSatisfied: true);\n  128  \t\t\t\tquest.AddShipJob(transportShip, ShipJobDefOf.Unload);\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_Root_Mission_AncientComplex.cs:\n  164  \t\t\t\t}, QuestGenUtility.MergeRules(null, dialog.text, \"root\"));\n  165  \t\t\t\tquest.AddPart(dialog);\n  166: \t\t\t\tquest.AddShipJob_Arrive(transportShip, map.Parent, null, null, ShipJobStartMode.Instant, Faction.OfEmpire);\n  167  \t\t\t\tquest.AddShipJob(transportShip, ShipJobDefOf.Unload, ShipJobStartMode.Force, text8);\n  168  \t\t\t\tquest.Signal(text7, delegate\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_Root_ShuttleCrash_Rescue.cs:\n   57  \t\t\t{\n   58  \t\t\t\tQuestGen_Pawns.GetPawnParms result = default(QuestGen_Pawns.GetPawnParms);\n   59: \t\t\t\tresult.mustBeOfFaction = Faction.OfEmpire;\n   60  \t\t\t\tresult.canGeneratePawn = true;\n   61  \t\t\t\tresult.mustBeWorldPawn = true;\n   ..\n   85  \t\t\tTryFindEnemyFaction(out var enemyFaction);\n   86  \t\t\tThing crashedShuttle = ThingMaker.MakeThing(ThingDefOf.ShuttleCrashed);\n   87: \t\t\tTryFindShuttleCrashPosition(map, Faction.OfEmpire, crashedShuttle.def.size, crashedShuttle.def.interactionCellOffset, out var shuttleCrashPosition);\n   88  \t\t\tList<Pawn> civilians = new List<Pawn>();\n   89  \t\t\tList<Pawn> list = new List<Pawn>();\n   ..\n   96  \t\t\tPawn asker = quest.GetPawn(new QuestGen_Pawns.GetPawnParms\n   97  \t\t\t{\n   98: \t\t\t\tmustBeOfFaction = Faction.OfEmpire,\n   99  \t\t\t\tcanGeneratePawn = true,\n  100  \t\t\t\tmustBeWorldPawn = true,\n  ...\n  114  \t\t\t\tPawn pawn2 = quest.GetPawn(new QuestGen_Pawns.GetPawnParms\n  115  \t\t\t\t{\n  116: \t\t\t\t\tmustBeOfFaction = Faction.OfEmpire,\n  117  \t\t\t\t\tcanGeneratePawn = true,\n  118  \t\t\t\t\tmustBeOfKind = mustBeOfKind,\n  ...\n  126  \t\t\tallPassengers.AddRange(civilians);\n  127  \t\t\tquest.BiocodeWeapons(allPassengers);\n  128: \t\t\tThing rescueShuttle = QuestGen_Shuttle.GenerateShuttle(Faction.OfEmpire, allPassengers);\n  129  \t\t\tstring inSignal = QuestGenUtility.HardcodedSignalWithQuestID(\"soldiers.Rescued\");\n  130  \t\t\tquest.RemoveFromRequiredPawnsOnRescue(rescueShuttle, soldiers, inSignal);\n  ...\n  134  \t\t\t\tquest.SpawnSkyfaller(map, ThingDefOf.ShuttleCrashing, Gen.YieldSingle(crashedShuttle), Faction.OfPlayer, shuttleCrashPosition);\n  135  \t\t\t\tquest.DropPods(map.Parent, allPassengers, null, null, null, null, dropSpot: shuttleCrashPosition, sendStandardLetter: false);\n  136: \t\t\t\tquest.DefendPoint(map.Parent, shuttleCrashPosition, soldiers, Faction.OfEmpire, null, null, 12f, isCaravanSendable: false, addFleeToil: false);\n  137  \t\t\t\tIntVec3 position = shuttleCrashPosition + IntVec3.South;\n  138: \t\t\t\tquest.WaitForEscort(map.Parent, civilians, Faction.OfEmpire, position, null, addFleeToil: false);\n  139  \t\t\t\tstring inSignal5 = QuestGenUtility.HardcodedSignalWithQuestID(\"rescueShuttle.Spawned\");\n  140: \t\t\t\tquest.ExitOnShuttle(map.Parent, allPassengers, Faction.OfEmpire, rescueShuttle, inSignal5, addFleeToil: false);\n  141  \t\t\t\tquest.ShuttleDelay(20000, civilians, delegate\n  142  \t\t\t\t{\n  143: \t\t\t\t\tquest.Letter(LetterDefOf.NeutralEvent, null, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, Gen.YieldSingle(rescueShuttle), filterDeadPawnsFromLookTargets: false, \"[rescueShuttleArrivedLetterText]\", null, \"[rescueShuttleArrivedLetterLabel]\");\n  144  \t\t\t\t\tTransportShip transportShip = quest.GenerateTransportShip(TransportShipDefOf.Ship_Shuttle, null, rescueShuttle).transportShip;\n  145  \t\t\t\t\tquest.SendTransportShipAwayOnCleanup(transportShip);\n  146  \t\t\t\t\tDropCellFinder.TryFindDropSpotNear(shuttleCrashPosition, map, out var result, allowFogged: false, canRoofPunch: false, allowIndoors: false, ThingDefOf.Shuttle.Size + new IntVec2(2, 2), mustBeReachableFromCenter: false);\n  147: \t\t\t\t\tquest.AddShipJob_Arrive(transportShip, map.Parent, null, result, ShipJobStartMode.Instant, Faction.OfEmpire);\n  148  \t\t\t\t\tquest.AddShipJob_WaitTime(transportShip, 30000, leaveImmediatelyWhenSatisfied: true, allPassengers.Cast<Thing>().ToList());\n  149  \t\t\t\t\tquest.ShuttleLeaveDelay(rescueShuttle, 30000);\n  ...\n  188  \t\t\tstring text3 = QuestGenUtility.HardcodedSignalWithQuestID(\"rescueShuttle.Destroyed\");\n  189  \t\t\tstring inSignal2 = QuestGenUtility.HardcodedSignalWithQuestID(\"asker.Destroyed\");\n  190: \t\t\tquest.GoodwillChangeShuttleSentThings(Faction.OfEmpire, list, -5, null, inSignalsShuttleSent, text3, HistoryEventDefOf.ShuttleGuardsMissedShuttle, canSendMessage: true, canSendHostilityLetter: false, QuestPart.SignalListenMode.Always);\n  191: \t\t\tquest.GoodwillChangeShuttleSentThings(Faction.OfEmpire, Gen.YieldSingle(asker), -10, null, inSignalsShuttleSent, text3, HistoryEventDefOf.ShuttleCommanderMissedShuttle, canSendMessage: true, canSendHostilityLetter: false, QuestPart.SignalListenMode.Always);\n  192  \t\t\tquest.Leave(allPassengers, \"\", sendStandardLetter: false);\n  193: \t\t\tquest.Letter(LetterDefOf.PositiveEvent, text, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, null, filterDeadPawnsFromLookTargets: false, \"[questCompletedSuccessLetterText]\", null, \"[questCompletedSuccessLetterLabel]\");\n  194  \t\t\tstring questSuccess = QuestGen.GenerateNewSignal(\"QuestSuccess\");\n  195  \t\t\tquest.SignalPass(delegate\n  ...\n  209  \t\t\t\tquest.AnyOnTransporter(Gen.YieldSingle(asker), rescueShuttle, delegate\n  210  \t\t\t\t{\n  211: \t\t\t\t\tquest.Letter(LetterDefOf.PositiveEvent, null, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, null, filterDeadPawnsFromLookTargets: false, \"[questCompletedCiviliansLostSuccessLetterText]\", null, \"[questCompletedCiviliansLostSuccessLetterLabel]\");\n  212  \t\t\t\t\tquest.SignalPass(null, null, questSuccess);\n  213  \t\t\t\t}, delegate\n  214  \t\t\t\t{\n  215: \t\t\t\t\tquest.Letter(LetterDefOf.NegativeEvent, null, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, null, filterDeadPawnsFromLookTargets: false, \"[askerLostLetterText]\", null, \"[askerLostLetterLabel]\");\n  216  \t\t\t\t\tQuestGen_End.End(quest, QuestEndOutcome.Fail);\n  217  \t\t\t\t});\n  218  \t\t\t}, delegate\n  219  \t\t\t{\n  220: \t\t\t\tquest.Letter(LetterDefOf.NegativeEvent, null, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, null, filterDeadPawnsFromLookTargets: false, \"[allLostLetterText]\", null, \"[allLostLetterLabel]\");\n  221  \t\t\t\tQuestGen_End.End(quest, QuestEndOutcome.Fail);\n  222  \t\t\t}, text2);\n  223: \t\t\tquest.Letter(LetterDefOf.NegativeEvent, inSignal2, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, Gen.YieldSingle(asker), filterDeadPawnsFromLookTargets: false, \"[askerDiedLetterText]\", null, \"[askerDiedLetterLabel]\");\n  224  \t\t\tquest.End(QuestEndOutcome.Fail, 0, null, inSignal2);\n  225: \t\t\tquest.Letter(LetterDefOf.NegativeEvent, text3, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, Gen.YieldSingle(rescueShuttle), filterDeadPawnsFromLookTargets: false, \"[shuttleDestroyedLetterText]\", null, \"[shuttleDestroyedLetterLabel]\");\n  226  \t\t\tquest.End(QuestEndOutcome.Fail, 0, null, text3);\n  227  \t\t\tquest.End(QuestEndOutcome.Fail, 0, null, QuestGenUtility.HardcodedSignalWithQuestID(\"asker.LeftMap\"), QuestPart.SignalListenMode.OngoingOnly, sendStandardLetter: true);\n  ...\n  240  \t\tprivate bool TryFindEnemyFaction(out Faction enemyFaction)\n  241  \t\t{\n  242: \t\t\treturn Find.FactionManager.AllFactionsVisible.Where((Faction f) => f.HostileTo(Faction.OfEmpire) && f.HostileTo(Faction.OfPlayer)).TryRandomElement(out enemyFaction);\n  243  \t\t}\n  244  \n  ...\n  273  \t\t\t\treturn false;\n  274  \t\t\t}\n  275: \t\t\tif (Faction.OfEmpire == null)\n  276  \t\t\t{\n  277  \t\t\t\treturn false;\n  ...\n  281  \t\t\t\treturn false;\n  282  \t\t\t}\n  283: \t\t\tif (Faction.OfEmpire.PlayerRelationKind == FactionRelationKind.Hostile)\n  284  \t\t\t{\n  285  \t\t\t\treturn false;\n  ...\n  294  \t\t\t\treturn false;\n  295  \t\t\t}\n  296: \t\t\tif (!TryFindShuttleCrashPosition(map, Faction.OfEmpire, ThingDefOf.ShuttleCrashed.size, ThingDefOf.ShuttleCrashed.interactionCellOffset, out var spot))\n  297  \t\t\t{\n  298  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/Verse/DebugActionsQuests.cs:\n   82  \t\t\t\t\t{\n   83  \t\t\t\t\t\tPawn pawn = slate.Get<Pawn>(\"asker\");\n   84: \t\t\t\t\t\tif (pawn.royalty.AllTitlesForReading.NullOrEmpty() && Faction.OfEmpire != null)\n   85  \t\t\t\t\t\t{\n   86: \t\t\t\t\t\t\tpawn.royalty.SetTitle(Faction.OfEmpire, RoyalTitleDefOf.Knight, grantRewards: false);\n   87  \t\t\t\t\t\t\tMessages.Message(\"DEV: Gave \" + RoyalTitleDefOf.Knight.label + \" title to \" + pawn.LabelCap, pawn, MessageTypeDefOf.NeutralEvent, historical: false);\n   88  \t\t\t\t\t\t}\n\n~/projects/RW1.4-Decompile/Verse/DebugActionsRoyalty.cs:\n  201  \t\t\t\t\tQuestScriptDef questScriptDef = DefDatabase<QuestScriptDef>.AllDefsListForReading.Where((QuestScriptDef x) => x.IsRootRandomSelected && x.CanRun(slate)).RandomElementByWeight((QuestScriptDef x) => NaturalRandomQuestChooser.GetNaturalRandomSelectionWeight(x, points, storyState));\n  202  \t\t\t\t\tQuest quest = QuestGen.Generate(questScriptDef, slate);\n  203: \t\t\t\t\tif (quest.InvolvedFactions.Contains(Faction.OfEmpire))\n  204  \t\t\t\t\t{\n  205  \t\t\t\t\t\tnum7++;\n\n49 matches across 17 files\n",
+			"settings":
+			{
+				"buffer_size": 15900,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			}
 		}
 	],
 	"build_system": "",
@@ -362,34 +149,80 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/cem/projects/Vexine_VexiSpecies",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/ModExtensions",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/StaticCollectionsClass",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/Things",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/Things/Buildings",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/ThoughtWorkers",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/InteractionDefs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/Rooms",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Defs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Defs/HediffDefs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/Common",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/Comps",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/Comps/CompProperties",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/HarmonyPatches",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/MentalStates",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/UI"
+		"/Users/cem/projects/Vexine_DarkStory",
+		"/Users/cem/projects/Vexine_DarkStory/1.4",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/FactionDefs",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingCategoryDefs",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingDef_Items",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches",
+		"/Users/cem/projects/Vexine_DarkStory/Source",
+		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory",
+		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory",
+		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/HarmonyPatches",
+		"/Users/cem/projects/PsychicAnimals",
+		"/Users/cem/projects/PsychicAnimals/1.4",
+		"/Users/cem/projects/PsychicAnimals/1.4/Defs",
+		"/Users/cem/projects/PsychicAnimals/AnimaFruit",
+		"/Users/cem/projects/PsychicAnimals/AnimaFruit/Defs",
+		"/Users/cem/projects/RW1.4-Decompile"
 	],
 	"file_history":
 	[
+		"/Users/cem/projects/Vexine_DarkStory/LoadFolders.xml",
+		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/FactionRellationChanger.cs",
+		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/HarmonyPatches/TributeCollectorPatch.cs",
+		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/DarkStoryMod.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/PreceptDefs/Precepts_Slavery.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/FactionDefs/Faction_Empire.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/TraderKindDef.cs",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches/untitled.xml",
+		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/Incidents/TCAEmpire.cs",
+		"/Users/cem/projects/PsychicAnimals/1.4/Defs/FeedFruitOnAnimal.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/IncidentDefs/Incidents_Map_Special.xml",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches/TributeCollectorFreq.xml",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections.sln",
+		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/Vexine.DarkStory.csproj",
+		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/FactionDefs/Player.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Faction.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompDissolutionEffect_Goodwill.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAbilityEffect_Flashstorm.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/DiplomacyTuning.cs",
+		"/Users/cem/projects/Animalitor/1.4/Defs/RecipeDefs/Recipe_AnimalitorImplant.xml",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_Endogenes.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Goodwill/GoodwillSituations_Misc.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_TimedMakeFactionHostile.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/FactionRelationKind.cs",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/BackstoryDefs/VexiSpecific.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/JobDriver_Lovin.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/IndividualThoughtToAdd.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThoughtDefs/Thoughts_Situation_Social.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/InteractionDefs/Interactions_Social.xml",
+		"/Users/cem/projects/PositiveConnections/1.4/Defs/InteractionDefs/Interactions.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThoughtDefs/Thoughts_Memory_Social.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThoughtDefs/Thoughts_Memory_Death.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/InteractionDefs/Interactions_Animal.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/InteractionDefs/Interactions_Social.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/InteractionDefs/Interactions_Social.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAbilityEffect_BloodfeederBite.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/SanguophageUtility.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/InteractionDefs/Interactions_Prisoner.xml",
+		"/Users/cem/projects/PositiveConnections/About/About.xml",
+		"/Users/cem/projects/RW1.4-Decompile/Verse/PawnGenerator.cs",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections/PositiveConnections.csproj",
+		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Animalitor.csproj",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/TraitSet.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraitDefs/Traits_Singular.xml",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections.sln_orig",
+		"/Users/cem/projects/PositiveConnections/Animalitor.sln",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/IncidentDef/FleaInfestation.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Storyteller/Incidents_Map_Special.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Storyteller/Storytellers.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs/GeneDefs_Cosmetic.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/TrainableUtility.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_TrainingTracker.cs",
+		"/Users/cem/projects/RW1.4-Decompile/Verse/IExposable.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThingDefs_Buildings/Buildings_Production.xml",
 		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/ModExtensions/NaturalPartWithHediff.cs",
 		"/Users/cem/projects/RW1.4-Decompile/Verse/RaceProperties.cs",
 		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Hediffs/Hediff_Animalitor.cs",
@@ -405,7 +238,6 @@
 		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Ability.cs",
 		"/Users/cem/projects/Animalitor/1.4/Defs/AbilityDefs/Abilities_Misc.xml",
 		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/JobDriver_AnimalWatching.cs",
-		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_Endogenes.xml",
 		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAnimalInsanityPulser.cs",
 		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/HarmonyPatches/PawnKillPatch.cs",
 		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/AnimalitorUtility.cs",
@@ -418,7 +250,6 @@
 		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompGiveHediffSeverity.cs",
 		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/HediffDefs/Hediffs_Mechanitor.xml",
 		"/Users/cem/projects/RW1.4-Decompile/MechanitorUtility.cs",
-		"/Users/cem/projects/RW1.4-Decompile/Verse/PawnGenerator.cs",
 		"/Users/cem/projects/RW1.4-Decompile/Verse/PawnKindDef.cs",
 		"/Users/cem/projects/RW1.4-Decompile/Verse/SkillRange.cs",
 		"/Users/cem/projects/Animalitor/1.4/Defs/PawnKindDefs_Humanlikes/PawnKinds_Special.xml",
@@ -465,69 +296,46 @@
 		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/StuffCategoryDefs/StuffCategoryDefs.xml",
 		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches/FurForEmpire.xml",
 		"/Users/cem/projects/Goldenbell/safety",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Mods/Vexine_VexiSpecies/1.4/Defs/ThingDef_Items/Item_Resource_Stuff_Leather.xml",
-		"/Users/cem/projects/Vexine_VexiSpecies/About/About.xml",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/HarmonyPatches/ButcherTo.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/FactionDefs/Faction_Empire.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThingDefs_Misc/Apparel_Child.xml",
-		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine/HarmonyPatches/DefsFromRecipeMakers.cs",
-		"/Users/cem/projects/RitualCulture/1.4/Defs/ThingDefs_Buildings/Buildings_Art.xml",
-		"/Users/cem/projects/Vexine_DarkStory/About/About.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Dialog_ManageOutfits.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/RecipeDefGenerator.cs",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/HarmonyPatches/ArtComfort.cs",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/CompAffectedByArtFacility.cs",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/CompArtComfortBonus.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompFacility.cs",
-		"/Users/cem/projects/RitualCulture/Source/ArtComps.cs",
-		"/Users/cem/projects/RitualCulture/1.4/Defs/ModExtensions/ModExtensions.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/RoomStatWorker_Space.cs",
-		"/Users/cem/projects/RitualCulture/1.4/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/HarmonyPatches/LikeABedPatch.cs",
-		"/Users/cem/projects/RW1.4-Decompile/Verse/Zone.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/JobDriver_Ingest.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/FoodUtility.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/JobDriver_InteractAnimal.cs",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/RitualCultureDefOf.cs",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/Buildings/RitualCulture_Shelf.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAffectedByFacilities.cs",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/HarmonyPatches/RoomFacilityPatch.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Mods/RitualCulture/Source/RitualCulture/ModExtension.xml",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/LinkableFacilityModExtension.cs",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/RoomFacility.cs",
-		"/Users/cem/projects/Linkable/LinkableSettings/CompAffectedByFacilities_CanPotentiallyLinkTo_Static.cs",
-		"/Users/cem/projects/RitualCulture/Source/RitualCulture/RitualCultureMod.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs/GeneDefs_Cosmetic.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs/GeneDefs_Endogenes.xml",
-		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/PawnKindDefs_Humanlike/PawnKinds_VexiTribal.xml",
-		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/PawnKindDefs_Humanlike/PawnKinds_Player.xml",
-		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/BackstoryDefs/Offworld_Nonspecific_Child.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/QuestUtility.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAbilityEffect_ReimplantXenogerm.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2231295285/1.4/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Dialog_FormCaravan.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompLaunchable.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/BillUtility.cs",
-		"/Users/cem/projects/Goldenbell/1.4/Patches/TraderKinds_Base_OutlanderPatch.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraderKindDefs/TraderKinds_Caravan_Outlander.xml",
-		"/Users/cem/projects/Goldenbell/1.4/Patches/TraderKinds_Caravan_OutlanderPatch.xml",
-		"/Users/cem/projects/Goldenbell/1.4/Defs/ResearchProjectDefs/ResearchProjects.xml",
-		"/Users/cem/projects/Goldenbell/1.4/Defs/Drugs/Psynerge.xml",
-		"/Users/cem/projects/Goldenbell/1.4/Defs/Drugs/Quelflo.xml",
-		"/Users/cem/projects/Goldenbell/1.4/Patches/PlantBiomePatch.xml",
-		"/Users/cem/projects/Goldenbell/1.4/Defs/ThingDefs_Plants/Plants_Wild_General.xml"
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Mods/Vexine_VexiSpecies/1.4/Defs/ThingDef_Items/Item_Resource_Stuff_Leather.xml"
 	],
 	"find":
 	{
-		"height": 81.0
+		"height": 59.0
 	},
 	"find_in_files":
 	{
 		"height": 257.0,
 		"where_history":
 		[
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Animalitor/Animalitor,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Defs,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source,<project filters>",
@@ -626,24 +434,7 @@
 			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2279786905,<project filters>",
 			"/Users/cem/projects/ApiniRaceMod,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2279786905,<project filters>",
-			"/Users/cem/projects/ApiniRaceMod,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThoughtDefs,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>"
+			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2279786905,<project filters>"
 		]
 	},
 	"find_state":
@@ -651,6 +442,75 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Faction.OfEmpire",
+			"Slavery_Classic",
+			"neanderthal",
+			"tribute",
+			"neanderthal",
+			"Faction",
+			"CheckReachNaturalGoodwill",
+			"goodwill",
+			"diplo",
+			"MayRequire",
+			"modExtensions",
+			"MayRequire",
+			"factionEmpire",
+			"FactionRelationKind",
+			"Faction",
+			"NaturalEnemy",
+			"NaturalEnemyInitialGoodwill",
+			"InitialHostileThreshold",
+			"goodwill",
+			"startingGoodwill",
+			"female",
+			"moodPowerFact",
+			"Thought_MemorySocial",
+			"ModSettingsWindow",
+			"initiator",
+			"RecipientThought",
+			"interactiondef",
+			"thoughtdeftogivetarget",
+			"Opinion",
+			"gainopinion",
+			"Interacted",
+			"InteractionDef",
+			"PersonalCharacteristic",
+			"InteractionDef",
+			"assembly",
+			"Thought_MemorySocial",
+			"Rival",
+			"Animalitor",
+			"traitdef",
+			"trait",
+			"gaintrait",
+			"pawngen",
+			"kind",
+			"gen",
+			"trait",
+			"psycho",
+			"kind",
+			"commonality",
+			"TravelerGroup",
+			"IncidentWorker_VisitorGroup",
+			"Furskin",
+			"furskin",
+			"fur",
+			"furskin",
+			"FUR",
+			"Fur",
+			"Furskin",
+			"fur",
+			"TryExecuteWorker",
+			"IAnimalitorActions",
+			"IsLinkedAnimal",
+			"degradation",
+			"hediff_linkedanimal",
+			"Hediff_AnimalitorLinkedAnimal",
+			"IsLinkedAnimal",
+			"degradationperiod",
+			"TrainingDecay",
+			"Recipe",
+			"CraftingRecipeBase",
 			"hediff",
 			"affected",
 			"Capacity",
@@ -709,76 +569,7 @@
 			"RegisterAnimalitor",
 			"activeAnimalitors",
 			"hunter",
-			"scientist",
-			"trylinkwith",
-			"joygiver_",
-			"ModExtension",
-			"jobdriver",
-			"animal",
-			"play",
-			"fetch",
-			"psylink",
-			"psychicamplifier",
-			"CanBeUsedBy",
-			"psychicamplifier",
-			"upgrade",
-			"psychicamplifier",
-			"thick",
-			"drag",
-			"IsAnimalLinked",
-			"following",
-			"namespace",
-			"GetHediff",
-			"Hediff_Animalitor",
-			"IsValidLinkTarget",
-			"controlledPawns",
-			"Expose",
-			"hediff",
-			"Pawn_Mechanitor",
-			"MapComponent",
-			"mechanitor",
-			"mechanitor_pawntracker",
-			"LinkAnimal",
-			"IsAnimalLinked",
-			"controlGroups",
-			"controlledPawns",
-			"mechanitor",
-			"followingAnimals",
-			"activeAnimalitors",
-			"IsLinkOverlayActive",
-			"obedien",
-			"obedience",
-			"ToggleAnimalFollow",
-			"followFieldwork",
-			"skin",
-			"skinshader",
-			"Fur",
-			"Furs",
-			"stuffProps",
-			"thingFilter",
-			"ThingFilter",
-			"recipedef",
-			"IsStuffAllowed",
-			"IsStuffApplicable",
-			"parka",
-			"stuffProps",
-			"leather",
-			"devilstrand",
-			"clothingFilter",
-			"apparelFilter",
-			"Filter",
-			"Leathery",
-			"devilstrand",
-			"fabric",
-			"tissue",
-			"fabric",
-			"synthread",
-			"apparelFilter",
-			"IsFacilityOf",
-			"IsFacilityOf(Thing facility)\n",
-			"Facility",
-			"CompProperties_Facility",
-			"StatWorker_"
+			"scientist"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -786,6 +577,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"PositiveConnections",
 			"PsychicSensitivityReducer",
 			"PsychicSensitivityBooster",
 			"baseMoodEffect"
@@ -805,31 +597,34 @@
 			[
 				{
 					"buffer": 0,
-					"semi_transient": false,
+					"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/IncidentWorker_TraderCaravanArrival.cs",
+					"selected": true,
+					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 54,
+						"buffer_size": 4276,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								54,
-								54
+								2134,
+								2195
 							]
 						],
 						"settings":
 						{
-							"auto_name": "problems:",
-							"lsp_uri": "buffer://sublime/193",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"lsp_uri": "file:///Users/cem/projects/RW1.4-Decompile/RimWorld/IncidentWorker_TraderCaravanArrival.cs",
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 4772.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"stack_multiselect": false,
 					"type": "text"
 				},
@@ -838,43 +633,213 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2130,
+						"buffer_size": 15900,
 						"regions":
 						{
-						},
-						"selection":
-						[
-							[
-								2130,
-								2130
-							]
-						],
-						"settings":
-						{
-							"auto_name": "using System;",
-							"lsp_uri": "buffer://sublime/132",
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "Source/Vexine/ModExtensions/NaturalPartWithHediff.cs",
-					"selected": true,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2702,
-						"regions":
-						{
+							"match":
+							{
+								"flags": 112,
+								"regions":
+								[
+									[
+										323,
+										339
+									],
+									[
+										568,
+										584
+									],
+									[
+										1028,
+										1044
+									],
+									[
+										1238,
+										1254
+									],
+									[
+										1557,
+										1573
+									],
+									[
+										1697,
+										1713
+									],
+									[
+										2096,
+										2112
+									],
+									[
+										2212,
+										2228
+									],
+									[
+										2474,
+										2490
+									],
+									[
+										2522,
+										2538
+									],
+									[
+										2984,
+										3000
+									],
+									[
+										3112,
+										3128
+									],
+									[
+										3347,
+										3363
+									],
+									[
+										3922,
+										3938
+									],
+									[
+										3972,
+										3988
+									],
+									[
+										4305,
+										4321
+									],
+									[
+										4355,
+										4371
+									],
+									[
+										4724,
+										4740
+									],
+									[
+										4953,
+										4969
+									],
+									[
+										5193,
+										5209
+									],
+									[
+										5470,
+										5486
+									],
+									[
+										5983,
+										5999
+									],
+									[
+										6634,
+										6650
+									],
+									[
+										7109,
+										7125
+									],
+									[
+										7483,
+										7499
+									],
+									[
+										7769,
+										7785
+									],
+									[
+										8098,
+										8114
+									],
+									[
+										8305,
+										8321
+									],
+									[
+										8563,
+										8579
+									],
+									[
+										9128,
+										9144
+									],
+									[
+										9332,
+										9348
+									],
+									[
+										9544,
+										9560
+									],
+									[
+										9742,
+										9758
+									],
+									[
+										10531,
+										10547
+									],
+									[
+										10987,
+										11003
+									],
+									[
+										11233,
+										11249
+									],
+									[
+										11584,
+										11600
+									],
+									[
+										12087,
+										12103
+									],
+									[
+										12495,
+										12511
+									],
+									[
+										12868,
+										12884
+									],
+									[
+										13212,
+										13228
+									],
+									[
+										13558,
+										13574
+									],
+									[
+										14212,
+										14228
+									],
+									[
+										14376,
+										14392
+									],
+									[
+										14496,
+										14512
+									],
+									[
+										14692,
+										14708
+									],
+									[
+										15032,
+										15048
+									],
+									[
+										15109,
+										15125
+									],
+									[
+										15818,
+										15834
+									]
+								],
+								"scope": ""
+							}
 						},
 						"selection":
 						[
@@ -885,16 +850,32 @@
 						],
 						"settings":
 						{
-							"lsp_uri": "file:///Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/ModExtensions/NaturalPartWithHediff.cs",
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
+							"auto_complete_triggers":
+							[
+								{
+									"characters": "<",
+									"selector": "text.html, text.xml"
+								},
+								{
+									"rhs_empty": true,
+									"selector": "punctuation.accessor"
+								}
+							],
+							"detect_indentation": false,
+							"line_numbers": false,
+							"lsp_uri": "buffer://sublime/297",
+							"output_tag": 1,
+							"result_base_dir": "",
+							"result_file_regex": "^([^ \t].*):$",
+							"result_line_regex": "^ +([0-9]+):",
+							"scroll_past_end": true,
+							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 892.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"stack_multiselect": false,
 					"type": "text"
 				}
@@ -987,7 +968,7 @@
 	},
 	"select_symbol":
 	{
-		"height": 370.0,
+		"height": 500.0,
 		"last_filter": "",
 		"selected_items":
 		[
@@ -1002,7 +983,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 594.0,
+	"side_bar_width": 589.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

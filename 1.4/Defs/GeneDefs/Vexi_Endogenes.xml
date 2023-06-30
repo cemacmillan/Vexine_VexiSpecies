@@ -244,7 +244,7 @@
         </statOffsets>
         <geneClass>Vexine.NaturalPartWithHediff</geneClass>
         <modExtensions>
-            <li Class="Vexine.GenomeExtension">
+            <li Class="Vexine.GenomeExtension" MayRequire="Ludeon.RimWorld.Biotech">
                 <linkedHediff>dIl_VexiClaws</linkedHediff>
                 <affectedPart>Hand</affectedPart>
             </li>
