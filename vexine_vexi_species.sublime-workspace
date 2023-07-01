@@ -44,10 +44,23 @@
 	"buffers":
 	[
 		{
-			"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/IncidentWorker_TraderCaravanArrival.cs",
+			"contents": "Searching 7215 files for \"MostSeniorTitle\"\n\n~/projects/RW1.4-Decompile/RimWorld/Alert_ColonistsIdle.cs:\n   31  \t\t\t\t\t\tif (item.royalty != null)\n   32  \t\t\t\t\t\t{\n   33: \t\t\t\t\t\t\tRoyalTitle mostSeniorTitle = item.royalty.MostSeniorTitle;\n   34: \t\t\t\t\t\t\tif (mostSeniorTitle == null || !mostSeniorTitle.def.suppressIdleAlert)\n   35  \t\t\t\t\t\t\t{\n   36  \t\t\t\t\t\t\t\tidleColonistsResult.Add(item);\n\n~/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs:\n   22  \t\t\t\t\t\tif (freeColonist.Spawned && (freeColonist.story == null || !freeColonist.story.traits.HasTrait(TraitDefOf.Ascetic)))\n   23  \t\t\t\t\t\t{\n   24: \t\t\t\t\t\t\tRoyalTitle royalTitle = freeColonist.royalty?.MostSeniorTitle;\n   25  \t\t\t\t\t\t\tif (royalTitle != null && royalTitle.conceited && royalTitle.def.foodRequirement.Defined && !FoodUtility.TryFindBestFoodSourceFor_NewTemp(freeColonist, freeColonist, desperate: false, out var _, out var _, canRefillDispenser: true, canUseInventory: true, canUsePackAnimalInventory: false, allowForbidden: false, allowCorpse: false, allowSociallyImproper: false, allowHarvest: false, forceScanWholeMap: false, ignoreReservations: true, calculateWantedStackCount: false, allowVenerated: false, FoodPreferability.DesperateOnly))\n   26  \t\t\t\t\t\t\t{\n   ..\n   53  \t\t\treturn defaultExplanation + \"\\n\" + Targets.Select(delegate(Pawn t)\n   54  \t\t\t{\n   55: \t\t\t\tRoyalTitle mostSeniorTitle = t.royalty.MostSeniorTitle;\n   56: \t\t\t\tstring text = t.LabelShort + \" (\" + mostSeniorTitle.def.GetLabelFor(t.gender) + \"):\\n\" + mostSeniorTitle.def.SatisfyingMeals(includeDrugs: false).Select((Func<ThingDef, string>)((ThingDef m) => m.LabelCap)).ToLineList(\"- \");\n   57  \t\t\t\tif (ModsConfig.IdeologyActive && t.Ideo != null && t.Ideo.VeneratedAnimals.Any())\n   58  \t\t\t\t{\n\n~/projects/RW1.4-Decompile/RimWorld/FloatMenuMakerMap.cs:\n  586  \t\t\t\t\telse if (FoodUtility.InappropriateForTitle(t2.def, pawn, allowIfStarving: true))\n  587  \t\t\t\t\t{\n  588: \t\t\t\t\t\topt = new FloatMenuOption(text + \": \" + \"FoodBelowTitleRequirements\".Translate(pawn.royalty.MostSeniorTitle.def.GetLabelFor(pawn).CapitalizeFirst()).CapitalizeFirst(), null);\n  589  \t\t\t\t\t}\n  590  \t\t\t\t\telse if (!pawn.CanReach(t2, PathEndMode.OnCell, Danger.Deadly))\n\n~/projects/RW1.4-Decompile/RimWorld/FoodUtility.cs:\n  147  \t\t\t\treturn false;\n  148  \t\t\t}\n  149: \t\t\tRoyalTitle royalTitle = p.royalty?.MostSeniorTitle;\n  150  \t\t\tif (royalTitle != null && royalTitle.conceited && royalTitle.def.foodRequirement.Defined)\n  151  \t\t\t{\n\n~/projects/RW1.4-Decompile/RimWorld/ITab_Pawn_Visitor.cs:\n   87  \t\t\t\t\t\t\tif (base.SelPawn.royalty != null)\n   88  \t\t\t\t\t\t\t{\n   89: \t\t\t\t\t\t\t\tRoyalTitle mostSeniorTitle = base.SelPawn.royalty.MostSeniorTitle;\n   90: \t\t\t\t\t\t\t\tif (mostSeniorTitle != null && mostSeniorTitle.def.recruitmentResistanceOffset != 0f)\n   91  \t\t\t\t\t\t\t\t{\n   92: \t\t\t\t\t\t\t\t\tstring text3 = ((mostSeniorTitle.def.recruitmentResistanceOffset > 0f) ? \"+\" : \"-\");\n   93: \t\t\t\t\t\t\t\t\ttaggedString += \"\\n\" + \"RecruitmentResistanceRoyalTitleOffset\".Translate(mostSeniorTitle.Label.CapitalizeFirst()) + (\": \" + text3) + mostSeniorTitle.def.recruitmentResistanceOffset.ToString();\n   94  \t\t\t\t\t\t\t\t}\n   95  \t\t\t\t\t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld/JobGiver_PrisonerGetDressed.cs:\n   19  \t\t\tif (pawn.royalty != null && pawn.royalty.AllTitlesInEffectForReading.Count > 0)\n   20  \t\t\t{\n   21: \t\t\t\tRoyalTitleDef def = pawn.royalty.MostSeniorTitle.def;\n   22  \t\t\t\tif (def != null && def.requiredApparel != null)\n   23  \t\t\t\t{\n\n~/projects/RW1.4-Decompile/RimWorld/MainTabWindow_Quests.cs:\n 1345  \t\t\t\t\t\tif (p.royalty != null && p.royalty.AllTitlesInEffectForReading.Any())\n 1346  \t\t\t\t\t\t{\n 1347: \t\t\t\t\t\t\ttext = text + \" (\" + p.royalty.MostSeniorTitle.def.GetLabelFor(pLocal) + \")\";\n 1348  \t\t\t\t\t\t}\n 1349  \t\t\t\t\t\tlist.Add(new FloatMenuOption(text, delegate\n\n~/projects/RW1.4-Decompile/RimWorld/MusicManagerPlay.cs:\n  309  \t\t\t\t}\n  310  \t\t\t}\n  311: \t\t\tif (song.minRoyalTitle != null && !PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists.Any((Pawn p) => p.royalty != null && p.royalty.AllTitlesForReading.Any() && p.royalty.MostSeniorTitle.def.seniority >= song.minRoyalTitle.seniority && !p.IsQuestLodger()))\n  312  \t\t\t{\n  313  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/RimWorld/Pawn_GuestTracker.cs:\n  385  \t\t\t\tif (pawn.royalty != null)\n  386  \t\t\t\t{\n  387: \t\t\t\t\tRoyalTitle mostSeniorTitle = pawn.royalty.MostSeniorTitle;\n  388: \t\t\t\t\tif (mostSeniorTitle != null)\n  389  \t\t\t\t\t{\n  390: \t\t\t\t\t\tnum += mostSeniorTitle.def.recruitmentResistanceOffset;\n  391  \t\t\t\t\t}\n  392  \t\t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs:\n   72  \t\t}\n   73  \n   74: \t\tpublic RoyalTitle MostSeniorTitle\n   75  \t\t{\n   76  \t\t\tget\n\n~/projects/RW1.4-Decompile/RimWorld/QuestPart_Hyperlinks.cs:\n   41  \t\t\t\tif (pawns[j].royalty != null && pawns[j].royalty.AllTitlesForReading.Any())\n   42  \t\t\t\t{\n   43: \t\t\t\t\tRoyalTitle mostSeniorTitle = pawns[j].royalty.MostSeniorTitle;\n   44: \t\t\t\t\tif (mostSeniorTitle != null)\n   45  \t\t\t\t\t{\n   46: \t\t\t\t\t\tyield return new Dialog_InfoCard.Hyperlink(mostSeniorTitle.def, mostSeniorTitle.faction);\n   47  \t\t\t\t\t}\n   48  \t\t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld/RitualOutcomeEffectWorker_Speech.cs:\n   90  \t\t\t{\n   91  \t\t\t\tAbility ability = organizer.abilities.GetAbility(AbilityDefOf.Speech, includeTemporary: true);\n   92: \t\t\t\tRoyalTitle mostSeniorTitle = organizer.royalty.MostSeniorTitle;\n   93: \t\t\t\tif (ability != null && mostSeniorTitle != null)\n   94  \t\t\t\t{\n   95: \t\t\t\t\tability.StartCooldown(mostSeniorTitle.def.speechCooldown.RandomInRange);\n   96  \t\t\t\t}\n   97  \t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestGen_Pawns.cs:\n  260  \t\t\t\treturn false;\n  261  \t\t\t}\n  262: \t\t\tif (parms.seniorityRange != default(FloatRange) && (pawn.royalty == null || pawn.royalty.MostSeniorTitle == null || !parms.seniorityRange.IncludesEpsilon(pawn.royalty.MostSeniorTitle.def.seniority)))\n  263  \t\t\t{\n  264  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_GetPawn.cs:\n  213  \t\t\t\treturn false;\n  214  \t\t\t}\n  215: \t\t\tif (seniorityRange.GetValue(slate) != default(FloatRange) && (pawn.royalty == null || pawn.royalty.MostSeniorTitle == null || !seniorityRange.GetValue(slate).IncludesEpsilon(pawn.royalty.MostSeniorTitle.def.seniority)))\n  216  \t\t\t{\n  217  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/Verse/DebugActionsMisc.cs:\n  677  \t\t\t\t\t\tif (pawn2.royalty != null)\n  678  \t\t\t\t\t\t{\n  679: \t\t\t\t\t\t\tRoyalTitle mostSeniorTitle2 = pawn2.royalty.MostSeniorTitle;\n  680: \t\t\t\t\t\t\tif (mostSeniorTitle2 != null && !mostSeniorTitle2.def.requiredApparel.NullOrEmpty())\n  681  \t\t\t\t\t\t\t{\n  682: \t\t\t\t\t\t\t\tfor (int l = 0; l < mostSeniorTitle2.def.requiredApparel.Count; l++)\n  683  \t\t\t\t\t\t\t\t{\n  684: \t\t\t\t\t\t\t\t\tApparelRequirement apparelRequirement = mostSeniorTitle2.def.requiredApparel[l];\n  685  \t\t\t\t\t\t\t\t\tif (apparelRequirement.IsActive(pawn2) && !apparelRequirement.IsMet(pawn2))\n  686  \t\t\t\t\t\t\t\t\t{\n  687: \t\t\t\t\t\t\t\t\t\tLog.Error(string.Concat(localKindDef, \" (\", mostSeniorTitle2.def.label, \")  does not have its title requirements met. index=\", l, logApparel(pawn2)));\n  688  \t\t\t\t\t\t\t\t\t\tflag = true;\n  689  \t\t\t\t\t\t\t\t\t}\n  ...\n  738  \t\t\t\t\t\treturn \"Required tag missing.\";\n  739  \t\t\t\t\t}\n  740: \t\t\t\t\tif ((pawn.royalty == null || pawn.royalty.MostSeniorTitle == null) && app.tags.Contains(\"Royal\") && !pawn.kindDef.apparelTags.Any((string tag) => app.tags.Contains(tag)))\n  741  \t\t\t\t\t{\n  742  \t\t\t\t\t\treturn \"Royal apparel on non-royal pawn.\";\n  ...\n  749  \t\t\t\tif (pawn.royalty != null && pawn.royalty.AllTitlesInEffectForReading.Any())\n  750  \t\t\t\t{\n  751: \t\t\t\t\tRoyalTitle mostSeniorTitle = pawn.royalty.MostSeniorTitle;\n  752: \t\t\t\t\tif (apparel.TryGetQuality(out var qc) && (int)qc < (int)mostSeniorTitle.def.requiredMinimumApparelQuality)\n  753  \t\t\t\t\t{\n  754  \t\t\t\t\t\treturn \"Quality too low.\";\n  ...\n  797  \t\t\t\t\t\t}\n  798  \t\t\t\t\t\tPawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(localKindDef, faction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, fixedTitle));\n  799: \t\t\t\t\t\tRoyalTitle mostSeniorTitle = pawn.royalty.MostSeniorTitle;\n  800: \t\t\t\t\t\tif (mostSeniorTitle != null)\n  801  \t\t\t\t\t\t{\n  802  \t\t\t\t\t\t\tHediff_Psylink mainPsylinkSource = pawn.GetMainPsylinkSource();\n  803  \t\t\t\t\t\t\tif (mainPsylinkSource == null)\n  804  \t\t\t\t\t\t\t{\n  805: \t\t\t\t\t\t\t\tif (mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def) > 0)\n  806  \t\t\t\t\t\t\t\t{\n  807: \t\t\t\t\t\t\t\t\tstring text = mostSeniorTitle.def.LabelCap + \" - No psylink.\";\n  808  \t\t\t\t\t\t\t\t\tif (pawn.abilities.abilities.Any((Ability x) => x.def.level > 0))\n  809  \t\t\t\t\t\t\t\t\t{\n  ...\n  813  \t\t\t\t\t\t\t\t}\n  814  \t\t\t\t\t\t\t}\n  815: \t\t\t\t\t\t\telse if (mainPsylinkSource.level < mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def))\n  816  \t\t\t\t\t\t\t{\n  817: \t\t\t\t\t\t\t\tstringBuilder.AppendLine(\"Psylink at level \" + mainPsylinkSource.level + \", but requires \" + mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def));\n  818  \t\t\t\t\t\t\t}\n  819: \t\t\t\t\t\t\telse if (mainPsylinkSource.level > mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def))\n  820  \t\t\t\t\t\t\t{\n  821: \t\t\t\t\t\t\t\tstringBuilder.AppendLine(\"Psylink at level \" + mainPsylinkSource.level + \". Max is \" + mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def));\n  822  \t\t\t\t\t\t\t}\n  823  \t\t\t\t\t\t}\n\n~/projects/RW1.4-Decompile/Verse/Pawn.cs:\n 2532  \t\t\tStringBuilder stringBuilder = new StringBuilder();\n 2533  \t\t\tstringBuilder.AppendLine(MainDesc(writeFaction: true));\n 2534: \t\t\tRoyalTitle royalTitle = royalty?.MostSeniorTitle;\n 2535  \t\t\tif (royalTitle != null)\n 2536  \t\t\t{\n\n60 matches across 16 files\n",
 			"settings":
 			{
-				"buffer_size": 4276,
+				"buffer_size": 9847,
+				"line_ending": "Unix",
+				"name": "Find Results",
+				"scratch": true
+			},
+			"undo_stack":
+			[
+			]
+		},
+		{
+			"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs",
+			"settings":
+			{
+				"buffer_size": 40609,
 				"line_ending": "Unix"
 			},
 			"undo_stack":
@@ -55,14 +68,2826 @@
 			]
 		},
 		{
-			"contents": "Searching 7215 files for \"Faction.OfEmpire\"\n\n~/projects/RW1.4-Decompile/RimWorld/GenStep_Outpost.cs:\n   86  \t\t\tRimWorld.BaseGen.BaseGen.globalSettings.maxFarms = (allowGeneratingFarms ? (-1) : 0);\n   87  \t\t\tRimWorld.BaseGen.BaseGen.symbolStack.Push(\"settlement\", resolveParams);\n   88: \t\t\tif (faction != null && faction == Faction.OfEmpire)\n   89  \t\t\t{\n   90  \t\t\t\tRimWorld.BaseGen.BaseGen.globalSettings.minThroneRooms = (allowGeneratingThronerooms ? 1 : 0);\n   ..\n   92  \t\t\t}\n   93  \t\t\tRimWorld.BaseGen.BaseGen.Generate();\n   94: \t\t\tif (faction != null && faction == Faction.OfEmpire && RimWorld.BaseGen.BaseGen.globalSettings.landingPadsGenerated == 0)\n   95  \t\t\t{\n   96  \t\t\t\tGenStep_Settlement.GenerateLandingPadNearby(resolveParams.rect, map, faction, out var usedRect);\n\n~/projects/RW1.4-Decompile/RimWorld/GenStep_Settlement.cs:\n   54  \t\t\tRimWorld.BaseGen.BaseGen.globalSettings.minBarracks = 1;\n   55  \t\t\tRimWorld.BaseGen.BaseGen.symbolStack.Push(\"settlement\", resolveParams);\n   56: \t\t\tif (faction != null && faction == Faction.OfEmpire)\n   57  \t\t\t{\n   58  \t\t\t\tRimWorld.BaseGen.BaseGen.globalSettings.minThroneRooms = 1;\n   ..\n   60  \t\t\t}\n   61  \t\t\tRimWorld.BaseGen.BaseGen.Generate();\n   62: \t\t\tif (faction != null && faction == Faction.OfEmpire && RimWorld.BaseGen.BaseGen.globalSettings.landingPadsGenerated == 0)\n   63  \t\t\t{\n   64  \t\t\t\tGenerateLandingPadNearby(resolveParams.rect, map, faction, out var _);\n\n~/projects/RW1.4-Decompile/RimWorld/IncidentWorker_CaravanArrivalTributeCollector.cs:\n   15  \t\t\t\treturn false;\n   16  \t\t\t}\n   17: \t\t\tif (Faction.OfEmpire == null)\n   18  \t\t\t{\n   19  \t\t\t\treturn false;\n   20  \t\t\t}\n   21  \t\t\tMap map = (Map)parms.target;\n   22: \t\t\tparms.faction = Faction.OfEmpire;\n   23  \t\t\tparms.traderKind = DefDatabase<TraderKindDef>.AllDefsListForReading.Where((TraderKindDef t) => t.category == \"TributeCollector\").RandomElementByWeight((TraderKindDef t) => TraderKindCommonality(t, map, parms.faction));\n   24  \t\t\treturn true;\n   ..\n   27  \t\tprotected override bool CanFireNowSub(IncidentParms parms)\n   28  \t\t{\n   29: \t\t\tif (!base.CanFireNowSub(parms) || Faction.OfEmpire == null)\n   30  \t\t\t{\n   31  \t\t\t\treturn false;\n   32  \t\t\t}\n   33: \t\t\treturn FactionCanBeGroupSource(Faction.OfEmpire, (Map)parms.target);\n   34  \t\t}\n   35  \n\n~/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs:\n  602  \t\tpublic void AssignHeirIfNone(RoyalTitleDef t, Faction faction)\n  603  \t\t{\n  604: \t\t\tif (!heirs.ContainsKey(faction) && t.Awardable && (Faction.OfEmpire == null || pawn.HomeFaction != Faction.OfEmpire))\n  605  \t\t\t{\n  606  \t\t\t\tSetHeir(t.GetInheritanceWorker(faction).FindHeir(faction, pawn, t), faction);\n\n~/projects/RW1.4-Decompile/RimWorld/QuestPart_LendColonistsToFaction.cs:\n   86  \t\t\t{\n   87  \t\t\t\tbase.Complete(new SignalArgs(new LookTargets(lentColonists).Named(\"SUBJECT\"), lentColonists.Select((Thing c) => c.LabelShort).ToCommaList(useAnd: true).Named(\"PAWNS\")));\n   88: \t\t\t\tif (lendColonistsToFaction != null && lendColonistsToFaction == Faction.OfEmpire)\n   89  \t\t\t\t{\n   90  \t\t\t\t\tThing thing = ThingMaker.MakeThing(ThingDefOf.Shuttle);\n   91: \t\t\t\t\tthing.SetFaction(Faction.OfEmpire);\n   92  \t\t\t\t\tTransportShip transportShip = TransportShipMaker.MakeTransportShip(TransportShipDefOf.Ship_Shuttle, lentColonists, thing);\n   93: \t\t\t\t\ttransportShip.ArriveAt(DropCellFinder.GetBestShuttleLandingSpot(map, Faction.OfEmpire), map.Parent);\n   94  \t\t\t\t\ttransportShip.AddJobs(ShipJobDefOf.Unload, ShipJobDefOf.FlyAway);\n   95  \t\t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld/Reward_Items.cs:\n  119  \t\t\tbool flag = true;\n  120  \t\t\tfloat x2 = (Find.TickManager.TicksGame - Find.History.lastPsylinkAvailable).TicksToDays();\n  121: \t\t\tif (Rand.Chance(QuestTuning.DaysSincePsylinkAvailableToGuaranteedNeuroformerChance.Evaluate(x2)) && ModsConfig.RoyaltyActive && (parms.disallowedThingDefs == null || !parms.disallowedThingDefs.Contains(ThingDefOf.PsychicAmplifier)) && rewardValue >= 600f && (Faction.OfEmpire == null || parms.giverFaction != Faction.OfEmpire))\n  122  \t\t\t{\n  123  \t\t\t\titems.Add(ThingMaker.MakeThing(ThingDefOf.PsychicAmplifier));\n\n~/projects/RW1.4-Decompile/RimWorld/RewardsGenerator.cs:\n   96  \t\t\tbool flag3 = flag2 || flag;\n   97  \t\t\tbool flag4 = parms.giverFaction != null && parms.giverFaction.HostileTo(Faction.OfPlayer);\n   98: \t\t\tbool flag5 = flag2 && Faction.OfEmpire != null && parms.giverFaction == Faction.OfEmpire && !parms.thingRewardItemsOnly;\n   99  \t\t\tbool flag6;\n  100  \t\t\tbool flag7;\n\n~/projects/RW1.4-Decompile/RimWorld/StatsReportUtility.cs:\n   55  \t\t\tquickSearchWidget.Reset();\n   56  \t\t\tPermitsCardUtility.selectedPermit = null;\n   57: \t\t\tPermitsCardUtility.selectedFaction = ((ModLister.RoyaltyInstalled && Current.ProgramState == ProgramState.Playing) ? Faction.OfEmpire : null);\n   58  \t\t}\n   59  \n\n~/projects/RW1.4-Decompile/RimWorld.BaseGen/SymbolResolver_BasePart_Indoors_Leaf_ThroneRoom.cs:\n    9  \t\t\t\treturn false;\n   10  \t\t\t}\n   11: \t\t\tif (rp.faction == null || rp.faction != Faction.OfEmpire)\n   12  \t\t\t{\n   13  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/RimWorld.BaseGen/SymbolResolver_BasePart_Outdoors_Leaf_LandingPad.cs:\n   28  \t\t\t\treturn false;\n   29  \t\t\t}\n   30: \t\t\tif (rp.faction == null || rp.faction != Faction.OfEmpire)\n   31  \t\t\t{\n   32  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestGen_Lord.cs:\n   57  \t\t\tquestPart_WaitForEscort.pawns.AddRange(pawns);\n   58  \t\t\tquestPart_WaitForEscort.mapParent = mapParent;\n   59: \t\t\tquestPart_WaitForEscort.faction = Faction.OfEmpire;\n   60  \t\t\tquestPart_WaitForEscort.addFleeToil = addFleeToil;\n   61  \t\t\tquest.AddPart(questPart_WaitForEscort);\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_Root_BestowingCeremony.cs:\n  108  \t\t\tthing.TryGetComp<CompShuttle>().requiredPawns = list;\n  109  \t\t\tTransportShip transportShip = quest.GenerateTransportShip(TransportShipDefOf.Ship_Shuttle, list, thing).transportShip;\n  110: \t\t\tquest.AddShipJob_Arrive(transportShip, pawn.MapHeld.Parent, pawn, null, ShipJobStartMode.Instant, Faction.OfEmpire);\n  111  \t\t\tquest.AddShipJob(transportShip, ShipJobDefOf.Unload);\n  112  \t\t\tquest.AddShipJob_WaitForever(transportShip, leaveImmediatelyWhenSatisfied: true, showGizmos: false, list.Cast<Thing>().ToList()).sendAwayIfAnyDespawnedDownedOrDead = new List<Thing> { pawn2 };\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_Root_Mission.cs:\n  124  \t\t\t\tQuestUtility.AddQuestTag(ref transportShip.questTags, text);\n  125  \t\t\t\tquest.SendTransportShipAwayOnCleanup(transportShip, unloadContents: true, TransportShipDropMode.None);\n  126: \t\t\t\tquest.AddShipJob_Arrive(transportShip, colonyMap.Parent, null, null, ShipJobStartMode.Instant, Faction.OfEmpire);\n  127  \t\t\t\tquest.AddShipJob_WaitSendable(transportShip, site, leaveImmeiatelyWhenSatisfied: true);\n  128  \t\t\t\tquest.AddShipJob(transportShip, ShipJobDefOf.Unload);\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_Root_Mission_AncientComplex.cs:\n  164  \t\t\t\t}, QuestGenUtility.MergeRules(null, dialog.text, \"root\"));\n  165  \t\t\t\tquest.AddPart(dialog);\n  166: \t\t\t\tquest.AddShipJob_Arrive(transportShip, map.Parent, null, null, ShipJobStartMode.Instant, Faction.OfEmpire);\n  167  \t\t\t\tquest.AddShipJob(transportShip, ShipJobDefOf.Unload, ShipJobStartMode.Force, text8);\n  168  \t\t\t\tquest.Signal(text7, delegate\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_Root_ShuttleCrash_Rescue.cs:\n   57  \t\t\t{\n   58  \t\t\t\tQuestGen_Pawns.GetPawnParms result = default(QuestGen_Pawns.GetPawnParms);\n   59: \t\t\t\tresult.mustBeOfFaction = Faction.OfEmpire;\n   60  \t\t\t\tresult.canGeneratePawn = true;\n   61  \t\t\t\tresult.mustBeWorldPawn = true;\n   ..\n   85  \t\t\tTryFindEnemyFaction(out var enemyFaction);\n   86  \t\t\tThing crashedShuttle = ThingMaker.MakeThing(ThingDefOf.ShuttleCrashed);\n   87: \t\t\tTryFindShuttleCrashPosition(map, Faction.OfEmpire, crashedShuttle.def.size, crashedShuttle.def.interactionCellOffset, out var shuttleCrashPosition);\n   88  \t\t\tList<Pawn> civilians = new List<Pawn>();\n   89  \t\t\tList<Pawn> list = new List<Pawn>();\n   ..\n   96  \t\t\tPawn asker = quest.GetPawn(new QuestGen_Pawns.GetPawnParms\n   97  \t\t\t{\n   98: \t\t\t\tmustBeOfFaction = Faction.OfEmpire,\n   99  \t\t\t\tcanGeneratePawn = true,\n  100  \t\t\t\tmustBeWorldPawn = true,\n  ...\n  114  \t\t\t\tPawn pawn2 = quest.GetPawn(new QuestGen_Pawns.GetPawnParms\n  115  \t\t\t\t{\n  116: \t\t\t\t\tmustBeOfFaction = Faction.OfEmpire,\n  117  \t\t\t\t\tcanGeneratePawn = true,\n  118  \t\t\t\t\tmustBeOfKind = mustBeOfKind,\n  ...\n  126  \t\t\tallPassengers.AddRange(civilians);\n  127  \t\t\tquest.BiocodeWeapons(allPassengers);\n  128: \t\t\tThing rescueShuttle = QuestGen_Shuttle.GenerateShuttle(Faction.OfEmpire, allPassengers);\n  129  \t\t\tstring inSignal = QuestGenUtility.HardcodedSignalWithQuestID(\"soldiers.Rescued\");\n  130  \t\t\tquest.RemoveFromRequiredPawnsOnRescue(rescueShuttle, soldiers, inSignal);\n  ...\n  134  \t\t\t\tquest.SpawnSkyfaller(map, ThingDefOf.ShuttleCrashing, Gen.YieldSingle(crashedShuttle), Faction.OfPlayer, shuttleCrashPosition);\n  135  \t\t\t\tquest.DropPods(map.Parent, allPassengers, null, null, null, null, dropSpot: shuttleCrashPosition, sendStandardLetter: false);\n  136: \t\t\t\tquest.DefendPoint(map.Parent, shuttleCrashPosition, soldiers, Faction.OfEmpire, null, null, 12f, isCaravanSendable: false, addFleeToil: false);\n  137  \t\t\t\tIntVec3 position = shuttleCrashPosition + IntVec3.South;\n  138: \t\t\t\tquest.WaitForEscort(map.Parent, civilians, Faction.OfEmpire, position, null, addFleeToil: false);\n  139  \t\t\t\tstring inSignal5 = QuestGenUtility.HardcodedSignalWithQuestID(\"rescueShuttle.Spawned\");\n  140: \t\t\t\tquest.ExitOnShuttle(map.Parent, allPassengers, Faction.OfEmpire, rescueShuttle, inSignal5, addFleeToil: false);\n  141  \t\t\t\tquest.ShuttleDelay(20000, civilians, delegate\n  142  \t\t\t\t{\n  143: \t\t\t\t\tquest.Letter(LetterDefOf.NeutralEvent, null, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, Gen.YieldSingle(rescueShuttle), filterDeadPawnsFromLookTargets: false, \"[rescueShuttleArrivedLetterText]\", null, \"[rescueShuttleArrivedLetterLabel]\");\n  144  \t\t\t\t\tTransportShip transportShip = quest.GenerateTransportShip(TransportShipDefOf.Ship_Shuttle, null, rescueShuttle).transportShip;\n  145  \t\t\t\t\tquest.SendTransportShipAwayOnCleanup(transportShip);\n  146  \t\t\t\t\tDropCellFinder.TryFindDropSpotNear(shuttleCrashPosition, map, out var result, allowFogged: false, canRoofPunch: false, allowIndoors: false, ThingDefOf.Shuttle.Size + new IntVec2(2, 2), mustBeReachableFromCenter: false);\n  147: \t\t\t\t\tquest.AddShipJob_Arrive(transportShip, map.Parent, null, result, ShipJobStartMode.Instant, Faction.OfEmpire);\n  148  \t\t\t\t\tquest.AddShipJob_WaitTime(transportShip, 30000, leaveImmediatelyWhenSatisfied: true, allPassengers.Cast<Thing>().ToList());\n  149  \t\t\t\t\tquest.ShuttleLeaveDelay(rescueShuttle, 30000);\n  ...\n  188  \t\t\tstring text3 = QuestGenUtility.HardcodedSignalWithQuestID(\"rescueShuttle.Destroyed\");\n  189  \t\t\tstring inSignal2 = QuestGenUtility.HardcodedSignalWithQuestID(\"asker.Destroyed\");\n  190: \t\t\tquest.GoodwillChangeShuttleSentThings(Faction.OfEmpire, list, -5, null, inSignalsShuttleSent, text3, HistoryEventDefOf.ShuttleGuardsMissedShuttle, canSendMessage: true, canSendHostilityLetter: false, QuestPart.SignalListenMode.Always);\n  191: \t\t\tquest.GoodwillChangeShuttleSentThings(Faction.OfEmpire, Gen.YieldSingle(asker), -10, null, inSignalsShuttleSent, text3, HistoryEventDefOf.ShuttleCommanderMissedShuttle, canSendMessage: true, canSendHostilityLetter: false, QuestPart.SignalListenMode.Always);\n  192  \t\t\tquest.Leave(allPassengers, \"\", sendStandardLetter: false);\n  193: \t\t\tquest.Letter(LetterDefOf.PositiveEvent, text, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, null, filterDeadPawnsFromLookTargets: false, \"[questCompletedSuccessLetterText]\", null, \"[questCompletedSuccessLetterLabel]\");\n  194  \t\t\tstring questSuccess = QuestGen.GenerateNewSignal(\"QuestSuccess\");\n  195  \t\t\tquest.SignalPass(delegate\n  ...\n  209  \t\t\t\tquest.AnyOnTransporter(Gen.YieldSingle(asker), rescueShuttle, delegate\n  210  \t\t\t\t{\n  211: \t\t\t\t\tquest.Letter(LetterDefOf.PositiveEvent, null, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, null, filterDeadPawnsFromLookTargets: false, \"[questCompletedCiviliansLostSuccessLetterText]\", null, \"[questCompletedCiviliansLostSuccessLetterLabel]\");\n  212  \t\t\t\t\tquest.SignalPass(null, null, questSuccess);\n  213  \t\t\t\t}, delegate\n  214  \t\t\t\t{\n  215: \t\t\t\t\tquest.Letter(LetterDefOf.NegativeEvent, null, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, null, filterDeadPawnsFromLookTargets: false, \"[askerLostLetterText]\", null, \"[askerLostLetterLabel]\");\n  216  \t\t\t\t\tQuestGen_End.End(quest, QuestEndOutcome.Fail);\n  217  \t\t\t\t});\n  218  \t\t\t}, delegate\n  219  \t\t\t{\n  220: \t\t\t\tquest.Letter(LetterDefOf.NegativeEvent, null, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, null, filterDeadPawnsFromLookTargets: false, \"[allLostLetterText]\", null, \"[allLostLetterLabel]\");\n  221  \t\t\t\tQuestGen_End.End(quest, QuestEndOutcome.Fail);\n  222  \t\t\t}, text2);\n  223: \t\t\tquest.Letter(LetterDefOf.NegativeEvent, inSignal2, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, Gen.YieldSingle(asker), filterDeadPawnsFromLookTargets: false, \"[askerDiedLetterText]\", null, \"[askerDiedLetterLabel]\");\n  224  \t\t\tquest.End(QuestEndOutcome.Fail, 0, null, inSignal2);\n  225: \t\t\tquest.Letter(LetterDefOf.NegativeEvent, text3, null, Faction.OfEmpire, null, useColonistsFromCaravanArg: false, QuestPart.SignalListenMode.OngoingOnly, Gen.YieldSingle(rescueShuttle), filterDeadPawnsFromLookTargets: false, \"[shuttleDestroyedLetterText]\", null, \"[shuttleDestroyedLetterLabel]\");\n  226  \t\t\tquest.End(QuestEndOutcome.Fail, 0, null, text3);\n  227  \t\t\tquest.End(QuestEndOutcome.Fail, 0, null, QuestGenUtility.HardcodedSignalWithQuestID(\"asker.LeftMap\"), QuestPart.SignalListenMode.OngoingOnly, sendStandardLetter: true);\n  ...\n  240  \t\tprivate bool TryFindEnemyFaction(out Faction enemyFaction)\n  241  \t\t{\n  242: \t\t\treturn Find.FactionManager.AllFactionsVisible.Where((Faction f) => f.HostileTo(Faction.OfEmpire) && f.HostileTo(Faction.OfPlayer)).TryRandomElement(out enemyFaction);\n  243  \t\t}\n  244  \n  ...\n  273  \t\t\t\treturn false;\n  274  \t\t\t}\n  275: \t\t\tif (Faction.OfEmpire == null)\n  276  \t\t\t{\n  277  \t\t\t\treturn false;\n  ...\n  281  \t\t\t\treturn false;\n  282  \t\t\t}\n  283: \t\t\tif (Faction.OfEmpire.PlayerRelationKind == FactionRelationKind.Hostile)\n  284  \t\t\t{\n  285  \t\t\t\treturn false;\n  ...\n  294  \t\t\t\treturn false;\n  295  \t\t\t}\n  296: \t\t\tif (!TryFindShuttleCrashPosition(map, Faction.OfEmpire, ThingDefOf.ShuttleCrashed.size, ThingDefOf.ShuttleCrashed.interactionCellOffset, out var spot))\n  297  \t\t\t{\n  298  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/Verse/DebugActionsQuests.cs:\n   82  \t\t\t\t\t{\n   83  \t\t\t\t\t\tPawn pawn = slate.Get<Pawn>(\"asker\");\n   84: \t\t\t\t\t\tif (pawn.royalty.AllTitlesForReading.NullOrEmpty() && Faction.OfEmpire != null)\n   85  \t\t\t\t\t\t{\n   86: \t\t\t\t\t\t\tpawn.royalty.SetTitle(Faction.OfEmpire, RoyalTitleDefOf.Knight, grantRewards: false);\n   87  \t\t\t\t\t\t\tMessages.Message(\"DEV: Gave \" + RoyalTitleDefOf.Knight.label + \" title to \" + pawn.LabelCap, pawn, MessageTypeDefOf.NeutralEvent, historical: false);\n   88  \t\t\t\t\t\t}\n\n~/projects/RW1.4-Decompile/Verse/DebugActionsRoyalty.cs:\n  201  \t\t\t\t\tQuestScriptDef questScriptDef = DefDatabase<QuestScriptDef>.AllDefsListForReading.Where((QuestScriptDef x) => x.IsRootRandomSelected && x.CanRun(slate)).RandomElementByWeight((QuestScriptDef x) => NaturalRandomQuestChooser.GetNaturalRandomSelectionWeight(x, points, storyState));\n  202  \t\t\t\t\tQuest quest = QuestGen.Generate(questScriptDef, slate);\n  203: \t\t\t\t\tif (quest.InvolvedFactions.Contains(Faction.OfEmpire))\n  204  \t\t\t\t\t{\n  205  \t\t\t\t\t\tnum7++;\n\n49 matches across 17 files\n",
+			"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs",
 			"settings":
 			{
-				"buffer_size": 15900,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
+				"buffer_size": 2389,
+				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "/Users/cem/projects/Vexine_DarkStory/About/About.xml",
+			"settings":
+			{
+				"buffer_size": 1936,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					5,
+					1,
+					"paste",
+					null,
+					"AgAAAAcBAAAAAAAAbwcAAAAAAAAAAAAAbwcAAAAAAABvBwAAAAAAADkAAABJbWFnaW5lIGEgd29ybGQgd2hlcmUgZXZlcnlvbmUgbGl0ZXJhbGx5IHdhbnRzIHlvdXIgc2tpbj8",
+					"AQAAAAAAAAABAAAABwEAAAAAAABAAQAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"contents": "Vexine Dark Story makes life more difficult for your Vexi playthrough in the following dastardly ways:\n\n- Your Vexi pawns are now much more valuable per unit.\n- Vexilour is a prized clothing material in the Empire.\n- The Empire will dislike you more for every not human enough free pawn in your colony. Wasters, Pigs, Yttakin, Impids, and of course Vexi. Unacceptable to the Empire.\n- You'll see a lot more refugees, which could complicate things if the Empire happens to visit and your map is filled with displaced persons of xenotypes not desired by the Empire.\n\nIf you want to be friends with the Empire,  just obtain the title of Dame/Knight or superior and they'll overlook your indiscretions.\n\nOr, you can bank on making friends with those who resist the Empire, if the rumors are true.",
+			"settings":
+			{
+				"buffer_size": 792,
+				"line_ending": "Unix",
+				"name": "Vexine Dark Story makes life more difficult for yo"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"insert",
+					{
+						"characters": "D"
+					},
+					"AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					4,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAAAAAAAAAAAAAAAAAAAAAABAAAARA",
+					"AQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					5,
+					1,
+					"insert",
+					{
+						"characters": "Vexine"
+					},
+					"BgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					6,
+					1,
+					"insert",
+					{
+						"characters": " Dark"
+					},
+					"BQAAAAYAAAAAAAAABwAAAAAAAAAAAAAABwAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAALAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABgAAAAAAAAAGAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					7,
+					1,
+					"insert",
+					{
+						"characters": " Storyt"
+					},
+					"BwAAAAsAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAANAAAAAAAAAAAAAAANAAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAAAAAADwAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABEAAAAAAAAAAAAAABEAAAAAAAAAEgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACwAAAAAAAAALAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAABIAAAAAAAAAEwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEgAAAAAAAAASAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					2,
+					"left_delete",
+					null,
+					"AgAAABIAAAAAAAAAEgAAAAAAAAABAAAAIBEAAAAAAAAAEQAAAAAAAAABAAAAdA",
+					"AQAAAAAAAAABAAAAEwAAAAAAAAATAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": " makes"
+					},
+					"BgAAABEAAAAAAAAAEgAAAAAAAAAAAAAAEgAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABQAAAAAAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAWAAAAAAAAAAAAAAAWAAAAAAAAABcAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEQAAAAAAAAARAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": " life"
+					},
+					"BQAAABcAAAAAAAAAGAAAAAAAAAAAAAAAGAAAAAAAAAAZAAAAAAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFwAAAAAAAAAXAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": " more"
+					},
+					"BQAAABwAAAAAAAAAHQAAAAAAAAAAAAAAHQAAAAAAAAAeAAAAAAAAAAAAAAAeAAAAAAAAAB8AAAAAAAAAAAAAAB8AAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAhAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHAAAAAAAAAAcAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					13,
+					1,
+					"insert",
+					{
+						"characters": " difficult"
+					},
+					"CgAAACEAAAAAAAAAIgAAAAAAAAAAAAAAIgAAAAAAAAAjAAAAAAAAAAAAAAAjAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAJQAAAAAAAAAAAAAAJQAAAAAAAAAmAAAAAAAAAAAAAAAmAAAAAAAAACcAAAAAAAAAAAAAACcAAAAAAAAAKAAAAAAAAAAAAAAAKAAAAAAAAAApAAAAAAAAAAAAAAApAAAAAAAAACoAAAAAAAAAAAAAACoAAAAAAAAAKwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIQAAAAAAAAAhAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					14,
+					1,
+					"insert",
+					{
+						"characters": " for"
+					},
+					"BAAAACsAAAAAAAAALAAAAAAAAAAAAAAALAAAAAAAAAAtAAAAAAAAAAAAAAAtAAAAAAAAAC4AAAAAAAAAAAAAAC4AAAAAAAAALwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKwAAAAAAAAArAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					15,
+					1,
+					"insert",
+					{
+						"characters": " your"
+					},
+					"BQAAAC8AAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAAAxAAAAAAAAAAAAAAAxAAAAAAAAADIAAAAAAAAAAAAAADIAAAAAAAAAMwAAAAAAAAAAAAAAMwAAAAAAAAA0AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALwAAAAAAAAAvAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					16,
+					1,
+					"insert",
+					{
+						"characters": " Vexi"
+					},
+					"BQAAADQAAAAAAAAANQAAAAAAAAAAAAAANQAAAAAAAAA2AAAAAAAAAAAAAAA2AAAAAAAAADcAAAAAAAAAAAAAADcAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA5AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANAAAAAAAAAA0AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					17,
+					1,
+					"insert",
+					{
+						"characters": " playtr"
+					},
+					"BwAAADkAAAAAAAAAOgAAAAAAAAAAAAAAOgAAAAAAAAA7AAAAAAAAAAAAAAA7AAAAAAAAADwAAAAAAAAAAAAAADwAAAAAAAAAPQAAAAAAAAAAAAAAPQAAAAAAAAA+AAAAAAAAAAAAAAA+AAAAAAAAAD8AAAAAAAAAAAAAAD8AAAAAAAAAQAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOQAAAAAAAAA5AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					1,
+					"left_delete",
+					null,
+					"AQAAAD8AAAAAAAAAPwAAAAAAAAABAAAAcg",
+					"AQAAAAAAAAABAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					19,
+					1,
+					"insert",
+					{
+						"characters": "gh"
+					},
+					"AgAAAD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABBAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					20,
+					2,
+					"left_delete",
+					null,
+					"AgAAAEAAAAAAAAAAQAAAAAAAAAABAAAAaD8AAAAAAAAAPwAAAAAAAAABAAAAZw",
+					"AQAAAAAAAAABAAAAQQAAAAAAAABBAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					1,
+					"insert",
+					{
+						"characters": "hrough"
+					},
+					"BgAAAD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABBAAAAAAAAAAAAAABBAAAAAAAAAEIAAAAAAAAAAAAAAEIAAAAAAAAAQwAAAAAAAAAAAAAAQwAAAAAAAABEAAAAAAAAAAAAAABEAAAAAAAAAEUAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					1,
+					"insert",
+					{
+						"characters": " in"
+					},
+					"AwAAAEUAAAAAAAAARgAAAAAAAAAAAAAARgAAAAAAAABHAAAAAAAAAAAAAABHAAAAAAAAAEgAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARQAAAAAAAABFAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					23,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAEgAAAAAAAAASQAAAAAAAAAAAAAASQAAAAAAAABKAAAAAAAAAAAAAABKAAAAAAAAAEsAAAAAAAAAAAAAAEsAAAAAAAAATAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					24,
+					1,
+					"insert",
+					{
+						"characters": " following"
+					},
+					"CgAAAEwAAAAAAAAATQAAAAAAAAAAAAAATQAAAAAAAABOAAAAAAAAAAAAAABOAAAAAAAAAE8AAAAAAAAAAAAAAE8AAAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAAABRAAAAAAAAAAAAAABRAAAAAAAAAFIAAAAAAAAAAAAAAFIAAAAAAAAAUwAAAAAAAAAAAAAAUwAAAAAAAABUAAAAAAAAAAAAAABUAAAAAAAAAFUAAAAAAAAAAAAAAFUAAAAAAAAAVgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATAAAAAAAAABMAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					1,
+					"insert",
+					{
+						"characters": " dastard"
+					},
+					"CAAAAFYAAAAAAAAAVwAAAAAAAAAAAAAAVwAAAAAAAABYAAAAAAAAAAAAAABYAAAAAAAAAFkAAAAAAAAAAAAAAFkAAAAAAAAAWgAAAAAAAAAAAAAAWgAAAAAAAABbAAAAAAAAAAAAAABbAAAAAAAAAFwAAAAAAAAAAAAAAFwAAAAAAAAAXQAAAAAAAAAAAAAAXQAAAAAAAABeAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVgAAAAAAAABWAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					26,
+					1,
+					"insert",
+					{
+						"characters": "ly"
+					},
+					"AgAAAF4AAAAAAAAAXwAAAAAAAAAAAAAAXwAAAAAAAABgAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXgAAAAAAAABeAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					27,
+					1,
+					"insert",
+					{
+						"characters": " ways:"
+					},
+					"BgAAAGAAAAAAAAAAYQAAAAAAAAAAAAAAYQAAAAAAAABiAAAAAAAAAAAAAABiAAAAAAAAAGMAAAAAAAAAAAAAAGMAAAAAAAAAZAAAAAAAAAAAAAAAZAAAAAAAAABlAAAAAAAAAAAAAABlAAAAAAAAAGYAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYAAAAAAAAABgAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					28,
+					1,
+					"insert",
+					{
+						"characters": "\n\n&)"
+					},
+					"BAAAAGYAAAAAAAAAZwAAAAAAAAAAAAAAZwAAAAAAAABoAAAAAAAAAAAAAABoAAAAAAAAAGkAAAAAAAAAAAAAAGkAAAAAAAAAagAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZgAAAAAAAABmAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					29,
+					2,
+					"left_delete",
+					null,
+					"AgAAAGkAAAAAAAAAaQAAAAAAAAABAAAAKWgAAAAAAAAAaAAAAAAAAAABAAAAJg",
+					"AQAAAAAAAAABAAAAagAAAAAAAABqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					30,
+					1,
+					"insert",
+					{
+						"characters": "1)"
+					},
+					"AgAAAGgAAAAAAAAAaQAAAAAAAAAAAAAAaQAAAAAAAABqAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaAAAAAAAAABoAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					31,
+					1,
+					"insert",
+					{
+						"characters": " Your"
+					},
+					"BQAAAGoAAAAAAAAAawAAAAAAAAAAAAAAawAAAAAAAABsAAAAAAAAAAAAAABsAAAAAAAAAG0AAAAAAAAAAAAAAG0AAAAAAAAAbgAAAAAAAAAAAAAAbgAAAAAAAABvAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAagAAAAAAAABqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					32,
+					1,
+					"insert",
+					{
+						"characters": " Vexi"
+					},
+					"BQAAAG8AAAAAAAAAcAAAAAAAAAAAAAAAcAAAAAAAAABxAAAAAAAAAAAAAABxAAAAAAAAAHIAAAAAAAAAAAAAAHIAAAAAAAAAcwAAAAAAAAAAAAAAcwAAAAAAAAB0AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbwAAAAAAAABvAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					33,
+					1,
+					"insert",
+					{
+						"characters": " p"
+					},
+					"AgAAAHQAAAAAAAAAdQAAAAAAAAAAAAAAdQAAAAAAAAB2AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdAAAAAAAAAB0AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					34,
+					14,
+					"left_delete",
+					null,
+					"DgAAAHUAAAAAAAAAdQAAAAAAAAABAAAAcHQAAAAAAAAAdAAAAAAAAAABAAAAIHMAAAAAAAAAcwAAAAAAAAABAAAAaXIAAAAAAAAAcgAAAAAAAAABAAAAeHEAAAAAAAAAcQAAAAAAAAABAAAAZXAAAAAAAAAAcAAAAAAAAAABAAAAVm8AAAAAAAAAbwAAAAAAAAABAAAAIG4AAAAAAAAAbgAAAAAAAAABAAAAcm0AAAAAAAAAbQAAAAAAAAABAAAAdWwAAAAAAAAAbAAAAAAAAAABAAAAb2sAAAAAAAAAawAAAAAAAAABAAAAWWoAAAAAAAAAagAAAAAAAAABAAAAIGkAAAAAAAAAaQAAAAAAAAABAAAAKWgAAAAAAAAAaAAAAAAAAAABAAAAMQ",
+					"AQAAAAAAAAABAAAAdgAAAAAAAAB2AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					35,
+					1,
+					"insert",
+					{
+						"characters": "*)"
+					},
+					"AgAAAGgAAAAAAAAAaQAAAAAAAAAAAAAAaQAAAAAAAABqAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaAAAAAAAAABoAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					36,
+					1,
+					"insert",
+					{
+						"characters": " Yçou"
+					},
+					"BQAAAGoAAAAAAAAAawAAAAAAAAAAAAAAawAAAAAAAABsAAAAAAAAAAAAAABsAAAAAAAAAG0AAAAAAAAAAAAAAG0AAAAAAAAAbgAAAAAAAAAAAAAAbgAAAAAAAABvAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAagAAAAAAAABqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					37,
+					3,
+					"left_delete",
+					null,
+					"AwAAAG4AAAAAAAAAbgAAAAAAAAABAAAAdW0AAAAAAAAAbQAAAAAAAAABAAAAb2wAAAAAAAAAbAAAAAAAAAACAAAAw6c",
+					"AQAAAAAAAAABAAAAbwAAAAAAAABvAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					38,
+					1,
+					"insert",
+					{
+						"characters": "our"
+					},
+					"AwAAAGwAAAAAAAAAbQAAAAAAAAAAAAAAbQAAAAAAAABuAAAAAAAAAAAAAABuAAAAAAAAAG8AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAAAAAAAAABsAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					39,
+					1,
+					"insert",
+					{
+						"characters": " Vexi"
+					},
+					"BQAAAG8AAAAAAAAAcAAAAAAAAAAAAAAAcAAAAAAAAABxAAAAAAAAAAAAAABxAAAAAAAAAHIAAAAAAAAAAAAAAHIAAAAAAAAAcwAAAAAAAAAAAAAAcwAAAAAAAAB0AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbwAAAAAAAABvAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					40,
+					1,
+					"insert",
+					{
+						"characters": " pawns"
+					},
+					"BgAAAHQAAAAAAAAAdQAAAAAAAAAAAAAAdQAAAAAAAAB2AAAAAAAAAAAAAAB2AAAAAAAAAHcAAAAAAAAAAAAAAHcAAAAAAAAAeAAAAAAAAAAAAAAAeAAAAAAAAAB5AAAAAAAAAAAAAAB5AAAAAAAAAHoAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdAAAAAAAAAB0AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"insert",
+					{
+						"characters": " are"
+					},
+					"BAAAAHoAAAAAAAAAewAAAAAAAAAAAAAAewAAAAAAAAB8AAAAAAAAAAAAAAB8AAAAAAAAAH0AAAAAAAAAAAAAAH0AAAAAAAAAfgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAegAAAAAAAAB6AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					42,
+					1,
+					"insert",
+					{
+						"characters": " now"
+					},
+					"BAAAAH4AAAAAAAAAfwAAAAAAAAAAAAAAfwAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAIEAAAAAAAAAAAAAAIEAAAAAAAAAggAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfgAAAAAAAAB+AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					43,
+					1,
+					"insert",
+					{
+						"characters": " much"
+					},
+					"BQAAAIIAAAAAAAAAgwAAAAAAAAAAAAAAgwAAAAAAAACEAAAAAAAAAAAAAACEAAAAAAAAAIUAAAAAAAAAAAAAAIUAAAAAAAAAhgAAAAAAAAAAAAAAhgAAAAAAAACHAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAggAAAAAAAACCAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					44,
+					1,
+					"insert",
+					{
+						"characters": " more"
+					},
+					"BQAAAIcAAAAAAAAAiAAAAAAAAAAAAAAAiAAAAAAAAACJAAAAAAAAAAAAAACJAAAAAAAAAIoAAAAAAAAAAAAAAIoAAAAAAAAAiwAAAAAAAAAAAAAAiwAAAAAAAACMAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhwAAAAAAAACHAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					45,
+					1,
+					"insert",
+					{
+						"characters": " valuable"
+					},
+					"CQAAAIwAAAAAAAAAjQAAAAAAAAAAAAAAjQAAAAAAAACOAAAAAAAAAAAAAACOAAAAAAAAAI8AAAAAAAAAAAAAAI8AAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACRAAAAAAAAAAAAAACRAAAAAAAAAJIAAAAAAAAAAAAAAJIAAAAAAAAAkwAAAAAAAAAAAAAAkwAAAAAAAACUAAAAAAAAAAAAAACUAAAAAAAAAJUAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjAAAAAAAAACMAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAJUAAAAAAAAAlgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlQAAAAAAAACVAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					47,
+					1,
+					"left_delete",
+					null,
+					"AQAAAJUAAAAAAAAAlQAAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAAlgAAAAAAAACWAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					48,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAJUAAAAAAAAAlgAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlQAAAAAAAACVAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					54,
+					2,
+					"left_delete",
+					null,
+					"AgAAAGkAAAAAAAAAaQAAAAAAAAABAAAAKWgAAAAAAAAAaAAAAAAAAAABAAAAKg",
+					"AQAAAAAAAAABAAAAagAAAAAAAABqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					55,
+					1,
+					"insert",
+					{
+						"characters": "-"
+					},
+					"AQAAAGgAAAAAAAAAaQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAaAAAAAAAAABoAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					57,
+					1,
+					"insert",
+					{
+						"characters": "per"
+					},
+					"AwAAAJUAAAAAAAAAlgAAAAAAAAAAAAAAlgAAAAAAAACXAAAAAAAAAAAAAACXAAAAAAAAAJgAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlQAAAAAAAACVAAAAAAAAAAAAAAAAADZA"
+				],
+				[
+					58,
+					1,
+					"insert",
+					{
+						"characters": " un"
+					},
+					"AwAAAJgAAAAAAAAAmQAAAAAAAAAAAAAAmQAAAAAAAACaAAAAAAAAAAAAAACaAAAAAAAAAJsAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmAAAAAAAAACYAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					1,
+					"insert",
+					{
+						"characters": "it."
+					},
+					"AwAAAJsAAAAAAAAAnAAAAAAAAAAAAAAAnAAAAAAAAACdAAAAAAAAAAAAAACdAAAAAAAAAJ4AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAmwAAAAAAAACbAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					60,
+					1,
+					"insert",
+					{
+						"characters": "\n-"
+					},
+					"AgAAAJ4AAAAAAAAAnwAAAAAAAAAAAAAAnwAAAAAAAACgAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAngAAAAAAAACeAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					61,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAKAAAAAAAAAAoQAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoAAAAAAAAACgAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					62,
+					1,
+					"insert",
+					{
+						"characters": "The"
+					},
+					"AwAAAKEAAAAAAAAAogAAAAAAAAAAAAAAogAAAAAAAACjAAAAAAAAAAAAAACjAAAAAAAAAKQAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoQAAAAAAAAChAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					63,
+					1,
+					"insert",
+					{
+						"characters": " human"
+					},
+					"BgAAAKQAAAAAAAAApQAAAAAAAAAAAAAApQAAAAAAAACmAAAAAAAAAAAAAACmAAAAAAAAAKcAAAAAAAAAAAAAAKcAAAAAAAAAqAAAAAAAAAAAAAAAqAAAAAAAAACpAAAAAAAAAAAAAACpAAAAAAAAAKoAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApAAAAAAAAACkAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					64,
+					7,
+					"left_delete",
+					null,
+					"BwAAAKkAAAAAAAAAqQAAAAAAAAABAAAAbqgAAAAAAAAAqAAAAAAAAAABAAAAYacAAAAAAAAApwAAAAAAAAABAAAAbaYAAAAAAAAApgAAAAAAAAABAAAAdaUAAAAAAAAApQAAAAAAAAABAAAAaKQAAAAAAAAApAAAAAAAAAABAAAAIKMAAAAAAAAAowAAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAAqgAAAAAAAACqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					65,
+					2,
+					"left_delete",
+					null,
+					"AgAAAKIAAAAAAAAAogAAAAAAAAABAAAAaKEAAAAAAAAAoQAAAAAAAAABAAAAVA",
+					"AQAAAAAAAAABAAAAowAAAAAAAACjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					66,
+					1,
+					"insert",
+					{
+						"characters": "Vexil"
+					},
+					"BQAAAKEAAAAAAAAAogAAAAAAAAAAAAAAogAAAAAAAACjAAAAAAAAAAAAAACjAAAAAAAAAKQAAAAAAAAAAAAAAKQAAAAAAAAApQAAAAAAAAAAAAAApQAAAAAAAACmAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoQAAAAAAAAChAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					67,
+					1,
+					"insert",
+					{
+						"characters": "our"
+					},
+					"AwAAAKYAAAAAAAAApwAAAAAAAAAAAAAApwAAAAAAAACoAAAAAAAAAAAAAACoAAAAAAAAAKkAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApgAAAAAAAACmAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					68,
+					1,
+					"insert",
+					{
+						"characters": " is"
+					},
+					"AwAAAKkAAAAAAAAAqgAAAAAAAAAAAAAAqgAAAAAAAACrAAAAAAAAAAAAAACrAAAAAAAAAKwAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqQAAAAAAAACpAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					69,
+					1,
+					"insert",
+					{
+						"characters": " a"
+					},
+					"AgAAAKwAAAAAAAAArQAAAAAAAAAAAAAArQAAAAAAAACuAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArAAAAAAAAACsAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					70,
+					1,
+					"insert",
+					{
+						"characters": " populart"
+					},
+					"CQAAAK4AAAAAAAAArwAAAAAAAAAAAAAArwAAAAAAAACwAAAAAAAAAAAAAACwAAAAAAAAALEAAAAAAAAAAAAAALEAAAAAAAAAsgAAAAAAAAAAAAAAsgAAAAAAAACzAAAAAAAAAAAAAACzAAAAAAAAALQAAAAAAAAAAAAAALQAAAAAAAAAtQAAAAAAAAAAAAAAtQAAAAAAAAC2AAAAAAAAAAAAAAC2AAAAAAAAALcAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArgAAAAAAAACuAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					71,
+					1,
+					"insert",
+					{
+						"characters": " c"
+					},
+					"AgAAALcAAAAAAAAAuAAAAAAAAAAAAAAAuAAAAAAAAAC5AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtwAAAAAAAAC3AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					72,
+					3,
+					"left_delete",
+					null,
+					"AwAAALgAAAAAAAAAuAAAAAAAAAABAAAAY7cAAAAAAAAAtwAAAAAAAAABAAAAILYAAAAAAAAAtgAAAAAAAAABAAAAdA",
+					"AQAAAAAAAAABAAAAuQAAAAAAAAC5AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					73,
+					1,
+					"insert",
+					{
+						"characters": " clothing"
+					},
+					"CQAAALYAAAAAAAAAtwAAAAAAAAAAAAAAtwAAAAAAAAC4AAAAAAAAAAAAAAC4AAAAAAAAALkAAAAAAAAAAAAAALkAAAAAAAAAugAAAAAAAAAAAAAAugAAAAAAAAC7AAAAAAAAAAAAAAC7AAAAAAAAALwAAAAAAAAAAAAAALwAAAAAAAAAvQAAAAAAAAAAAAAAvQAAAAAAAAC+AAAAAAAAAAAAAAC+AAAAAAAAAL8AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtgAAAAAAAAC2AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					74,
+					1,
+					"insert",
+					{
+						"characters": " material"
+					},
+					"CQAAAL8AAAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAAADBAAAAAAAAAAAAAADBAAAAAAAAAMIAAAAAAAAAAAAAAMIAAAAAAAAAwwAAAAAAAAAAAAAAwwAAAAAAAADEAAAAAAAAAAAAAADEAAAAAAAAAMUAAAAAAAAAAAAAAMUAAAAAAAAAxgAAAAAAAAAAAAAAxgAAAAAAAADHAAAAAAAAAAAAAADHAAAAAAAAAMgAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvwAAAAAAAAC/AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					75,
+					1,
+					"insert",
+					{
+						"characters": " in"
+					},
+					"AwAAAMgAAAAAAAAAyQAAAAAAAAAAAAAAyQAAAAAAAADKAAAAAAAAAAAAAADKAAAAAAAAAMsAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAyAAAAAAAAADIAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					76,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAMsAAAAAAAAAzAAAAAAAAAAAAAAAzAAAAAAAAADNAAAAAAAAAAAAAADNAAAAAAAAAM4AAAAAAAAAAAAAAM4AAAAAAAAAzwAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAywAAAAAAAADLAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					77,
+					1,
+					"insert",
+					{
+						"characters": " Empire"
+					},
+					"BwAAAM8AAAAAAAAA0AAAAAAAAAAAAAAA0AAAAAAAAADRAAAAAAAAAAAAAADRAAAAAAAAANIAAAAAAAAAAAAAANIAAAAAAAAA0wAAAAAAAAAAAAAA0wAAAAAAAADUAAAAAAAAAAAAAADUAAAAAAAAANUAAAAAAAAAAAAAANUAAAAAAAAA1gAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzwAAAAAAAADPAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					78,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAANYAAAAAAAAA1wAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1gAAAAAAAADWAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					81,
+					6,
+					"left_delete",
+					null,
+					"BgAAALUAAAAAAAAAtQAAAAAAAAABAAAAcrQAAAAAAAAAtAAAAAAAAAABAAAAYbMAAAAAAAAAswAAAAAAAAABAAAAbLIAAAAAAAAAsgAAAAAAAAABAAAAdbEAAAAAAAAAsQAAAAAAAAABAAAAcLAAAAAAAAAAsAAAAAAAAAABAAAAbw",
+					"AQAAAAAAAAABAAAAtgAAAAAAAAC2AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					82,
+					1,
+					"insert",
+					{
+						"characters": "rized"
+					},
+					"BQAAALAAAAAAAAAAsQAAAAAAAAAAAAAAsQAAAAAAAACyAAAAAAAAAAAAAACyAAAAAAAAALMAAAAAAAAAAAAAALMAAAAAAAAAtAAAAAAAAAAAAAAAtAAAAAAAAAC1AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAsAAAAAAAAACwAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					84,
+					1,
+					"insert",
+					{
+						"characters": "\n-"
+					},
+					"AgAAANYAAAAAAAAA1wAAAAAAAAAAAAAA1wAAAAAAAADYAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1gAAAAAAAADWAAAAAAAAAAAAAAAAcH5A"
+				],
+				[
+					85,
+					1,
+					"insert",
+					{
+						"characters": " The"
+					},
+					"BAAAANgAAAAAAAAA2QAAAAAAAAAAAAAA2QAAAAAAAADaAAAAAAAAAAAAAADaAAAAAAAAANsAAAAAAAAAAAAAANsAAAAAAAAA3AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA2AAAAAAAAADYAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					86,
+					1,
+					"insert",
+					{
+						"characters": " Empire"
+					},
+					"BwAAANwAAAAAAAAA3QAAAAAAAAAAAAAA3QAAAAAAAADeAAAAAAAAAAAAAADeAAAAAAAAAN8AAAAAAAAAAAAAAN8AAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADhAAAAAAAAAAAAAADhAAAAAAAAAOIAAAAAAAAAAAAAAOIAAAAAAAAA4wAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3AAAAAAAAADcAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					87,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAOMAAAAAAAAA5AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4wAAAAAAAADjAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					88,
+					1,
+					"insert",
+					{
+						"characters": "will"
+					},
+					"BAAAAOQAAAAAAAAA5QAAAAAAAAAAAAAA5QAAAAAAAADmAAAAAAAAAAAAAADmAAAAAAAAAOcAAAAAAAAAAAAAAOcAAAAAAAAA6AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5AAAAAAAAADkAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					89,
+					1,
+					"insert",
+					{
+						"characters": " d"
+					},
+					"AgAAAOgAAAAAAAAA6QAAAAAAAAAAAAAA6QAAAAAAAADqAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6AAAAAAAAADoAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					90,
+					1,
+					"insert",
+					{
+						"characters": "islike"
+					},
+					"BgAAAOoAAAAAAAAA6wAAAAAAAAAAAAAA6wAAAAAAAADsAAAAAAAAAAAAAADsAAAAAAAAAO0AAAAAAAAAAAAAAO0AAAAAAAAA7gAAAAAAAAAAAAAA7gAAAAAAAADvAAAAAAAAAAAAAADvAAAAAAAAAPAAAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6gAAAAAAAADqAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					91,
+					1,
+					"insert",
+					{
+						"characters": " you"
+					},
+					"BAAAAPAAAAAAAAAA8QAAAAAAAAAAAAAA8QAAAAAAAADyAAAAAAAAAAAAAADyAAAAAAAAAPMAAAAAAAAAAAAAAPMAAAAAAAAA9AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8AAAAAAAAADwAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					92,
+					1,
+					"insert",
+					{
+						"characters": " more"
+					},
+					"BQAAAPQAAAAAAAAA9QAAAAAAAAAAAAAA9QAAAAAAAAD2AAAAAAAAAAAAAAD2AAAAAAAAAPcAAAAAAAAAAAAAAPcAAAAAAAAA+AAAAAAAAAAAAAAA+AAAAAAAAAD5AAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9AAAAAAAAAD0AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					93,
+					1,
+					"insert",
+					{
+						"characters": " for"
+					},
+					"BAAAAPkAAAAAAAAA+gAAAAAAAAAAAAAA+gAAAAAAAAD7AAAAAAAAAAAAAAD7AAAAAAAAAPwAAAAAAAAAAAAAAPwAAAAAAAAA/QAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+QAAAAAAAAD5AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					94,
+					1,
+					"insert",
+					{
+						"characters": " every"
+					},
+					"BgAAAP0AAAAAAAAA/gAAAAAAAAAAAAAA/gAAAAAAAAD/AAAAAAAAAAAAAAD/AAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAQEAAAAAAAAAAAAAAQEAAAAAAAACAQAAAAAAAAAAAAACAQAAAAAAAAMBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA/QAAAAAAAAD9AAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					95,
+					1,
+					"insert",
+					{
+						"characters": " non-"
+					},
+					"BQAAAAMBAAAAAAAABAEAAAAAAAAAAAAABAEAAAAAAAAFAQAAAAAAAAAAAAAFAQAAAAAAAAYBAAAAAAAAAAAAAAYBAAAAAAAABwEAAAAAAAAAAAAABwEAAAAAAAAIAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAwEAAAAAAAADAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					96,
+					2,
+					"left_delete",
+					null,
+					"AgAAAAcBAAAAAAAABwEAAAAAAAABAAAALQYBAAAAAAAABgEAAAAAAAABAAAAbg",
+					"AQAAAAAAAAABAAAACAEAAAAAAAAIAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					97,
+					1,
+					"insert",
+					{
+						"characters": "t"
+					},
+					"AQAAAAYBAAAAAAAABwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABgEAAAAAAAAGAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					98,
+					1,
+					"insert",
+					{
+						"characters": " human"
+					},
+					"BgAAAAcBAAAAAAAACAEAAAAAAAAAAAAACAEAAAAAAAAJAQAAAAAAAAAAAAAJAQAAAAAAAAoBAAAAAAAAAAAAAAoBAAAAAAAACwEAAAAAAAAAAAAACwEAAAAAAAAMAQAAAAAAAAAAAAAMAQAAAAAAAA0BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABwEAAAAAAAAHAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					99,
+					1,
+					"insert",
+					{
+						"characters": " enough"
+					},
+					"BwAAAA0BAAAAAAAADgEAAAAAAAAAAAAADgEAAAAAAAAPAQAAAAAAAAAAAAAPAQAAAAAAABABAAAAAAAAAAAAABABAAAAAAAAEQEAAAAAAAAAAAAAEQEAAAAAAAASAQAAAAAAAAAAAAASAQAAAAAAABMBAAAAAAAAAAAAABMBAAAAAAAAFAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADQEAAAAAAAANAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					100,
+					1,
+					"insert",
+					{
+						"characters": " pawn"
+					},
+					"BQAAABQBAAAAAAAAFQEAAAAAAAAAAAAAFQEAAAAAAAAWAQAAAAAAAAAAAAAWAQAAAAAAABcBAAAAAAAAAAAAABcBAAAAAAAAGAEAAAAAAAAAAAAAGAEAAAAAAAAZAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFAEAAAAAAAAUAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					101,
+					1,
+					"insert",
+					{
+						"characters": " you"
+					},
+					"BAAAABkBAAAAAAAAGgEAAAAAAAAAAAAAGgEAAAAAAAAbAQAAAAAAAAAAAAAbAQAAAAAAABwBAAAAAAAAAAAAABwBAAAAAAAAHQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGQEAAAAAAAAZAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					102,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAB0BAAAAAAAAHgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHQEAAAAAAAAdAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					103,
+					9,
+					"left_delete",
+					null,
+					"CQAAAB0BAAAAAAAAHQEAAAAAAAABAAAAIBwBAAAAAAAAHAEAAAAAAAABAAAAdRsBAAAAAAAAGwEAAAAAAAABAAAAbxoBAAAAAAAAGgEAAAAAAAABAAAAeRkBAAAAAAAAGQEAAAAAAAABAAAAIBgBAAAAAAAAGAEAAAAAAAABAAAAbhcBAAAAAAAAFwEAAAAAAAABAAAAdxYBAAAAAAAAFgEAAAAAAAABAAAAYRUBAAAAAAAAFQEAAAAAAAABAAAAcA",
+					"AQAAAAAAAAABAAAAHgEAAAAAAAAeAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					104,
+					1,
+					"insert",
+					{
+						"characters": "free"
+					},
+					"BAAAABUBAAAAAAAAFgEAAAAAAAAAAAAAFgEAAAAAAAAXAQAAAAAAAAAAAAAXAQAAAAAAABgBAAAAAAAAAAAAABgBAAAAAAAAGQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFQEAAAAAAAAVAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					105,
+					1,
+					"insert",
+					{
+						"characters": " pawn"
+					},
+					"BQAAABkBAAAAAAAAGgEAAAAAAAAAAAAAGgEAAAAAAAAbAQAAAAAAAAAAAAAbAQAAAAAAABwBAAAAAAAAAAAAABwBAAAAAAAAHQEAAAAAAAAAAAAAHQEAAAAAAAAeAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGQEAAAAAAAAZAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					106,
+					1,
+					"insert",
+					{
+						"characters": " in"
+					},
+					"AwAAAB4BAAAAAAAAHwEAAAAAAAAAAAAAHwEAAAAAAAAgAQAAAAAAAAAAAAAgAQAAAAAAACEBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHgEAAAAAAAAeAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					107,
+					1,
+					"insert",
+					{
+						"characters": " your"
+					},
+					"BQAAACEBAAAAAAAAIgEAAAAAAAAAAAAAIgEAAAAAAAAjAQAAAAAAAAAAAAAjAQAAAAAAACQBAAAAAAAAAAAAACQBAAAAAAAAJQEAAAAAAAAAAAAAJQEAAAAAAAAmAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIQEAAAAAAAAhAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					108,
+					1,
+					"insert",
+					{
+						"characters": " colony"
+					},
+					"BwAAACYBAAAAAAAAJwEAAAAAAAAAAAAAJwEAAAAAAAAoAQAAAAAAAAAAAAAoAQAAAAAAACkBAAAAAAAAAAAAACkBAAAAAAAAKgEAAAAAAAAAAAAAKgEAAAAAAAArAQAAAAAAAAAAAAArAQAAAAAAACwBAAAAAAAAAAAAACwBAAAAAAAALQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJgEAAAAAAAAmAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					109,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAC0BAAAAAAAALgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALQEAAAAAAAAtAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					110,
+					1,
+					"insert",
+					{
+						"characters": " Was"
+					},
+					"BAAAAC4BAAAAAAAALwEAAAAAAAAAAAAALwEAAAAAAAAwAQAAAAAAAAAAAAAwAQAAAAAAADEBAAAAAAAAAAAAADEBAAAAAAAAMgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALgEAAAAAAAAuAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					111,
+					3,
+					"left_delete",
+					null,
+					"AwAAADEBAAAAAAAAMQEAAAAAAAABAAAAczABAAAAAAAAMAEAAAAAAAABAAAAYS8BAAAAAAAALwEAAAAAAAABAAAAVw",
+					"AQAAAAAAAAABAAAAMgEAAAAAAAAyAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					112,
+					1,
+					"insert",
+					{
+						"characters": "Wasters,"
+					},
+					"CAAAAC8BAAAAAAAAMAEAAAAAAAAAAAAAMAEAAAAAAAAxAQAAAAAAAAAAAAAxAQAAAAAAADIBAAAAAAAAAAAAADIBAAAAAAAAMwEAAAAAAAAAAAAAMwEAAAAAAAA0AQAAAAAAAAAAAAA0AQAAAAAAADUBAAAAAAAAAAAAADUBAAAAAAAANgEAAAAAAAAAAAAANgEAAAAAAAA3AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					113,
+					1,
+					"insert",
+					{
+						"characters": " Pigs,"
+					},
+					"BgAAADcBAAAAAAAAOAEAAAAAAAAAAAAAOAEAAAAAAAA5AQAAAAAAAAAAAAA5AQAAAAAAADoBAAAAAAAAAAAAADoBAAAAAAAAOwEAAAAAAAAAAAAAOwEAAAAAAAA8AQAAAAAAAAAAAAA8AQAAAAAAAD0BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANwEAAAAAAAA3AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					114,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAD0BAAAAAAAAPgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPQEAAAAAAAA9AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					115,
+					1,
+					"insert",
+					{
+						"characters": "Yttakin"
+					},
+					"BwAAAD4BAAAAAAAAPwEAAAAAAAAAAAAAPwEAAAAAAABAAQAAAAAAAAAAAABAAQAAAAAAAEEBAAAAAAAAAAAAAEEBAAAAAAAAQgEAAAAAAAAAAAAAQgEAAAAAAABDAQAAAAAAAAAAAABDAQAAAAAAAEQBAAAAAAAAAAAAAEQBAAAAAAAARQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPgEAAAAAAAA+AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					116,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAEUBAAAAAAAARgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARQEAAAAAAABFAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					117,
+					1,
+					"insert",
+					{
+						"characters": " Impids,"
+					},
+					"CAAAAEYBAAAAAAAARwEAAAAAAAAAAAAARwEAAAAAAABIAQAAAAAAAAAAAABIAQAAAAAAAEkBAAAAAAAAAAAAAEkBAAAAAAAASgEAAAAAAAAAAAAASgEAAAAAAABLAQAAAAAAAAAAAABLAQAAAAAAAEwBAAAAAAAAAAAAAEwBAAAAAAAATQEAAAAAAAAAAAAATQEAAAAAAABOAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARgEAAAAAAABGAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					118,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAE4BAAAAAAAATwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATgEAAAAAAABOAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					119,
+					1,
+					"insert",
+					{
+						"characters": "and"
+					},
+					"AwAAAE8BAAAAAAAAUAEAAAAAAAAAAAAAUAEAAAAAAABRAQAAAAAAAAAAAABRAQAAAAAAAFIBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATwEAAAAAAABPAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					120,
+					1,
+					"insert",
+					{
+						"characters": " of"
+					},
+					"AwAAAFIBAAAAAAAAUwEAAAAAAAAAAAAAUwEAAAAAAABUAQAAAAAAAAAAAABUAQAAAAAAAFUBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUgEAAAAAAABSAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					121,
+					1,
+					"insert",
+					{
+						"characters": " course"
+					},
+					"BwAAAFUBAAAAAAAAVgEAAAAAAAAAAAAAVgEAAAAAAABXAQAAAAAAAAAAAABXAQAAAAAAAFgBAAAAAAAAAAAAAFgBAAAAAAAAWQEAAAAAAAAAAAAAWQEAAAAAAABaAQAAAAAAAAAAAABaAQAAAAAAAFsBAAAAAAAAAAAAAFsBAAAAAAAAXAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVQEAAAAAAABVAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					122,
+					1,
+					"insert",
+					{
+						"characters": " Vexi."
+					},
+					"BgAAAFwBAAAAAAAAXQEAAAAAAAAAAAAAXQEAAAAAAABeAQAAAAAAAAAAAABeAQAAAAAAAF8BAAAAAAAAAAAAAF8BAAAAAAAAYAEAAAAAAAAAAAAAYAEAAAAAAABhAQAAAAAAAAAAAABhAQAAAAAAAGIBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXAEAAAAAAABcAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					123,
+					1,
+					"insert",
+					{
+						"characters": " Unaccep"
+					},
+					"CAAAAGIBAAAAAAAAYwEAAAAAAAAAAAAAYwEAAAAAAABkAQAAAAAAAAAAAABkAQAAAAAAAGUBAAAAAAAAAAAAAGUBAAAAAAAAZgEAAAAAAAAAAAAAZgEAAAAAAABnAQAAAAAAAAAAAABnAQAAAAAAAGgBAAAAAAAAAAAAAGgBAAAAAAAAaQEAAAAAAAAAAAAAaQEAAAAAAABqAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAYgEAAAAAAABiAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					124,
+					1,
+					"insert",
+					{
+						"characters": "table"
+					},
+					"BQAAAGoBAAAAAAAAawEAAAAAAAAAAAAAawEAAAAAAABsAQAAAAAAAAAAAABsAQAAAAAAAG0BAAAAAAAAAAAAAG0BAAAAAAAAbgEAAAAAAAAAAAAAbgEAAAAAAABvAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAagEAAAAAAABqAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					125,
+					1,
+					"insert",
+					{
+						"characters": " to"
+					},
+					"AwAAAG8BAAAAAAAAcAEAAAAAAAAAAAAAcAEAAAAAAABxAQAAAAAAAAAAAABxAQAAAAAAAHIBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbwEAAAAAAABvAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					126,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAHIBAAAAAAAAcwEAAAAAAAAAAAAAcwEAAAAAAAB0AQAAAAAAAAAAAAB0AQAAAAAAAHUBAAAAAAAAAAAAAHUBAAAAAAAAdgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcgEAAAAAAAByAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					127,
+					1,
+					"insert",
+					{
+						"characters": " Empire"
+					},
+					"BwAAAHYBAAAAAAAAdwEAAAAAAAAAAAAAdwEAAAAAAAB4AQAAAAAAAAAAAAB4AQAAAAAAAHkBAAAAAAAAAAAAAHkBAAAAAAAAegEAAAAAAAAAAAAAegEAAAAAAAB7AQAAAAAAAAAAAAB7AQAAAAAAAHwBAAAAAAAAAAAAAHwBAAAAAAAAfQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgEAAAAAAAB2AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					128,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAH0BAAAAAAAAfgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfQEAAAAAAAB9AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					129,
+					1,
+					"insert",
+					{
+						"characters": "without"
+					},
+					"BwAAAH4BAAAAAAAAfwEAAAAAAAAAAAAAfwEAAAAAAACAAQAAAAAAAAAAAACAAQAAAAAAAIEBAAAAAAAAAAAAAIEBAAAAAAAAggEAAAAAAAAAAAAAggEAAAAAAACDAQAAAAAAAAAAAACDAQAAAAAAAIQBAAAAAAAAAAAAAIQBAAAAAAAAhQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfgEAAAAAAAB+AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					130,
+					1,
+					"insert",
+					{
+						"characters": " at"
+					},
+					"AwAAAIUBAAAAAAAAhgEAAAAAAAAAAAAAhgEAAAAAAACHAQAAAAAAAAAAAACHAQAAAAAAAIgBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhQEAAAAAAACFAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					131,
+					1,
+					"insert",
+					{
+						"characters": " least"
+					},
+					"BgAAAIgBAAAAAAAAiQEAAAAAAAAAAAAAiQEAAAAAAACKAQAAAAAAAAAAAACKAQAAAAAAAIsBAAAAAAAAAAAAAIsBAAAAAAAAjAEAAAAAAAAAAAAAjAEAAAAAAACNAQAAAAAAAAAAAACNAQAAAAAAAI4BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiAEAAAAAAACIAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					132,
+					1,
+					"insert",
+					{
+						"characters": " a"
+					},
+					"AgAAAI4BAAAAAAAAjwEAAAAAAAAAAAAAjwEAAAAAAACQAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjgEAAAAAAACOAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					133,
+					1,
+					"insert",
+					{
+						"characters": " kn"
+					},
+					"AwAAAJABAAAAAAAAkQEAAAAAAAAAAAAAkQEAAAAAAACSAQAAAAAAAAAAAACSAQAAAAAAAJMBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkAEAAAAAAACQAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					134,
+					19,
+					"left_delete",
+					null,
+					"EwAAAJIBAAAAAAAAkgEAAAAAAAABAAAAbpEBAAAAAAAAkQEAAAAAAAABAAAAa5ABAAAAAAAAkAEAAAAAAAABAAAAII8BAAAAAAAAjwEAAAAAAAABAAAAYY4BAAAAAAAAjgEAAAAAAAABAAAAII0BAAAAAAAAjQEAAAAAAAABAAAAdIwBAAAAAAAAjAEAAAAAAAABAAAAc4sBAAAAAAAAiwEAAAAAAAABAAAAYYoBAAAAAAAAigEAAAAAAAABAAAAZYkBAAAAAAAAiQEAAAAAAAABAAAAbIgBAAAAAAAAiAEAAAAAAAABAAAAIIcBAAAAAAAAhwEAAAAAAAABAAAAdIYBAAAAAAAAhgEAAAAAAAABAAAAYYUBAAAAAAAAhQEAAAAAAAABAAAAIIQBAAAAAAAAhAEAAAAAAAABAAAAdIMBAAAAAAAAgwEAAAAAAAABAAAAdYIBAAAAAAAAggEAAAAAAAABAAAAb4EBAAAAAAAAgQEAAAAAAAABAAAAaIABAAAAAAAAgAEAAAAAAAABAAAAdA",
+					"AQAAAAAAAAABAAAAkwEAAAAAAACTAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					135,
+					3,
+					"left_delete",
+					null,
+					"AwAAAH8BAAAAAAAAfwEAAAAAAAABAAAAaX4BAAAAAAAAfgEAAAAAAAABAAAAd30BAAAAAAAAfQEAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					136,
+					1,
+					"insert",
+					{
+						"characters": "."
+					},
+					"AQAAAH0BAAAAAAAAfgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfQEAAAAAAAB9AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					137,
+					1,
+					"insert",
+					{
+						"characters": "\n\n"
+					},
+					"AgAAAH4BAAAAAAAAfwEAAAAAAAAAAAAAfwEAAAAAAACAAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfgEAAAAAAAB+AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					138,
+					1,
+					"left_delete",
+					null,
+					"AQAAAH8BAAAAAAAAfwEAAAAAAAABAAAACg",
+					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					139,
+					1,
+					"insert",
+					{
+						"characters": "-"
+					},
+					"AQAAAH8BAAAAAAAAgAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfwEAAAAAAAB/AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					140,
+					1,
+					"insert",
+					{
+						"characters": " U"
+					},
+					"AgAAAIABAAAAAAAAgQEAAAAAAAAAAAAAgQEAAAAAAACCAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					141,
+					1,
+					"left_delete",
+					null,
+					"AQAAAIEBAAAAAAAAgQEAAAAAAAABAAAAVQ",
+					"AQAAAAAAAAABAAAAggEAAAAAAACCAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					142,
+					1,
+					"insert",
+					{
+						"characters": "You'll"
+					},
+					"BgAAAIEBAAAAAAAAggEAAAAAAAAAAAAAggEAAAAAAACDAQAAAAAAAAAAAACDAQAAAAAAAIQBAAAAAAAAAAAAAIQBAAAAAAAAhQEAAAAAAAAAAAAAhQEAAAAAAACGAQAAAAAAAAAAAACGAQAAAAAAAIcBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgQEAAAAAAACBAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					143,
+					1,
+					"insert",
+					{
+						"characters": " see"
+					},
+					"BAAAAIcBAAAAAAAAiAEAAAAAAAAAAAAAiAEAAAAAAACJAQAAAAAAAAAAAACJAQAAAAAAAIoBAAAAAAAAAAAAAIoBAAAAAAAAiwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhwEAAAAAAACHAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					144,
+					1,
+					"insert",
+					{
+						"characters": " a"
+					},
+					"AgAAAIsBAAAAAAAAjAEAAAAAAAAAAAAAjAEAAAAAAACNAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiwEAAAAAAACLAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					145,
+					1,
+					"insert",
+					{
+						"characters": " lot"
+					},
+					"BAAAAI0BAAAAAAAAjgEAAAAAAAAAAAAAjgEAAAAAAACPAQAAAAAAAAAAAACPAQAAAAAAAJABAAAAAAAAAAAAAJABAAAAAAAAkQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjQEAAAAAAACNAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					146,
+					1,
+					"insert",
+					{
+						"characters": " more"
+					},
+					"BQAAAJEBAAAAAAAAkgEAAAAAAAAAAAAAkgEAAAAAAACTAQAAAAAAAAAAAACTAQAAAAAAAJQBAAAAAAAAAAAAAJQBAAAAAAAAlQEAAAAAAAAAAAAAlQEAAAAAAACWAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkQEAAAAAAACRAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					147,
+					1,
+					"insert",
+					{
+						"characters": " refugees"
+					},
+					"CQAAAJYBAAAAAAAAlwEAAAAAAAAAAAAAlwEAAAAAAACYAQAAAAAAAAAAAACYAQAAAAAAAJkBAAAAAAAAAAAAAJkBAAAAAAAAmgEAAAAAAAAAAAAAmgEAAAAAAACbAQAAAAAAAAAAAACbAQAAAAAAAJwBAAAAAAAAAAAAAJwBAAAAAAAAnQEAAAAAAAAAAAAAnQEAAAAAAACeAQAAAAAAAAAAAACeAQAAAAAAAJ8BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlgEAAAAAAACWAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					148,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAJ8BAAAAAAAAoAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnwEAAAAAAACfAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					149,
+					1,
+					"insert",
+					{
+						"characters": " which"
+					},
+					"BgAAAKABAAAAAAAAoQEAAAAAAAAAAAAAoQEAAAAAAACiAQAAAAAAAAAAAACiAQAAAAAAAKMBAAAAAAAAAAAAAKMBAAAAAAAApAEAAAAAAAAAAAAApAEAAAAAAAClAQAAAAAAAAAAAAClAQAAAAAAAKYBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAoAEAAAAAAACgAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					150,
+					1,
+					"insert",
+					{
+						"characters": " could"
+					},
+					"BgAAAKYBAAAAAAAApwEAAAAAAAAAAAAApwEAAAAAAACoAQAAAAAAAAAAAACoAQAAAAAAAKkBAAAAAAAAAAAAAKkBAAAAAAAAqgEAAAAAAAAAAAAAqgEAAAAAAACrAQAAAAAAAAAAAACrAQAAAAAAAKwBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApgEAAAAAAACmAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					151,
+					1,
+					"insert",
+					{
+						"characters": " complic"
+					},
+					"CAAAAKwBAAAAAAAArQEAAAAAAAAAAAAArQEAAAAAAACuAQAAAAAAAAAAAACuAQAAAAAAAK8BAAAAAAAAAAAAAK8BAAAAAAAAsAEAAAAAAAAAAAAAsAEAAAAAAACxAQAAAAAAAAAAAACxAQAAAAAAALIBAAAAAAAAAAAAALIBAAAAAAAAswEAAAAAAAAAAAAAswEAAAAAAAC0AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArAEAAAAAAACsAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					152,
+					1,
+					"insert",
+					{
+						"characters": "ate"
+					},
+					"AwAAALQBAAAAAAAAtQEAAAAAAAAAAAAAtQEAAAAAAAC2AQAAAAAAAAAAAAC2AQAAAAAAALcBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtAEAAAAAAAC0AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					153,
+					1,
+					"insert",
+					{
+						"characters": " things"
+					},
+					"BwAAALcBAAAAAAAAuAEAAAAAAAAAAAAAuAEAAAAAAAC5AQAAAAAAAAAAAAC5AQAAAAAAALoBAAAAAAAAAAAAALoBAAAAAAAAuwEAAAAAAAAAAAAAuwEAAAAAAAC8AQAAAAAAAAAAAAC8AQAAAAAAAL0BAAAAAAAAAAAAAL0BAAAAAAAAvgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtwEAAAAAAAC3AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					154,
+					1,
+					"insert",
+					{
+						"characters": " if"
+					},
+					"AwAAAL4BAAAAAAAAvwEAAAAAAAAAAAAAvwEAAAAAAADAAQAAAAAAAAAAAADAAQAAAAAAAMEBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvgEAAAAAAAC+AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					155,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAMEBAAAAAAAAwgEAAAAAAAAAAAAAwgEAAAAAAADDAQAAAAAAAAAAAADDAQAAAAAAAMQBAAAAAAAAAAAAAMQBAAAAAAAAxQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwQEAAAAAAADBAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					156,
+					1,
+					"insert",
+					{
+						"characters": " Empire"
+					},
+					"BwAAAMUBAAAAAAAAxgEAAAAAAAAAAAAAxgEAAAAAAADHAQAAAAAAAAAAAADHAQAAAAAAAMgBAAAAAAAAAAAAAMgBAAAAAAAAyQEAAAAAAAAAAAAAyQEAAAAAAADKAQAAAAAAAAAAAADKAQAAAAAAAMsBAAAAAAAAAAAAAMsBAAAAAAAAzAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxQEAAAAAAADFAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					157,
+					1,
+					"insert",
+					{
+						"characters": " happens"
+					},
+					"CAAAAMwBAAAAAAAAzQEAAAAAAAAAAAAAzQEAAAAAAADOAQAAAAAAAAAAAADOAQAAAAAAAM8BAAAAAAAAAAAAAM8BAAAAAAAA0AEAAAAAAAAAAAAA0AEAAAAAAADRAQAAAAAAAAAAAADRAQAAAAAAANIBAAAAAAAAAAAAANIBAAAAAAAA0wEAAAAAAAAAAAAA0wEAAAAAAADUAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzAEAAAAAAADMAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					158,
+					1,
+					"insert",
+					{
+						"characters": " to"
+					},
+					"AwAAANQBAAAAAAAA1QEAAAAAAAAAAAAA1QEAAAAAAADWAQAAAAAAAAAAAADWAQAAAAAAANcBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1AEAAAAAAADUAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					159,
+					1,
+					"insert",
+					{
+						"characters": " visit"
+					},
+					"BgAAANcBAAAAAAAA2AEAAAAAAAAAAAAA2AEAAAAAAADZAQAAAAAAAAAAAADZAQAAAAAAANoBAAAAAAAAAAAAANoBAAAAAAAA2wEAAAAAAAAAAAAA2wEAAAAAAADcAQAAAAAAAAAAAADcAQAAAAAAAN0BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1wEAAAAAAADXAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					160,
+					1,
+					"insert",
+					{
+						"characters": " and"
+					},
+					"BAAAAN0BAAAAAAAA3gEAAAAAAAAAAAAA3gEAAAAAAADfAQAAAAAAAAAAAADfAQAAAAAAAOABAAAAAAAAAAAAAOABAAAAAAAA4QEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3QEAAAAAAADdAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					161,
+					1,
+					"insert",
+					{
+						"characters": " your"
+					},
+					"BQAAAOEBAAAAAAAA4gEAAAAAAAAAAAAA4gEAAAAAAADjAQAAAAAAAAAAAADjAQAAAAAAAOQBAAAAAAAAAAAAAOQBAAAAAAAA5QEAAAAAAAAAAAAA5QEAAAAAAADmAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4QEAAAAAAADhAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					162,
+					1,
+					"insert",
+					{
+						"characters": " map"
+					},
+					"BAAAAOYBAAAAAAAA5wEAAAAAAAAAAAAA5wEAAAAAAADoAQAAAAAAAAAAAADoAQAAAAAAAOkBAAAAAAAAAAAAAOkBAAAAAAAA6gEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA5gEAAAAAAADmAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					163,
+					1,
+					"insert",
+					{
+						"characters": " is"
+					},
+					"AwAAAOoBAAAAAAAA6wEAAAAAAAAAAAAA6wEAAAAAAADsAQAAAAAAAAAAAADsAQAAAAAAAO0BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6gEAAAAAAADqAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					164,
+					1,
+					"insert",
+					{
+						"characters": " filled"
+					},
+					"BwAAAO0BAAAAAAAA7gEAAAAAAAAAAAAA7gEAAAAAAADvAQAAAAAAAAAAAADvAQAAAAAAAPABAAAAAAAAAAAAAPABAAAAAAAA8QEAAAAAAAAAAAAA8QEAAAAAAADyAQAAAAAAAAAAAADyAQAAAAAAAPMBAAAAAAAAAAAAAPMBAAAAAAAA9AEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7QEAAAAAAADtAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					165,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAPQBAAAAAAAA9QEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9AEAAAAAAAD0AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					166,
+					1,
+					"insert",
+					{
+						"characters": "with"
+					},
+					"BAAAAPUBAAAAAAAA9gEAAAAAAAAAAAAA9gEAAAAAAAD3AQAAAAAAAAAAAAD3AQAAAAAAAPgBAAAAAAAAAAAAAPgBAAAAAAAA+QEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9QEAAAAAAAD1AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					167,
+					1,
+					"insert",
+					{
+						"characters": " displaced"
+					},
+					"CgAAAPkBAAAAAAAA+gEAAAAAAAAAAAAA+gEAAAAAAAD7AQAAAAAAAAAAAAD7AQAAAAAAAPwBAAAAAAAAAAAAAPwBAAAAAAAA/QEAAAAAAAAAAAAA/QEAAAAAAAD+AQAAAAAAAAAAAAD+AQAAAAAAAP8BAAAAAAAAAAAAAP8BAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAABAgAAAAAAAAAAAAABAgAAAAAAAAICAAAAAAAAAAAAAAICAAAAAAAAAwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+QEAAAAAAAD5AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					168,
+					1,
+					"insert",
+					{
+						"characters": " per"
+					},
+					"BAAAAAMCAAAAAAAABAIAAAAAAAAAAAAABAIAAAAAAAAFAgAAAAAAAAAAAAAFAgAAAAAAAAYCAAAAAAAAAAAAAAYCAAAAAAAABwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAwIAAAAAAAADAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					169,
+					1,
+					"insert",
+					{
+						"characters": "sons"
+					},
+					"BAAAAAcCAAAAAAAACAIAAAAAAAAAAAAACAIAAAAAAAAJAgAAAAAAAAAAAAAJAgAAAAAAAAoCAAAAAAAAAAAAAAoCAAAAAAAACwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABwIAAAAAAAAHAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					170,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAAsCAAAAAAAADAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACwIAAAAAAAALAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					171,
+					1,
+					"left_delete",
+					null,
+					"AQAAAAsCAAAAAAAACwIAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAADAIAAAAAAAAMAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					172,
+					1,
+					"insert",
+					{
+						"characters": " of"
+					},
+					"AwAAAAsCAAAAAAAADAIAAAAAAAAAAAAADAIAAAAAAAANAgAAAAAAAAAAAAANAgAAAAAAAA4CAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAACwIAAAAAAAALAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					173,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAA4CAAAAAAAADwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADgIAAAAAAAAOAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					174,
+					1,
+					"insert",
+					{
+						"characters": "undes"
+					},
+					"BQAAAA8CAAAAAAAAEAIAAAAAAAAAAAAAEAIAAAAAAAARAgAAAAAAAAAAAAARAgAAAAAAABICAAAAAAAAAAAAABICAAAAAAAAEwIAAAAAAAAAAAAAEwIAAAAAAAAUAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADwIAAAAAAAAPAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					175,
+					1,
+					"insert",
+					{
+						"characters": "ir"
+					},
+					"AgAAABQCAAAAAAAAFQIAAAAAAAAAAAAAFQIAAAAAAAAWAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFAIAAAAAAAAUAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					176,
+					7,
+					"left_delete",
+					null,
+					"BwAAABUCAAAAAAAAFQIAAAAAAAABAAAAchQCAAAAAAAAFAIAAAAAAAABAAAAaRMCAAAAAAAAEwIAAAAAAAABAAAAcxICAAAAAAAAEgIAAAAAAAABAAAAZRECAAAAAAAAEQIAAAAAAAABAAAAZBACAAAAAAAAEAIAAAAAAAABAAAAbg8CAAAAAAAADwIAAAAAAAABAAAAdQ",
+					"AQAAAAAAAAABAAAAFgIAAAAAAAAWAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					177,
+					1,
+					"insert",
+					{
+						"characters": "xenotype"
+					},
+					"CAAAAA8CAAAAAAAAEAIAAAAAAAAAAAAAEAIAAAAAAAARAgAAAAAAAAAAAAARAgAAAAAAABICAAAAAAAAAAAAABICAAAAAAAAEwIAAAAAAAAAAAAAEwIAAAAAAAAUAgAAAAAAAAAAAAAUAgAAAAAAABUCAAAAAAAAAAAAABUCAAAAAAAAFgIAAAAAAAAAAAAAFgIAAAAAAAAXAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADwIAAAAAAAAPAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					178,
+					1,
+					"insert",
+					{
+						"characters": "s"
+					},
+					"AQAAABcCAAAAAAAAGAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAFwIAAAAAAAAXAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					179,
+					1,
+					"insert",
+					{
+						"characters": " not"
+					},
+					"BAAAABgCAAAAAAAAGQIAAAAAAAAAAAAAGQIAAAAAAAAaAgAAAAAAAAAAAAAaAgAAAAAAABsCAAAAAAAAAAAAABsCAAAAAAAAHAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGAIAAAAAAAAYAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					180,
+					1,
+					"insert",
+					{
+						"characters": " desire"
+					},
+					"BwAAABwCAAAAAAAAHQIAAAAAAAAAAAAAHQIAAAAAAAAeAgAAAAAAAAAAAAAeAgAAAAAAAB8CAAAAAAAAAAAAAB8CAAAAAAAAIAIAAAAAAAAAAAAAIAIAAAAAAAAhAgAAAAAAAAAAAAAhAgAAAAAAACICAAAAAAAAAAAAACICAAAAAAAAIwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAHAIAAAAAAAAcAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					181,
+					1,
+					"insert",
+					{
+						"characters": "d"
+					},
+					"AQAAACMCAAAAAAAAJAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAIwIAAAAAAAAjAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					182,
+					1,
+					"insert",
+					{
+						"characters": " by"
+					},
+					"AwAAACQCAAAAAAAAJQIAAAAAAAAAAAAAJQIAAAAAAAAmAgAAAAAAAAAAAAAmAgAAAAAAACcCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJAIAAAAAAAAkAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					183,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAACcCAAAAAAAAKAIAAAAAAAAAAAAAKAIAAAAAAAApAgAAAAAAAAAAAAApAgAAAAAAACoCAAAAAAAAAAAAACoCAAAAAAAAKwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAJwIAAAAAAAAnAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					184,
+					1,
+					"insert",
+					{
+						"characters": " Empire."
+					},
+					"CAAAACsCAAAAAAAALAIAAAAAAAAAAAAALAIAAAAAAAAtAgAAAAAAAAAAAAAtAgAAAAAAAC4CAAAAAAAAAAAAAC4CAAAAAAAALwIAAAAAAAAAAAAALwIAAAAAAAAwAgAAAAAAAAAAAAAwAgAAAAAAADECAAAAAAAAAAAAADECAAAAAAAAMgIAAAAAAAAAAAAAMgIAAAAAAAAzAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAKwIAAAAAAAArAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					185,
+					1,
+					"insert",
+					{
+						"characters": "\n\nIf"
+					},
+					"BAAAADMCAAAAAAAANAIAAAAAAAAAAAAANAIAAAAAAAA1AgAAAAAAAAAAAAA1AgAAAAAAADYCAAAAAAAAAAAAADYCAAAAAAAANwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAMwIAAAAAAAAzAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					186,
+					1,
+					"insert",
+					{
+						"characters": " you"
+					},
+					"BAAAADcCAAAAAAAAOAIAAAAAAAAAAAAAOAIAAAAAAAA5AgAAAAAAAAAAAAA5AgAAAAAAADoCAAAAAAAAAAAAADoCAAAAAAAAOwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANwIAAAAAAAA3AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					187,
+					1,
+					"insert",
+					{
+						"characters": " wxan"
+					},
+					"BQAAADsCAAAAAAAAPAIAAAAAAAAAAAAAPAIAAAAAAAA9AgAAAAAAAAAAAAA9AgAAAAAAAD4CAAAAAAAAAAAAAD4CAAAAAAAAPwIAAAAAAAAAAAAAPwIAAAAAAABAAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAOwIAAAAAAAA7AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					188,
+					3,
+					"left_delete",
+					null,
+					"AwAAAD8CAAAAAAAAPwIAAAAAAAABAAAAbj4CAAAAAAAAPgIAAAAAAAABAAAAYT0CAAAAAAAAPQIAAAAAAAABAAAAeA",
+					"AQAAAAAAAAABAAAAQAIAAAAAAABAAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					189,
+					1,
+					"insert",
+					{
+						"characters": "ant"
+					},
+					"AwAAAD0CAAAAAAAAPgIAAAAAAAAAAAAAPgIAAAAAAAA/AgAAAAAAAAAAAAA/AgAAAAAAAEACAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAPQIAAAAAAAA9AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					190,
+					1,
+					"insert",
+					{
+						"characters": " to"
+					},
+					"AwAAAEACAAAAAAAAQQIAAAAAAAAAAAAAQQIAAAAAAABCAgAAAAAAAAAAAABCAgAAAAAAAEMCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQAIAAAAAAABAAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					191,
+					1,
+					"insert",
+					{
+						"characters": " be"
+					},
+					"AwAAAEMCAAAAAAAARAIAAAAAAAAAAAAARAIAAAAAAABFAgAAAAAAAAAAAABFAgAAAAAAAEYCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAQwIAAAAAAABDAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					192,
+					1,
+					"insert",
+					{
+						"characters": " friends"
+					},
+					"CAAAAEYCAAAAAAAARwIAAAAAAAAAAAAARwIAAAAAAABIAgAAAAAAAAAAAABIAgAAAAAAAEkCAAAAAAAAAAAAAEkCAAAAAAAASgIAAAAAAAAAAAAASgIAAAAAAABLAgAAAAAAAAAAAABLAgAAAAAAAEwCAAAAAAAAAAAAAEwCAAAAAAAATQIAAAAAAAAAAAAATQIAAAAAAABOAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAARgIAAAAAAABGAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					193,
+					1,
+					"insert",
+					{
+						"characters": " witht"
+					},
+					"BgAAAE4CAAAAAAAATwIAAAAAAAAAAAAATwIAAAAAAABQAgAAAAAAAAAAAABQAgAAAAAAAFECAAAAAAAAAAAAAFECAAAAAAAAUgIAAAAAAAAAAAAAUgIAAAAAAABTAgAAAAAAAAAAAABTAgAAAAAAAFQCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAATgIAAAAAAABOAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					194,
+					1,
+					"insert",
+					{
+						"characters": " he"
+					},
+					"AwAAAFQCAAAAAAAAVQIAAAAAAAAAAAAAVQIAAAAAAABWAgAAAAAAAAAAAABWAgAAAAAAAFcCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVAIAAAAAAABUAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					195,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAFcCAAAAAAAAWAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVwIAAAAAAABXAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					196,
+					6,
+					"left_delete",
+					null,
+					"BgAAAFcCAAAAAAAAVwIAAAAAAAABAAAAIFYCAAAAAAAAVgIAAAAAAAABAAAAZVUCAAAAAAAAVQIAAAAAAAABAAAAaFQCAAAAAAAAVAIAAAAAAAABAAAAIFMCAAAAAAAAUwIAAAAAAAABAAAAdFICAAAAAAAAUgIAAAAAAAABAAAAaA",
+					"AQAAAAAAAAABAAAAWAIAAAAAAABYAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					197,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAFICAAAAAAAAUwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUgIAAAAAAABSAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					198,
+					1,
+					"left_delete",
+					null,
+					"AQAAAFICAAAAAAAAUgIAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAUwIAAAAAAABTAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					199,
+					1,
+					"insert",
+					{
+						"characters": "h"
+					},
+					"AQAAAFICAAAAAAAAUwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUgIAAAAAAABSAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					200,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAFMCAAAAAAAAVAIAAAAAAAAAAAAAVAIAAAAAAABVAgAAAAAAAAAAAABVAgAAAAAAAFYCAAAAAAAAAAAAAFYCAAAAAAAAVwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAUwIAAAAAAABTAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					201,
+					1,
+					"insert",
+					{
+						"characters": " Empire,"
+					},
+					"CAAAAFcCAAAAAAAAWAIAAAAAAAAAAAAAWAIAAAAAAABZAgAAAAAAAAAAAABZAgAAAAAAAFoCAAAAAAAAAAAAAFoCAAAAAAAAWwIAAAAAAAAAAAAAWwIAAAAAAABcAgAAAAAAAAAAAABcAgAAAAAAAF0CAAAAAAAAAAAAAF0CAAAAAAAAXgIAAAAAAAAAAAAAXgIAAAAAAABfAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAVwIAAAAAAABXAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					202,
+					1,
+					"insert",
+					{
+						"characters": "  just"
+					},
+					"BgAAAF8CAAAAAAAAYAIAAAAAAAAAAAAAYAIAAAAAAABhAgAAAAAAAAAAAABhAgAAAAAAAGICAAAAAAAAAAAAAGICAAAAAAAAYwIAAAAAAAAAAAAAYwIAAAAAAABkAgAAAAAAAAAAAABkAgAAAAAAAGUCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAXwIAAAAAAABfAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					203,
+					1,
+					"insert",
+					{
+						"characters": " obtain"
+					},
+					"BwAAAGUCAAAAAAAAZgIAAAAAAAAAAAAAZgIAAAAAAABnAgAAAAAAAAAAAABnAgAAAAAAAGgCAAAAAAAAAAAAAGgCAAAAAAAAaQIAAAAAAAAAAAAAaQIAAAAAAABqAgAAAAAAAAAAAABqAgAAAAAAAGsCAAAAAAAAAAAAAGsCAAAAAAAAbAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAZQIAAAAAAABlAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					204,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAGwCAAAAAAAAbQIAAAAAAAAAAAAAbQIAAAAAAABuAgAAAAAAAAAAAABuAgAAAAAAAG8CAAAAAAAAAAAAAG8CAAAAAAAAcAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAbAIAAAAAAABsAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					205,
+					1,
+					"insert",
+					{
+						"characters": " title"
+					},
+					"BgAAAHACAAAAAAAAcQIAAAAAAAAAAAAAcQIAAAAAAAByAgAAAAAAAAAAAAByAgAAAAAAAHMCAAAAAAAAAAAAAHMCAAAAAAAAdAIAAAAAAAAAAAAAdAIAAAAAAAB1AgAAAAAAAAAAAAB1AgAAAAAAAHYCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcAIAAAAAAABwAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					206,
+					1,
+					"insert",
+					{
+						"characters": " of"
+					},
+					"AwAAAHYCAAAAAAAAdwIAAAAAAAAAAAAAdwIAAAAAAAB4AgAAAAAAAAAAAAB4AgAAAAAAAHkCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgIAAAAAAAB2AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					207,
+					1,
+					"insert",
+					{
+						"characters": " Knif"
+					},
+					"BQAAAHkCAAAAAAAAegIAAAAAAAAAAAAAegIAAAAAAAB7AgAAAAAAAAAAAAB7AgAAAAAAAHwCAAAAAAAAAAAAAHwCAAAAAAAAfQIAAAAAAAAAAAAAfQIAAAAAAAB+AgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeQIAAAAAAAB5AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					208,
+					1,
+					"insert",
+					{
+						"characters": "e"
+					},
+					"AQAAAH4CAAAAAAAAfwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfgIAAAAAAAB+AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					209,
+					2,
+					"left_delete",
+					null,
+					"AgAAAH4CAAAAAAAAfgIAAAAAAAABAAAAZX0CAAAAAAAAfQIAAAAAAAABAAAAZg",
+					"AQAAAAAAAAABAAAAfwIAAAAAAAB/AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					210,
+					1,
+					"insert",
+					{
+						"characters": "ght/"
+					},
+					"BAAAAH0CAAAAAAAAfgIAAAAAAAAAAAAAfgIAAAAAAAB/AgAAAAAAAAAAAAB/AgAAAAAAAIACAAAAAAAAAAAAAIACAAAAAAAAgQIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfQIAAAAAAAB9AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					211,
+					7,
+					"left_delete",
+					null,
+					"BwAAAIACAAAAAAAAgAIAAAAAAAABAAAAL38CAAAAAAAAfwIAAAAAAAABAAAAdH4CAAAAAAAAfgIAAAAAAAABAAAAaH0CAAAAAAAAfQIAAAAAAAABAAAAZ3wCAAAAAAAAfAIAAAAAAAABAAAAaXsCAAAAAAAAewIAAAAAAAABAAAAbnoCAAAAAAAAegIAAAAAAAABAAAASw",
+					"AQAAAAAAAAABAAAAgQIAAAAAAACBAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					212,
+					1,
+					"insert",
+					{
+						"characters": "Dame/"
+					},
+					"BQAAAHoCAAAAAAAAewIAAAAAAAAAAAAAewIAAAAAAAB8AgAAAAAAAAAAAAB8AgAAAAAAAH0CAAAAAAAAAAAAAH0CAAAAAAAAfgIAAAAAAAAAAAAAfgIAAAAAAAB/AgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAegIAAAAAAAB6AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					213,
+					1,
+					"insert",
+					{
+						"characters": "kn"
+					},
+					"AgAAAH8CAAAAAAAAgAIAAAAAAAAAAAAAgAIAAAAAAACBAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfwIAAAAAAAB/AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					214,
+					2,
+					"left_delete",
+					null,
+					"AgAAAIACAAAAAAAAgAIAAAAAAAABAAAAbn8CAAAAAAAAfwIAAAAAAAABAAAAaw",
+					"AQAAAAAAAAABAAAAgQIAAAAAAACBAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					215,
+					1,
+					"insert",
+					{
+						"characters": "Knight"
+					},
+					"BgAAAH8CAAAAAAAAgAIAAAAAAAAAAAAAgAIAAAAAAACBAgAAAAAAAAAAAACBAgAAAAAAAIICAAAAAAAAAAAAAIICAAAAAAAAgwIAAAAAAAAAAAAAgwIAAAAAAACEAgAAAAAAAAAAAACEAgAAAAAAAIUCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfwIAAAAAAAB/AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					216,
+					1,
+					"insert",
+					{
+						"characters": " or"
+					},
+					"AwAAAIUCAAAAAAAAhgIAAAAAAAAAAAAAhgIAAAAAAACHAgAAAAAAAAAAAACHAgAAAAAAAIgCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhQIAAAAAAACFAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					217,
+					1,
+					"insert",
+					{
+						"characters": " superior"
+					},
+					"CQAAAIgCAAAAAAAAiQIAAAAAAAAAAAAAiQIAAAAAAACKAgAAAAAAAAAAAACKAgAAAAAAAIsCAAAAAAAAAAAAAIsCAAAAAAAAjAIAAAAAAAAAAAAAjAIAAAAAAACNAgAAAAAAAAAAAACNAgAAAAAAAI4CAAAAAAAAAAAAAI4CAAAAAAAAjwIAAAAAAAAAAAAAjwIAAAAAAACQAgAAAAAAAAAAAACQAgAAAAAAAJECAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAiAIAAAAAAACIAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					218,
+					1,
+					"insert",
+					{
+						"characters": " and"
+					},
+					"BAAAAJECAAAAAAAAkgIAAAAAAAAAAAAAkgIAAAAAAACTAgAAAAAAAAAAAACTAgAAAAAAAJQCAAAAAAAAAAAAAJQCAAAAAAAAlQIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAkQIAAAAAAACRAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					219,
+					1,
+					"insert",
+					{
+						"characters": " they'll"
+					},
+					"CAAAAJUCAAAAAAAAlgIAAAAAAAAAAAAAlgIAAAAAAACXAgAAAAAAAAAAAACXAgAAAAAAAJgCAAAAAAAAAAAAAJgCAAAAAAAAmQIAAAAAAAAAAAAAmQIAAAAAAACaAgAAAAAAAAAAAACaAgAAAAAAAJsCAAAAAAAAAAAAAJsCAAAAAAAAnAIAAAAAAAAAAAAAnAIAAAAAAACdAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlQIAAAAAAACVAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					220,
+					1,
+					"insert",
+					{
+						"characters": " overlook"
+					},
+					"CQAAAJ0CAAAAAAAAngIAAAAAAAAAAAAAngIAAAAAAACfAgAAAAAAAAAAAACfAgAAAAAAAKACAAAAAAAAAAAAAKACAAAAAAAAoQIAAAAAAAAAAAAAoQIAAAAAAACiAgAAAAAAAAAAAACiAgAAAAAAAKMCAAAAAAAAAAAAAKMCAAAAAAAApAIAAAAAAAAAAAAApAIAAAAAAAClAgAAAAAAAAAAAAClAgAAAAAAAKYCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAnQIAAAAAAACdAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					221,
+					1,
+					"insert",
+					{
+						"characters": " your"
+					},
+					"BQAAAKYCAAAAAAAApwIAAAAAAAAAAAAApwIAAAAAAACoAgAAAAAAAAAAAACoAgAAAAAAAKkCAAAAAAAAAAAAAKkCAAAAAAAAqgIAAAAAAAAAAAAAqgIAAAAAAACrAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAApgIAAAAAAACmAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					222,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAKsCAAAAAAAArAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAqwIAAAAAAACrAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					223,
+					1,
+					"insert",
+					{
+						"characters": "inde"
+					},
+					"BAAAAKwCAAAAAAAArQIAAAAAAAAAAAAArQIAAAAAAACuAgAAAAAAAAAAAACuAgAAAAAAAK8CAAAAAAAAAAAAAK8CAAAAAAAAsAIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArAIAAAAAAACsAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					224,
+					1,
+					"left_delete",
+					null,
+					"AQAAAK8CAAAAAAAArwIAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAAsAIAAAAAAACwAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					225,
+					1,
+					"insert",
+					{
+						"characters": "iscretio"
+					},
+					"CAAAAK8CAAAAAAAAsAIAAAAAAAAAAAAAsAIAAAAAAACxAgAAAAAAAAAAAACxAgAAAAAAALICAAAAAAAAAAAAALICAAAAAAAAswIAAAAAAAAAAAAAswIAAAAAAAC0AgAAAAAAAAAAAAC0AgAAAAAAALUCAAAAAAAAAAAAALUCAAAAAAAAtgIAAAAAAAAAAAAAtgIAAAAAAAC3AgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArwIAAAAAAACvAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					226,
+					1,
+					"insert",
+					{
+						"characters": "ns."
+					},
+					"AwAAALcCAAAAAAAAuAIAAAAAAAAAAAAAuAIAAAAAAAC5AgAAAAAAAAAAAAC5AgAAAAAAALoCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAtwIAAAAAAAC3AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					227,
+					1,
+					"insert",
+					{
+						"characters": "\n\nOr,"
+					},
+					"BQAAALoCAAAAAAAAuwIAAAAAAAAAAAAAuwIAAAAAAAC8AgAAAAAAAAAAAAC8AgAAAAAAAL0CAAAAAAAAAAAAAL0CAAAAAAAAvgIAAAAAAAAAAAAAvgIAAAAAAAC/AgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAugIAAAAAAAC6AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					228,
+					1,
+					"insert",
+					{
+						"characters": " you"
+					},
+					"BAAAAL8CAAAAAAAAwAIAAAAAAAAAAAAAwAIAAAAAAADBAgAAAAAAAAAAAADBAgAAAAAAAMICAAAAAAAAAAAAAMICAAAAAAAAwwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAvwIAAAAAAAC/AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					229,
+					1,
+					"insert",
+					{
+						"characters": " can"
+					},
+					"BAAAAMMCAAAAAAAAxAIAAAAAAAAAAAAAxAIAAAAAAADFAgAAAAAAAAAAAADFAgAAAAAAAMYCAAAAAAAAAAAAAMYCAAAAAAAAxwIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAwwIAAAAAAADDAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					230,
+					1,
+					"insert",
+					{
+						"characters": " bank"
+					},
+					"BQAAAMcCAAAAAAAAyAIAAAAAAAAAAAAAyAIAAAAAAADJAgAAAAAAAAAAAADJAgAAAAAAAMoCAAAAAAAAAAAAAMoCAAAAAAAAywIAAAAAAAAAAAAAywIAAAAAAADMAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAxwIAAAAAAADHAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					231,
+					1,
+					"insert",
+					{
+						"characters": " on"
+					},
+					"AwAAAMwCAAAAAAAAzQIAAAAAAAAAAAAAzQIAAAAAAADOAgAAAAAAAAAAAADOAgAAAAAAAM8CAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzAIAAAAAAADMAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					232,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAM8CAAAAAAAA0AIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAzwIAAAAAAADPAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					233,
+					1,
+					"insert",
+					{
+						"characters": "making"
+					},
+					"BgAAANACAAAAAAAA0QIAAAAAAAAAAAAA0QIAAAAAAADSAgAAAAAAAAAAAADSAgAAAAAAANMCAAAAAAAAAAAAANMCAAAAAAAA1AIAAAAAAAAAAAAA1AIAAAAAAADVAgAAAAAAAAAAAADVAgAAAAAAANYCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA0AIAAAAAAADQAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					234,
+					1,
+					"insert",
+					{
+						"characters": " friends"
+					},
+					"CAAAANYCAAAAAAAA1wIAAAAAAAAAAAAA1wIAAAAAAADYAgAAAAAAAAAAAADYAgAAAAAAANkCAAAAAAAAAAAAANkCAAAAAAAA2gIAAAAAAAAAAAAA2gIAAAAAAADbAgAAAAAAAAAAAADbAgAAAAAAANwCAAAAAAAAAAAAANwCAAAAAAAA3QIAAAAAAAAAAAAA3QIAAAAAAADeAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA1gIAAAAAAADWAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					235,
+					1,
+					"insert",
+					{
+						"characters": " with"
+					},
+					"BQAAAN4CAAAAAAAA3wIAAAAAAAAAAAAA3wIAAAAAAADgAgAAAAAAAAAAAADgAgAAAAAAAOECAAAAAAAAAAAAAOECAAAAAAAA4gIAAAAAAAAAAAAA4gIAAAAAAADjAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA3gIAAAAAAADeAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					236,
+					1,
+					"insert",
+					{
+						"characters": " those"
+					},
+					"BgAAAOMCAAAAAAAA5AIAAAAAAAAAAAAA5AIAAAAAAADlAgAAAAAAAAAAAADlAgAAAAAAAOYCAAAAAAAAAAAAAOYCAAAAAAAA5wIAAAAAAAAAAAAA5wIAAAAAAADoAgAAAAAAAAAAAADoAgAAAAAAAOkCAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA4wIAAAAAAADjAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					237,
+					1,
+					"insert",
+					{
+						"characters": " who"
+					},
+					"BAAAAOkCAAAAAAAA6gIAAAAAAAAAAAAA6gIAAAAAAADrAgAAAAAAAAAAAADrAgAAAAAAAOwCAAAAAAAAAAAAAOwCAAAAAAAA7QIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6QIAAAAAAADpAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					238,
+					1,
+					"insert",
+					{
+						"characters": " resist"
+					},
+					"BwAAAO0CAAAAAAAA7gIAAAAAAAAAAAAA7gIAAAAAAADvAgAAAAAAAAAAAADvAgAAAAAAAPACAAAAAAAAAAAAAPACAAAAAAAA8QIAAAAAAAAAAAAA8QIAAAAAAADyAgAAAAAAAAAAAADyAgAAAAAAAPMCAAAAAAAAAAAAAPMCAAAAAAAA9AIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7QIAAAAAAADtAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					239,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAPQCAAAAAAAA9QIAAAAAAAAAAAAA9QIAAAAAAAD2AgAAAAAAAAAAAAD2AgAAAAAAAPcCAAAAAAAAAAAAAPcCAAAAAAAA+AIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9AIAAAAAAAD0AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					240,
+					1,
+					"insert",
+					{
+						"characters": " Empire"
+					},
+					"BwAAAPgCAAAAAAAA+QIAAAAAAAAAAAAA+QIAAAAAAAD6AgAAAAAAAAAAAAD6AgAAAAAAAPsCAAAAAAAAAAAAAPsCAAAAAAAA/AIAAAAAAAAAAAAA/AIAAAAAAAD9AgAAAAAAAAAAAAD9AgAAAAAAAP4CAAAAAAAAAAAAAP4CAAAAAAAA/wIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+AIAAAAAAAD4AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					241,
+					1,
+					"insert",
+					{
+						"characters": ","
+					},
+					"AQAAAP8CAAAAAAAAAAMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA/wIAAAAAAAD/AgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					242,
+					1,
+					"insert",
+					{
+						"characters": " if"
+					},
+					"AwAAAAADAAAAAAAAAQMAAAAAAAAAAAAAAQMAAAAAAAACAwAAAAAAAAAAAAACAwAAAAAAAAMDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					243,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAAMDAAAAAAAABAMAAAAAAAAAAAAABAMAAAAAAAAFAwAAAAAAAAAAAAAFAwAAAAAAAAYDAAAAAAAAAAAAAAYDAAAAAAAABwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAwMAAAAAAAADAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					244,
+					1,
+					"insert",
+					{
+						"characters": " rumors"
+					},
+					"BwAAAAcDAAAAAAAACAMAAAAAAAAAAAAACAMAAAAAAAAJAwAAAAAAAAAAAAAJAwAAAAAAAAoDAAAAAAAAAAAAAAoDAAAAAAAACwMAAAAAAAAAAAAACwMAAAAAAAAMAwAAAAAAAAAAAAAMAwAAAAAAAA0DAAAAAAAAAAAAAA0DAAAAAAAADgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABwMAAAAAAAAHAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					245,
+					1,
+					"insert",
+					{
+						"characters": " are"
+					},
+					"BAAAAA4DAAAAAAAADwMAAAAAAAAAAAAADwMAAAAAAAAQAwAAAAAAAAAAAAAQAwAAAAAAABEDAAAAAAAAAAAAABEDAAAAAAAAEgMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADgMAAAAAAAAOAwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					246,
+					1,
+					"insert",
+					{
+						"characters": " true."
+					},
+					"BgAAABIDAAAAAAAAEwMAAAAAAAAAAAAAEwMAAAAAAAAUAwAAAAAAAAAAAAAUAwAAAAAAABUDAAAAAAAAAAAAABUDAAAAAAAAFgMAAAAAAAAAAAAAFgMAAAAAAAAXAwAAAAAAAAAAAAAXAwAAAAAAABgDAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAEgMAAAAAAAASAwAAAAAAAAAAAAAAAPC/"
+				]
+			]
+		},
+		{
+			"contents": "\nUnveiling Vexine Dark Story: A Sinister Twist for Vexi Enthusiasts\n\nEmbark on a perilous odyssey with Vexine Dark Story, where your Vexi playthrough takes a harrowing turn, unraveling a clandestine plot that leaves no pawn unscathed. Brace yourself for the following treacherous elements:\n\nThe Vexi's Price: Beware the covetous eyes of the Empire, for your Vexi pawns are much more valuable than before. Vexilour garments, fetch exorbitant prices in the Empire's nefarious black market and are quite popular among the highest ranked.\n\nEmpire's Watchful Gaze: The Empire's intolerance for diversity intensifies. With each non-humanoid pawn dwelling within your colony, including Wasters, Pigs, Yttakin, Impids, and of course, Vexi, their disdain grows stronger.\n\nRefugees Amidst Chaos: Amidst the chaos, a multitude of refugees descend upon your doorstep seeking solace. But beware, for your sheltered haven could attract the attention of the Empire's agents. Will you provide sanctuary or become entangled in a deadly game of espionage?\n\nTo evade the Empire's wrath and secure a tenuous truce, attain the esteemed titles of Dame or Knight, or dare to transcend their expectations. Yet, whispers abound of a clandestine resistance, those who defy the Empire's iron fist. Forge alliances with these enigmatic rebels, for their secrets may hold the key to freedom.\n\nPrepare yourself for the twisted underbelly of Vexine Dark Story, where every choice reverberates with dire consequences. Will you succumb to the Empire's vile machinations or unearth the truth and lead your Vexi brethren towards liberation? The saga awaits your decisive hand.",
+			"settings":
+			{
+				"buffer_size": 1641,
+				"line_ending": "Unix"
+			},
+			"undo_stack":
+			[
+				[
+					3,
+					1,
+					"paste",
+					{
+						"event":
+						{
+							"modifier_keys":
+							{
+							},
+							"x": 716.587053571,
+							"y": 228.647321429
+						}
+					},
+					"AQAAAAAAAAAAAAAA0QcAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					8,
+					19,
+					"left_delete",
+					null,
+					"EwAAAI4BAAAAAAAAjgEAAAAAAAABAAAALo0BAAAAAAAAjQEAAAAAAAABAAAAZYwBAAAAAAAAjAEAAAAAAAABAAAAcosBAAAAAAAAiwEAAAAAAAABAAAAaYoBAAAAAAAAigEAAAAAAAABAAAAc4kBAAAAAAAAiQEAAAAAAAABAAAAZYgBAAAAAAAAiAEAAAAAAAABAAAAZIcBAAAAAAAAhwEAAAAAAAABAAAAIIYBAAAAAAAAhgEAAAAAAAABAAAAZoUBAAAAAAAAhQEAAAAAAAABAAAAb4QBAAAAAAAAhAEAAAAAAAABAAAAIIMBAAAAAAAAgwEAAAAAAAABAAAAc4IBAAAAAAAAggEAAAAAAAABAAAAdIEBAAAAAAAAgQEAAAAAAAABAAAAY4ABAAAAAAAAgAEAAAAAAAABAAAAZX8BAAAAAAAAfwEAAAAAAAABAAAAan4BAAAAAAAAfgEAAAAAAAABAAAAYn0BAAAAAAAAfQEAAAAAAAABAAAAb3wBAAAAAAAAfAEAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAjwEAAAAAAACPAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					9,
+					6,
+					"left_delete",
+					null,
+					"BgAAAHsBAAAAAAAAewEAAAAAAAABAAAAZXoBAAAAAAAAegEAAAAAAAABAAAAbXkBAAAAAAAAeQEAAAAAAAABAAAAb3gBAAAAAAAAeAEAAAAAAAABAAAAY3cBAAAAAAAAdwEAAAAAAAABAAAAZXYBAAAAAAAAdgEAAAAAAAABAAAAYg",
+					"AQAAAAAAAAABAAAAfAEAAAAAAAB8AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					10,
+					1,
+					"insert",
+					{
+						"characters": "are"
+					},
+					"AwAAAHYBAAAAAAAAdwEAAAAAAAAAAAAAdwEAAAAAAAB4AQAAAAAAAAAAAAB4AQAAAAAAAHkBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdgEAAAAAAAB2AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					11,
+					1,
+					"insert",
+					{
+						"characters": " valu"
+					},
+					"BQAAAHkBAAAAAAAAegEAAAAAAAAAAAAAegEAAAAAAAB7AQAAAAAAAAAAAAB7AQAAAAAAAHwBAAAAAAAAAAAAAHwBAAAAAAAAfQEAAAAAAAAAAAAAfQEAAAAAAAB+AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeQEAAAAAAAB5AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					12,
+					1,
+					"insert",
+					{
+						"characters": "able."
+					},
+					"BQAAAH4BAAAAAAAAfwEAAAAAAAAAAAAAfwEAAAAAAACAAQAAAAAAAAAAAACAAQAAAAAAAIEBAAAAAAAAAAAAAIEBAAAAAAAAggEAAAAAAAAAAAAAggEAAAAAAACDAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfgEAAAAAAAB+AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					18,
+					19,
+					"left_delete",
+					null,
+					"EwAAAFYEAAAAAAAAVgQAAAAAAAABAAAALlUEAAAAAAAAVQQAAAAAAAABAAAAblQEAAAAAAAAVAQAAAAAAAABAAAAb1MEAAAAAAAAUwQAAAAAAAABAAAAaVIEAAAAAAAAUgQAAAAAAAABAAAAbFEEAAAAAAAAUQQAAAAAAAABAAAAbFAEAAAAAAAAUAQAAAAAAAABAAAAZU8EAAAAAAAATwQAAAAAAAABAAAAYk4EAAAAAAAATgQAAAAAAAABAAAAZU0EAAAAAAAATQQAAAAAAAABAAAAckwEAAAAAAAATAQAAAAAAAABAAAAIEsEAAAAAAAASwQAAAAAAAABAAAAZkoEAAAAAAAASgQAAAAAAAABAAAAb0kEAAAAAAAASQQAAAAAAAABAAAAIEgEAAAAAAAASAQAAAAAAAABAAAAc0cEAAAAAAAARwQAAAAAAAABAAAAZUYEAAAAAAAARgQAAAAAAAABAAAAbUUEAAAAAAAARQQAAAAAAAABAAAAYUQEAAAAAAAARAQAAAAAAAABAAAAbA",
+					"AQAAAAAAAAABAAAAVwQAAAAAAABXBAAAAAAAAAAAAAAAmIBA"
+				],
+				[
+					19,
+					24,
+					"left_delete",
+					null,
+					"GAAAAEMEAAAAAAAAQwQAAAAAAAABAAAAZkIEAAAAAAAAQgQAAAAAAAABAAAAIEEEAAAAAAAAQQQAAAAAAAABAAAAZUAEAAAAAAAAQAQAAAAAAAABAAAAaD8EAAAAAAAAPwQAAAAAAAABAAAAdD4EAAAAAAAAPgQAAAAAAAABAAAAID0EAAAAAAAAPQQAAAAAAAABAAAAZTwEAAAAAAAAPAQAAAAAAAABAAAAdDsEAAAAAAAAOwQAAAAAAAABAAAAaToEAAAAAAAAOgQAAAAAAAABAAAAbjkEAAAAAAAAOQQAAAAAAAABAAAAZzgEAAAAAAAAOAQAAAAAAAABAAAAaTcEAAAAAAAANwQAAAAAAAABAAAAIDYEAAAAAAAANgQAAAAAAAABAAAAeTUEAAAAAAAANQQAAAAAAAABAAAAYTQEAAAAAAAANAQAAAAAAAABAAAAbTMEAAAAAAAAMwQAAAAAAAABAAAAIDIEAAAAAAAAMgQAAAAAAAABAAAAZTEEAAAAAAAAMQQAAAAAAAABAAAAYzAEAAAAAAAAMAQAAAAAAAABAAAAbi8EAAAAAAAALwQAAAAAAAABAAAAYS4EAAAAAAAALgQAAAAAAAABAAAAbC0EAAAAAAAALQQAAAAAAAABAAAAYSwEAAAAAAAALAQAAAAAAAABAAAAYg",
+					"AQAAAAAAAAABAAAARAQAAAAAAABEBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					20,
+					24,
+					"left_delete",
+					null,
+					"GAAAACsEAAAAAAAAKwQAAAAAAAABAAAAICoEAAAAAAAAKgQAAAAAAAABAAAAZSkEAAAAAAAAKQQAAAAAAAABAAAAdCgEAAAAAAAAKAQAAAAAAAABAAAAYScEAAAAAAAAJwQAAAAAAAABAAAAYyYEAAAAAAAAJgQAAAAAAAABAAAAaSUEAAAAAAAAJQQAAAAAAAABAAAAbCQEAAAAAAAAJAQAAAAAAAABAAAAZSMEAAAAAAAAIwQAAAAAAAABAAAAZCIEAAAAAAAAIgQAAAAAAAABAAAAICEEAAAAAAAAIQQAAAAAAAABAAAAZSAEAAAAAAAAIAQAAAAAAAABAAAAaB8EAAAAAAAAHwQAAAAAAAABAAAAdB4EAAAAAAAAHgQAAAAAAAABAAAAIB0EAAAAAAAAHQQAAAAAAAABAAAAbhwEAAAAAAAAHAQAAAAAAAABAAAAaRsEAAAAAAAAGwQAAAAAAAABAAAAYRoEAAAAAAAAGgQAAAAAAAABAAAAdBkEAAAAAAAAGQQAAAAAAAABAAAAbhgEAAAAAAAAGAQAAAAAAAABAAAAaRcEAAAAAAAAFwQAAAAAAAABAAAAYRYEAAAAAAAAFgQAAAAAAAABAAAAbRUEAAAAAAAAFQQAAAAAAAABAAAAIBQEAAAAAAAAFAQAAAAAAAABAAAAbw",
+					"AQAAAAAAAAABAAAALAQAAAAAAAAsBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					21,
+					12,
+					"left_delete",
+					null,
+					"DAAAABMEAAAAAAAAEwQAAAAAAAABAAAAdBIEAAAAAAAAEgQAAAAAAAABAAAAIBEEAAAAAAAAEQQAAAAAAAABAAAAZRAEAAAAAAAAEAQAAAAAAAABAAAAbA8EAAAAAAAADwQAAAAAAAABAAAAZw4EAAAAAAAADgQAAAAAAAABAAAAZw0EAAAAAAAADQQAAAAAAAABAAAAdQwEAAAAAAAADAQAAAAAAAABAAAAcgsEAAAAAAAACwQAAAAAAAABAAAAdAoEAAAAAAAACgQAAAAAAAABAAAAcwkEAAAAAAAACQQAAAAAAAABAAAAIAgEAAAAAAAACAQAAAAAAAABAAAAcg",
+					"AQAAAAAAAAABAAAAFAQAAAAAAAAUBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					22,
+					4,
+					"left_delete",
+					null,
+					"BAAAAAcEAAAAAAAABwQAAAAAAAABAAAAdQYEAAAAAAAABgQAAAAAAAABAAAAbwUEAAAAAAAABQQAAAAAAAABAAAAWQQEAAAAAAAABAQAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAACAQAAAAAAAAIBAAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					25,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAAQEAAAAAAAABQQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABAQAAAAAAAAEBAAAAAAAAAAAAAAAPJlA"
+				],
+				[
+					29,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAAAQCAAAAAAAABQIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABAIAAAAAAAAEAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					32,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAABoFAAAAAAAAGwUAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAGgUAAAAAAAAaBQAAAAAAAAAAAAAAAAAA"
+				],
+				[
+					39,
+					11,
+					"left_delete",
+					null,
+					"CwAAAIIBAAAAAAAAggEAAAAAAAABAAAALoEBAAAAAAAAgQEAAAAAAAABAAAAZYABAAAAAAAAgAEAAAAAAAABAAAAbH8BAAAAAAAAfwEAAAAAAAABAAAAYn4BAAAAAAAAfgEAAAAAAAABAAAAYX0BAAAAAAAAfQEAAAAAAAABAAAAdXwBAAAAAAAAfAEAAAAAAAABAAAAbHsBAAAAAAAAewEAAAAAAAABAAAAYXoBAAAAAAAAegEAAAAAAAABAAAAdnkBAAAAAAAAeQEAAAAAAAABAAAAIHgBAAAAAAAAeAEAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAAgwEAAAAAAACDAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					40,
+					7,
+					"left_delete",
+					null,
+					"BwAAAHcBAAAAAAAAdwEAAAAAAAABAAAAcnYBAAAAAAAAdgEAAAAAAAABAAAAYXUBAAAAAAAAdQEAAAAAAAABAAAAIHQBAAAAAAAAdAEAAAAAAAABAAAAZXMBAAAAAAAAcwEAAAAAAAABAAAAdnIBAAAAAAAAcgEAAAAAAAABAAAAYXEBAAAAAAAAcQEAAAAAAAABAAAAaA",
+					"AQAAAAAAAAABAAAAeAEAAAAAAAB4AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					41,
+					1,
+					"insert",
+					{
+						"characters": "m"
+					},
+					"AQAAAHEBAAAAAAAAcgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcQEAAAAAAABxAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					42,
+					2,
+					"left_delete",
+					null,
+					"AgAAAHEBAAAAAAAAcQEAAAAAAAABAAAAbXABAAAAAAAAcAEAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAAcgEAAAAAAAByAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					43,
+					1,
+					"insert",
+					{
+						"characters": " are"
+					},
+					"BAAAAHABAAAAAAAAcQEAAAAAAAAAAAAAcQEAAAAAAAByAQAAAAAAAAAAAAByAQAAAAAAAHMBAAAAAAAAAAAAAHMBAAAAAAAAdAEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAcAEAAAAAAABwAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					44,
+					1,
+					"insert",
+					{
+						"characters": " much"
+					},
+					"BQAAAHQBAAAAAAAAdQEAAAAAAAAAAAAAdQEAAAAAAAB2AQAAAAAAAAAAAAB2AQAAAAAAAHcBAAAAAAAAAAAAAHcBAAAAAAAAeAEAAAAAAAAAAAAAeAEAAAAAAAB5AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAdAEAAAAAAAB0AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					45,
+					1,
+					"insert",
+					{
+						"characters": " more"
+					},
+					"BQAAAHkBAAAAAAAAegEAAAAAAAAAAAAAegEAAAAAAAB7AQAAAAAAAAAAAAB7AQAAAAAAAHwBAAAAAAAAAAAAAHwBAAAAAAAAfQEAAAAAAAAAAAAAfQEAAAAAAAB+AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAeQEAAAAAAAB5AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					46,
+					1,
+					"insert",
+					{
+						"characters": " vlu"
+					},
+					"BAAAAH4BAAAAAAAAfwEAAAAAAAAAAAAAfwEAAAAAAACAAQAAAAAAAAAAAACAAQAAAAAAAIEBAAAAAAAAAAAAAIEBAAAAAAAAggEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAfgEAAAAAAAB+AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					47,
+					2,
+					"left_delete",
+					null,
+					"AgAAAIEBAAAAAAAAgQEAAAAAAAABAAAAdYABAAAAAAAAgAEAAAAAAAABAAAAbA",
+					"AQAAAAAAAAABAAAAggEAAAAAAACCAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					48,
+					1,
+					"insert",
+					{
+						"characters": "aluable"
+					},
+					"BwAAAIABAAAAAAAAgQEAAAAAAAAAAAAAgQEAAAAAAACCAQAAAAAAAAAAAACCAQAAAAAAAIMBAAAAAAAAAAAAAIMBAAAAAAAAhAEAAAAAAAAAAAAAhAEAAAAAAACFAQAAAAAAAAAAAACFAQAAAAAAAIYBAAAAAAAAAAAAAIYBAAAAAAAAhwEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					49,
+					1,
+					"insert",
+					{
+						"characters": " than"
+					},
+					"BQAAAIcBAAAAAAAAiAEAAAAAAAAAAAAAiAEAAAAAAACJAQAAAAAAAAAAAACJAQAAAAAAAIoBAAAAAAAAAAAAAIoBAAAAAAAAiwEAAAAAAAAAAAAAiwEAAAAAAACMAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAhwEAAAAAAACHAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					50,
+					1,
+					"insert",
+					{
+						"characters": " before."
+					},
+					"CAAAAIwBAAAAAAAAjQEAAAAAAAAAAAAAjQEAAAAAAACOAQAAAAAAAAAAAACOAQAAAAAAAI8BAAAAAAAAAAAAAI8BAAAAAAAAkAEAAAAAAAAAAAAAkAEAAAAAAACRAQAAAAAAAAAAAACRAQAAAAAAAJIBAAAAAAAAAAAAAJIBAAAAAAAAkwEAAAAAAAAAAAAAkwEAAAAAAACUAQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAjAEAAAAAAACMAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					59,
+					2,
+					"left_delete",
+					null,
+					"AgAAAJUBAAAAAAAAlQEAAAAAAAAsAAAAVGhlaXIgdW5pcXVlIHNraW4sIGZhc2hpb25lZCBpbnRvIGV4cXVpc2l0ZSCUAQAAAAAAAJQBAAAAAAAAAQAAACA",
+					"AQAAAAAAAAABAAAAwQEAAAAAAACVAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					60,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAJQBAAAAAAAAlQEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAlAEAAAAAAACUAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					63,
+					1,
+					"left_delete",
+					null,
+					"AQAAAOgBAAAAAAAA6AEAAAAAAAABAAAALg",
+					"AQAAAAAAAAABAAAA6QEAAAAAAADpAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					64,
+					1,
+					"insert",
+					{
+						"characters": " and"
+					},
+					"BAAAAOgBAAAAAAAA6QEAAAAAAAAAAAAA6QEAAAAAAADqAQAAAAAAAAAAAADqAQAAAAAAAOsBAAAAAAAAAAAAAOsBAAAAAAAA7AEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6AEAAAAAAADoAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					65,
+					1,
+					"insert",
+					{
+						"characters": " somehow"
+					},
+					"CAAAAOwBAAAAAAAA7QEAAAAAAAAAAAAA7QEAAAAAAADuAQAAAAAAAAAAAADuAQAAAAAAAO8BAAAAAAAAAAAAAO8BAAAAAAAA8AEAAAAAAAAAAAAA8AEAAAAAAADxAQAAAAAAAAAAAADxAQAAAAAAAPIBAAAAAAAAAAAAAPIBAAAAAAAA8wEAAAAAAAAAAAAA8wEAAAAAAAD0AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7AEAAAAAAADsAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					66,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAPQBAAAAAAAA9QEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9AEAAAAAAAD0AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					68,
+					3,
+					"left_delete",
+					null,
+					"AwAAAK8BAAAAAAAArwEAAAAAAAABAAAAIK4BAAAAAAAArgEAAAAAAAABAAAAc60BAAAAAAAArQEAAAAAAAABAAAAZQ",
+					"AQAAAAAAAAABAAAAsAEAAAAAAACwAQAAAAAAAAAAAAAA3JdA"
+				],
+				[
+					69,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAK0BAAAAAAAArgEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAArQEAAAAAAACtAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					72,
+					1,
+					"insert",
+					{
+						"characters": "are"
+					},
+					"AwAAAPMBAAAAAAAA9AEAAAAAAAAAAAAA9AEAAAAAAAD1AQAAAAAAAAAAAAD1AQAAAAAAAPYBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA8wEAAAAAAADzAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					73,
+					1,
+					"insert",
+					{
+						"characters": " a"
+					},
+					"AgAAAPYBAAAAAAAA9wEAAAAAAAAAAAAA9wEAAAAAAAD4AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9gEAAAAAAAD2AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					74,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAPgBAAAAAAAA+QEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA+AEAAAAAAAD4AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					75,
+					7,
+					"left_delete",
+					null,
+					"BwAAAPgBAAAAAAAA+AEAAAAAAAABAAAAIPcBAAAAAAAA9wEAAAAAAAABAAAAYfYBAAAAAAAA9gEAAAAAAAABAAAAIPUBAAAAAAAA9QEAAAAAAAABAAAAZfQBAAAAAAAA9AEAAAAAAAABAAAAcvMBAAAAAAAA8wEAAAAAAAABAAAAYfIBAAAAAAAA8gEAAAAAAAABAAAAIA",
+					"AQAAAAAAAAABAAAA+QEAAAAAAAD5AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					76,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPEBAAAAAAAA8QEAAAAAAAABAAAAdw",
+					"AQAAAAAAAAABAAAA8gEAAAAAAADyAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					77,
+					1,
+					"left_delete",
+					null,
+					"AQAAAPABAAAAAAAA8AEAAAAAAAABAAAAbw",
+					"AQAAAAAAAAABAAAA8QEAAAAAAADxAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					78,
+					5,
+					"left_delete",
+					null,
+					"BQAAAO8BAAAAAAAA7wEAAAAAAAABAAAAaO4BAAAAAAAA7gEAAAAAAAABAAAAZe0BAAAAAAAA7QEAAAAAAAABAAAAbewBAAAAAAAA7AEAAAAAAAABAAAAb+sBAAAAAAAA6wEAAAAAAAABAAAAcw",
+					"AQAAAAAAAAABAAAA8AEAAAAAAADwAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					79,
+					1,
+					"insert",
+					{
+						"characters": "are"
+					},
+					"AwAAAOsBAAAAAAAA7AEAAAAAAAAAAAAA7AEAAAAAAADtAQAAAAAAAAAAAADtAQAAAAAAAO4BAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA6wEAAAAAAADrAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					80,
+					1,
+					"insert",
+					{
+						"characters": " quite"
+					},
+					"BgAAAO4BAAAAAAAA7wEAAAAAAAAAAAAA7wEAAAAAAADwAQAAAAAAAAAAAADwAQAAAAAAAPEBAAAAAAAAAAAAAPEBAAAAAAAA8gEAAAAAAAAAAAAA8gEAAAAAAADzAQAAAAAAAAAAAADzAQAAAAAAAPQBAAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA7gEAAAAAAADuAQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					81,
+					1,
+					"insert",
+					{
+						"characters": " popular"
+					},
+					"CAAAAPQBAAAAAAAA9QEAAAAAAAAAAAAA9QEAAAAAAAD2AQAAAAAAAAAAAAD2AQAAAAAAAPcBAAAAAAAAAAAAAPcBAAAAAAAA+AEAAAAAAAAAAAAA+AEAAAAAAAD5AQAAAAAAAAAAAAD5AQAAAAAAAPoBAAAAAAAAAAAAAPoBAAAAAAAA+wEAAAAAAAAAAAAA+wEAAAAAAAD8AQAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA9AEAAAAAAAD0AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					82,
+					1,
+					"insert",
+					{
+						"characters": " "
+					},
+					"AQAAAPwBAAAAAAAA/QEAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA/AEAAAAAAAD8AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					83,
+					1,
+					"insert",
+					{
+						"characters": "among"
+					},
+					"BQAAAP0BAAAAAAAA/gEAAAAAAAAAAAAA/gEAAAAAAAD/AQAAAAAAAAAAAAD/AQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAQIAAAAAAAAAAAAAAQIAAAAAAAACAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAA/QEAAAAAAAD9AQAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					84,
+					1,
+					"insert",
+					{
+						"characters": " the"
+					},
+					"BAAAAAICAAAAAAAAAwIAAAAAAAAAAAAAAwIAAAAAAAAEAgAAAAAAAAAAAAAEAgAAAAAAAAUCAAAAAAAAAAAAAAUCAAAAAAAABgIAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAAAgIAAAAAAAACAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					85,
+					1,
+					"insert",
+					{
+						"characters": " highest"
+					},
+					"CAAAAAYCAAAAAAAABwIAAAAAAAAAAAAABwIAAAAAAAAIAgAAAAAAAAAAAAAIAgAAAAAAAAkCAAAAAAAAAAAAAAkCAAAAAAAACgIAAAAAAAAAAAAACgIAAAAAAAALAgAAAAAAAAAAAAALAgAAAAAAAAwCAAAAAAAAAAAAAAwCAAAAAAAADQIAAAAAAAAAAAAADQIAAAAAAAAOAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAABgIAAAAAAAAGAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					86,
+					1,
+					"insert",
+					{
+						"characters": " ranked."
+					},
+					"CAAAAA4CAAAAAAAADwIAAAAAAAAAAAAADwIAAAAAAAAQAgAAAAAAAAAAAAAQAgAAAAAAABECAAAAAAAAAAAAABECAAAAAAAAEgIAAAAAAAAAAAAAEgIAAAAAAAATAgAAAAAAAAAAAAATAgAAAAAAABQCAAAAAAAAAAAAABQCAAAAAAAAFQIAAAAAAAAAAAAAFQIAAAAAAAAWAgAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAADgIAAAAAAAAOAgAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					92,
+					1,
+					"insert",
+					{
+						"characters": "\n"
+					},
+					"AQAAADYDAAAAAAAANwMAAAAAAAAAAAAA",
+					"AQAAAAAAAAABAAAANgMAAAAAAAA2AwAAAAAAAAAAAAAAAPC/"
+				],
+				[
+					103,
+					3,
+					"left_delete",
+					null,
+					"AwAAABgCAAAAAAAAGAIAAAAAAAAdAQAAQSBTaW5pc3RlciBUdWctb2YtV2FyOiBOYXZpZ2F0ZSB0aGUgZGVsaWNhdGUgZGFuY2Ugb2YgcG93ZXIgYW5kIHNlY3JlY3kgYXMgdGhlIEVtcGlyZSdzIGluc2F0aWFibGUgdGhpcnN0IGZvciBWZXhpbG91ciBkcml2ZXMgYSBkZWVwZXIgd2VkZ2UgYmV0d2VlbiB5b3VyIGNvbG9ueSBhbmQgdGhlaXIgb3BwcmVzc2l2ZSBydWxlLiBFdmVyeSBzdGVwIHlvdSB0YWtlLCBldmVyeSBkZWNpc2lvbiB5b3UgbWFrZSwgZWNob2VzIHRocm91Z2ggdGhlIHNoYWRvd3kgY29ycmlkb3JzIG9mIHJlc2lzdGFuY2UuFwIAAAAAAAAXAgAAAAAAAAEAAAAKFgIAAAAAAAAWAgAAAAAAAAEAAAAK",
+					"AQAAAAAAAAABAAAAGAIAAAAAAAA1AwAAAAAAAAAAAAAAAPC/"
+				]
+			]
 		}
 	],
 	"build_system": "",
@@ -156,21 +2981,25 @@
 		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingCategoryDefs",
 		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingDef_Items",
 		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches",
+		"/Users/cem/projects/Vexine_DarkStory/About",
 		"/Users/cem/projects/Vexine_DarkStory/Source",
 		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory",
 		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory",
 		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/HarmonyPatches",
-		"/Users/cem/projects/PsychicAnimals",
-		"/Users/cem/projects/PsychicAnimals/1.4",
-		"/Users/cem/projects/PsychicAnimals/1.4/Defs",
-		"/Users/cem/projects/PsychicAnimals/AnimaFruit",
-		"/Users/cem/projects/PsychicAnimals/AnimaFruit/Defs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty",
 		"/Users/cem/projects/RW1.4-Decompile"
 	],
 	"file_history":
 	[
-		"/Users/cem/projects/Vexine_DarkStory/LoadFolders.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/PawnKinds/PawnKinds_Empire.xml",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs",
 		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/FactionRellationChanger.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/ITab_Pawn_Visitor.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_ColonistsIdle.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs",
+		"/Users/cem/projects/RW1.4-Decompile/RimWorld/RoyalTitle.cs",
+		"/Users/cem/projects/Vexine_DarkStory/LoadFolders.xml",
 		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/HarmonyPatches/TributeCollectorPatch.cs",
 		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/DarkStoryMod.cs",
 		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/PreceptDefs/Precepts_Slavery.xml",
@@ -290,23 +3119,19 @@
 		"/Users/cem/projects/RW1.4-Decompile/RimWorld/DirectPawnRelation.cs",
 		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_PlayerSettings.cs",
 		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingCategoryDefs/ThingCategories.xml",
-		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_CosmeticGenes.xml",
-		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/DefsFromRecipeMakers.cs",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingDef_Items/Item_Resource_Stuff_Leather.xml",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/StuffCategoryDefs/StuffCategoryDefs.xml",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches/FurForEmpire.xml",
-		"/Users/cem/projects/Goldenbell/safety",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Mods/Vexine_VexiSpecies/1.4/Defs/ThingDef_Items/Item_Resource_Stuff_Leather.xml"
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_CosmeticGenes.xml"
 	],
 	"find":
 	{
-		"height": 59.0
+		"height": 81.0
 	},
 	"find_in_files":
 	{
 		"height": 257.0,
 		"where_history":
 		[
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
 			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
@@ -432,8 +3257,6 @@
 			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
 			"/Users/cem/projects/Goldenbell,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2279786905,<project filters>",
-			"/Users/cem/projects/ApiniRaceMod,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2279786905,<project filters>"
 		]
 	},
@@ -442,6 +3265,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"gettitle",
+			"gettitleinfaction",
+			"title",
+			"MostSeniorTitle",
+			"knight",
+			"Title",
 			"Faction.OfEmpire",
 			"Slavery_Classic",
 			"neanderthal",
@@ -563,13 +3392,7 @@
 			"backstoryfilter",
 			"empire",
 			"herder",
-			"hunter",
-			"shouldfollow",
-			"Saving or loading hediff",
-			"RegisterAnimalitor",
-			"activeAnimalitors",
-			"hunter",
-			"scientist"
+			"hunter"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -597,43 +3420,10 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/IncidentWorker_TraderCaravanArrival.cs",
-					"selected": true,
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 4276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2134,
-								2195
-							]
-						],
-						"settings":
-						{
-							"lsp_uri": "file:///Users/cem/projects/RW1.4-Decompile/RimWorld/IncidentWorker_TraderCaravanArrival.cs",
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 4772.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15900,
+						"buffer_size": 9847,
 						"regions":
 						{
 							"match":
@@ -642,200 +3432,244 @@
 								"regions":
 								[
 									[
-										323,
-										339
+										183,
+										198
 									],
 									[
-										568,
-										584
+										214,
+										229
 									],
 									[
-										1028,
-										1044
+										249,
+										264
 									],
 									[
-										1238,
-										1254
+										277,
+										292
 									],
 									[
-										1557,
-										1573
+										652,
+										667
 									],
 									[
-										1697,
-										1713
+										1342,
+										1357
 									],
 									[
-										2096,
-										2112
+										1370,
+										1385
 									],
 									[
-										2212,
-										2228
+										1434,
+										1449
 									],
 									[
-										2474,
-										2490
+										1487,
+										1502
 									],
 									[
-										2522,
-										2538
+										2000,
+										2015
 									],
 									[
-										2984,
-										3000
+										2308,
+										2323
 									],
 									[
-										3112,
-										3128
+										2586,
+										2601
 									],
 									[
-										3347,
-										3363
+										2625,
+										2640
 									],
 									[
-										3922,
-										3938
+										2661,
+										2676
 									],
 									[
-										3972,
-										3988
+										2688,
+										2703
 									],
 									[
-										4305,
-										4321
+										2793,
+										2808
 									],
 									[
-										4355,
-										4371
+										2950,
+										2965
 									],
 									[
-										4724,
-										4740
+										3010,
+										3025
 									],
 									[
-										4953,
-										4969
+										3318,
+										3333
 									],
 									[
-										5193,
-										5209
+										3616,
+										3631
 									],
 									[
-										5470,
-										5486
+										4018,
+										4033
 									],
 									[
-										5983,
-										5999
+										4273,
+										4288
 									],
 									[
-										6634,
-										6650
+										4304,
+										4319
 									],
 									[
-										7109,
-										7125
+										4337,
+										4352
+									],
+									[
+										4396,
+										4411
+									],
+									[
+										4579,
+										4594
+									],
+									[
+										4805,
+										4820
+									],
+									[
+										4840,
+										4855
+									],
+									[
+										4873,
+										4888
+									],
+									[
+										4968,
+										4983
+									],
+									[
+										4989,
+										5004
+									],
+									[
+										5256,
+										5271
+									],
+									[
+										5292,
+										5307
+									],
+									[
+										5343,
+										5358
+									],
+									[
+										5415,
+										5430
+									],
+									[
+										5692,
+										5707
+									],
+									[
+										5770,
+										5785
+									],
+									[
+										6054,
+										6069
+									],
+									[
+										6142,
+										6157
+									],
+									[
+										6347,
+										6362
+									],
+									[
+										6380,
+										6395
+									],
+									[
+										6415,
+										6430
+									],
+									[
+										6444,
+										6459
+									],
+									[
+										6547,
+										6562
+									],
+									[
+										6669,
+										6684
+									],
+									[
+										6881,
+										6896
+									],
+									[
+										7155,
+										7170
 									],
 									[
 										7483,
-										7499
+										7498
 									],
 									[
-										7769,
-										7785
+										7514,
+										7529
 									],
 									[
-										8098,
-										8114
+										7599,
+										7614
 									],
 									[
-										8305,
-										8321
+										8367,
+										8382
 									],
 									[
-										8563,
-										8579
+										8398,
+										8413
 									],
 									[
-										9128,
-										9144
+										8432,
+										8447
 									],
 									[
-										9332,
-										9348
+										8630,
+										8645
 									],
 									[
-										9544,
-										9560
+										8738,
+										8753
 									],
 									[
-										9742,
-										9758
+										8975,
+										8990
 									],
 									[
-										10531,
-										10547
+										9156,
+										9171
 									],
 									[
-										10987,
-										11003
+										9279,
+										9294
 									],
 									[
-										11233,
-										11249
+										9454,
+										9469
 									],
 									[
-										11584,
-										11600
-									],
-									[
-										12087,
-										12103
-									],
-									[
-										12495,
-										12511
-									],
-									[
-										12868,
-										12884
-									],
-									[
-										13212,
-										13228
-									],
-									[
-										13558,
-										13574
-									],
-									[
-										14212,
-										14228
-									],
-									[
-										14376,
-										14392
-									],
-									[
-										14496,
-										14512
-									],
-									[
-										14692,
-										14708
-									],
-									[
-										15032,
-										15048
-									],
-									[
-										15109,
-										15125
-									],
-									[
-										15818,
-										15834
+										9756,
+										9771
 									]
 								],
 								"scope": ""
@@ -844,8 +3678,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								4517,
+								4517
 							]
 						],
 						"settings":
@@ -863,13 +3697,170 @@
 							],
 							"detect_indentation": false,
 							"line_numbers": false,
-							"lsp_uri": "buffer://sublime/297",
+							"lsp_uri": "buffer://sublime/59",
 							"output_tag": 1,
 							"result_base_dir": "",
 							"result_file_regex": "^([^ \t].*):$",
 							"result_line_regex": "^ +([0-9]+):",
 							"scroll_past_end": true,
 							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 5040.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 40609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								12974,
+								13250
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs",
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 20903.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs",
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 746.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/cem/projects/Vexine_DarkStory/About/About.xml",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1936,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1903,
+								1903
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///Users/cem/projects/Vexine_DarkStory/About/About.xml",
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 515.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								792,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "Vexine Dark Story makes life more difficult for yo",
+							"lsp_uri": "buffer://sublime/86",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"stack_multiselect": false,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1641,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1,
+								1641
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"lsp_uri": "buffer://sublime/89",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
