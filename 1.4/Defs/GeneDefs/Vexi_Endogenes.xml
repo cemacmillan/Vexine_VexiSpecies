@@ -76,12 +76,12 @@
         <displayOrderInCategory>139</displayOrderInCategory>
         <iconPath>UI/Icons/Genes/Gene_Furskin</iconPath>
         <iconColor>(0.50, 0.25, 0.25)</iconColor>
-        <forcedHeadTypes>
+       <!-- <forcedHeadTypes>
             <li>dIl_Vexi_HeadTypeF1</li>
             <li>dIl_Vexi_HeadTypeM1</li>
             <li>dIl_Vexi_HeadTypeF2</li>
             <li>dIl_Vexi_HeadTypeM2</li>
-        </forcedHeadTypes>
+        </forcedHeadTypes> -->
         <beardTagFilter>
             <whitelist>true</whitelist>
             <tags>
@@ -104,8 +104,8 @@
         </statOffsets>
         <graphicData>
             <fur>Furskin</fur>
-            <colorType>Hair</colorType>
-            <skinIsHairColor>false</skinIsHairColor>
+            <colorType>Skin</colorType>
+            <skinIsHairColor>true</skinIsHairColor>
             <tattoosVisible>false</tattoosVisible>
         </graphicData>
         <symbolPack>
@@ -209,6 +209,7 @@
         <iconColor>(0.75, 0.75, 0.75)</iconColor>
         <graphicData>
             <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tail/dgr</graphicPath>
+            <colorType>Skin</colorType>
         </graphicData>
         <randomChosen>true</randomChosen>
         <selectionWeight>0.05</selectionWeight>
@@ -222,6 +223,7 @@
         <displayCategory>dIl_Vexi_Endogenes</displayCategory>
         <graphicData>
             <graphicPath>Things/Pawn/Humanlike/BodyAttachments/Tail/vexine</graphicPath>
+            <colorType>Skin</colorType>
         </graphicData>
         <exclusionTags>
             <li>Tail</li>

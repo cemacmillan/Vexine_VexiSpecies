@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <Defs>
   <BodyPartDef>
-    <defName>dIl_GallBladder</defName>
+    <defName>GallBladder</defName>
     <label>gall bladder</label>
     <spawnThingOnRemoved>GallBladder</spawnThingOnRemoved>
   </BodyPartDef>
@@ -10,7 +10,6 @@
     <defName>dIl_Vexi_Furskin</defName>
     <noGraphic>true</noGraphic>
     <bodyTypeGraphicPaths>
-      <!-- <colorType>Hair</colorType> -->
       <Male>vexi/body/FurCovered_Thin</Male>
       <Female>vexi/body/FurCovered_Thin</Female>
       <Hulk>vexi/body/FurCovered_Hulk</Hulk>

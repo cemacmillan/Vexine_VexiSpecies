@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"base",
+				"baseOpinionOffset"
+			],
+			[
+				"ba",
+				"baseOpinionOffset"
+			],
+			[
 				"develo",
 				"developmentalStageFilter"
 			],
@@ -43,2852 +51,6 @@
 	},
 	"buffers":
 	[
-		{
-			"contents": "Searching 7215 files for \"MostSeniorTitle\"\n\n~/projects/RW1.4-Decompile/RimWorld/Alert_ColonistsIdle.cs:\n   31  \t\t\t\t\t\tif (item.royalty != null)\n   32  \t\t\t\t\t\t{\n   33: \t\t\t\t\t\t\tRoyalTitle mostSeniorTitle = item.royalty.MostSeniorTitle;\n   34: \t\t\t\t\t\t\tif (mostSeniorTitle == null || !mostSeniorTitle.def.suppressIdleAlert)\n   35  \t\t\t\t\t\t\t{\n   36  \t\t\t\t\t\t\t\tidleColonistsResult.Add(item);\n\n~/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs:\n   22  \t\t\t\t\t\tif (freeColonist.Spawned && (freeColonist.story == null || !freeColonist.story.traits.HasTrait(TraitDefOf.Ascetic)))\n   23  \t\t\t\t\t\t{\n   24: \t\t\t\t\t\t\tRoyalTitle royalTitle = freeColonist.royalty?.MostSeniorTitle;\n   25  \t\t\t\t\t\t\tif (royalTitle != null && royalTitle.conceited && royalTitle.def.foodRequirement.Defined && !FoodUtility.TryFindBestFoodSourceFor_NewTemp(freeColonist, freeColonist, desperate: false, out var _, out var _, canRefillDispenser: true, canUseInventory: true, canUsePackAnimalInventory: false, allowForbidden: false, allowCorpse: false, allowSociallyImproper: false, allowHarvest: false, forceScanWholeMap: false, ignoreReservations: true, calculateWantedStackCount: false, allowVenerated: false, FoodPreferability.DesperateOnly))\n   26  \t\t\t\t\t\t\t{\n   ..\n   53  \t\t\treturn defaultExplanation + \"\\n\" + Targets.Select(delegate(Pawn t)\n   54  \t\t\t{\n   55: \t\t\t\tRoyalTitle mostSeniorTitle = t.royalty.MostSeniorTitle;\n   56: \t\t\t\tstring text = t.LabelShort + \" (\" + mostSeniorTitle.def.GetLabelFor(t.gender) + \"):\\n\" + mostSeniorTitle.def.SatisfyingMeals(includeDrugs: false).Select((Func<ThingDef, string>)((ThingDef m) => m.LabelCap)).ToLineList(\"- \");\n   57  \t\t\t\tif (ModsConfig.IdeologyActive && t.Ideo != null && t.Ideo.VeneratedAnimals.Any())\n   58  \t\t\t\t{\n\n~/projects/RW1.4-Decompile/RimWorld/FloatMenuMakerMap.cs:\n  586  \t\t\t\t\telse if (FoodUtility.InappropriateForTitle(t2.def, pawn, allowIfStarving: true))\n  587  \t\t\t\t\t{\n  588: \t\t\t\t\t\topt = new FloatMenuOption(text + \": \" + \"FoodBelowTitleRequirements\".Translate(pawn.royalty.MostSeniorTitle.def.GetLabelFor(pawn).CapitalizeFirst()).CapitalizeFirst(), null);\n  589  \t\t\t\t\t}\n  590  \t\t\t\t\telse if (!pawn.CanReach(t2, PathEndMode.OnCell, Danger.Deadly))\n\n~/projects/RW1.4-Decompile/RimWorld/FoodUtility.cs:\n  147  \t\t\t\treturn false;\n  148  \t\t\t}\n  149: \t\t\tRoyalTitle royalTitle = p.royalty?.MostSeniorTitle;\n  150  \t\t\tif (royalTitle != null && royalTitle.conceited && royalTitle.def.foodRequirement.Defined)\n  151  \t\t\t{\n\n~/projects/RW1.4-Decompile/RimWorld/ITab_Pawn_Visitor.cs:\n   87  \t\t\t\t\t\t\tif (base.SelPawn.royalty != null)\n   88  \t\t\t\t\t\t\t{\n   89: \t\t\t\t\t\t\t\tRoyalTitle mostSeniorTitle = base.SelPawn.royalty.MostSeniorTitle;\n   90: \t\t\t\t\t\t\t\tif (mostSeniorTitle != null && mostSeniorTitle.def.recruitmentResistanceOffset != 0f)\n   91  \t\t\t\t\t\t\t\t{\n   92: \t\t\t\t\t\t\t\t\tstring text3 = ((mostSeniorTitle.def.recruitmentResistanceOffset > 0f) ? \"+\" : \"-\");\n   93: \t\t\t\t\t\t\t\t\ttaggedString += \"\\n\" + \"RecruitmentResistanceRoyalTitleOffset\".Translate(mostSeniorTitle.Label.CapitalizeFirst()) + (\": \" + text3) + mostSeniorTitle.def.recruitmentResistanceOffset.ToString();\n   94  \t\t\t\t\t\t\t\t}\n   95  \t\t\t\t\t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld/JobGiver_PrisonerGetDressed.cs:\n   19  \t\t\tif (pawn.royalty != null && pawn.royalty.AllTitlesInEffectForReading.Count > 0)\n   20  \t\t\t{\n   21: \t\t\t\tRoyalTitleDef def = pawn.royalty.MostSeniorTitle.def;\n   22  \t\t\t\tif (def != null && def.requiredApparel != null)\n   23  \t\t\t\t{\n\n~/projects/RW1.4-Decompile/RimWorld/MainTabWindow_Quests.cs:\n 1345  \t\t\t\t\t\tif (p.royalty != null && p.royalty.AllTitlesInEffectForReading.Any())\n 1346  \t\t\t\t\t\t{\n 1347: \t\t\t\t\t\t\ttext = text + \" (\" + p.royalty.MostSeniorTitle.def.GetLabelFor(pLocal) + \")\";\n 1348  \t\t\t\t\t\t}\n 1349  \t\t\t\t\t\tlist.Add(new FloatMenuOption(text, delegate\n\n~/projects/RW1.4-Decompile/RimWorld/MusicManagerPlay.cs:\n  309  \t\t\t\t}\n  310  \t\t\t}\n  311: \t\t\tif (song.minRoyalTitle != null && !PawnsFinder.AllMapsCaravansAndTravelingTransportPods_Alive_Colonists.Any((Pawn p) => p.royalty != null && p.royalty.AllTitlesForReading.Any() && p.royalty.MostSeniorTitle.def.seniority >= song.minRoyalTitle.seniority && !p.IsQuestLodger()))\n  312  \t\t\t{\n  313  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/RimWorld/Pawn_GuestTracker.cs:\n  385  \t\t\t\tif (pawn.royalty != null)\n  386  \t\t\t\t{\n  387: \t\t\t\t\tRoyalTitle mostSeniorTitle = pawn.royalty.MostSeniorTitle;\n  388: \t\t\t\t\tif (mostSeniorTitle != null)\n  389  \t\t\t\t\t{\n  390: \t\t\t\t\t\tnum += mostSeniorTitle.def.recruitmentResistanceOffset;\n  391  \t\t\t\t\t}\n  392  \t\t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs:\n   72  \t\t}\n   73  \n   74: \t\tpublic RoyalTitle MostSeniorTitle\n   75  \t\t{\n   76  \t\t\tget\n\n~/projects/RW1.4-Decompile/RimWorld/QuestPart_Hyperlinks.cs:\n   41  \t\t\t\tif (pawns[j].royalty != null && pawns[j].royalty.AllTitlesForReading.Any())\n   42  \t\t\t\t{\n   43: \t\t\t\t\tRoyalTitle mostSeniorTitle = pawns[j].royalty.MostSeniorTitle;\n   44: \t\t\t\t\tif (mostSeniorTitle != null)\n   45  \t\t\t\t\t{\n   46: \t\t\t\t\t\tyield return new Dialog_InfoCard.Hyperlink(mostSeniorTitle.def, mostSeniorTitle.faction);\n   47  \t\t\t\t\t}\n   48  \t\t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld/RitualOutcomeEffectWorker_Speech.cs:\n   90  \t\t\t{\n   91  \t\t\t\tAbility ability = organizer.abilities.GetAbility(AbilityDefOf.Speech, includeTemporary: true);\n   92: \t\t\t\tRoyalTitle mostSeniorTitle = organizer.royalty.MostSeniorTitle;\n   93: \t\t\t\tif (ability != null && mostSeniorTitle != null)\n   94  \t\t\t\t{\n   95: \t\t\t\t\tability.StartCooldown(mostSeniorTitle.def.speechCooldown.RandomInRange);\n   96  \t\t\t\t}\n   97  \t\t\t}\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestGen_Pawns.cs:\n  260  \t\t\t\treturn false;\n  261  \t\t\t}\n  262: \t\t\tif (parms.seniorityRange != default(FloatRange) && (pawn.royalty == null || pawn.royalty.MostSeniorTitle == null || !parms.seniorityRange.IncludesEpsilon(pawn.royalty.MostSeniorTitle.def.seniority)))\n  263  \t\t\t{\n  264  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/RimWorld.QuestGen/QuestNode_GetPawn.cs:\n  213  \t\t\t\treturn false;\n  214  \t\t\t}\n  215: \t\t\tif (seniorityRange.GetValue(slate) != default(FloatRange) && (pawn.royalty == null || pawn.royalty.MostSeniorTitle == null || !seniorityRange.GetValue(slate).IncludesEpsilon(pawn.royalty.MostSeniorTitle.def.seniority)))\n  216  \t\t\t{\n  217  \t\t\t\treturn false;\n\n~/projects/RW1.4-Decompile/Verse/DebugActionsMisc.cs:\n  677  \t\t\t\t\t\tif (pawn2.royalty != null)\n  678  \t\t\t\t\t\t{\n  679: \t\t\t\t\t\t\tRoyalTitle mostSeniorTitle2 = pawn2.royalty.MostSeniorTitle;\n  680: \t\t\t\t\t\t\tif (mostSeniorTitle2 != null && !mostSeniorTitle2.def.requiredApparel.NullOrEmpty())\n  681  \t\t\t\t\t\t\t{\n  682: \t\t\t\t\t\t\t\tfor (int l = 0; l < mostSeniorTitle2.def.requiredApparel.Count; l++)\n  683  \t\t\t\t\t\t\t\t{\n  684: \t\t\t\t\t\t\t\t\tApparelRequirement apparelRequirement = mostSeniorTitle2.def.requiredApparel[l];\n  685  \t\t\t\t\t\t\t\t\tif (apparelRequirement.IsActive(pawn2) && !apparelRequirement.IsMet(pawn2))\n  686  \t\t\t\t\t\t\t\t\t{\n  687: \t\t\t\t\t\t\t\t\t\tLog.Error(string.Concat(localKindDef, \" (\", mostSeniorTitle2.def.label, \")  does not have its title requirements met. index=\", l, logApparel(pawn2)));\n  688  \t\t\t\t\t\t\t\t\t\tflag = true;\n  689  \t\t\t\t\t\t\t\t\t}\n  ...\n  738  \t\t\t\t\t\treturn \"Required tag missing.\";\n  739  \t\t\t\t\t}\n  740: \t\t\t\t\tif ((pawn.royalty == null || pawn.royalty.MostSeniorTitle == null) && app.tags.Contains(\"Royal\") && !pawn.kindDef.apparelTags.Any((string tag) => app.tags.Contains(tag)))\n  741  \t\t\t\t\t{\n  742  \t\t\t\t\t\treturn \"Royal apparel on non-royal pawn.\";\n  ...\n  749  \t\t\t\tif (pawn.royalty != null && pawn.royalty.AllTitlesInEffectForReading.Any())\n  750  \t\t\t\t{\n  751: \t\t\t\t\tRoyalTitle mostSeniorTitle = pawn.royalty.MostSeniorTitle;\n  752: \t\t\t\t\tif (apparel.TryGetQuality(out var qc) && (int)qc < (int)mostSeniorTitle.def.requiredMinimumApparelQuality)\n  753  \t\t\t\t\t{\n  754  \t\t\t\t\t\treturn \"Quality too low.\";\n  ...\n  797  \t\t\t\t\t\t}\n  798  \t\t\t\t\t\tPawn pawn = PawnGenerator.GeneratePawn(new PawnGenerationRequest(localKindDef, faction, PawnGenerationContext.NonPlayer, -1, forceGenerateNewPawn: false, allowDead: false, allowDowned: false, canGeneratePawnRelations: true, mustBeCapableOfViolence: false, 1f, forceAddFreeWarmLayerIfNeeded: false, allowGay: true, allowPregnant: false, allowFood: true, allowAddictions: true, inhabitant: false, certainlyBeenInCryptosleep: false, forceRedressWorldPawnIfFormerColonist: false, worldPawnFactionDoesntMatter: false, 0f, 0f, null, 1f, null, null, null, null, null, null, null, null, null, null, fixedTitle));\n  799: \t\t\t\t\t\tRoyalTitle mostSeniorTitle = pawn.royalty.MostSeniorTitle;\n  800: \t\t\t\t\t\tif (mostSeniorTitle != null)\n  801  \t\t\t\t\t\t{\n  802  \t\t\t\t\t\t\tHediff_Psylink mainPsylinkSource = pawn.GetMainPsylinkSource();\n  803  \t\t\t\t\t\t\tif (mainPsylinkSource == null)\n  804  \t\t\t\t\t\t\t{\n  805: \t\t\t\t\t\t\t\tif (mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def) > 0)\n  806  \t\t\t\t\t\t\t\t{\n  807: \t\t\t\t\t\t\t\t\tstring text = mostSeniorTitle.def.LabelCap + \" - No psylink.\";\n  808  \t\t\t\t\t\t\t\t\tif (pawn.abilities.abilities.Any((Ability x) => x.def.level > 0))\n  809  \t\t\t\t\t\t\t\t\t{\n  ...\n  813  \t\t\t\t\t\t\t\t}\n  814  \t\t\t\t\t\t\t}\n  815: \t\t\t\t\t\t\telse if (mainPsylinkSource.level < mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def))\n  816  \t\t\t\t\t\t\t{\n  817: \t\t\t\t\t\t\t\tstringBuilder.AppendLine(\"Psylink at level \" + mainPsylinkSource.level + \", but requires \" + mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def));\n  818  \t\t\t\t\t\t\t}\n  819: \t\t\t\t\t\t\telse if (mainPsylinkSource.level > mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def))\n  820  \t\t\t\t\t\t\t{\n  821: \t\t\t\t\t\t\t\tstringBuilder.AppendLine(\"Psylink at level \" + mainPsylinkSource.level + \". Max is \" + mostSeniorTitle.def.MaxAllowedPsylinkLevel(faction.def));\n  822  \t\t\t\t\t\t\t}\n  823  \t\t\t\t\t\t}\n\n~/projects/RW1.4-Decompile/Verse/Pawn.cs:\n 2532  \t\t\tStringBuilder stringBuilder = new StringBuilder();\n 2533  \t\t\tstringBuilder.AppendLine(MainDesc(writeFaction: true));\n 2534: \t\t\tRoyalTitle royalTitle = royalty?.MostSeniorTitle;\n 2535  \t\t\tif (royalTitle != null)\n 2536  \t\t\t{\n\n60 matches across 16 files\n",
-			"settings":
-			{
-				"buffer_size": 9847,
-				"line_ending": "Unix",
-				"name": "Find Results",
-				"scratch": true
-			},
-			"undo_stack":
-			[
-			]
-		},
-		{
-			"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs",
-			"settings":
-			{
-				"buffer_size": 40609,
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-			]
-		},
-		{
-			"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs",
-			"settings":
-			{
-				"buffer_size": 2389,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/Users/cem/projects/Vexine_DarkStory/About/About.xml",
-			"settings":
-			{
-				"buffer_size": 1936,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-				[
-					5,
-					1,
-					"paste",
-					null,
-					"AgAAAAcBAAAAAAAAbwcAAAAAAAAAAAAAbwcAAAAAAABvBwAAAAAAADkAAABJbWFnaW5lIGEgd29ybGQgd2hlcmUgZXZlcnlvbmUgbGl0ZXJhbGx5IHdhbnRzIHlvdXIgc2tpbj8",
-					"AQAAAAAAAAABAAAABwEAAAAAAABAAQAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"contents": "Vexine Dark Story makes life more difficult for your Vexi playthrough in the following dastardly ways:\n\n- Your Vexi pawns are now much more valuable per unit.\n- Vexilour is a prized clothing material in the Empire.\n- The Empire will dislike you more for every not human enough free pawn in your colony. Wasters, Pigs, Yttakin, Impids, and of course Vexi. Unacceptable to the Empire.\n- You'll see a lot more refugees, which could complicate things if the Empire happens to visit and your map is filled with displaced persons of xenotypes not desired by the Empire.\n\nIf you want to be friends with the Empire,  just obtain the title of Dame/Knight or superior and they'll overlook your indiscretions.\n\nOr, you can bank on making friends with those who resist the Empire, if the rumors are true.",
-			"settings":
-			{
-				"buffer_size": 792,
-				"line_ending": "Unix",
-				"name": "Vexine Dark Story makes life more difficult for yo"
-			},
-			"undo_stack":
-			[
-				[
-					3,
-					1,
-					"insert",
-					{
-						"characters": "D"
-					},
-					"AQAAAAAAAAAAAAAAAQAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					4,
-					1,
-					"left_delete",
-					null,
-					"AQAAAAAAAAAAAAAAAAAAAAAAAAABAAAARA",
-					"AQAAAAAAAAABAAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					5,
-					1,
-					"insert",
-					{
-						"characters": "Vexine"
-					},
-					"BgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAFAAAAAAAAAAAAAAAFAAAAAAAAAAYAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					6,
-					1,
-					"insert",
-					{
-						"characters": " Dark"
-					},
-					"BQAAAAYAAAAAAAAABwAAAAAAAAAAAAAABwAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACgAAAAAAAAAAAAAACgAAAAAAAAALAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABgAAAAAAAAAGAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					7,
-					1,
-					"insert",
-					{
-						"characters": " Storyt"
-					},
-					"BwAAAAsAAAAAAAAADAAAAAAAAAAAAAAADAAAAAAAAAANAAAAAAAAAAAAAAANAAAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADwAAAAAAAAAAAAAADwAAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABEAAAAAAAAAAAAAABEAAAAAAAAAEgAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAACwAAAAAAAAALAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					8,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAABIAAAAAAAAAEwAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAEgAAAAAAAAASAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					9,
-					2,
-					"left_delete",
-					null,
-					"AgAAABIAAAAAAAAAEgAAAAAAAAABAAAAIBEAAAAAAAAAEQAAAAAAAAABAAAAdA",
-					"AQAAAAAAAAABAAAAEwAAAAAAAAATAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					10,
-					1,
-					"insert",
-					{
-						"characters": " makes"
-					},
-					"BgAAABEAAAAAAAAAEgAAAAAAAAAAAAAAEgAAAAAAAAATAAAAAAAAAAAAAAATAAAAAAAAABQAAAAAAAAAAAAAABQAAAAAAAAAFQAAAAAAAAAAAAAAFQAAAAAAAAAWAAAAAAAAAAAAAAAWAAAAAAAAABcAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAEQAAAAAAAAARAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					11,
-					1,
-					"insert",
-					{
-						"characters": " life"
-					},
-					"BQAAABcAAAAAAAAAGAAAAAAAAAAAAAAAGAAAAAAAAAAZAAAAAAAAAAAAAAAZAAAAAAAAABoAAAAAAAAAAAAAABoAAAAAAAAAGwAAAAAAAAAAAAAAGwAAAAAAAAAcAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAFwAAAAAAAAAXAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					12,
-					1,
-					"insert",
-					{
-						"characters": " more"
-					},
-					"BQAAABwAAAAAAAAAHQAAAAAAAAAAAAAAHQAAAAAAAAAeAAAAAAAAAAAAAAAeAAAAAAAAAB8AAAAAAAAAAAAAAB8AAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAAAAhAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAHAAAAAAAAAAcAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					13,
-					1,
-					"insert",
-					{
-						"characters": " difficult"
-					},
-					"CgAAACEAAAAAAAAAIgAAAAAAAAAAAAAAIgAAAAAAAAAjAAAAAAAAAAAAAAAjAAAAAAAAACQAAAAAAAAAAAAAACQAAAAAAAAAJQAAAAAAAAAAAAAAJQAAAAAAAAAmAAAAAAAAAAAAAAAmAAAAAAAAACcAAAAAAAAAAAAAACcAAAAAAAAAKAAAAAAAAAAAAAAAKAAAAAAAAAApAAAAAAAAAAAAAAApAAAAAAAAACoAAAAAAAAAAAAAACoAAAAAAAAAKwAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAIQAAAAAAAAAhAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					14,
-					1,
-					"insert",
-					{
-						"characters": " for"
-					},
-					"BAAAACsAAAAAAAAALAAAAAAAAAAAAAAALAAAAAAAAAAtAAAAAAAAAAAAAAAtAAAAAAAAAC4AAAAAAAAAAAAAAC4AAAAAAAAALwAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAKwAAAAAAAAArAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					15,
-					1,
-					"insert",
-					{
-						"characters": " your"
-					},
-					"BQAAAC8AAAAAAAAAMAAAAAAAAAAAAAAAMAAAAAAAAAAxAAAAAAAAAAAAAAAxAAAAAAAAADIAAAAAAAAAAAAAADIAAAAAAAAAMwAAAAAAAAAAAAAAMwAAAAAAAAA0AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAALwAAAAAAAAAvAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					16,
-					1,
-					"insert",
-					{
-						"characters": " Vexi"
-					},
-					"BQAAADQAAAAAAAAANQAAAAAAAAAAAAAANQAAAAAAAAA2AAAAAAAAAAAAAAA2AAAAAAAAADcAAAAAAAAAAAAAADcAAAAAAAAAOAAAAAAAAAAAAAAAOAAAAAAAAAA5AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAANAAAAAAAAAA0AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					17,
-					1,
-					"insert",
-					{
-						"characters": " playtr"
-					},
-					"BwAAADkAAAAAAAAAOgAAAAAAAAAAAAAAOgAAAAAAAAA7AAAAAAAAAAAAAAA7AAAAAAAAADwAAAAAAAAAAAAAADwAAAAAAAAAPQAAAAAAAAAAAAAAPQAAAAAAAAA+AAAAAAAAAAAAAAA+AAAAAAAAAD8AAAAAAAAAAAAAAD8AAAAAAAAAQAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAOQAAAAAAAAA5AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					18,
-					1,
-					"left_delete",
-					null,
-					"AQAAAD8AAAAAAAAAPwAAAAAAAAABAAAAcg",
-					"AQAAAAAAAAABAAAAQAAAAAAAAABAAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					19,
-					1,
-					"insert",
-					{
-						"characters": "gh"
-					},
-					"AgAAAD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABBAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					20,
-					2,
-					"left_delete",
-					null,
-					"AgAAAEAAAAAAAAAAQAAAAAAAAAABAAAAaD8AAAAAAAAAPwAAAAAAAAABAAAAZw",
-					"AQAAAAAAAAABAAAAQQAAAAAAAABBAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					21,
-					1,
-					"insert",
-					{
-						"characters": "hrough"
-					},
-					"BgAAAD8AAAAAAAAAQAAAAAAAAAAAAAAAQAAAAAAAAABBAAAAAAAAAAAAAABBAAAAAAAAAEIAAAAAAAAAAAAAAEIAAAAAAAAAQwAAAAAAAAAAAAAAQwAAAAAAAABEAAAAAAAAAAAAAABEAAAAAAAAAEUAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAPwAAAAAAAAA/AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					22,
-					1,
-					"insert",
-					{
-						"characters": " in"
-					},
-					"AwAAAEUAAAAAAAAARgAAAAAAAAAAAAAARgAAAAAAAABHAAAAAAAAAAAAAABHAAAAAAAAAEgAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAARQAAAAAAAABFAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					23,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAAEgAAAAAAAAASQAAAAAAAAAAAAAASQAAAAAAAABKAAAAAAAAAAAAAABKAAAAAAAAAEsAAAAAAAAAAAAAAEsAAAAAAAAATAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAASAAAAAAAAABIAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					24,
-					1,
-					"insert",
-					{
-						"characters": " following"
-					},
-					"CgAAAEwAAAAAAAAATQAAAAAAAAAAAAAATQAAAAAAAABOAAAAAAAAAAAAAABOAAAAAAAAAE8AAAAAAAAAAAAAAE8AAAAAAAAAUAAAAAAAAAAAAAAAUAAAAAAAAABRAAAAAAAAAAAAAABRAAAAAAAAAFIAAAAAAAAAAAAAAFIAAAAAAAAAUwAAAAAAAAAAAAAAUwAAAAAAAABUAAAAAAAAAAAAAABUAAAAAAAAAFUAAAAAAAAAAAAAAFUAAAAAAAAAVgAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAATAAAAAAAAABMAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					25,
-					1,
-					"insert",
-					{
-						"characters": " dastard"
-					},
-					"CAAAAFYAAAAAAAAAVwAAAAAAAAAAAAAAVwAAAAAAAABYAAAAAAAAAAAAAABYAAAAAAAAAFkAAAAAAAAAAAAAAFkAAAAAAAAAWgAAAAAAAAAAAAAAWgAAAAAAAABbAAAAAAAAAAAAAABbAAAAAAAAAFwAAAAAAAAAAAAAAFwAAAAAAAAAXQAAAAAAAAAAAAAAXQAAAAAAAABeAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAVgAAAAAAAABWAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					26,
-					1,
-					"insert",
-					{
-						"characters": "ly"
-					},
-					"AgAAAF4AAAAAAAAAXwAAAAAAAAAAAAAAXwAAAAAAAABgAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAXgAAAAAAAABeAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					27,
-					1,
-					"insert",
-					{
-						"characters": " ways:"
-					},
-					"BgAAAGAAAAAAAAAAYQAAAAAAAAAAAAAAYQAAAAAAAABiAAAAAAAAAAAAAABiAAAAAAAAAGMAAAAAAAAAAAAAAGMAAAAAAAAAZAAAAAAAAAAAAAAAZAAAAAAAAABlAAAAAAAAAAAAAABlAAAAAAAAAGYAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAYAAAAAAAAABgAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					28,
-					1,
-					"insert",
-					{
-						"characters": "\n\n&)"
-					},
-					"BAAAAGYAAAAAAAAAZwAAAAAAAAAAAAAAZwAAAAAAAABoAAAAAAAAAAAAAABoAAAAAAAAAGkAAAAAAAAAAAAAAGkAAAAAAAAAagAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAZgAAAAAAAABmAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					29,
-					2,
-					"left_delete",
-					null,
-					"AgAAAGkAAAAAAAAAaQAAAAAAAAABAAAAKWgAAAAAAAAAaAAAAAAAAAABAAAAJg",
-					"AQAAAAAAAAABAAAAagAAAAAAAABqAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					30,
-					1,
-					"insert",
-					{
-						"characters": "1)"
-					},
-					"AgAAAGgAAAAAAAAAaQAAAAAAAAAAAAAAaQAAAAAAAABqAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAaAAAAAAAAABoAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					31,
-					1,
-					"insert",
-					{
-						"characters": " Your"
-					},
-					"BQAAAGoAAAAAAAAAawAAAAAAAAAAAAAAawAAAAAAAABsAAAAAAAAAAAAAABsAAAAAAAAAG0AAAAAAAAAAAAAAG0AAAAAAAAAbgAAAAAAAAAAAAAAbgAAAAAAAABvAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAagAAAAAAAABqAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					32,
-					1,
-					"insert",
-					{
-						"characters": " Vexi"
-					},
-					"BQAAAG8AAAAAAAAAcAAAAAAAAAAAAAAAcAAAAAAAAABxAAAAAAAAAAAAAABxAAAAAAAAAHIAAAAAAAAAAAAAAHIAAAAAAAAAcwAAAAAAAAAAAAAAcwAAAAAAAAB0AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAbwAAAAAAAABvAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					33,
-					1,
-					"insert",
-					{
-						"characters": " p"
-					},
-					"AgAAAHQAAAAAAAAAdQAAAAAAAAAAAAAAdQAAAAAAAAB2AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAdAAAAAAAAAB0AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					34,
-					14,
-					"left_delete",
-					null,
-					"DgAAAHUAAAAAAAAAdQAAAAAAAAABAAAAcHQAAAAAAAAAdAAAAAAAAAABAAAAIHMAAAAAAAAAcwAAAAAAAAABAAAAaXIAAAAAAAAAcgAAAAAAAAABAAAAeHEAAAAAAAAAcQAAAAAAAAABAAAAZXAAAAAAAAAAcAAAAAAAAAABAAAAVm8AAAAAAAAAbwAAAAAAAAABAAAAIG4AAAAAAAAAbgAAAAAAAAABAAAAcm0AAAAAAAAAbQAAAAAAAAABAAAAdWwAAAAAAAAAbAAAAAAAAAABAAAAb2sAAAAAAAAAawAAAAAAAAABAAAAWWoAAAAAAAAAagAAAAAAAAABAAAAIGkAAAAAAAAAaQAAAAAAAAABAAAAKWgAAAAAAAAAaAAAAAAAAAABAAAAMQ",
-					"AQAAAAAAAAABAAAAdgAAAAAAAAB2AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					35,
-					1,
-					"insert",
-					{
-						"characters": "*)"
-					},
-					"AgAAAGgAAAAAAAAAaQAAAAAAAAAAAAAAaQAAAAAAAABqAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAaAAAAAAAAABoAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					36,
-					1,
-					"insert",
-					{
-						"characters": " Yçou"
-					},
-					"BQAAAGoAAAAAAAAAawAAAAAAAAAAAAAAawAAAAAAAABsAAAAAAAAAAAAAABsAAAAAAAAAG0AAAAAAAAAAAAAAG0AAAAAAAAAbgAAAAAAAAAAAAAAbgAAAAAAAABvAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAagAAAAAAAABqAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					37,
-					3,
-					"left_delete",
-					null,
-					"AwAAAG4AAAAAAAAAbgAAAAAAAAABAAAAdW0AAAAAAAAAbQAAAAAAAAABAAAAb2wAAAAAAAAAbAAAAAAAAAACAAAAw6c",
-					"AQAAAAAAAAABAAAAbwAAAAAAAABvAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					38,
-					1,
-					"insert",
-					{
-						"characters": "our"
-					},
-					"AwAAAGwAAAAAAAAAbQAAAAAAAAAAAAAAbQAAAAAAAABuAAAAAAAAAAAAAABuAAAAAAAAAG8AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAbAAAAAAAAABsAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					39,
-					1,
-					"insert",
-					{
-						"characters": " Vexi"
-					},
-					"BQAAAG8AAAAAAAAAcAAAAAAAAAAAAAAAcAAAAAAAAABxAAAAAAAAAAAAAABxAAAAAAAAAHIAAAAAAAAAAAAAAHIAAAAAAAAAcwAAAAAAAAAAAAAAcwAAAAAAAAB0AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAbwAAAAAAAABvAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					40,
-					1,
-					"insert",
-					{
-						"characters": " pawns"
-					},
-					"BgAAAHQAAAAAAAAAdQAAAAAAAAAAAAAAdQAAAAAAAAB2AAAAAAAAAAAAAAB2AAAAAAAAAHcAAAAAAAAAAAAAAHcAAAAAAAAAeAAAAAAAAAAAAAAAeAAAAAAAAAB5AAAAAAAAAAAAAAB5AAAAAAAAAHoAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAdAAAAAAAAAB0AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					41,
-					1,
-					"insert",
-					{
-						"characters": " are"
-					},
-					"BAAAAHoAAAAAAAAAewAAAAAAAAAAAAAAewAAAAAAAAB8AAAAAAAAAAAAAAB8AAAAAAAAAH0AAAAAAAAAAAAAAH0AAAAAAAAAfgAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAegAAAAAAAAB6AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					42,
-					1,
-					"insert",
-					{
-						"characters": " now"
-					},
-					"BAAAAH4AAAAAAAAAfwAAAAAAAAAAAAAAfwAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAAIEAAAAAAAAAAAAAAIEAAAAAAAAAggAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfgAAAAAAAAB+AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					43,
-					1,
-					"insert",
-					{
-						"characters": " much"
-					},
-					"BQAAAIIAAAAAAAAAgwAAAAAAAAAAAAAAgwAAAAAAAACEAAAAAAAAAAAAAACEAAAAAAAAAIUAAAAAAAAAAAAAAIUAAAAAAAAAhgAAAAAAAAAAAAAAhgAAAAAAAACHAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAggAAAAAAAACCAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					44,
-					1,
-					"insert",
-					{
-						"characters": " more"
-					},
-					"BQAAAIcAAAAAAAAAiAAAAAAAAAAAAAAAiAAAAAAAAACJAAAAAAAAAAAAAACJAAAAAAAAAIoAAAAAAAAAAAAAAIoAAAAAAAAAiwAAAAAAAAAAAAAAiwAAAAAAAACMAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAhwAAAAAAAACHAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					45,
-					1,
-					"insert",
-					{
-						"characters": " valuable"
-					},
-					"CQAAAIwAAAAAAAAAjQAAAAAAAAAAAAAAjQAAAAAAAACOAAAAAAAAAAAAAACOAAAAAAAAAI8AAAAAAAAAAAAAAI8AAAAAAAAAkAAAAAAAAAAAAAAAkAAAAAAAAACRAAAAAAAAAAAAAACRAAAAAAAAAJIAAAAAAAAAAAAAAJIAAAAAAAAAkwAAAAAAAAAAAAAAkwAAAAAAAACUAAAAAAAAAAAAAACUAAAAAAAAAJUAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAjAAAAAAAAACMAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					46,
-					1,
-					"insert",
-					{
-						"characters": "."
-					},
-					"AQAAAJUAAAAAAAAAlgAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAlQAAAAAAAACVAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					47,
-					1,
-					"left_delete",
-					null,
-					"AQAAAJUAAAAAAAAAlQAAAAAAAAABAAAALg",
-					"AQAAAAAAAAABAAAAlgAAAAAAAACWAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					48,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAJUAAAAAAAAAlgAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAlQAAAAAAAACVAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					54,
-					2,
-					"left_delete",
-					null,
-					"AgAAAGkAAAAAAAAAaQAAAAAAAAABAAAAKWgAAAAAAAAAaAAAAAAAAAABAAAAKg",
-					"AQAAAAAAAAABAAAAagAAAAAAAABqAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					55,
-					1,
-					"insert",
-					{
-						"characters": "-"
-					},
-					"AQAAAGgAAAAAAAAAaQAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAaAAAAAAAAABoAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					57,
-					1,
-					"insert",
-					{
-						"characters": "per"
-					},
-					"AwAAAJUAAAAAAAAAlgAAAAAAAAAAAAAAlgAAAAAAAACXAAAAAAAAAAAAAACXAAAAAAAAAJgAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAlQAAAAAAAACVAAAAAAAAAAAAAAAAADZA"
-				],
-				[
-					58,
-					1,
-					"insert",
-					{
-						"characters": " un"
-					},
-					"AwAAAJgAAAAAAAAAmQAAAAAAAAAAAAAAmQAAAAAAAACaAAAAAAAAAAAAAACaAAAAAAAAAJsAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAmAAAAAAAAACYAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					59,
-					1,
-					"insert",
-					{
-						"characters": "it."
-					},
-					"AwAAAJsAAAAAAAAAnAAAAAAAAAAAAAAAnAAAAAAAAACdAAAAAAAAAAAAAACdAAAAAAAAAJ4AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAmwAAAAAAAACbAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					60,
-					1,
-					"insert",
-					{
-						"characters": "\n-"
-					},
-					"AgAAAJ4AAAAAAAAAnwAAAAAAAAAAAAAAnwAAAAAAAACgAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAngAAAAAAAACeAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					61,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAKAAAAAAAAAAoQAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAoAAAAAAAAACgAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					62,
-					1,
-					"insert",
-					{
-						"characters": "The"
-					},
-					"AwAAAKEAAAAAAAAAogAAAAAAAAAAAAAAogAAAAAAAACjAAAAAAAAAAAAAACjAAAAAAAAAKQAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAoQAAAAAAAAChAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					63,
-					1,
-					"insert",
-					{
-						"characters": " human"
-					},
-					"BgAAAKQAAAAAAAAApQAAAAAAAAAAAAAApQAAAAAAAACmAAAAAAAAAAAAAACmAAAAAAAAAKcAAAAAAAAAAAAAAKcAAAAAAAAAqAAAAAAAAAAAAAAAqAAAAAAAAACpAAAAAAAAAAAAAACpAAAAAAAAAKoAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAApAAAAAAAAACkAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					64,
-					7,
-					"left_delete",
-					null,
-					"BwAAAKkAAAAAAAAAqQAAAAAAAAABAAAAbqgAAAAAAAAAqAAAAAAAAAABAAAAYacAAAAAAAAApwAAAAAAAAABAAAAbaYAAAAAAAAApgAAAAAAAAABAAAAdaUAAAAAAAAApQAAAAAAAAABAAAAaKQAAAAAAAAApAAAAAAAAAABAAAAIKMAAAAAAAAAowAAAAAAAAABAAAAZQ",
-					"AQAAAAAAAAABAAAAqgAAAAAAAACqAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					65,
-					2,
-					"left_delete",
-					null,
-					"AgAAAKIAAAAAAAAAogAAAAAAAAABAAAAaKEAAAAAAAAAoQAAAAAAAAABAAAAVA",
-					"AQAAAAAAAAABAAAAowAAAAAAAACjAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					66,
-					1,
-					"insert",
-					{
-						"characters": "Vexil"
-					},
-					"BQAAAKEAAAAAAAAAogAAAAAAAAAAAAAAogAAAAAAAACjAAAAAAAAAAAAAACjAAAAAAAAAKQAAAAAAAAAAAAAAKQAAAAAAAAApQAAAAAAAAAAAAAApQAAAAAAAACmAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAoQAAAAAAAAChAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					67,
-					1,
-					"insert",
-					{
-						"characters": "our"
-					},
-					"AwAAAKYAAAAAAAAApwAAAAAAAAAAAAAApwAAAAAAAACoAAAAAAAAAAAAAACoAAAAAAAAAKkAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAApgAAAAAAAACmAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					68,
-					1,
-					"insert",
-					{
-						"characters": " is"
-					},
-					"AwAAAKkAAAAAAAAAqgAAAAAAAAAAAAAAqgAAAAAAAACrAAAAAAAAAAAAAACrAAAAAAAAAKwAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAqQAAAAAAAACpAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					69,
-					1,
-					"insert",
-					{
-						"characters": " a"
-					},
-					"AgAAAKwAAAAAAAAArQAAAAAAAAAAAAAArQAAAAAAAACuAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAArAAAAAAAAACsAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					70,
-					1,
-					"insert",
-					{
-						"characters": " populart"
-					},
-					"CQAAAK4AAAAAAAAArwAAAAAAAAAAAAAArwAAAAAAAACwAAAAAAAAAAAAAACwAAAAAAAAALEAAAAAAAAAAAAAALEAAAAAAAAAsgAAAAAAAAAAAAAAsgAAAAAAAACzAAAAAAAAAAAAAACzAAAAAAAAALQAAAAAAAAAAAAAALQAAAAAAAAAtQAAAAAAAAAAAAAAtQAAAAAAAAC2AAAAAAAAAAAAAAC2AAAAAAAAALcAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAArgAAAAAAAACuAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					71,
-					1,
-					"insert",
-					{
-						"characters": " c"
-					},
-					"AgAAALcAAAAAAAAAuAAAAAAAAAAAAAAAuAAAAAAAAAC5AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAtwAAAAAAAAC3AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					72,
-					3,
-					"left_delete",
-					null,
-					"AwAAALgAAAAAAAAAuAAAAAAAAAABAAAAY7cAAAAAAAAAtwAAAAAAAAABAAAAILYAAAAAAAAAtgAAAAAAAAABAAAAdA",
-					"AQAAAAAAAAABAAAAuQAAAAAAAAC5AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					73,
-					1,
-					"insert",
-					{
-						"characters": " clothing"
-					},
-					"CQAAALYAAAAAAAAAtwAAAAAAAAAAAAAAtwAAAAAAAAC4AAAAAAAAAAAAAAC4AAAAAAAAALkAAAAAAAAAAAAAALkAAAAAAAAAugAAAAAAAAAAAAAAugAAAAAAAAC7AAAAAAAAAAAAAAC7AAAAAAAAALwAAAAAAAAAAAAAALwAAAAAAAAAvQAAAAAAAAAAAAAAvQAAAAAAAAC+AAAAAAAAAAAAAAC+AAAAAAAAAL8AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAtgAAAAAAAAC2AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					74,
-					1,
-					"insert",
-					{
-						"characters": " material"
-					},
-					"CQAAAL8AAAAAAAAAwAAAAAAAAAAAAAAAwAAAAAAAAADBAAAAAAAAAAAAAADBAAAAAAAAAMIAAAAAAAAAAAAAAMIAAAAAAAAAwwAAAAAAAAAAAAAAwwAAAAAAAADEAAAAAAAAAAAAAADEAAAAAAAAAMUAAAAAAAAAAAAAAMUAAAAAAAAAxgAAAAAAAAAAAAAAxgAAAAAAAADHAAAAAAAAAAAAAADHAAAAAAAAAMgAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAvwAAAAAAAAC/AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					75,
-					1,
-					"insert",
-					{
-						"characters": " in"
-					},
-					"AwAAAMgAAAAAAAAAyQAAAAAAAAAAAAAAyQAAAAAAAADKAAAAAAAAAAAAAADKAAAAAAAAAMsAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAyAAAAAAAAADIAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					76,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAAMsAAAAAAAAAzAAAAAAAAAAAAAAAzAAAAAAAAADNAAAAAAAAAAAAAADNAAAAAAAAAM4AAAAAAAAAAAAAAM4AAAAAAAAAzwAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAywAAAAAAAADLAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					77,
-					1,
-					"insert",
-					{
-						"characters": " Empire"
-					},
-					"BwAAAM8AAAAAAAAA0AAAAAAAAAAAAAAA0AAAAAAAAADRAAAAAAAAAAAAAADRAAAAAAAAANIAAAAAAAAAAAAAANIAAAAAAAAA0wAAAAAAAAAAAAAA0wAAAAAAAADUAAAAAAAAAAAAAADUAAAAAAAAANUAAAAAAAAAAAAAANUAAAAAAAAA1gAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAzwAAAAAAAADPAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					78,
-					1,
-					"insert",
-					{
-						"characters": "."
-					},
-					"AQAAANYAAAAAAAAA1wAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA1gAAAAAAAADWAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					81,
-					6,
-					"left_delete",
-					null,
-					"BgAAALUAAAAAAAAAtQAAAAAAAAABAAAAcrQAAAAAAAAAtAAAAAAAAAABAAAAYbMAAAAAAAAAswAAAAAAAAABAAAAbLIAAAAAAAAAsgAAAAAAAAABAAAAdbEAAAAAAAAAsQAAAAAAAAABAAAAcLAAAAAAAAAAsAAAAAAAAAABAAAAbw",
-					"AQAAAAAAAAABAAAAtgAAAAAAAAC2AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					82,
-					1,
-					"insert",
-					{
-						"characters": "rized"
-					},
-					"BQAAALAAAAAAAAAAsQAAAAAAAAAAAAAAsQAAAAAAAACyAAAAAAAAAAAAAACyAAAAAAAAALMAAAAAAAAAAAAAALMAAAAAAAAAtAAAAAAAAAAAAAAAtAAAAAAAAAC1AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAsAAAAAAAAACwAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					84,
-					1,
-					"insert",
-					{
-						"characters": "\n-"
-					},
-					"AgAAANYAAAAAAAAA1wAAAAAAAAAAAAAA1wAAAAAAAADYAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA1gAAAAAAAADWAAAAAAAAAAAAAAAAcH5A"
-				],
-				[
-					85,
-					1,
-					"insert",
-					{
-						"characters": " The"
-					},
-					"BAAAANgAAAAAAAAA2QAAAAAAAAAAAAAA2QAAAAAAAADaAAAAAAAAAAAAAADaAAAAAAAAANsAAAAAAAAAAAAAANsAAAAAAAAA3AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA2AAAAAAAAADYAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					86,
-					1,
-					"insert",
-					{
-						"characters": " Empire"
-					},
-					"BwAAANwAAAAAAAAA3QAAAAAAAAAAAAAA3QAAAAAAAADeAAAAAAAAAAAAAADeAAAAAAAAAN8AAAAAAAAAAAAAAN8AAAAAAAAA4AAAAAAAAAAAAAAA4AAAAAAAAADhAAAAAAAAAAAAAADhAAAAAAAAAOIAAAAAAAAAAAAAAOIAAAAAAAAA4wAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA3AAAAAAAAADcAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					87,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAOMAAAAAAAAA5AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA4wAAAAAAAADjAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					88,
-					1,
-					"insert",
-					{
-						"characters": "will"
-					},
-					"BAAAAOQAAAAAAAAA5QAAAAAAAAAAAAAA5QAAAAAAAADmAAAAAAAAAAAAAADmAAAAAAAAAOcAAAAAAAAAAAAAAOcAAAAAAAAA6AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA5AAAAAAAAADkAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					89,
-					1,
-					"insert",
-					{
-						"characters": " d"
-					},
-					"AgAAAOgAAAAAAAAA6QAAAAAAAAAAAAAA6QAAAAAAAADqAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA6AAAAAAAAADoAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					90,
-					1,
-					"insert",
-					{
-						"characters": "islike"
-					},
-					"BgAAAOoAAAAAAAAA6wAAAAAAAAAAAAAA6wAAAAAAAADsAAAAAAAAAAAAAADsAAAAAAAAAO0AAAAAAAAAAAAAAO0AAAAAAAAA7gAAAAAAAAAAAAAA7gAAAAAAAADvAAAAAAAAAAAAAADvAAAAAAAAAPAAAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA6gAAAAAAAADqAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					91,
-					1,
-					"insert",
-					{
-						"characters": " you"
-					},
-					"BAAAAPAAAAAAAAAA8QAAAAAAAAAAAAAA8QAAAAAAAADyAAAAAAAAAAAAAADyAAAAAAAAAPMAAAAAAAAAAAAAAPMAAAAAAAAA9AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA8AAAAAAAAADwAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					92,
-					1,
-					"insert",
-					{
-						"characters": " more"
-					},
-					"BQAAAPQAAAAAAAAA9QAAAAAAAAAAAAAA9QAAAAAAAAD2AAAAAAAAAAAAAAD2AAAAAAAAAPcAAAAAAAAAAAAAAPcAAAAAAAAA+AAAAAAAAAAAAAAA+AAAAAAAAAD5AAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9AAAAAAAAAD0AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					93,
-					1,
-					"insert",
-					{
-						"characters": " for"
-					},
-					"BAAAAPkAAAAAAAAA+gAAAAAAAAAAAAAA+gAAAAAAAAD7AAAAAAAAAAAAAAD7AAAAAAAAAPwAAAAAAAAAAAAAAPwAAAAAAAAA/QAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA+QAAAAAAAAD5AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					94,
-					1,
-					"insert",
-					{
-						"characters": " every"
-					},
-					"BgAAAP0AAAAAAAAA/gAAAAAAAAAAAAAA/gAAAAAAAAD/AAAAAAAAAAAAAAD/AAAAAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAQEAAAAAAAAAAAAAAQEAAAAAAAACAQAAAAAAAAAAAAACAQAAAAAAAAMBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA/QAAAAAAAAD9AAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					95,
-					1,
-					"insert",
-					{
-						"characters": " non-"
-					},
-					"BQAAAAMBAAAAAAAABAEAAAAAAAAAAAAABAEAAAAAAAAFAQAAAAAAAAAAAAAFAQAAAAAAAAYBAAAAAAAAAAAAAAYBAAAAAAAABwEAAAAAAAAAAAAABwEAAAAAAAAIAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAwEAAAAAAAADAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					96,
-					2,
-					"left_delete",
-					null,
-					"AgAAAAcBAAAAAAAABwEAAAAAAAABAAAALQYBAAAAAAAABgEAAAAAAAABAAAAbg",
-					"AQAAAAAAAAABAAAACAEAAAAAAAAIAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					97,
-					1,
-					"insert",
-					{
-						"characters": "t"
-					},
-					"AQAAAAYBAAAAAAAABwEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABgEAAAAAAAAGAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					98,
-					1,
-					"insert",
-					{
-						"characters": " human"
-					},
-					"BgAAAAcBAAAAAAAACAEAAAAAAAAAAAAACAEAAAAAAAAJAQAAAAAAAAAAAAAJAQAAAAAAAAoBAAAAAAAAAAAAAAoBAAAAAAAACwEAAAAAAAAAAAAACwEAAAAAAAAMAQAAAAAAAAAAAAAMAQAAAAAAAA0BAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABwEAAAAAAAAHAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					99,
-					1,
-					"insert",
-					{
-						"characters": " enough"
-					},
-					"BwAAAA0BAAAAAAAADgEAAAAAAAAAAAAADgEAAAAAAAAPAQAAAAAAAAAAAAAPAQAAAAAAABABAAAAAAAAAAAAABABAAAAAAAAEQEAAAAAAAAAAAAAEQEAAAAAAAASAQAAAAAAAAAAAAASAQAAAAAAABMBAAAAAAAAAAAAABMBAAAAAAAAFAEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAADQEAAAAAAAANAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					100,
-					1,
-					"insert",
-					{
-						"characters": " pawn"
-					},
-					"BQAAABQBAAAAAAAAFQEAAAAAAAAAAAAAFQEAAAAAAAAWAQAAAAAAAAAAAAAWAQAAAAAAABcBAAAAAAAAAAAAABcBAAAAAAAAGAEAAAAAAAAAAAAAGAEAAAAAAAAZAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAFAEAAAAAAAAUAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					101,
-					1,
-					"insert",
-					{
-						"characters": " you"
-					},
-					"BAAAABkBAAAAAAAAGgEAAAAAAAAAAAAAGgEAAAAAAAAbAQAAAAAAAAAAAAAbAQAAAAAAABwBAAAAAAAAAAAAABwBAAAAAAAAHQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAGQEAAAAAAAAZAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					102,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAB0BAAAAAAAAHgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAHQEAAAAAAAAdAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					103,
-					9,
-					"left_delete",
-					null,
-					"CQAAAB0BAAAAAAAAHQEAAAAAAAABAAAAIBwBAAAAAAAAHAEAAAAAAAABAAAAdRsBAAAAAAAAGwEAAAAAAAABAAAAbxoBAAAAAAAAGgEAAAAAAAABAAAAeRkBAAAAAAAAGQEAAAAAAAABAAAAIBgBAAAAAAAAGAEAAAAAAAABAAAAbhcBAAAAAAAAFwEAAAAAAAABAAAAdxYBAAAAAAAAFgEAAAAAAAABAAAAYRUBAAAAAAAAFQEAAAAAAAABAAAAcA",
-					"AQAAAAAAAAABAAAAHgEAAAAAAAAeAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					104,
-					1,
-					"insert",
-					{
-						"characters": "free"
-					},
-					"BAAAABUBAAAAAAAAFgEAAAAAAAAAAAAAFgEAAAAAAAAXAQAAAAAAAAAAAAAXAQAAAAAAABgBAAAAAAAAAAAAABgBAAAAAAAAGQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAFQEAAAAAAAAVAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					105,
-					1,
-					"insert",
-					{
-						"characters": " pawn"
-					},
-					"BQAAABkBAAAAAAAAGgEAAAAAAAAAAAAAGgEAAAAAAAAbAQAAAAAAAAAAAAAbAQAAAAAAABwBAAAAAAAAAAAAABwBAAAAAAAAHQEAAAAAAAAAAAAAHQEAAAAAAAAeAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAGQEAAAAAAAAZAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					106,
-					1,
-					"insert",
-					{
-						"characters": " in"
-					},
-					"AwAAAB4BAAAAAAAAHwEAAAAAAAAAAAAAHwEAAAAAAAAgAQAAAAAAAAAAAAAgAQAAAAAAACEBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAHgEAAAAAAAAeAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					107,
-					1,
-					"insert",
-					{
-						"characters": " your"
-					},
-					"BQAAACEBAAAAAAAAIgEAAAAAAAAAAAAAIgEAAAAAAAAjAQAAAAAAAAAAAAAjAQAAAAAAACQBAAAAAAAAAAAAACQBAAAAAAAAJQEAAAAAAAAAAAAAJQEAAAAAAAAmAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAIQEAAAAAAAAhAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					108,
-					1,
-					"insert",
-					{
-						"characters": " colony"
-					},
-					"BwAAACYBAAAAAAAAJwEAAAAAAAAAAAAAJwEAAAAAAAAoAQAAAAAAAAAAAAAoAQAAAAAAACkBAAAAAAAAAAAAACkBAAAAAAAAKgEAAAAAAAAAAAAAKgEAAAAAAAArAQAAAAAAAAAAAAArAQAAAAAAACwBAAAAAAAAAAAAACwBAAAAAAAALQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAJgEAAAAAAAAmAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					109,
-					1,
-					"insert",
-					{
-						"characters": "."
-					},
-					"AQAAAC0BAAAAAAAALgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAALQEAAAAAAAAtAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					110,
-					1,
-					"insert",
-					{
-						"characters": " Was"
-					},
-					"BAAAAC4BAAAAAAAALwEAAAAAAAAAAAAALwEAAAAAAAAwAQAAAAAAAAAAAAAwAQAAAAAAADEBAAAAAAAAAAAAADEBAAAAAAAAMgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAALgEAAAAAAAAuAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					111,
-					3,
-					"left_delete",
-					null,
-					"AwAAADEBAAAAAAAAMQEAAAAAAAABAAAAczABAAAAAAAAMAEAAAAAAAABAAAAYS8BAAAAAAAALwEAAAAAAAABAAAAVw",
-					"AQAAAAAAAAABAAAAMgEAAAAAAAAyAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					112,
-					1,
-					"insert",
-					{
-						"characters": "Wasters,"
-					},
-					"CAAAAC8BAAAAAAAAMAEAAAAAAAAAAAAAMAEAAAAAAAAxAQAAAAAAAAAAAAAxAQAAAAAAADIBAAAAAAAAAAAAADIBAAAAAAAAMwEAAAAAAAAAAAAAMwEAAAAAAAA0AQAAAAAAAAAAAAA0AQAAAAAAADUBAAAAAAAAAAAAADUBAAAAAAAANgEAAAAAAAAAAAAANgEAAAAAAAA3AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAALwEAAAAAAAAvAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					113,
-					1,
-					"insert",
-					{
-						"characters": " Pigs,"
-					},
-					"BgAAADcBAAAAAAAAOAEAAAAAAAAAAAAAOAEAAAAAAAA5AQAAAAAAAAAAAAA5AQAAAAAAADoBAAAAAAAAAAAAADoBAAAAAAAAOwEAAAAAAAAAAAAAOwEAAAAAAAA8AQAAAAAAAAAAAAA8AQAAAAAAAD0BAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAANwEAAAAAAAA3AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					114,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAD0BAAAAAAAAPgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAPQEAAAAAAAA9AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					115,
-					1,
-					"insert",
-					{
-						"characters": "Yttakin"
-					},
-					"BwAAAD4BAAAAAAAAPwEAAAAAAAAAAAAAPwEAAAAAAABAAQAAAAAAAAAAAABAAQAAAAAAAEEBAAAAAAAAAAAAAEEBAAAAAAAAQgEAAAAAAAAAAAAAQgEAAAAAAABDAQAAAAAAAAAAAABDAQAAAAAAAEQBAAAAAAAAAAAAAEQBAAAAAAAARQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAPgEAAAAAAAA+AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					116,
-					1,
-					"insert",
-					{
-						"characters": ","
-					},
-					"AQAAAEUBAAAAAAAARgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAARQEAAAAAAABFAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					117,
-					1,
-					"insert",
-					{
-						"characters": " Impids,"
-					},
-					"CAAAAEYBAAAAAAAARwEAAAAAAAAAAAAARwEAAAAAAABIAQAAAAAAAAAAAABIAQAAAAAAAEkBAAAAAAAAAAAAAEkBAAAAAAAASgEAAAAAAAAAAAAASgEAAAAAAABLAQAAAAAAAAAAAABLAQAAAAAAAEwBAAAAAAAAAAAAAEwBAAAAAAAATQEAAAAAAAAAAAAATQEAAAAAAABOAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAARgEAAAAAAABGAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					118,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAE4BAAAAAAAATwEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAATgEAAAAAAABOAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					119,
-					1,
-					"insert",
-					{
-						"characters": "and"
-					},
-					"AwAAAE8BAAAAAAAAUAEAAAAAAAAAAAAAUAEAAAAAAABRAQAAAAAAAAAAAABRAQAAAAAAAFIBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAATwEAAAAAAABPAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					120,
-					1,
-					"insert",
-					{
-						"characters": " of"
-					},
-					"AwAAAFIBAAAAAAAAUwEAAAAAAAAAAAAAUwEAAAAAAABUAQAAAAAAAAAAAABUAQAAAAAAAFUBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAUgEAAAAAAABSAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					121,
-					1,
-					"insert",
-					{
-						"characters": " course"
-					},
-					"BwAAAFUBAAAAAAAAVgEAAAAAAAAAAAAAVgEAAAAAAABXAQAAAAAAAAAAAABXAQAAAAAAAFgBAAAAAAAAAAAAAFgBAAAAAAAAWQEAAAAAAAAAAAAAWQEAAAAAAABaAQAAAAAAAAAAAABaAQAAAAAAAFsBAAAAAAAAAAAAAFsBAAAAAAAAXAEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAVQEAAAAAAABVAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					122,
-					1,
-					"insert",
-					{
-						"characters": " Vexi."
-					},
-					"BgAAAFwBAAAAAAAAXQEAAAAAAAAAAAAAXQEAAAAAAABeAQAAAAAAAAAAAABeAQAAAAAAAF8BAAAAAAAAAAAAAF8BAAAAAAAAYAEAAAAAAAAAAAAAYAEAAAAAAABhAQAAAAAAAAAAAABhAQAAAAAAAGIBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAXAEAAAAAAABcAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					123,
-					1,
-					"insert",
-					{
-						"characters": " Unaccep"
-					},
-					"CAAAAGIBAAAAAAAAYwEAAAAAAAAAAAAAYwEAAAAAAABkAQAAAAAAAAAAAABkAQAAAAAAAGUBAAAAAAAAAAAAAGUBAAAAAAAAZgEAAAAAAAAAAAAAZgEAAAAAAABnAQAAAAAAAAAAAABnAQAAAAAAAGgBAAAAAAAAAAAAAGgBAAAAAAAAaQEAAAAAAAAAAAAAaQEAAAAAAABqAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAYgEAAAAAAABiAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					124,
-					1,
-					"insert",
-					{
-						"characters": "table"
-					},
-					"BQAAAGoBAAAAAAAAawEAAAAAAAAAAAAAawEAAAAAAABsAQAAAAAAAAAAAABsAQAAAAAAAG0BAAAAAAAAAAAAAG0BAAAAAAAAbgEAAAAAAAAAAAAAbgEAAAAAAABvAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAagEAAAAAAABqAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					125,
-					1,
-					"insert",
-					{
-						"characters": " to"
-					},
-					"AwAAAG8BAAAAAAAAcAEAAAAAAAAAAAAAcAEAAAAAAABxAQAAAAAAAAAAAABxAQAAAAAAAHIBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAbwEAAAAAAABvAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					126,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAAHIBAAAAAAAAcwEAAAAAAAAAAAAAcwEAAAAAAAB0AQAAAAAAAAAAAAB0AQAAAAAAAHUBAAAAAAAAAAAAAHUBAAAAAAAAdgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAcgEAAAAAAAByAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					127,
-					1,
-					"insert",
-					{
-						"characters": " Empire"
-					},
-					"BwAAAHYBAAAAAAAAdwEAAAAAAAAAAAAAdwEAAAAAAAB4AQAAAAAAAAAAAAB4AQAAAAAAAHkBAAAAAAAAAAAAAHkBAAAAAAAAegEAAAAAAAAAAAAAegEAAAAAAAB7AQAAAAAAAAAAAAB7AQAAAAAAAHwBAAAAAAAAAAAAAHwBAAAAAAAAfQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAdgEAAAAAAAB2AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					128,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAH0BAAAAAAAAfgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfQEAAAAAAAB9AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					129,
-					1,
-					"insert",
-					{
-						"characters": "without"
-					},
-					"BwAAAH4BAAAAAAAAfwEAAAAAAAAAAAAAfwEAAAAAAACAAQAAAAAAAAAAAACAAQAAAAAAAIEBAAAAAAAAAAAAAIEBAAAAAAAAggEAAAAAAAAAAAAAggEAAAAAAACDAQAAAAAAAAAAAACDAQAAAAAAAIQBAAAAAAAAAAAAAIQBAAAAAAAAhQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfgEAAAAAAAB+AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					130,
-					1,
-					"insert",
-					{
-						"characters": " at"
-					},
-					"AwAAAIUBAAAAAAAAhgEAAAAAAAAAAAAAhgEAAAAAAACHAQAAAAAAAAAAAACHAQAAAAAAAIgBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAhQEAAAAAAACFAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					131,
-					1,
-					"insert",
-					{
-						"characters": " least"
-					},
-					"BgAAAIgBAAAAAAAAiQEAAAAAAAAAAAAAiQEAAAAAAACKAQAAAAAAAAAAAACKAQAAAAAAAIsBAAAAAAAAAAAAAIsBAAAAAAAAjAEAAAAAAAAAAAAAjAEAAAAAAACNAQAAAAAAAAAAAACNAQAAAAAAAI4BAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAiAEAAAAAAACIAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					132,
-					1,
-					"insert",
-					{
-						"characters": " a"
-					},
-					"AgAAAI4BAAAAAAAAjwEAAAAAAAAAAAAAjwEAAAAAAACQAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAjgEAAAAAAACOAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					133,
-					1,
-					"insert",
-					{
-						"characters": " kn"
-					},
-					"AwAAAJABAAAAAAAAkQEAAAAAAAAAAAAAkQEAAAAAAACSAQAAAAAAAAAAAACSAQAAAAAAAJMBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAkAEAAAAAAACQAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					134,
-					19,
-					"left_delete",
-					null,
-					"EwAAAJIBAAAAAAAAkgEAAAAAAAABAAAAbpEBAAAAAAAAkQEAAAAAAAABAAAAa5ABAAAAAAAAkAEAAAAAAAABAAAAII8BAAAAAAAAjwEAAAAAAAABAAAAYY4BAAAAAAAAjgEAAAAAAAABAAAAII0BAAAAAAAAjQEAAAAAAAABAAAAdIwBAAAAAAAAjAEAAAAAAAABAAAAc4sBAAAAAAAAiwEAAAAAAAABAAAAYYoBAAAAAAAAigEAAAAAAAABAAAAZYkBAAAAAAAAiQEAAAAAAAABAAAAbIgBAAAAAAAAiAEAAAAAAAABAAAAIIcBAAAAAAAAhwEAAAAAAAABAAAAdIYBAAAAAAAAhgEAAAAAAAABAAAAYYUBAAAAAAAAhQEAAAAAAAABAAAAIIQBAAAAAAAAhAEAAAAAAAABAAAAdIMBAAAAAAAAgwEAAAAAAAABAAAAdYIBAAAAAAAAggEAAAAAAAABAAAAb4EBAAAAAAAAgQEAAAAAAAABAAAAaIABAAAAAAAAgAEAAAAAAAABAAAAdA",
-					"AQAAAAAAAAABAAAAkwEAAAAAAACTAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					135,
-					3,
-					"left_delete",
-					null,
-					"AwAAAH8BAAAAAAAAfwEAAAAAAAABAAAAaX4BAAAAAAAAfgEAAAAAAAABAAAAd30BAAAAAAAAfQEAAAAAAAABAAAAIA",
-					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					136,
-					1,
-					"insert",
-					{
-						"characters": "."
-					},
-					"AQAAAH0BAAAAAAAAfgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfQEAAAAAAAB9AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					137,
-					1,
-					"insert",
-					{
-						"characters": "\n\n"
-					},
-					"AgAAAH4BAAAAAAAAfwEAAAAAAAAAAAAAfwEAAAAAAACAAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfgEAAAAAAAB+AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					138,
-					1,
-					"left_delete",
-					null,
-					"AQAAAH8BAAAAAAAAfwEAAAAAAAABAAAACg",
-					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					139,
-					1,
-					"insert",
-					{
-						"characters": "-"
-					},
-					"AQAAAH8BAAAAAAAAgAEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfwEAAAAAAAB/AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					140,
-					1,
-					"insert",
-					{
-						"characters": " U"
-					},
-					"AgAAAIABAAAAAAAAgQEAAAAAAAAAAAAAgQEAAAAAAACCAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					141,
-					1,
-					"left_delete",
-					null,
-					"AQAAAIEBAAAAAAAAgQEAAAAAAAABAAAAVQ",
-					"AQAAAAAAAAABAAAAggEAAAAAAACCAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					142,
-					1,
-					"insert",
-					{
-						"characters": "You'll"
-					},
-					"BgAAAIEBAAAAAAAAggEAAAAAAAAAAAAAggEAAAAAAACDAQAAAAAAAAAAAACDAQAAAAAAAIQBAAAAAAAAAAAAAIQBAAAAAAAAhQEAAAAAAAAAAAAAhQEAAAAAAACGAQAAAAAAAAAAAACGAQAAAAAAAIcBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAgQEAAAAAAACBAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					143,
-					1,
-					"insert",
-					{
-						"characters": " see"
-					},
-					"BAAAAIcBAAAAAAAAiAEAAAAAAAAAAAAAiAEAAAAAAACJAQAAAAAAAAAAAACJAQAAAAAAAIoBAAAAAAAAAAAAAIoBAAAAAAAAiwEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAhwEAAAAAAACHAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					144,
-					1,
-					"insert",
-					{
-						"characters": " a"
-					},
-					"AgAAAIsBAAAAAAAAjAEAAAAAAAAAAAAAjAEAAAAAAACNAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAiwEAAAAAAACLAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					145,
-					1,
-					"insert",
-					{
-						"characters": " lot"
-					},
-					"BAAAAI0BAAAAAAAAjgEAAAAAAAAAAAAAjgEAAAAAAACPAQAAAAAAAAAAAACPAQAAAAAAAJABAAAAAAAAAAAAAJABAAAAAAAAkQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAjQEAAAAAAACNAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					146,
-					1,
-					"insert",
-					{
-						"characters": " more"
-					},
-					"BQAAAJEBAAAAAAAAkgEAAAAAAAAAAAAAkgEAAAAAAACTAQAAAAAAAAAAAACTAQAAAAAAAJQBAAAAAAAAAAAAAJQBAAAAAAAAlQEAAAAAAAAAAAAAlQEAAAAAAACWAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAkQEAAAAAAACRAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					147,
-					1,
-					"insert",
-					{
-						"characters": " refugees"
-					},
-					"CQAAAJYBAAAAAAAAlwEAAAAAAAAAAAAAlwEAAAAAAACYAQAAAAAAAAAAAACYAQAAAAAAAJkBAAAAAAAAAAAAAJkBAAAAAAAAmgEAAAAAAAAAAAAAmgEAAAAAAACbAQAAAAAAAAAAAACbAQAAAAAAAJwBAAAAAAAAAAAAAJwBAAAAAAAAnQEAAAAAAAAAAAAAnQEAAAAAAACeAQAAAAAAAAAAAACeAQAAAAAAAJ8BAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAlgEAAAAAAACWAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					148,
-					1,
-					"insert",
-					{
-						"characters": ","
-					},
-					"AQAAAJ8BAAAAAAAAoAEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAnwEAAAAAAACfAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					149,
-					1,
-					"insert",
-					{
-						"characters": " which"
-					},
-					"BgAAAKABAAAAAAAAoQEAAAAAAAAAAAAAoQEAAAAAAACiAQAAAAAAAAAAAACiAQAAAAAAAKMBAAAAAAAAAAAAAKMBAAAAAAAApAEAAAAAAAAAAAAApAEAAAAAAAClAQAAAAAAAAAAAAClAQAAAAAAAKYBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAoAEAAAAAAACgAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					150,
-					1,
-					"insert",
-					{
-						"characters": " could"
-					},
-					"BgAAAKYBAAAAAAAApwEAAAAAAAAAAAAApwEAAAAAAACoAQAAAAAAAAAAAACoAQAAAAAAAKkBAAAAAAAAAAAAAKkBAAAAAAAAqgEAAAAAAAAAAAAAqgEAAAAAAACrAQAAAAAAAAAAAACrAQAAAAAAAKwBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAApgEAAAAAAACmAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					151,
-					1,
-					"insert",
-					{
-						"characters": " complic"
-					},
-					"CAAAAKwBAAAAAAAArQEAAAAAAAAAAAAArQEAAAAAAACuAQAAAAAAAAAAAACuAQAAAAAAAK8BAAAAAAAAAAAAAK8BAAAAAAAAsAEAAAAAAAAAAAAAsAEAAAAAAACxAQAAAAAAAAAAAACxAQAAAAAAALIBAAAAAAAAAAAAALIBAAAAAAAAswEAAAAAAAAAAAAAswEAAAAAAAC0AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAArAEAAAAAAACsAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					152,
-					1,
-					"insert",
-					{
-						"characters": "ate"
-					},
-					"AwAAALQBAAAAAAAAtQEAAAAAAAAAAAAAtQEAAAAAAAC2AQAAAAAAAAAAAAC2AQAAAAAAALcBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAtAEAAAAAAAC0AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					153,
-					1,
-					"insert",
-					{
-						"characters": " things"
-					},
-					"BwAAALcBAAAAAAAAuAEAAAAAAAAAAAAAuAEAAAAAAAC5AQAAAAAAAAAAAAC5AQAAAAAAALoBAAAAAAAAAAAAALoBAAAAAAAAuwEAAAAAAAAAAAAAuwEAAAAAAAC8AQAAAAAAAAAAAAC8AQAAAAAAAL0BAAAAAAAAAAAAAL0BAAAAAAAAvgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAtwEAAAAAAAC3AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					154,
-					1,
-					"insert",
-					{
-						"characters": " if"
-					},
-					"AwAAAL4BAAAAAAAAvwEAAAAAAAAAAAAAvwEAAAAAAADAAQAAAAAAAAAAAADAAQAAAAAAAMEBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAvgEAAAAAAAC+AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					155,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAAMEBAAAAAAAAwgEAAAAAAAAAAAAAwgEAAAAAAADDAQAAAAAAAAAAAADDAQAAAAAAAMQBAAAAAAAAAAAAAMQBAAAAAAAAxQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAwQEAAAAAAADBAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					156,
-					1,
-					"insert",
-					{
-						"characters": " Empire"
-					},
-					"BwAAAMUBAAAAAAAAxgEAAAAAAAAAAAAAxgEAAAAAAADHAQAAAAAAAAAAAADHAQAAAAAAAMgBAAAAAAAAAAAAAMgBAAAAAAAAyQEAAAAAAAAAAAAAyQEAAAAAAADKAQAAAAAAAAAAAADKAQAAAAAAAMsBAAAAAAAAAAAAAMsBAAAAAAAAzAEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAxQEAAAAAAADFAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					157,
-					1,
-					"insert",
-					{
-						"characters": " happens"
-					},
-					"CAAAAMwBAAAAAAAAzQEAAAAAAAAAAAAAzQEAAAAAAADOAQAAAAAAAAAAAADOAQAAAAAAAM8BAAAAAAAAAAAAAM8BAAAAAAAA0AEAAAAAAAAAAAAA0AEAAAAAAADRAQAAAAAAAAAAAADRAQAAAAAAANIBAAAAAAAAAAAAANIBAAAAAAAA0wEAAAAAAAAAAAAA0wEAAAAAAADUAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAzAEAAAAAAADMAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					158,
-					1,
-					"insert",
-					{
-						"characters": " to"
-					},
-					"AwAAANQBAAAAAAAA1QEAAAAAAAAAAAAA1QEAAAAAAADWAQAAAAAAAAAAAADWAQAAAAAAANcBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA1AEAAAAAAADUAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					159,
-					1,
-					"insert",
-					{
-						"characters": " visit"
-					},
-					"BgAAANcBAAAAAAAA2AEAAAAAAAAAAAAA2AEAAAAAAADZAQAAAAAAAAAAAADZAQAAAAAAANoBAAAAAAAAAAAAANoBAAAAAAAA2wEAAAAAAAAAAAAA2wEAAAAAAADcAQAAAAAAAAAAAADcAQAAAAAAAN0BAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA1wEAAAAAAADXAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					160,
-					1,
-					"insert",
-					{
-						"characters": " and"
-					},
-					"BAAAAN0BAAAAAAAA3gEAAAAAAAAAAAAA3gEAAAAAAADfAQAAAAAAAAAAAADfAQAAAAAAAOABAAAAAAAAAAAAAOABAAAAAAAA4QEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA3QEAAAAAAADdAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					161,
-					1,
-					"insert",
-					{
-						"characters": " your"
-					},
-					"BQAAAOEBAAAAAAAA4gEAAAAAAAAAAAAA4gEAAAAAAADjAQAAAAAAAAAAAADjAQAAAAAAAOQBAAAAAAAAAAAAAOQBAAAAAAAA5QEAAAAAAAAAAAAA5QEAAAAAAADmAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA4QEAAAAAAADhAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					162,
-					1,
-					"insert",
-					{
-						"characters": " map"
-					},
-					"BAAAAOYBAAAAAAAA5wEAAAAAAAAAAAAA5wEAAAAAAADoAQAAAAAAAAAAAADoAQAAAAAAAOkBAAAAAAAAAAAAAOkBAAAAAAAA6gEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA5gEAAAAAAADmAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					163,
-					1,
-					"insert",
-					{
-						"characters": " is"
-					},
-					"AwAAAOoBAAAAAAAA6wEAAAAAAAAAAAAA6wEAAAAAAADsAQAAAAAAAAAAAADsAQAAAAAAAO0BAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA6gEAAAAAAADqAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					164,
-					1,
-					"insert",
-					{
-						"characters": " filled"
-					},
-					"BwAAAO0BAAAAAAAA7gEAAAAAAAAAAAAA7gEAAAAAAADvAQAAAAAAAAAAAADvAQAAAAAAAPABAAAAAAAAAAAAAPABAAAAAAAA8QEAAAAAAAAAAAAA8QEAAAAAAADyAQAAAAAAAAAAAADyAQAAAAAAAPMBAAAAAAAAAAAAAPMBAAAAAAAA9AEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA7QEAAAAAAADtAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					165,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAPQBAAAAAAAA9QEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9AEAAAAAAAD0AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					166,
-					1,
-					"insert",
-					{
-						"characters": "with"
-					},
-					"BAAAAPUBAAAAAAAA9gEAAAAAAAAAAAAA9gEAAAAAAAD3AQAAAAAAAAAAAAD3AQAAAAAAAPgBAAAAAAAAAAAAAPgBAAAAAAAA+QEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9QEAAAAAAAD1AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					167,
-					1,
-					"insert",
-					{
-						"characters": " displaced"
-					},
-					"CgAAAPkBAAAAAAAA+gEAAAAAAAAAAAAA+gEAAAAAAAD7AQAAAAAAAAAAAAD7AQAAAAAAAPwBAAAAAAAAAAAAAPwBAAAAAAAA/QEAAAAAAAAAAAAA/QEAAAAAAAD+AQAAAAAAAAAAAAD+AQAAAAAAAP8BAAAAAAAAAAAAAP8BAAAAAAAAAAIAAAAAAAAAAAAAAAIAAAAAAAABAgAAAAAAAAAAAAABAgAAAAAAAAICAAAAAAAAAAAAAAICAAAAAAAAAwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA+QEAAAAAAAD5AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					168,
-					1,
-					"insert",
-					{
-						"characters": " per"
-					},
-					"BAAAAAMCAAAAAAAABAIAAAAAAAAAAAAABAIAAAAAAAAFAgAAAAAAAAAAAAAFAgAAAAAAAAYCAAAAAAAAAAAAAAYCAAAAAAAABwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAwIAAAAAAAADAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					169,
-					1,
-					"insert",
-					{
-						"characters": "sons"
-					},
-					"BAAAAAcCAAAAAAAACAIAAAAAAAAAAAAACAIAAAAAAAAJAgAAAAAAAAAAAAAJAgAAAAAAAAoCAAAAAAAAAAAAAAoCAAAAAAAACwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABwIAAAAAAAAHAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					170,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAAsCAAAAAAAADAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAACwIAAAAAAAALAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					171,
-					1,
-					"left_delete",
-					null,
-					"AQAAAAsCAAAAAAAACwIAAAAAAAABAAAAIA",
-					"AQAAAAAAAAABAAAADAIAAAAAAAAMAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					172,
-					1,
-					"insert",
-					{
-						"characters": " of"
-					},
-					"AwAAAAsCAAAAAAAADAIAAAAAAAAAAAAADAIAAAAAAAANAgAAAAAAAAAAAAANAgAAAAAAAA4CAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAACwIAAAAAAAALAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					173,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAA4CAAAAAAAADwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAADgIAAAAAAAAOAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					174,
-					1,
-					"insert",
-					{
-						"characters": "undes"
-					},
-					"BQAAAA8CAAAAAAAAEAIAAAAAAAAAAAAAEAIAAAAAAAARAgAAAAAAAAAAAAARAgAAAAAAABICAAAAAAAAAAAAABICAAAAAAAAEwIAAAAAAAAAAAAAEwIAAAAAAAAUAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAADwIAAAAAAAAPAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					175,
-					1,
-					"insert",
-					{
-						"characters": "ir"
-					},
-					"AgAAABQCAAAAAAAAFQIAAAAAAAAAAAAAFQIAAAAAAAAWAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAFAIAAAAAAAAUAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					176,
-					7,
-					"left_delete",
-					null,
-					"BwAAABUCAAAAAAAAFQIAAAAAAAABAAAAchQCAAAAAAAAFAIAAAAAAAABAAAAaRMCAAAAAAAAEwIAAAAAAAABAAAAcxICAAAAAAAAEgIAAAAAAAABAAAAZRECAAAAAAAAEQIAAAAAAAABAAAAZBACAAAAAAAAEAIAAAAAAAABAAAAbg8CAAAAAAAADwIAAAAAAAABAAAAdQ",
-					"AQAAAAAAAAABAAAAFgIAAAAAAAAWAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					177,
-					1,
-					"insert",
-					{
-						"characters": "xenotype"
-					},
-					"CAAAAA8CAAAAAAAAEAIAAAAAAAAAAAAAEAIAAAAAAAARAgAAAAAAAAAAAAARAgAAAAAAABICAAAAAAAAAAAAABICAAAAAAAAEwIAAAAAAAAAAAAAEwIAAAAAAAAUAgAAAAAAAAAAAAAUAgAAAAAAABUCAAAAAAAAAAAAABUCAAAAAAAAFgIAAAAAAAAAAAAAFgIAAAAAAAAXAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAADwIAAAAAAAAPAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					178,
-					1,
-					"insert",
-					{
-						"characters": "s"
-					},
-					"AQAAABcCAAAAAAAAGAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAFwIAAAAAAAAXAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					179,
-					1,
-					"insert",
-					{
-						"characters": " not"
-					},
-					"BAAAABgCAAAAAAAAGQIAAAAAAAAAAAAAGQIAAAAAAAAaAgAAAAAAAAAAAAAaAgAAAAAAABsCAAAAAAAAAAAAABsCAAAAAAAAHAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAGAIAAAAAAAAYAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					180,
-					1,
-					"insert",
-					{
-						"characters": " desire"
-					},
-					"BwAAABwCAAAAAAAAHQIAAAAAAAAAAAAAHQIAAAAAAAAeAgAAAAAAAAAAAAAeAgAAAAAAAB8CAAAAAAAAAAAAAB8CAAAAAAAAIAIAAAAAAAAAAAAAIAIAAAAAAAAhAgAAAAAAAAAAAAAhAgAAAAAAACICAAAAAAAAAAAAACICAAAAAAAAIwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAHAIAAAAAAAAcAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					181,
-					1,
-					"insert",
-					{
-						"characters": "d"
-					},
-					"AQAAACMCAAAAAAAAJAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAIwIAAAAAAAAjAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					182,
-					1,
-					"insert",
-					{
-						"characters": " by"
-					},
-					"AwAAACQCAAAAAAAAJQIAAAAAAAAAAAAAJQIAAAAAAAAmAgAAAAAAAAAAAAAmAgAAAAAAACcCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAJAIAAAAAAAAkAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					183,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAACcCAAAAAAAAKAIAAAAAAAAAAAAAKAIAAAAAAAApAgAAAAAAAAAAAAApAgAAAAAAACoCAAAAAAAAAAAAACoCAAAAAAAAKwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAJwIAAAAAAAAnAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					184,
-					1,
-					"insert",
-					{
-						"characters": " Empire."
-					},
-					"CAAAACsCAAAAAAAALAIAAAAAAAAAAAAALAIAAAAAAAAtAgAAAAAAAAAAAAAtAgAAAAAAAC4CAAAAAAAAAAAAAC4CAAAAAAAALwIAAAAAAAAAAAAALwIAAAAAAAAwAgAAAAAAAAAAAAAwAgAAAAAAADECAAAAAAAAAAAAADECAAAAAAAAMgIAAAAAAAAAAAAAMgIAAAAAAAAzAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAKwIAAAAAAAArAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					185,
-					1,
-					"insert",
-					{
-						"characters": "\n\nIf"
-					},
-					"BAAAADMCAAAAAAAANAIAAAAAAAAAAAAANAIAAAAAAAA1AgAAAAAAAAAAAAA1AgAAAAAAADYCAAAAAAAAAAAAADYCAAAAAAAANwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAMwIAAAAAAAAzAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					186,
-					1,
-					"insert",
-					{
-						"characters": " you"
-					},
-					"BAAAADcCAAAAAAAAOAIAAAAAAAAAAAAAOAIAAAAAAAA5AgAAAAAAAAAAAAA5AgAAAAAAADoCAAAAAAAAAAAAADoCAAAAAAAAOwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAANwIAAAAAAAA3AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					187,
-					1,
-					"insert",
-					{
-						"characters": " wxan"
-					},
-					"BQAAADsCAAAAAAAAPAIAAAAAAAAAAAAAPAIAAAAAAAA9AgAAAAAAAAAAAAA9AgAAAAAAAD4CAAAAAAAAAAAAAD4CAAAAAAAAPwIAAAAAAAAAAAAAPwIAAAAAAABAAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAOwIAAAAAAAA7AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					188,
-					3,
-					"left_delete",
-					null,
-					"AwAAAD8CAAAAAAAAPwIAAAAAAAABAAAAbj4CAAAAAAAAPgIAAAAAAAABAAAAYT0CAAAAAAAAPQIAAAAAAAABAAAAeA",
-					"AQAAAAAAAAABAAAAQAIAAAAAAABAAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					189,
-					1,
-					"insert",
-					{
-						"characters": "ant"
-					},
-					"AwAAAD0CAAAAAAAAPgIAAAAAAAAAAAAAPgIAAAAAAAA/AgAAAAAAAAAAAAA/AgAAAAAAAEACAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAPQIAAAAAAAA9AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					190,
-					1,
-					"insert",
-					{
-						"characters": " to"
-					},
-					"AwAAAEACAAAAAAAAQQIAAAAAAAAAAAAAQQIAAAAAAABCAgAAAAAAAAAAAABCAgAAAAAAAEMCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAQAIAAAAAAABAAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					191,
-					1,
-					"insert",
-					{
-						"characters": " be"
-					},
-					"AwAAAEMCAAAAAAAARAIAAAAAAAAAAAAARAIAAAAAAABFAgAAAAAAAAAAAABFAgAAAAAAAEYCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAQwIAAAAAAABDAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					192,
-					1,
-					"insert",
-					{
-						"characters": " friends"
-					},
-					"CAAAAEYCAAAAAAAARwIAAAAAAAAAAAAARwIAAAAAAABIAgAAAAAAAAAAAABIAgAAAAAAAEkCAAAAAAAAAAAAAEkCAAAAAAAASgIAAAAAAAAAAAAASgIAAAAAAABLAgAAAAAAAAAAAABLAgAAAAAAAEwCAAAAAAAAAAAAAEwCAAAAAAAATQIAAAAAAAAAAAAATQIAAAAAAABOAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAARgIAAAAAAABGAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					193,
-					1,
-					"insert",
-					{
-						"characters": " witht"
-					},
-					"BgAAAE4CAAAAAAAATwIAAAAAAAAAAAAATwIAAAAAAABQAgAAAAAAAAAAAABQAgAAAAAAAFECAAAAAAAAAAAAAFECAAAAAAAAUgIAAAAAAAAAAAAAUgIAAAAAAABTAgAAAAAAAAAAAABTAgAAAAAAAFQCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAATgIAAAAAAABOAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					194,
-					1,
-					"insert",
-					{
-						"characters": " he"
-					},
-					"AwAAAFQCAAAAAAAAVQIAAAAAAAAAAAAAVQIAAAAAAABWAgAAAAAAAAAAAABWAgAAAAAAAFcCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAVAIAAAAAAABUAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					195,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAFcCAAAAAAAAWAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAVwIAAAAAAABXAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					196,
-					6,
-					"left_delete",
-					null,
-					"BgAAAFcCAAAAAAAAVwIAAAAAAAABAAAAIFYCAAAAAAAAVgIAAAAAAAABAAAAZVUCAAAAAAAAVQIAAAAAAAABAAAAaFQCAAAAAAAAVAIAAAAAAAABAAAAIFMCAAAAAAAAUwIAAAAAAAABAAAAdFICAAAAAAAAUgIAAAAAAAABAAAAaA",
-					"AQAAAAAAAAABAAAAWAIAAAAAAABYAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					197,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAFICAAAAAAAAUwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAUgIAAAAAAABSAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					198,
-					1,
-					"left_delete",
-					null,
-					"AQAAAFICAAAAAAAAUgIAAAAAAAABAAAAIA",
-					"AQAAAAAAAAABAAAAUwIAAAAAAABTAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					199,
-					1,
-					"insert",
-					{
-						"characters": "h"
-					},
-					"AQAAAFICAAAAAAAAUwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAUgIAAAAAAABSAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					200,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAAFMCAAAAAAAAVAIAAAAAAAAAAAAAVAIAAAAAAABVAgAAAAAAAAAAAABVAgAAAAAAAFYCAAAAAAAAAAAAAFYCAAAAAAAAVwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAUwIAAAAAAABTAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					201,
-					1,
-					"insert",
-					{
-						"characters": " Empire,"
-					},
-					"CAAAAFcCAAAAAAAAWAIAAAAAAAAAAAAAWAIAAAAAAABZAgAAAAAAAAAAAABZAgAAAAAAAFoCAAAAAAAAAAAAAFoCAAAAAAAAWwIAAAAAAAAAAAAAWwIAAAAAAABcAgAAAAAAAAAAAABcAgAAAAAAAF0CAAAAAAAAAAAAAF0CAAAAAAAAXgIAAAAAAAAAAAAAXgIAAAAAAABfAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAVwIAAAAAAABXAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					202,
-					1,
-					"insert",
-					{
-						"characters": "  just"
-					},
-					"BgAAAF8CAAAAAAAAYAIAAAAAAAAAAAAAYAIAAAAAAABhAgAAAAAAAAAAAABhAgAAAAAAAGICAAAAAAAAAAAAAGICAAAAAAAAYwIAAAAAAAAAAAAAYwIAAAAAAABkAgAAAAAAAAAAAABkAgAAAAAAAGUCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAXwIAAAAAAABfAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					203,
-					1,
-					"insert",
-					{
-						"characters": " obtain"
-					},
-					"BwAAAGUCAAAAAAAAZgIAAAAAAAAAAAAAZgIAAAAAAABnAgAAAAAAAAAAAABnAgAAAAAAAGgCAAAAAAAAAAAAAGgCAAAAAAAAaQIAAAAAAAAAAAAAaQIAAAAAAABqAgAAAAAAAAAAAABqAgAAAAAAAGsCAAAAAAAAAAAAAGsCAAAAAAAAbAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAZQIAAAAAAABlAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					204,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAAGwCAAAAAAAAbQIAAAAAAAAAAAAAbQIAAAAAAABuAgAAAAAAAAAAAABuAgAAAAAAAG8CAAAAAAAAAAAAAG8CAAAAAAAAcAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAbAIAAAAAAABsAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					205,
-					1,
-					"insert",
-					{
-						"characters": " title"
-					},
-					"BgAAAHACAAAAAAAAcQIAAAAAAAAAAAAAcQIAAAAAAAByAgAAAAAAAAAAAAByAgAAAAAAAHMCAAAAAAAAAAAAAHMCAAAAAAAAdAIAAAAAAAAAAAAAdAIAAAAAAAB1AgAAAAAAAAAAAAB1AgAAAAAAAHYCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAcAIAAAAAAABwAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					206,
-					1,
-					"insert",
-					{
-						"characters": " of"
-					},
-					"AwAAAHYCAAAAAAAAdwIAAAAAAAAAAAAAdwIAAAAAAAB4AgAAAAAAAAAAAAB4AgAAAAAAAHkCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAdgIAAAAAAAB2AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					207,
-					1,
-					"insert",
-					{
-						"characters": " Knif"
-					},
-					"BQAAAHkCAAAAAAAAegIAAAAAAAAAAAAAegIAAAAAAAB7AgAAAAAAAAAAAAB7AgAAAAAAAHwCAAAAAAAAAAAAAHwCAAAAAAAAfQIAAAAAAAAAAAAAfQIAAAAAAAB+AgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAeQIAAAAAAAB5AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					208,
-					1,
-					"insert",
-					{
-						"characters": "e"
-					},
-					"AQAAAH4CAAAAAAAAfwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfgIAAAAAAAB+AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					209,
-					2,
-					"left_delete",
-					null,
-					"AgAAAH4CAAAAAAAAfgIAAAAAAAABAAAAZX0CAAAAAAAAfQIAAAAAAAABAAAAZg",
-					"AQAAAAAAAAABAAAAfwIAAAAAAAB/AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					210,
-					1,
-					"insert",
-					{
-						"characters": "ght/"
-					},
-					"BAAAAH0CAAAAAAAAfgIAAAAAAAAAAAAAfgIAAAAAAAB/AgAAAAAAAAAAAAB/AgAAAAAAAIACAAAAAAAAAAAAAIACAAAAAAAAgQIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfQIAAAAAAAB9AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					211,
-					7,
-					"left_delete",
-					null,
-					"BwAAAIACAAAAAAAAgAIAAAAAAAABAAAAL38CAAAAAAAAfwIAAAAAAAABAAAAdH4CAAAAAAAAfgIAAAAAAAABAAAAaH0CAAAAAAAAfQIAAAAAAAABAAAAZ3wCAAAAAAAAfAIAAAAAAAABAAAAaXsCAAAAAAAAewIAAAAAAAABAAAAbnoCAAAAAAAAegIAAAAAAAABAAAASw",
-					"AQAAAAAAAAABAAAAgQIAAAAAAACBAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					212,
-					1,
-					"insert",
-					{
-						"characters": "Dame/"
-					},
-					"BQAAAHoCAAAAAAAAewIAAAAAAAAAAAAAewIAAAAAAAB8AgAAAAAAAAAAAAB8AgAAAAAAAH0CAAAAAAAAAAAAAH0CAAAAAAAAfgIAAAAAAAAAAAAAfgIAAAAAAAB/AgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAegIAAAAAAAB6AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					213,
-					1,
-					"insert",
-					{
-						"characters": "kn"
-					},
-					"AgAAAH8CAAAAAAAAgAIAAAAAAAAAAAAAgAIAAAAAAACBAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfwIAAAAAAAB/AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					214,
-					2,
-					"left_delete",
-					null,
-					"AgAAAIACAAAAAAAAgAIAAAAAAAABAAAAbn8CAAAAAAAAfwIAAAAAAAABAAAAaw",
-					"AQAAAAAAAAABAAAAgQIAAAAAAACBAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					215,
-					1,
-					"insert",
-					{
-						"characters": "Knight"
-					},
-					"BgAAAH8CAAAAAAAAgAIAAAAAAAAAAAAAgAIAAAAAAACBAgAAAAAAAAAAAACBAgAAAAAAAIICAAAAAAAAAAAAAIICAAAAAAAAgwIAAAAAAAAAAAAAgwIAAAAAAACEAgAAAAAAAAAAAACEAgAAAAAAAIUCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfwIAAAAAAAB/AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					216,
-					1,
-					"insert",
-					{
-						"characters": " or"
-					},
-					"AwAAAIUCAAAAAAAAhgIAAAAAAAAAAAAAhgIAAAAAAACHAgAAAAAAAAAAAACHAgAAAAAAAIgCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAhQIAAAAAAACFAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					217,
-					1,
-					"insert",
-					{
-						"characters": " superior"
-					},
-					"CQAAAIgCAAAAAAAAiQIAAAAAAAAAAAAAiQIAAAAAAACKAgAAAAAAAAAAAACKAgAAAAAAAIsCAAAAAAAAAAAAAIsCAAAAAAAAjAIAAAAAAAAAAAAAjAIAAAAAAACNAgAAAAAAAAAAAACNAgAAAAAAAI4CAAAAAAAAAAAAAI4CAAAAAAAAjwIAAAAAAAAAAAAAjwIAAAAAAACQAgAAAAAAAAAAAACQAgAAAAAAAJECAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAiAIAAAAAAACIAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					218,
-					1,
-					"insert",
-					{
-						"characters": " and"
-					},
-					"BAAAAJECAAAAAAAAkgIAAAAAAAAAAAAAkgIAAAAAAACTAgAAAAAAAAAAAACTAgAAAAAAAJQCAAAAAAAAAAAAAJQCAAAAAAAAlQIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAkQIAAAAAAACRAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					219,
-					1,
-					"insert",
-					{
-						"characters": " they'll"
-					},
-					"CAAAAJUCAAAAAAAAlgIAAAAAAAAAAAAAlgIAAAAAAACXAgAAAAAAAAAAAACXAgAAAAAAAJgCAAAAAAAAAAAAAJgCAAAAAAAAmQIAAAAAAAAAAAAAmQIAAAAAAACaAgAAAAAAAAAAAACaAgAAAAAAAJsCAAAAAAAAAAAAAJsCAAAAAAAAnAIAAAAAAAAAAAAAnAIAAAAAAACdAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAlQIAAAAAAACVAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					220,
-					1,
-					"insert",
-					{
-						"characters": " overlook"
-					},
-					"CQAAAJ0CAAAAAAAAngIAAAAAAAAAAAAAngIAAAAAAACfAgAAAAAAAAAAAACfAgAAAAAAAKACAAAAAAAAAAAAAKACAAAAAAAAoQIAAAAAAAAAAAAAoQIAAAAAAACiAgAAAAAAAAAAAACiAgAAAAAAAKMCAAAAAAAAAAAAAKMCAAAAAAAApAIAAAAAAAAAAAAApAIAAAAAAAClAgAAAAAAAAAAAAClAgAAAAAAAKYCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAnQIAAAAAAACdAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					221,
-					1,
-					"insert",
-					{
-						"characters": " your"
-					},
-					"BQAAAKYCAAAAAAAApwIAAAAAAAAAAAAApwIAAAAAAACoAgAAAAAAAAAAAACoAgAAAAAAAKkCAAAAAAAAAAAAAKkCAAAAAAAAqgIAAAAAAAAAAAAAqgIAAAAAAACrAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAApgIAAAAAAACmAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					222,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAKsCAAAAAAAArAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAqwIAAAAAAACrAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					223,
-					1,
-					"insert",
-					{
-						"characters": "inde"
-					},
-					"BAAAAKwCAAAAAAAArQIAAAAAAAAAAAAArQIAAAAAAACuAgAAAAAAAAAAAACuAgAAAAAAAK8CAAAAAAAAAAAAAK8CAAAAAAAAsAIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAArAIAAAAAAACsAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					224,
-					1,
-					"left_delete",
-					null,
-					"AQAAAK8CAAAAAAAArwIAAAAAAAABAAAAZQ",
-					"AQAAAAAAAAABAAAAsAIAAAAAAACwAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					225,
-					1,
-					"insert",
-					{
-						"characters": "iscretio"
-					},
-					"CAAAAK8CAAAAAAAAsAIAAAAAAAAAAAAAsAIAAAAAAACxAgAAAAAAAAAAAACxAgAAAAAAALICAAAAAAAAAAAAALICAAAAAAAAswIAAAAAAAAAAAAAswIAAAAAAAC0AgAAAAAAAAAAAAC0AgAAAAAAALUCAAAAAAAAAAAAALUCAAAAAAAAtgIAAAAAAAAAAAAAtgIAAAAAAAC3AgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAArwIAAAAAAACvAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					226,
-					1,
-					"insert",
-					{
-						"characters": "ns."
-					},
-					"AwAAALcCAAAAAAAAuAIAAAAAAAAAAAAAuAIAAAAAAAC5AgAAAAAAAAAAAAC5AgAAAAAAALoCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAtwIAAAAAAAC3AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					227,
-					1,
-					"insert",
-					{
-						"characters": "\n\nOr,"
-					},
-					"BQAAALoCAAAAAAAAuwIAAAAAAAAAAAAAuwIAAAAAAAC8AgAAAAAAAAAAAAC8AgAAAAAAAL0CAAAAAAAAAAAAAL0CAAAAAAAAvgIAAAAAAAAAAAAAvgIAAAAAAAC/AgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAugIAAAAAAAC6AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					228,
-					1,
-					"insert",
-					{
-						"characters": " you"
-					},
-					"BAAAAL8CAAAAAAAAwAIAAAAAAAAAAAAAwAIAAAAAAADBAgAAAAAAAAAAAADBAgAAAAAAAMICAAAAAAAAAAAAAMICAAAAAAAAwwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAvwIAAAAAAAC/AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					229,
-					1,
-					"insert",
-					{
-						"characters": " can"
-					},
-					"BAAAAMMCAAAAAAAAxAIAAAAAAAAAAAAAxAIAAAAAAADFAgAAAAAAAAAAAADFAgAAAAAAAMYCAAAAAAAAAAAAAMYCAAAAAAAAxwIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAwwIAAAAAAADDAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					230,
-					1,
-					"insert",
-					{
-						"characters": " bank"
-					},
-					"BQAAAMcCAAAAAAAAyAIAAAAAAAAAAAAAyAIAAAAAAADJAgAAAAAAAAAAAADJAgAAAAAAAMoCAAAAAAAAAAAAAMoCAAAAAAAAywIAAAAAAAAAAAAAywIAAAAAAADMAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAxwIAAAAAAADHAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					231,
-					1,
-					"insert",
-					{
-						"characters": " on"
-					},
-					"AwAAAMwCAAAAAAAAzQIAAAAAAAAAAAAAzQIAAAAAAADOAgAAAAAAAAAAAADOAgAAAAAAAM8CAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAzAIAAAAAAADMAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					232,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAM8CAAAAAAAA0AIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAzwIAAAAAAADPAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					233,
-					1,
-					"insert",
-					{
-						"characters": "making"
-					},
-					"BgAAANACAAAAAAAA0QIAAAAAAAAAAAAA0QIAAAAAAADSAgAAAAAAAAAAAADSAgAAAAAAANMCAAAAAAAAAAAAANMCAAAAAAAA1AIAAAAAAAAAAAAA1AIAAAAAAADVAgAAAAAAAAAAAADVAgAAAAAAANYCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA0AIAAAAAAADQAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					234,
-					1,
-					"insert",
-					{
-						"characters": " friends"
-					},
-					"CAAAANYCAAAAAAAA1wIAAAAAAAAAAAAA1wIAAAAAAADYAgAAAAAAAAAAAADYAgAAAAAAANkCAAAAAAAAAAAAANkCAAAAAAAA2gIAAAAAAAAAAAAA2gIAAAAAAADbAgAAAAAAAAAAAADbAgAAAAAAANwCAAAAAAAAAAAAANwCAAAAAAAA3QIAAAAAAAAAAAAA3QIAAAAAAADeAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA1gIAAAAAAADWAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					235,
-					1,
-					"insert",
-					{
-						"characters": " with"
-					},
-					"BQAAAN4CAAAAAAAA3wIAAAAAAAAAAAAA3wIAAAAAAADgAgAAAAAAAAAAAADgAgAAAAAAAOECAAAAAAAAAAAAAOECAAAAAAAA4gIAAAAAAAAAAAAA4gIAAAAAAADjAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA3gIAAAAAAADeAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					236,
-					1,
-					"insert",
-					{
-						"characters": " those"
-					},
-					"BgAAAOMCAAAAAAAA5AIAAAAAAAAAAAAA5AIAAAAAAADlAgAAAAAAAAAAAADlAgAAAAAAAOYCAAAAAAAAAAAAAOYCAAAAAAAA5wIAAAAAAAAAAAAA5wIAAAAAAADoAgAAAAAAAAAAAADoAgAAAAAAAOkCAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA4wIAAAAAAADjAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					237,
-					1,
-					"insert",
-					{
-						"characters": " who"
-					},
-					"BAAAAOkCAAAAAAAA6gIAAAAAAAAAAAAA6gIAAAAAAADrAgAAAAAAAAAAAADrAgAAAAAAAOwCAAAAAAAAAAAAAOwCAAAAAAAA7QIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA6QIAAAAAAADpAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					238,
-					1,
-					"insert",
-					{
-						"characters": " resist"
-					},
-					"BwAAAO0CAAAAAAAA7gIAAAAAAAAAAAAA7gIAAAAAAADvAgAAAAAAAAAAAADvAgAAAAAAAPACAAAAAAAAAAAAAPACAAAAAAAA8QIAAAAAAAAAAAAA8QIAAAAAAADyAgAAAAAAAAAAAADyAgAAAAAAAPMCAAAAAAAAAAAAAPMCAAAAAAAA9AIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA7QIAAAAAAADtAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					239,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAAPQCAAAAAAAA9QIAAAAAAAAAAAAA9QIAAAAAAAD2AgAAAAAAAAAAAAD2AgAAAAAAAPcCAAAAAAAAAAAAAPcCAAAAAAAA+AIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9AIAAAAAAAD0AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					240,
-					1,
-					"insert",
-					{
-						"characters": " Empire"
-					},
-					"BwAAAPgCAAAAAAAA+QIAAAAAAAAAAAAA+QIAAAAAAAD6AgAAAAAAAAAAAAD6AgAAAAAAAPsCAAAAAAAAAAAAAPsCAAAAAAAA/AIAAAAAAAAAAAAA/AIAAAAAAAD9AgAAAAAAAAAAAAD9AgAAAAAAAP4CAAAAAAAAAAAAAP4CAAAAAAAA/wIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA+AIAAAAAAAD4AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					241,
-					1,
-					"insert",
-					{
-						"characters": ","
-					},
-					"AQAAAP8CAAAAAAAAAAMAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA/wIAAAAAAAD/AgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					242,
-					1,
-					"insert",
-					{
-						"characters": " if"
-					},
-					"AwAAAAADAAAAAAAAAQMAAAAAAAAAAAAAAQMAAAAAAAACAwAAAAAAAAAAAAACAwAAAAAAAAMDAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAAMAAAAAAAAAAwAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					243,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAAAMDAAAAAAAABAMAAAAAAAAAAAAABAMAAAAAAAAFAwAAAAAAAAAAAAAFAwAAAAAAAAYDAAAAAAAAAAAAAAYDAAAAAAAABwMAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAwMAAAAAAAADAwAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					244,
-					1,
-					"insert",
-					{
-						"characters": " rumors"
-					},
-					"BwAAAAcDAAAAAAAACAMAAAAAAAAAAAAACAMAAAAAAAAJAwAAAAAAAAAAAAAJAwAAAAAAAAoDAAAAAAAAAAAAAAoDAAAAAAAACwMAAAAAAAAAAAAACwMAAAAAAAAMAwAAAAAAAAAAAAAMAwAAAAAAAA0DAAAAAAAAAAAAAA0DAAAAAAAADgMAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABwMAAAAAAAAHAwAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					245,
-					1,
-					"insert",
-					{
-						"characters": " are"
-					},
-					"BAAAAA4DAAAAAAAADwMAAAAAAAAAAAAADwMAAAAAAAAQAwAAAAAAAAAAAAAQAwAAAAAAABEDAAAAAAAAAAAAABEDAAAAAAAAEgMAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAADgMAAAAAAAAOAwAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					246,
-					1,
-					"insert",
-					{
-						"characters": " true."
-					},
-					"BgAAABIDAAAAAAAAEwMAAAAAAAAAAAAAEwMAAAAAAAAUAwAAAAAAAAAAAAAUAwAAAAAAABUDAAAAAAAAAAAAABUDAAAAAAAAFgMAAAAAAAAAAAAAFgMAAAAAAAAXAwAAAAAAAAAAAAAXAwAAAAAAABgDAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAEgMAAAAAAAASAwAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		},
-		{
-			"contents": "\nUnveiling Vexine Dark Story: A Sinister Twist for Vexi Enthusiasts\n\nEmbark on a perilous odyssey with Vexine Dark Story, where your Vexi playthrough takes a harrowing turn, unraveling a clandestine plot that leaves no pawn unscathed. Brace yourself for the following treacherous elements:\n\nThe Vexi's Price: Beware the covetous eyes of the Empire, for your Vexi pawns are much more valuable than before. Vexilour garments, fetch exorbitant prices in the Empire's nefarious black market and are quite popular among the highest ranked.\n\nEmpire's Watchful Gaze: The Empire's intolerance for diversity intensifies. With each non-humanoid pawn dwelling within your colony, including Wasters, Pigs, Yttakin, Impids, and of course, Vexi, their disdain grows stronger.\n\nRefugees Amidst Chaos: Amidst the chaos, a multitude of refugees descend upon your doorstep seeking solace. But beware, for your sheltered haven could attract the attention of the Empire's agents. Will you provide sanctuary or become entangled in a deadly game of espionage?\n\nTo evade the Empire's wrath and secure a tenuous truce, attain the esteemed titles of Dame or Knight, or dare to transcend their expectations. Yet, whispers abound of a clandestine resistance, those who defy the Empire's iron fist. Forge alliances with these enigmatic rebels, for their secrets may hold the key to freedom.\n\nPrepare yourself for the twisted underbelly of Vexine Dark Story, where every choice reverberates with dire consequences. Will you succumb to the Empire's vile machinations or unearth the truth and lead your Vexi brethren towards liberation? The saga awaits your decisive hand.",
-			"settings":
-			{
-				"buffer_size": 1641,
-				"line_ending": "Unix"
-			},
-			"undo_stack":
-			[
-				[
-					3,
-					1,
-					"paste",
-					{
-						"event":
-						{
-							"modifier_keys":
-							{
-							},
-							"x": 716.587053571,
-							"y": 228.647321429
-						}
-					},
-					"AQAAAAAAAAAAAAAA0QcAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					8,
-					19,
-					"left_delete",
-					null,
-					"EwAAAI4BAAAAAAAAjgEAAAAAAAABAAAALo0BAAAAAAAAjQEAAAAAAAABAAAAZYwBAAAAAAAAjAEAAAAAAAABAAAAcosBAAAAAAAAiwEAAAAAAAABAAAAaYoBAAAAAAAAigEAAAAAAAABAAAAc4kBAAAAAAAAiQEAAAAAAAABAAAAZYgBAAAAAAAAiAEAAAAAAAABAAAAZIcBAAAAAAAAhwEAAAAAAAABAAAAIIYBAAAAAAAAhgEAAAAAAAABAAAAZoUBAAAAAAAAhQEAAAAAAAABAAAAb4QBAAAAAAAAhAEAAAAAAAABAAAAIIMBAAAAAAAAgwEAAAAAAAABAAAAc4IBAAAAAAAAggEAAAAAAAABAAAAdIEBAAAAAAAAgQEAAAAAAAABAAAAY4ABAAAAAAAAgAEAAAAAAAABAAAAZX8BAAAAAAAAfwEAAAAAAAABAAAAan4BAAAAAAAAfgEAAAAAAAABAAAAYn0BAAAAAAAAfQEAAAAAAAABAAAAb3wBAAAAAAAAfAEAAAAAAAABAAAAIA",
-					"AQAAAAAAAAABAAAAjwEAAAAAAACPAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					9,
-					6,
-					"left_delete",
-					null,
-					"BgAAAHsBAAAAAAAAewEAAAAAAAABAAAAZXoBAAAAAAAAegEAAAAAAAABAAAAbXkBAAAAAAAAeQEAAAAAAAABAAAAb3gBAAAAAAAAeAEAAAAAAAABAAAAY3cBAAAAAAAAdwEAAAAAAAABAAAAZXYBAAAAAAAAdgEAAAAAAAABAAAAYg",
-					"AQAAAAAAAAABAAAAfAEAAAAAAAB8AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					10,
-					1,
-					"insert",
-					{
-						"characters": "are"
-					},
-					"AwAAAHYBAAAAAAAAdwEAAAAAAAAAAAAAdwEAAAAAAAB4AQAAAAAAAAAAAAB4AQAAAAAAAHkBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAdgEAAAAAAAB2AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					11,
-					1,
-					"insert",
-					{
-						"characters": " valu"
-					},
-					"BQAAAHkBAAAAAAAAegEAAAAAAAAAAAAAegEAAAAAAAB7AQAAAAAAAAAAAAB7AQAAAAAAAHwBAAAAAAAAAAAAAHwBAAAAAAAAfQEAAAAAAAAAAAAAfQEAAAAAAAB+AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAeQEAAAAAAAB5AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					12,
-					1,
-					"insert",
-					{
-						"characters": "able."
-					},
-					"BQAAAH4BAAAAAAAAfwEAAAAAAAAAAAAAfwEAAAAAAACAAQAAAAAAAAAAAACAAQAAAAAAAIEBAAAAAAAAAAAAAIEBAAAAAAAAggEAAAAAAAAAAAAAggEAAAAAAACDAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfgEAAAAAAAB+AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					18,
-					19,
-					"left_delete",
-					null,
-					"EwAAAFYEAAAAAAAAVgQAAAAAAAABAAAALlUEAAAAAAAAVQQAAAAAAAABAAAAblQEAAAAAAAAVAQAAAAAAAABAAAAb1MEAAAAAAAAUwQAAAAAAAABAAAAaVIEAAAAAAAAUgQAAAAAAAABAAAAbFEEAAAAAAAAUQQAAAAAAAABAAAAbFAEAAAAAAAAUAQAAAAAAAABAAAAZU8EAAAAAAAATwQAAAAAAAABAAAAYk4EAAAAAAAATgQAAAAAAAABAAAAZU0EAAAAAAAATQQAAAAAAAABAAAAckwEAAAAAAAATAQAAAAAAAABAAAAIEsEAAAAAAAASwQAAAAAAAABAAAAZkoEAAAAAAAASgQAAAAAAAABAAAAb0kEAAAAAAAASQQAAAAAAAABAAAAIEgEAAAAAAAASAQAAAAAAAABAAAAc0cEAAAAAAAARwQAAAAAAAABAAAAZUYEAAAAAAAARgQAAAAAAAABAAAAbUUEAAAAAAAARQQAAAAAAAABAAAAYUQEAAAAAAAARAQAAAAAAAABAAAAbA",
-					"AQAAAAAAAAABAAAAVwQAAAAAAABXBAAAAAAAAAAAAAAAmIBA"
-				],
-				[
-					19,
-					24,
-					"left_delete",
-					null,
-					"GAAAAEMEAAAAAAAAQwQAAAAAAAABAAAAZkIEAAAAAAAAQgQAAAAAAAABAAAAIEEEAAAAAAAAQQQAAAAAAAABAAAAZUAEAAAAAAAAQAQAAAAAAAABAAAAaD8EAAAAAAAAPwQAAAAAAAABAAAAdD4EAAAAAAAAPgQAAAAAAAABAAAAID0EAAAAAAAAPQQAAAAAAAABAAAAZTwEAAAAAAAAPAQAAAAAAAABAAAAdDsEAAAAAAAAOwQAAAAAAAABAAAAaToEAAAAAAAAOgQAAAAAAAABAAAAbjkEAAAAAAAAOQQAAAAAAAABAAAAZzgEAAAAAAAAOAQAAAAAAAABAAAAaTcEAAAAAAAANwQAAAAAAAABAAAAIDYEAAAAAAAANgQAAAAAAAABAAAAeTUEAAAAAAAANQQAAAAAAAABAAAAYTQEAAAAAAAANAQAAAAAAAABAAAAbTMEAAAAAAAAMwQAAAAAAAABAAAAIDIEAAAAAAAAMgQAAAAAAAABAAAAZTEEAAAAAAAAMQQAAAAAAAABAAAAYzAEAAAAAAAAMAQAAAAAAAABAAAAbi8EAAAAAAAALwQAAAAAAAABAAAAYS4EAAAAAAAALgQAAAAAAAABAAAAbC0EAAAAAAAALQQAAAAAAAABAAAAYSwEAAAAAAAALAQAAAAAAAABAAAAYg",
-					"AQAAAAAAAAABAAAARAQAAAAAAABEBAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					20,
-					24,
-					"left_delete",
-					null,
-					"GAAAACsEAAAAAAAAKwQAAAAAAAABAAAAICoEAAAAAAAAKgQAAAAAAAABAAAAZSkEAAAAAAAAKQQAAAAAAAABAAAAdCgEAAAAAAAAKAQAAAAAAAABAAAAYScEAAAAAAAAJwQAAAAAAAABAAAAYyYEAAAAAAAAJgQAAAAAAAABAAAAaSUEAAAAAAAAJQQAAAAAAAABAAAAbCQEAAAAAAAAJAQAAAAAAAABAAAAZSMEAAAAAAAAIwQAAAAAAAABAAAAZCIEAAAAAAAAIgQAAAAAAAABAAAAICEEAAAAAAAAIQQAAAAAAAABAAAAZSAEAAAAAAAAIAQAAAAAAAABAAAAaB8EAAAAAAAAHwQAAAAAAAABAAAAdB4EAAAAAAAAHgQAAAAAAAABAAAAIB0EAAAAAAAAHQQAAAAAAAABAAAAbhwEAAAAAAAAHAQAAAAAAAABAAAAaRsEAAAAAAAAGwQAAAAAAAABAAAAYRoEAAAAAAAAGgQAAAAAAAABAAAAdBkEAAAAAAAAGQQAAAAAAAABAAAAbhgEAAAAAAAAGAQAAAAAAAABAAAAaRcEAAAAAAAAFwQAAAAAAAABAAAAYRYEAAAAAAAAFgQAAAAAAAABAAAAbRUEAAAAAAAAFQQAAAAAAAABAAAAIBQEAAAAAAAAFAQAAAAAAAABAAAAbw",
-					"AQAAAAAAAAABAAAALAQAAAAAAAAsBAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					21,
-					12,
-					"left_delete",
-					null,
-					"DAAAABMEAAAAAAAAEwQAAAAAAAABAAAAdBIEAAAAAAAAEgQAAAAAAAABAAAAIBEEAAAAAAAAEQQAAAAAAAABAAAAZRAEAAAAAAAAEAQAAAAAAAABAAAAbA8EAAAAAAAADwQAAAAAAAABAAAAZw4EAAAAAAAADgQAAAAAAAABAAAAZw0EAAAAAAAADQQAAAAAAAABAAAAdQwEAAAAAAAADAQAAAAAAAABAAAAcgsEAAAAAAAACwQAAAAAAAABAAAAdAoEAAAAAAAACgQAAAAAAAABAAAAcwkEAAAAAAAACQQAAAAAAAABAAAAIAgEAAAAAAAACAQAAAAAAAABAAAAcg",
-					"AQAAAAAAAAABAAAAFAQAAAAAAAAUBAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					22,
-					4,
-					"left_delete",
-					null,
-					"BAAAAAcEAAAAAAAABwQAAAAAAAABAAAAdQYEAAAAAAAABgQAAAAAAAABAAAAbwUEAAAAAAAABQQAAAAAAAABAAAAWQQEAAAAAAAABAQAAAAAAAABAAAAIA",
-					"AQAAAAAAAAABAAAACAQAAAAAAAAIBAAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					25,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AQAAAAQEAAAAAAAABQQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABAQAAAAAAAAEBAAAAAAAAAAAAAAAPJlA"
-				],
-				[
-					29,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AQAAAAQCAAAAAAAABQIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABAIAAAAAAAAEAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					32,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AQAAABoFAAAAAAAAGwUAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAGgUAAAAAAAAaBQAAAAAAAAAAAAAAAAAA"
-				],
-				[
-					39,
-					11,
-					"left_delete",
-					null,
-					"CwAAAIIBAAAAAAAAggEAAAAAAAABAAAALoEBAAAAAAAAgQEAAAAAAAABAAAAZYABAAAAAAAAgAEAAAAAAAABAAAAbH8BAAAAAAAAfwEAAAAAAAABAAAAYn4BAAAAAAAAfgEAAAAAAAABAAAAYX0BAAAAAAAAfQEAAAAAAAABAAAAdXwBAAAAAAAAfAEAAAAAAAABAAAAbHsBAAAAAAAAewEAAAAAAAABAAAAYXoBAAAAAAAAegEAAAAAAAABAAAAdnkBAAAAAAAAeQEAAAAAAAABAAAAIHgBAAAAAAAAeAEAAAAAAAABAAAAZQ",
-					"AQAAAAAAAAABAAAAgwEAAAAAAACDAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					40,
-					7,
-					"left_delete",
-					null,
-					"BwAAAHcBAAAAAAAAdwEAAAAAAAABAAAAcnYBAAAAAAAAdgEAAAAAAAABAAAAYXUBAAAAAAAAdQEAAAAAAAABAAAAIHQBAAAAAAAAdAEAAAAAAAABAAAAZXMBAAAAAAAAcwEAAAAAAAABAAAAdnIBAAAAAAAAcgEAAAAAAAABAAAAYXEBAAAAAAAAcQEAAAAAAAABAAAAaA",
-					"AQAAAAAAAAABAAAAeAEAAAAAAAB4AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					41,
-					1,
-					"insert",
-					{
-						"characters": "m"
-					},
-					"AQAAAHEBAAAAAAAAcgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAcQEAAAAAAABxAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					42,
-					2,
-					"left_delete",
-					null,
-					"AgAAAHEBAAAAAAAAcQEAAAAAAAABAAAAbXABAAAAAAAAcAEAAAAAAAABAAAAIA",
-					"AQAAAAAAAAABAAAAcgEAAAAAAAByAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					43,
-					1,
-					"insert",
-					{
-						"characters": " are"
-					},
-					"BAAAAHABAAAAAAAAcQEAAAAAAAAAAAAAcQEAAAAAAAByAQAAAAAAAAAAAAByAQAAAAAAAHMBAAAAAAAAAAAAAHMBAAAAAAAAdAEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAcAEAAAAAAABwAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					44,
-					1,
-					"insert",
-					{
-						"characters": " much"
-					},
-					"BQAAAHQBAAAAAAAAdQEAAAAAAAAAAAAAdQEAAAAAAAB2AQAAAAAAAAAAAAB2AQAAAAAAAHcBAAAAAAAAAAAAAHcBAAAAAAAAeAEAAAAAAAAAAAAAeAEAAAAAAAB5AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAdAEAAAAAAAB0AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					45,
-					1,
-					"insert",
-					{
-						"characters": " more"
-					},
-					"BQAAAHkBAAAAAAAAegEAAAAAAAAAAAAAegEAAAAAAAB7AQAAAAAAAAAAAAB7AQAAAAAAAHwBAAAAAAAAAAAAAHwBAAAAAAAAfQEAAAAAAAAAAAAAfQEAAAAAAAB+AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAeQEAAAAAAAB5AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					46,
-					1,
-					"insert",
-					{
-						"characters": " vlu"
-					},
-					"BAAAAH4BAAAAAAAAfwEAAAAAAAAAAAAAfwEAAAAAAACAAQAAAAAAAAAAAACAAQAAAAAAAIEBAAAAAAAAAAAAAIEBAAAAAAAAggEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAfgEAAAAAAAB+AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					47,
-					2,
-					"left_delete",
-					null,
-					"AgAAAIEBAAAAAAAAgQEAAAAAAAABAAAAdYABAAAAAAAAgAEAAAAAAAABAAAAbA",
-					"AQAAAAAAAAABAAAAggEAAAAAAACCAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					48,
-					1,
-					"insert",
-					{
-						"characters": "aluable"
-					},
-					"BwAAAIABAAAAAAAAgQEAAAAAAAAAAAAAgQEAAAAAAACCAQAAAAAAAAAAAACCAQAAAAAAAIMBAAAAAAAAAAAAAIMBAAAAAAAAhAEAAAAAAAAAAAAAhAEAAAAAAACFAQAAAAAAAAAAAACFAQAAAAAAAIYBAAAAAAAAAAAAAIYBAAAAAAAAhwEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAgAEAAAAAAACAAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					49,
-					1,
-					"insert",
-					{
-						"characters": " than"
-					},
-					"BQAAAIcBAAAAAAAAiAEAAAAAAAAAAAAAiAEAAAAAAACJAQAAAAAAAAAAAACJAQAAAAAAAIoBAAAAAAAAAAAAAIoBAAAAAAAAiwEAAAAAAAAAAAAAiwEAAAAAAACMAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAhwEAAAAAAACHAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					50,
-					1,
-					"insert",
-					{
-						"characters": " before."
-					},
-					"CAAAAIwBAAAAAAAAjQEAAAAAAAAAAAAAjQEAAAAAAACOAQAAAAAAAAAAAACOAQAAAAAAAI8BAAAAAAAAAAAAAI8BAAAAAAAAkAEAAAAAAAAAAAAAkAEAAAAAAACRAQAAAAAAAAAAAACRAQAAAAAAAJIBAAAAAAAAAAAAAJIBAAAAAAAAkwEAAAAAAAAAAAAAkwEAAAAAAACUAQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAjAEAAAAAAACMAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					59,
-					2,
-					"left_delete",
-					null,
-					"AgAAAJUBAAAAAAAAlQEAAAAAAAAsAAAAVGhlaXIgdW5pcXVlIHNraW4sIGZhc2hpb25lZCBpbnRvIGV4cXVpc2l0ZSCUAQAAAAAAAJQBAAAAAAAAAQAAACA",
-					"AQAAAAAAAAABAAAAwQEAAAAAAACVAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					60,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAJQBAAAAAAAAlQEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAlAEAAAAAAACUAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					63,
-					1,
-					"left_delete",
-					null,
-					"AQAAAOgBAAAAAAAA6AEAAAAAAAABAAAALg",
-					"AQAAAAAAAAABAAAA6QEAAAAAAADpAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					64,
-					1,
-					"insert",
-					{
-						"characters": " and"
-					},
-					"BAAAAOgBAAAAAAAA6QEAAAAAAAAAAAAA6QEAAAAAAADqAQAAAAAAAAAAAADqAQAAAAAAAOsBAAAAAAAAAAAAAOsBAAAAAAAA7AEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA6AEAAAAAAADoAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					65,
-					1,
-					"insert",
-					{
-						"characters": " somehow"
-					},
-					"CAAAAOwBAAAAAAAA7QEAAAAAAAAAAAAA7QEAAAAAAADuAQAAAAAAAAAAAADuAQAAAAAAAO8BAAAAAAAAAAAAAO8BAAAAAAAA8AEAAAAAAAAAAAAA8AEAAAAAAADxAQAAAAAAAAAAAADxAQAAAAAAAPIBAAAAAAAAAAAAAPIBAAAAAAAA8wEAAAAAAAAAAAAA8wEAAAAAAAD0AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA7AEAAAAAAADsAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					66,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAPQBAAAAAAAA9QEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9AEAAAAAAAD0AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					68,
-					3,
-					"left_delete",
-					null,
-					"AwAAAK8BAAAAAAAArwEAAAAAAAABAAAAIK4BAAAAAAAArgEAAAAAAAABAAAAc60BAAAAAAAArQEAAAAAAAABAAAAZQ",
-					"AQAAAAAAAAABAAAAsAEAAAAAAACwAQAAAAAAAAAAAAAA3JdA"
-				],
-				[
-					69,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAK0BAAAAAAAArgEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAArQEAAAAAAACtAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					72,
-					1,
-					"insert",
-					{
-						"characters": "are"
-					},
-					"AwAAAPMBAAAAAAAA9AEAAAAAAAAAAAAA9AEAAAAAAAD1AQAAAAAAAAAAAAD1AQAAAAAAAPYBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA8wEAAAAAAADzAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					73,
-					1,
-					"insert",
-					{
-						"characters": " a"
-					},
-					"AgAAAPYBAAAAAAAA9wEAAAAAAAAAAAAA9wEAAAAAAAD4AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9gEAAAAAAAD2AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					74,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAPgBAAAAAAAA+QEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA+AEAAAAAAAD4AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					75,
-					7,
-					"left_delete",
-					null,
-					"BwAAAPgBAAAAAAAA+AEAAAAAAAABAAAAIPcBAAAAAAAA9wEAAAAAAAABAAAAYfYBAAAAAAAA9gEAAAAAAAABAAAAIPUBAAAAAAAA9QEAAAAAAAABAAAAZfQBAAAAAAAA9AEAAAAAAAABAAAAcvMBAAAAAAAA8wEAAAAAAAABAAAAYfIBAAAAAAAA8gEAAAAAAAABAAAAIA",
-					"AQAAAAAAAAABAAAA+QEAAAAAAAD5AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					76,
-					1,
-					"left_delete",
-					null,
-					"AQAAAPEBAAAAAAAA8QEAAAAAAAABAAAAdw",
-					"AQAAAAAAAAABAAAA8gEAAAAAAADyAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					77,
-					1,
-					"left_delete",
-					null,
-					"AQAAAPABAAAAAAAA8AEAAAAAAAABAAAAbw",
-					"AQAAAAAAAAABAAAA8QEAAAAAAADxAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					78,
-					5,
-					"left_delete",
-					null,
-					"BQAAAO8BAAAAAAAA7wEAAAAAAAABAAAAaO4BAAAAAAAA7gEAAAAAAAABAAAAZe0BAAAAAAAA7QEAAAAAAAABAAAAbewBAAAAAAAA7AEAAAAAAAABAAAAb+sBAAAAAAAA6wEAAAAAAAABAAAAcw",
-					"AQAAAAAAAAABAAAA8AEAAAAAAADwAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					79,
-					1,
-					"insert",
-					{
-						"characters": "are"
-					},
-					"AwAAAOsBAAAAAAAA7AEAAAAAAAAAAAAA7AEAAAAAAADtAQAAAAAAAAAAAADtAQAAAAAAAO4BAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA6wEAAAAAAADrAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					80,
-					1,
-					"insert",
-					{
-						"characters": " quite"
-					},
-					"BgAAAO4BAAAAAAAA7wEAAAAAAAAAAAAA7wEAAAAAAADwAQAAAAAAAAAAAADwAQAAAAAAAPEBAAAAAAAAAAAAAPEBAAAAAAAA8gEAAAAAAAAAAAAA8gEAAAAAAADzAQAAAAAAAAAAAADzAQAAAAAAAPQBAAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA7gEAAAAAAADuAQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					81,
-					1,
-					"insert",
-					{
-						"characters": " popular"
-					},
-					"CAAAAPQBAAAAAAAA9QEAAAAAAAAAAAAA9QEAAAAAAAD2AQAAAAAAAAAAAAD2AQAAAAAAAPcBAAAAAAAAAAAAAPcBAAAAAAAA+AEAAAAAAAAAAAAA+AEAAAAAAAD5AQAAAAAAAAAAAAD5AQAAAAAAAPoBAAAAAAAAAAAAAPoBAAAAAAAA+wEAAAAAAAAAAAAA+wEAAAAAAAD8AQAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA9AEAAAAAAAD0AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					82,
-					1,
-					"insert",
-					{
-						"characters": " "
-					},
-					"AQAAAPwBAAAAAAAA/QEAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA/AEAAAAAAAD8AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					83,
-					1,
-					"insert",
-					{
-						"characters": "among"
-					},
-					"BQAAAP0BAAAAAAAA/gEAAAAAAAAAAAAA/gEAAAAAAAD/AQAAAAAAAAAAAAD/AQAAAAAAAAACAAAAAAAAAAAAAAACAAAAAAAAAQIAAAAAAAAAAAAAAQIAAAAAAAACAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAA/QEAAAAAAAD9AQAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					84,
-					1,
-					"insert",
-					{
-						"characters": " the"
-					},
-					"BAAAAAICAAAAAAAAAwIAAAAAAAAAAAAAAwIAAAAAAAAEAgAAAAAAAAAAAAAEAgAAAAAAAAUCAAAAAAAAAAAAAAUCAAAAAAAABgIAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAAAgIAAAAAAAACAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					85,
-					1,
-					"insert",
-					{
-						"characters": " highest"
-					},
-					"CAAAAAYCAAAAAAAABwIAAAAAAAAAAAAABwIAAAAAAAAIAgAAAAAAAAAAAAAIAgAAAAAAAAkCAAAAAAAAAAAAAAkCAAAAAAAACgIAAAAAAAAAAAAACgIAAAAAAAALAgAAAAAAAAAAAAALAgAAAAAAAAwCAAAAAAAAAAAAAAwCAAAAAAAADQIAAAAAAAAAAAAADQIAAAAAAAAOAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAABgIAAAAAAAAGAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					86,
-					1,
-					"insert",
-					{
-						"characters": " ranked."
-					},
-					"CAAAAA4CAAAAAAAADwIAAAAAAAAAAAAADwIAAAAAAAAQAgAAAAAAAAAAAAAQAgAAAAAAABECAAAAAAAAAAAAABECAAAAAAAAEgIAAAAAAAAAAAAAEgIAAAAAAAATAgAAAAAAAAAAAAATAgAAAAAAABQCAAAAAAAAAAAAABQCAAAAAAAAFQIAAAAAAAAAAAAAFQIAAAAAAAAWAgAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAADgIAAAAAAAAOAgAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					92,
-					1,
-					"insert",
-					{
-						"characters": "\n"
-					},
-					"AQAAADYDAAAAAAAANwMAAAAAAAAAAAAA",
-					"AQAAAAAAAAABAAAANgMAAAAAAAA2AwAAAAAAAAAAAAAAAPC/"
-				],
-				[
-					103,
-					3,
-					"left_delete",
-					null,
-					"AwAAABgCAAAAAAAAGAIAAAAAAAAdAQAAQSBTaW5pc3RlciBUdWctb2YtV2FyOiBOYXZpZ2F0ZSB0aGUgZGVsaWNhdGUgZGFuY2Ugb2YgcG93ZXIgYW5kIHNlY3JlY3kgYXMgdGhlIEVtcGlyZSdzIGluc2F0aWFibGUgdGhpcnN0IGZvciBWZXhpbG91ciBkcml2ZXMgYSBkZWVwZXIgd2VkZ2UgYmV0d2VlbiB5b3VyIGNvbG9ueSBhbmQgdGhlaXIgb3BwcmVzc2l2ZSBydWxlLiBFdmVyeSBzdGVwIHlvdSB0YWtlLCBldmVyeSBkZWNpc2lvbiB5b3UgbWFrZSwgZWNob2VzIHRocm91Z2ggdGhlIHNoYWRvd3kgY29ycmlkb3JzIG9mIHJlc2lzdGFuY2UuFwIAAAAAAAAXAgAAAAAAAAEAAAAKFgIAAAAAAAAWAgAAAAAAAAEAAAAK",
-					"AQAAAAAAAAABAAAAGAIAAAAAAAA1AwAAAAAAAAAAAAAAAPC/"
-				]
-			]
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -2901,6 +63,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"openAi",
+				"OpenAI: New Message"
+			],
+			[
+				"open",
+				"OpenAI: New Message"
+			],
 			[
 				"ope",
 				"OpenAI: New Message"
@@ -2974,290 +144,287 @@
 	},
 	"expanded_folders":
 	[
-		"/Users/cem/projects/Vexine_DarkStory",
-		"/Users/cem/projects/Vexine_DarkStory/1.4",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/FactionDefs",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingCategoryDefs",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingDef_Items",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches",
-		"/Users/cem/projects/Vexine_DarkStory/About",
-		"/Users/cem/projects/Vexine_DarkStory/Source",
-		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory",
-		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory",
-		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/HarmonyPatches",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty",
-		"/Users/cem/projects/RW1.4-Decompile"
+		"/Users/cem/projects/PositiveConnections",
+		"/Users/cem/projects/PositiveConnections/1.4",
+		"/Users/cem/projects/PositiveConnections/1.4/Defs",
+		"/Users/cem/projects/PositiveConnections/1.4/Defs/InteractionDefs",
+		"/Users/cem/projects/Vexine_VexiSpecies",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs",
+		"/Users/cem/projects/safety/Vexine_IdeologyAndRitual",
+		"/Users/cem/projects/safety/Vexine_IdeologyAndRitual/Defs",
+		"/Users/cem/projects/safety/Vexine_IdeologyAndRitual/Defs/MemeDefs",
+		"/Users/cem/projects/safety/Vexine_IdeologyAndRitual/PreceptDefs"
 	],
 	"file_history":
 	[
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/PawnKinds/PawnKinds_Empire.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs",
-		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/FactionRellationChanger.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/ITab_Pawn_Visitor.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_ColonistsIdle.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/RoyalTitle.cs",
-		"/Users/cem/projects/Vexine_DarkStory/LoadFolders.xml",
-		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/HarmonyPatches/TributeCollectorPatch.cs",
-		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/DarkStoryMod.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/PreceptDefs/Precepts_Slavery.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/FactionDefs/Faction_Empire.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/TraderKindDef.cs",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches/untitled.xml",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/Incidents/TCAEmpire.cs",
-		"/Users/cem/projects/PsychicAnimals/1.4/Defs/FeedFruitOnAnimal.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/IncidentDefs/Incidents_Map_Special.xml",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Patches/TributeCollectorFreq.xml",
-		"/Users/cem/projects/PositiveConnections/PositiveConnections.sln",
-		"/Users/cem/projects/Vexine_DarkStory/Source/Vexine.DarkStory/Vexine.DarkStory/Vexine.DarkStory.csproj",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/FactionDefs/Player.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Faction.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompDissolutionEffect_Goodwill.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAbilityEffect_Flashstorm.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/DiplomacyTuning.cs",
-		"/Users/cem/projects/Animalitor/1.4/Defs/RecipeDefs/Recipe_AnimalitorImplant.xml",
 		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_Endogenes.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Goodwill/GoodwillSituations_Misc.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_TimedMakeFactionHostile.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/FactionRelationKind.cs",
-		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/BackstoryDefs/VexiSpecific.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/JobDriver_Lovin.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/IndividualThoughtToAdd.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThoughtDefs/Thoughts_Situation_Social.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/InteractionDefs/Interactions_Social.xml",
-		"/Users/cem/projects/PositiveConnections/1.4/Defs/InteractionDefs/Interactions.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThoughtDefs/Thoughts_Memory_Social.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThoughtDefs/Thoughts_Memory_Death.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/InteractionDefs/Interactions_Animal.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/InteractionDefs/Interactions_Social.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/InteractionDefs/Interactions_Social.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAbilityEffect_BloodfeederBite.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/SanguophageUtility.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/InteractionDefs/Interactions_Prisoner.xml",
-		"/Users/cem/projects/PositiveConnections/About/About.xml",
-		"/Users/cem/projects/RW1.4-Decompile/Verse/PawnGenerator.cs",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_XenotypeDefs.xml",
+		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_CosmeticGenes.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse.AI/Pawn_JobTracker.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse.AI/MentalState_WanderSad.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse.AI/WanderUtility.cs",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections/InteractionWorker_DiscussIdeoligion.cs",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections/InteractionWorker_Gift.cs",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections/InteractionWorker_GiveComfort.cs",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections/InteractionWorker_Mediation.cs",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections/InteractionWorker_SharedPassion.cs",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections/InteractionWorker_SkillShare.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/JobGiver_WanderColony.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/TraitSet.cs",
 		"/Users/cem/projects/PositiveConnections/PositiveConnections/PositiveConnections.csproj",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Animalitor.csproj",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/TraitSet.cs",
+		"/Users/cem/projects/PositiveConnections/PositiveConnections/InteractionWorker_Compliment.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse/Pawn_HealthTracker.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs/Thoughts_Memory_Misc.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/JobDriver_Dance.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/JobDriver_PredatorHunt.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Pawn_RelationsTracker.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/PawnRecentMemory.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/IdeoDevelopmentTracker.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Ideo.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/CompLeavingsLetter.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Apparel.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs/Thoughts_Situation_TraitsPerm.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
+		"/Users/cem/projects/TravelReadyColor/1.4/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThinkTreeDefs/Humanlike.xml",
+		"/Users/cem/projects/TravelReadyColor/1.4/Defs/ThingDefs_Items/Craftable_Furniture.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Thought.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/InspirationDefs/Inspirations.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse.AI/MentalState_WanderConfused.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/MentalStateDefs/MentalStates_BabyFits.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThoughtDefs/Thoughts_Memory_Childcare.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse.AI/MentalState_BabyFit.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse.AI/MentalState_BabyCry.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs/Thoughts_Situation_Social.xml",
 		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraitDefs/Traits_Singular.xml",
-		"/Users/cem/projects/PositiveConnections/PositiveConnections.sln_orig",
-		"/Users/cem/projects/PositiveConnections/Animalitor.sln",
-		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/IncidentDef/FleaInfestation.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Storyteller/Incidents_Map_Special.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Storyteller/Storytellers.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs/GeneDefs_Cosmetic.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/TrainableUtility.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_TrainingTracker.cs",
-		"/Users/cem/projects/RW1.4-Decompile/Verse/IExposable.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThingDefs_Buildings/Buildings_Production.xml",
-		"/Users/cem/projects/Vexine_VexiSpecies/Source/Vexine/ModExtensions/NaturalPartWithHediff.cs",
-		"/Users/cem/projects/RW1.4-Decompile/Verse/RaceProperties.cs",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Hediffs/Hediff_Animalitor.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Defs/HediffDefs/Hediffs.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/Paths/Harmonist/HediffComp_MindControl.cs",
-		"/Users/cem/projects/Animalitor/1.4/Defs/HediffDefs/Hediff_LinkedAnimal.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/UI/PsychicStatusGizmo.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraitDefs/Traits_Spectrum.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs/GeneDefs_Spectrum.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Stats/Stats_Pawns_Social.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Thought_Situational.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Command_Ability.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/ThoughtHandler.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/SituationalThoughtHandler.cs",
 		"/Users/cem/projects/Animalitor/1.4/Defs/HediffDefs/Hediffs_Animalitor.xml",
-		"/Users/cem/projects/Animalitor/1.4/Defs/HediffDefs/Hediff_AnimalitorAbililities.xml",
-		"/Users/cem/projects/Animalitor/1.4/Defs/ThoughtDefs/ThoughtDefs_Misc.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/RuleDefs/Rules_Interior.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/RuleDefs/Rules_Complex.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Ability.cs",
-		"/Users/cem/projects/Animalitor/1.4/Defs/AbilityDefs/Abilities_Misc.xml",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/JobDriver_AnimalWatching.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompAnimalInsanityPulser.cs",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/HarmonyPatches/PawnKillPatch.cs",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/AnimalitorUtility.cs",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/HarmonyPatches/AnimalAttackPatch.cs",
-		"/Users/cem/projects/Animalitor/1.4/Defs/Scenarios/Scenarios.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Scenarios/Scenarios_Classic.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/HediffGiverSetDef.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/HediffComp_RoyalImplant.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/HediffComp_PsychicHarmonizer.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompGiveHediffSeverity.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/HediffDefs/Hediffs_Mechanitor.xml",
-		"/Users/cem/projects/RW1.4-Decompile/MechanitorUtility.cs",
-		"/Users/cem/projects/RW1.4-Decompile/Verse/PawnKindDef.cs",
-		"/Users/cem/projects/RW1.4-Decompile/Verse/SkillRange.cs",
-		"/Users/cem/projects/Animalitor/1.4/Defs/PawnKindDefs_Humanlikes/PawnKinds_Special.xml",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/AnimalitorOverlayManager.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/PawnKindDefs_Humanlikes/PawnKinds_Tribal.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/BackstoryDefs/Shuffled/ImperialFighter_Child.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/BackstoryDefs/Shuffled/ImperialRoyal_Child.xml",
-		"/Users/cem/projects/Animalitor/1.4/Defs/BackstoryDefs/Animalitor_Child.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs/Shuffled/Tribal_Child.xml",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Components/AnimalitorGameComponent.cs",
-		"/Users/cem/projects/Animalitor/1.4/Defs/JoyDefs/JoyGivers_Misc.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs/Shuffled/Offworld_Nonspecific_Adult.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/PawnKindDefs_Humanlikes/PawnKinds_Special.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/PawnKindDefs_Humanlikes/PawnKinds_Special.xml",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Components/AnimalitorMapComponent.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2108362126/Defs/Revolus_AnimalsAreFun.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/JoyGiver_GoForWalk.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TaleDefs/Tales_Job.xml",
-		"/Users/cem/projects/Animalitor/1.4/Defs/JobDefs/Jobs_Misc.xml",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/AnimalitorMod.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2108362126/Revolus.AnimalsAreFun/Walkies.cs",
-		"/Users/cem/projects/Animalitor/1.4/Defs/TaleDefs/Tales_Job.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompUseEffect_GainAbility.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/PawnUtility.cs",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Joy/JoyGivers.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/JobDefs/Jobs_Misc.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Races/Races_Animal_CatGroup.xml",
-		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/HediffDefs/Hediffs_Psycasts.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/CompUsableImplant.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/ArchivedDialog.cs",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/IAnimalitorActions.cs",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Pawn_AnimalitorTracker.cs",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/Hediffs/Hediff_LinkedAnimal.cs",
-		"/Users/cem/projects/Animalitor/Animalitor/Animalitor/AnimalitorActions.cs",
-		"/Users/cem/projects/Animalitor/1.4/Defs/PawnRelationDefs/PawnRelations_Misc.xml",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_MechanitorTracker.cs",
-		"/Users/cem/projects/RW1.4-Decompile/Verse.AI/MentalStateHandler.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/DirectPawnRelation.cs",
-		"/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_PlayerSettings.cs",
-		"/Users/cem/projects/Vexine_DarkStory/1.4/Defs/ThingCategoryDefs/ThingCategories.xml",
-		"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs/Vexi_CosmeticGenes.xml"
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs/Solid/Solid_Child.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse.AI/Pawn_MindState.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse/Pawn.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Verb_MeleeAttack.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Stats/Stats_Building_Special.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/ThoughtWorker_IsNightForNightOwl.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/ThoughtWorker_IsDayForNightOwl.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/RoomStatWorker_Cleanliness.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/ThoughtWorker.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/PreceptDefs/RitualPatternDefs/RitualPatterns.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/Rituals/Ritual_Outcomes.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/ThoughtState.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/TraitDefs/Traits.xml",
+		"/Users/cem/projects/PsychicAnimals/Source/AnimaFruitPatch/AnimaFruitPatch.csproj",
+		"/Users/cem/projects/PsychicAnimals/Source/PsychicAnimals.csproj",
+		"/Users/cem/projects/PsychicAnimals/Source/StaticConstructorOnStartupClass.cs",
+		"/Users/cem/projects/PsychicAnimals/Source/AnimaFruitUtility.cs",
+		"/Users/cem/projects/PsychicAnimals/Source/AnimaFruitPatch/StaticConstructor.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs/Thoughts_Memory_Social.xml",
+		"/Users/cem/projects/PositiveConnections/1.4/Defs/ThoughtDefs/Thoughts.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/StoryState.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse/DangerUtility.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/PawnUtility.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/RCellFinder.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/DutyDefs/Duties_Misc.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/ThingDefs_Races/Races_Animal_Special.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Faction.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThinkTreeDefs/Animal.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/CompProperties_Transporter.cs",
+		"/Users/cem/projects/PositiveConnections/About/About.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/ConversionUtility.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Thought_Memory.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/MemoryThoughtHandler.cs",
+		"/Users/cem/projects/AnimaFruit/1.4/Defs/Defs.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Drugs/Ambrosia.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/HediffDefs/Hediffs_Global_Misc.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/HediffDefs/Hediffs_Local_Misc.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/HealthCardUtility.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/RecordWorker_TimeOnFire.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/QuestScriptDefs/Script_PawnLend.xml",
+		"/Users/cem/projects/TravelReadyColor/Textures/Things/Building/Furniture/Petate_south.png",
+		"/Users/cem/projects/TravelReadyColor/Textures/Things/Building/Furniture/Petate_north.png",
+		"/Users/cem/projects/TravelReadyColor/Textures/Things/Building/Furniture/Petate_east.png",
+		"/Users/cem/Documents/Craftable_Furniture.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/PreceptDefs/Precepts_RoughLiving.xml",
+		"/Users/cem/projects/RitualCulture/1.4/Patches/RoughLivingPatch.xml",
+		"/Users/cem/projects/RitualCulture/1.4/Defs/MemeDefs/Memes_Misc_Royalty.xml",
+		"/Users/cem/projects/RitualCulture/1.4/Defs/PreceptDefs/AnimalPragmatism.xml",
+		"/Users/cem/projects/RitualCulture/1.4/Defs/ThoughtDefs/Thoughts_Misc.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse/Building.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/HediffComp_PsychicHarmonizer.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Storyteller/Incidents_Map_Misc.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/JobDriver_Train.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Races/Races_Animal_SheepGroup.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Building_PlantGrower.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/HediffDefs/Hediffs_BodyParts_Archotech_EmpireRoyal.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Buildings/Buildings_Production.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/TerrainAffordanceDefOf.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Buildings/Buildings_Power.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Buildings/Buildings_Base.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Buildings/Buildings_Mech.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/CompPowerTrader.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/Verse/RaceProperties.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/TameUtility.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Designator_Tame.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/WorkGiver_Tame.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/ThingDefs_Buildings/Buildings_Furniture.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/TrainableUtility.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Pawn_NeedsTracker.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs/GeneDefs_Cosmetic.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/HediffCompProperties_PsychicHarmonizer.cs",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/Need.cs",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Bodies/Bodies_Animal_Insect.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Races/Races_Animal_Insect.xml",
+		"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Plants/Plants_Bases.xml",
+		"/Volumes/Core/RWSourceCodeCurrent/RimWorld/BrieflyDespawnedUtil.cs",
+		"/Users/cem/projects/Goldenbell/About/About.xml",
+		"/Users/cem/projects/Goldenbell/source/.vs/Goldenbell/xs/UserPrefs.xml",
+		"/Users/cem/projects/Goldenbell/1.4/Defs/Drugs/GoldenbellTea.xml",
+		"/Users/cem/projects/Goldenbell/source/Goldenbell/Goldenbell.csproj"
 	],
 	"find":
 	{
-		"height": 81.0
+		"height": 59.0
 	},
 	"find_in_files":
 	{
 		"height": 257.0,
 		"where_history":
 		[
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Animalitor/Animalitor,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Defs,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2842502659/1.4/Source/VanillaPsycastsExpanded/UI,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/Animalitor/Animalitor,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs/GeneDefs,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/PawnKinds,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/PawnKindDefs_Humanlikes,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/Animalitor/Animalitor,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BackstoryDefs/Shuffled,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/Animalitor/Animalitor,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/Animalitor/Animalitor/Animalitor,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Animalitor,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Vexine_DarkStory,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
-			"/Users/cem/projects/Vexine_DarkStory,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Items,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Linkable,<project filters>",
-			"/Users/cem/projects/RitualCulture/Source/RitualCulture,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2739581441,<project filters>",
-			"/Users/cem/projects/Linkable/LinkableSettings,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies/1.4/Defs,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/BiomeDefs,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/Goldenbell,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Plants,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/projects/TravelReadyColor,<project filters>",
+			"/Users/cem/projects/RitualCulture,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/MentalStateDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraitDefs,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/ThoughtDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/HediffDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraitDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraitDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraitDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraitDefs,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Stats,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TraitDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/PsychicAnimals,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/AnimaFruit,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThingDefs_Buildings,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/ThingDefs_Buildings,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/MemeDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology/Defs/MemeDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Ideology,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/TerrainDefs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Storyteller,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/ThoughtDefs,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty/Defs/ThoughtDefs,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs/Bodies,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Biotech/Defs/GeneDefs,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/projects/Goldenbell,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/Goldenbell,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/projects/PositiveConnections,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Volumes/Core/RWSourceCodeCurrent,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Core/Defs,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data/Royalty,<project filters>",
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
+			"/Users/cem/projects/Vexine_VexiSpecies,<project filters>",
+			"/Users/cem/projects/Animalitor,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
 			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Goldenbell/source/Goldenbell,<project filters>",
-			"/Users/cem/projects/Goldenbell/source,<project filters>",
-			"/Users/cem/projects/Goldenbell,<project filters>",
-			"/Users/cem/projects/Goldenbell/source,<project filters>",
-			"/Users/cem/projects/Goldenbell,<project filters>",
-			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
-			"/Users/cem/projects/Goldenbell,<project filters>",
 			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>",
-			"/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2279786905,<project filters>"
+			"/Users/cem/projects/RW1.4-Decompile,<project filters>",
+			"/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data,<project filters>"
 		]
 	},
 	"find_state":
@@ -3265,134 +432,134 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"gettitle",
-			"gettitleinfaction",
-			"title",
-			"MostSeniorTitle",
-			"knight",
-			"Title",
-			"Faction.OfEmpire",
-			"Slavery_Classic",
-			"neanderthal",
-			"tribute",
-			"neanderthal",
-			"Faction",
-			"CheckReachNaturalGoodwill",
-			"goodwill",
-			"diplo",
-			"MayRequire",
-			"modExtensions",
-			"MayRequire",
-			"factionEmpire",
-			"FactionRelationKind",
-			"Faction",
-			"NaturalEnemy",
-			"NaturalEnemyInitialGoodwill",
-			"InitialHostileThreshold",
-			"goodwill",
-			"startingGoodwill",
-			"female",
-			"moodPowerFact",
-			"Thought_MemorySocial",
-			"ModSettingsWindow",
-			"initiator",
-			"RecipientThought",
-			"interactiondef",
-			"thoughtdeftogivetarget",
-			"Opinion",
-			"gainopinion",
-			"Interacted",
-			"InteractionDef",
-			"PersonalCharacteristic",
-			"InteractionDef",
-			"assembly",
-			"Thought_MemorySocial",
-			"Rival",
-			"Animalitor",
-			"traitdef",
+			"HasTrait",
+			"Wander",
+			"MentalState_WanderSad",
+			"sad",
+			"Wander_Sad",
+			"SadWander",
+			"StopAll",
+			"TryInteractWith",
+			"recluse",
+			"MakeDowned",
+			"notify_",
+			"void Notify_",
+			"Notify_CorpseBuried",
+			"NotifyCorpseBuried",
+			"Psychology",
+			"humanLike",
+			"<?",
+			"petate",
+			"bed",
+			"bedWithQuality",
+			"bedwit",
+			"bed",
+			"CompProperties_Quality",
+			"requiredtrait",
 			"trait",
-			"gaintrait",
-			"pawngen",
-			"kind",
-			"gen",
-			"trait",
-			"psycho",
-			"kind",
-			"commonality",
-			"TravelerGroup",
-			"IncidentWorker_VisitorGroup",
-			"Furskin",
-			"furskin",
-			"fur",
-			"furskin",
-			"FUR",
-			"Fur",
-			"Furskin",
-			"fur",
-			"TryExecuteWorker",
-			"IAnimalitorActions",
-			"IsLinkedAnimal",
-			"degradation",
-			"hediff_linkedanimal",
-			"Hediff_AnimalitorLinkedAnimal",
-			"IsLinkedAnimal",
-			"degradationperiod",
-			"TrainingDecay",
-			"Recipe",
-			"CraftingRecipeBase",
 			"hediff",
-			"affected",
-			"Capacity",
-			"consciousn",
-			"Hunger",
-			"HediffComp_MindControl",
-			"nutrition",
-			"NutritionEatenPerDay",
-			"shockThreshold",
-			"Gizmos",
-			"GetGizmosExtra",
-			"ruleset",
-			"Ability",
-			"HediffWith",
-			"HediffWithDuration",
-			"Hediff_LinkedToAnimalitor",
-			"becoming",
-			"Ability",
-			"AbilityWorker",
-			"MeleeDPS",
-			"ArmorRating_Blunt",
-			"modExtension",
-			"AbilityWorker",
-			"pulse",
-			"severity",
-			"Hediff",
-			"severity",
+			"outdoor",
+			"CryingBaby",
+			"crying",
+			"Crying",
+			"mood",
+			"HediffGiver",
+			"HediffGiver_Radius",
+			"RandomSocialMode SocialModeMax()",
+			"moodEffect",
+			"ugly",
+			"nulli",
+			"ugly",
+			"RequiredTraits",
+			"beau",
+			"beauty",
+			"Ugly",
+			"break",
+			"tortured",
+			"inspir",
+			"thoughts",
+			"ReceiveThought",
+			"disablesThought",
+			"ReceiveThought",
+			"thought",
+			"Cannot",
+			"CannotReceive",
+			"CannotReceiveThought",
+			"groupswith",
+			"GetAllMoodThoughts",
+			"checkrecalculatemoodthoughts",
+			"recalculateState",
+			"CheckRecalculateMoodThoughts",
+			"tameAnimalChance",
+			"TradePriceImprovement",
+			"statFactor",
+			"NightOwl",
+			"nightowl",
+			"statOff",
+			"recreat",
+			"joy",
+			"Industrious",
+			"Sanguine",
+			"last",
+			"lastmeleethreatharmtick",
+			"outgoing",
+			"AppendPsychologyThoughts",
+			"funeralstandard",
+			"Funeral",
+			"ritualpatterndef",
+			"funeral",
+			"AttendedFuneral",
+			"RecalculateState",
+			"CheckRecalculateMoodThoughts",
+			"shouldRemove",
+			"GainTrait",
 			"hediff",
-			"warcall",
-			"SkillRange",
-			"skills",
-			"skillrange",
-			"kind",
-			"generatepawn",
-			"mechlinkimplant",
-			"maxinstallcount",
-			"mechlinkimplant",
-			"implant",
-			"mechanitor",
-			"skill",
-			"pawngenerator",
-			"minskill",
-			"skill",
-			"mechanitor",
-			"bolt-action",
-			"weaponTags",
-			"backstory",
-			"categor",
-			"filter",
-			"backstoryfilter",
-			"empire",
-			"herder",
-			"hunter"
+			"DrugDesire",
+			"chem",
+			"chemical",
+			"chemicalinterest",
+			"chemical",
+			"chemicalinterest",
+			"uncompromising",
+			"Log.Message",
+			"InstallPsylinkonanimal",
+			"Patching done",
+			"log",
+			"Changing recipe definition",
+			"After modifying recipeUsers",
+			"ThinkTree",
+			"thoughtclass",
+			"killed my mother",
+			"petness",
+			"danger",
+			"maxDanger",
+			"prude",
+			"lastThreat",
+			"lastThreatBigTick",
+			"lastRaidFaction",
+			"storystate",
+			"lastAttackTicks",
+			"attack",
+			"raided",
+			"attacked",
+			"canChangeAssignedThingsAfterStarting",
+			"Meme",
+			"hediffWith",
+			"label",
+			"hediffClass",
+			"AnimaFruitEffect",
+			"nurseable",
+			"nursea",
+			"groupswith",
+			"GroupsWith",
+			"onfire",
+			"pain",
+			"Thought_Memory",
+			"sowTag",
+			"sowTagh",
+			"Plant",
+			"GroundPlants",
+			"workSkill"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -3400,6 +567,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"meme_Travel",
+			"Goldenbell",
 			"PositiveConnections",
 			"PsychicSensitivityReducer",
 			"PsychicSensitivityBooster",
@@ -3418,458 +587,6 @@
 		{
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 9847,
-						"regions":
-						{
-							"match":
-							{
-								"flags": 112,
-								"regions":
-								[
-									[
-										183,
-										198
-									],
-									[
-										214,
-										229
-									],
-									[
-										249,
-										264
-									],
-									[
-										277,
-										292
-									],
-									[
-										652,
-										667
-									],
-									[
-										1342,
-										1357
-									],
-									[
-										1370,
-										1385
-									],
-									[
-										1434,
-										1449
-									],
-									[
-										1487,
-										1502
-									],
-									[
-										2000,
-										2015
-									],
-									[
-										2308,
-										2323
-									],
-									[
-										2586,
-										2601
-									],
-									[
-										2625,
-										2640
-									],
-									[
-										2661,
-										2676
-									],
-									[
-										2688,
-										2703
-									],
-									[
-										2793,
-										2808
-									],
-									[
-										2950,
-										2965
-									],
-									[
-										3010,
-										3025
-									],
-									[
-										3318,
-										3333
-									],
-									[
-										3616,
-										3631
-									],
-									[
-										4018,
-										4033
-									],
-									[
-										4273,
-										4288
-									],
-									[
-										4304,
-										4319
-									],
-									[
-										4337,
-										4352
-									],
-									[
-										4396,
-										4411
-									],
-									[
-										4579,
-										4594
-									],
-									[
-										4805,
-										4820
-									],
-									[
-										4840,
-										4855
-									],
-									[
-										4873,
-										4888
-									],
-									[
-										4968,
-										4983
-									],
-									[
-										4989,
-										5004
-									],
-									[
-										5256,
-										5271
-									],
-									[
-										5292,
-										5307
-									],
-									[
-										5343,
-										5358
-									],
-									[
-										5415,
-										5430
-									],
-									[
-										5692,
-										5707
-									],
-									[
-										5770,
-										5785
-									],
-									[
-										6054,
-										6069
-									],
-									[
-										6142,
-										6157
-									],
-									[
-										6347,
-										6362
-									],
-									[
-										6380,
-										6395
-									],
-									[
-										6415,
-										6430
-									],
-									[
-										6444,
-										6459
-									],
-									[
-										6547,
-										6562
-									],
-									[
-										6669,
-										6684
-									],
-									[
-										6881,
-										6896
-									],
-									[
-										7155,
-										7170
-									],
-									[
-										7483,
-										7498
-									],
-									[
-										7514,
-										7529
-									],
-									[
-										7599,
-										7614
-									],
-									[
-										8367,
-										8382
-									],
-									[
-										8398,
-										8413
-									],
-									[
-										8432,
-										8447
-									],
-									[
-										8630,
-										8645
-									],
-									[
-										8738,
-										8753
-									],
-									[
-										8975,
-										8990
-									],
-									[
-										9156,
-										9171
-									],
-									[
-										9279,
-										9294
-									],
-									[
-										9454,
-										9469
-									],
-									[
-										9756,
-										9771
-									]
-								],
-								"scope": ""
-							}
-						},
-						"selection":
-						[
-							[
-								4517,
-								4517
-							]
-						],
-						"settings":
-						{
-							"auto_complete_triggers":
-							[
-								{
-									"characters": "<",
-									"selector": "text.html, text.xml"
-								},
-								{
-									"rhs_empty": true,
-									"selector": "punctuation.accessor"
-								}
-							],
-							"detect_indentation": false,
-							"line_numbers": false,
-							"lsp_uri": "buffer://sublime/59",
-							"output_tag": 1,
-							"result_base_dir": "",
-							"result_file_regex": "^([^ \t].*):$",
-							"result_line_regex": "^ +([0-9]+):",
-							"scroll_past_end": true,
-							"syntax": "Packages/Default/Find Results.hidden-tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 5040.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 40609,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								12974,
-								13250
-							]
-						],
-						"settings":
-						{
-							"lsp_uri": "file:///Users/cem/projects/RW1.4-Decompile/RimWorld/Pawn_RoyaltyTracker.cs",
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 20903.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2389,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"lsp_uri": "file:///Users/cem/projects/RW1.4-Decompile/RimWorld/Alert_RoyalNoAcceptableFood.cs",
-							"syntax": "Packages/C#/C#.sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 746.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "/Users/cem/projects/Vexine_DarkStory/About/About.xml",
-					"selected": true,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1936,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1903,
-								1903
-							]
-						],
-						"settings":
-						{
-							"lsp_uri": "file:///Users/cem/projects/Vexine_DarkStory/About/About.xml",
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 515.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 792,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								792,
-								0
-							]
-						],
-						"settings":
-						{
-							"auto_name": "Vexine Dark Story makes life more difficult for yo",
-							"lsp_uri": "buffer://sublime/86",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"stack_multiselect": false,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1641,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1,
-								1641
-							]
-						],
-						"settings":
-						{
-							"auto_name": "",
-							"lsp_uri": "buffer://sublime/89",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"stack_multiselect": false,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -3879,7 +596,7 @@
 	},
 	"input":
 	{
-		"height": 95.0
+		"height": 1066.0
 	},
 	"layout":
 	{
@@ -3910,7 +627,7 @@
 	},
 	"output.OpenAI Chat":
 	{
-		"height": 256.0
+		"height": 861.0
 	},
 	"output.diagnostics":
 	{

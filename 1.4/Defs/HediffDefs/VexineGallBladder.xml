@@ -19,7 +19,6 @@
         <defName>GallBladder</defName>
         <label>gallbladder</label>
         <description>The gallbladder is a crucial organ in vexi anatomy, supplementing the digestive activity of the stomach. It helps to break down ingested substances, protecting against food poisoning and allowing Vexi to eat practically anything nutrititive. It is said, a Vexi will never starve unless they can't move.</description>
-        <descriptionHyperlinks><RecipeDef>InstallNaturalGallBladder</RecipeDef></descriptionHyperlinks>
       <statBases>
       <MarketValue>1600</MarketValue>
       <Mass>2</Mass>
@@ -29,8 +28,7 @@
   <RecipeDef ParentName="SurgeryInstallBodyPartNaturalBase">
     <defName>InstallNaturalGallBladder</defName>
     <label>install gallbladder</label>
-    <description>Install a biological biological gall bladder.</description>
-    <descriptionHyperlinks><ThingDef>gall bladder</ThingDef></descriptionHyperlinks>
+    <description>Install a biological gall bladder.</description>
     <jobString>Installing gall bladder.</jobString>
     <ingredients>
       <li>

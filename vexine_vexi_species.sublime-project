@@ -2,19 +2,25 @@
 	"folders":
 	[
 		{
+			"path": ".",
+		},
+		{
+			"path": "/Users/cem/projects/RitualCulture",
+		},
+		{
+			"path": "/Users/cem/projects/TravelReadyColor",
+		},
+		{
+			"path": "/Users/cem/projects/Goldenbell",
+		},
+		{
 			"path": "/Users/cem/projects/PositiveConnections",
 		},
 		{
 			"path": "/Users/cem/projects/Animalitor",
 		},
 		{
-			"path": ".",
-		},
-		{
 			"path": "/Users/cem/projects/Vexine_DarkStory",
-		},
-		{
-			"path": "/Users/cem/projects/Goldenbell",
 		},
 		{
 			"path": "/Users/cem/projects/AnimaFruit",
@@ -26,13 +32,10 @@
 			"path": "/Volumes/Core/RW Art",
 		},
 		{
-			"path": "/Users/cem/projects/RitualCulture",
-		},
-		{
 			"path": "/Users/cem/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Data",
 		},
 		{
-			"path": "/Users/cem/projects/RW1.4-Decompile",
+			"path": "/Volumes/Core/RWSourceCodeCurrent",
 		},
 		{
 			"path": "/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2108362126",
@@ -50,7 +53,16 @@
 			"path": "/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/1875168898",
 		},
 		{
-			"path": "/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2007485974"
+			"path": "/Users/cem/projects/ModTemplate",
+		},
+		{
+			"path": "/Users/cem/projects/RW1.4-Decompile",
+		},
+		{
+			"path": "/Users/cem/Library/Application Support/Steam/steamapps/workshop/content/294100/2858079457",
+		},
+		{
+			"path": "/Users/cem/projects/safety/Vexine_IdeologyAndRitual",
 		},
 	],
 }

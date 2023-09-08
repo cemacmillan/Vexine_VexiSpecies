@@ -1,22 +1,23 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="IncidentWorkers/EmptyClass.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="HarmonyPatches/GeneticsResolution.cs">
     <Files>
       <File FileName="IncidentWorkers/EmptyClass.cs" Line="34" Column="42" />
+      <File FileName="HarmonyPatches/ButcherTo.cs" Line="1" Column="1" />
+      <File FileName="HarmonyPatches/EmptyClass.cs" Line="33" Column="2" />
+      <File FileName="HarmonyPatches/RecreationForSkill.cs" Line="1" Column="1" />
+      <File FileName="HarmonyPatches/SleptInBarracksVexi.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="VexiSpecies" expanded="True">
-            <Node name="Solution Items" expanded="True" />
-            <Node name="VexiSpecies" expanded="True">
-              <Node name="HarmonyPatches" expanded="True" />
-              <Node name="Health" expanded="True" />
-              <Node name="IncidentWorkers" expanded="True">
-                <Node name="EmptyClass.cs" selected="True" />
+          <Node name="VexiSpecies">
+            <Node name="VexiSpecies">
+              <Node name="HarmonyPatches" expanded="True">
+                <Node name="GeneticsResolution.cs" selected="True" />
               </Node>
+              <Node name="Health" expanded="True" />
+              <Node name="IncidentWorkers" expanded="True" />
               <Node name="ModExtensions" expanded="True" />
               <Node name="ThoughtWorkers" expanded="True" />
             </Node>
@@ -25,6 +26,8 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -21,11 +21,20 @@
       <li>dIl_Vexi_EarsD</li>
       <li>dIl_Vexi_TailDgr</li>
       <li>dIl_Vexi_TailVexine</li>
+      <li>dIl_Vexi_MuzzleA</li>
       <li>dIl_Vexi_MuzzleB</li>
+      <li>dIl_Vexi_MuzzleC</li>
+      <li>dIl_Vexi_FringeA</li>
       <li>dIl_Vexi_FringeB</li>
+      <li>dIl_Vexi_FringeC</li>
       <li>dIl_Vexi_Gallbladder</li>
       <li>dIl_Crepuscular_Vision</li>
       <li>Vexi_SkulkInstinct</li>
+      <li>Skin_Orange</li>
+      <li>Skin_DeepRed</li>
+      <li>Skin_SlateGray</li>
+      <li>Skin_SheerWhite</li>
+      <li>Skin_InkBlack</li>
     </genes>
   </XenotypeDef>
 
